@@ -1,0 +1,10 @@
+zpracovavam Objekt č. 3
+davam dosavadni vysledky do latexu
+zpracovavam Objekt č. 4
+Objekt č. 5 nelze zpracovat!!! (pouze jedna namerena hodnota koncentrace radonu)
+Objekt č. 6 take nelze zpracovat, ten samy problem
+Objekt č. 7 to same...
+
+-pozn. aktualni skript "vypocet_Rn_prutoky.py" je vzdy ve slozce zpracovavaneho objektu
+-slozka zaloha obsahuje:
+    -vypocetni skript, ve kterem se zadava zdali se uvazuje infiltrovani pri spousteni skriptu jako argument

@@ -1,0 +1,7 @@
+#tento soubor nepouzivam (v momentalni chvili, treba se bude hodit), tj. nepouzivej ho
+#vymeny vzduchu mezi jednotlivymi zonami [m^3/hod^(-1)]
+0    3.6 2.9 
+80.5 0   20.8 
+23.7 0.2   0 
+#vymeny vzduchu s okolnim prostredim [hod^(-1)]
+0.7 0.1 0.4

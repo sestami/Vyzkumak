@@ -1,0 +1,4 @@
+- vypocet_Rn_prutoky.py -> uvazuje objemove prutoky vzduchu mezi zonami a vnejsim prostredim, tj. vnejsi zona je N+1 zona
+
+TO DO:
+- vypocet_Rn_vymenyVzduchu.py -> ty budou uvazovat vymeny vzduchu pro kazdou zonu

@@ -1,0 +1,13 @@
+# coding: utf-8
+%run grafOAR_spolecny.py
+cd ..
+%run bulharskeKonstanty.py
+OAR_sigma_B=np.sqrt()
+OAR_means=np.array([OAR1.mean(), OAR2.mean(), OAR3.mean(), OAR4.mean()])
+OAR_means
+OAR_sigma_B=np.sqrt(OAR_means/citlivosti_mean)
+OAR_sigma_B
+OAR_sigma_A=np.array([OAR1.std(), OAR2.std(), OAR3.std(), OAR4.std()])
+OAR_sigma_A
+OAR_sigma=np.sqrt(OAR_sigma_A**2+OAR_sigma_B**2)
+OAR_sigma

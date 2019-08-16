@@ -1,0 +1,117 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage[figurename=Obr., tablename=Tab.]{caption}
+\usepackage{a4wide}
+\usepackage{mhchem}
+\usepackage{siunitx}
+\usepackage{empheq}
+\usepackage[unicode, pdfauthor={Michal Šesták}, pdftitle={<++>}, pdfsubject={<++>},colorlinks=true, linkcolor=red,
+urlcolor=black, citecolor=blue]{hyperref}
+\author{Michal Šesták}
+\title{Určení přísunů radonu do zón proměřených objektů}
+%\LTcapwidth=\textwidth
+%\renewcommand{\arraystretch}{1.0}
+\begin{document}
+\maketitle
+\tableofcontents
+\section{Úvod}
+Jako zóny byly brány jednotlivé podlaží zkoumaných objektů. Určení přísunů radonu do jednotlivých zón nebylo možné provést u objektů č. 5, 6 a 7, protože v nich byly naměřeny koncentrace radonu pouze v jedné zóně. Uvedené nejistoty jsou u všech veličin rovny směrodatným odchylkám průměrů, tj. je uvažován faktor pokrytí $k=1$.
+\section{Objekt č. 1}
+\begin{table}[H]
+    \centering
+    \caption{Průměrné koncentrace radonu a objemy všech místností ve všech podlažích.}
+    \input{1vysledky_inputData}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{Průtoky vzduchu mezi podlažími v \si{m^3/hod}. Hodnota v $i$-tém řádku a $j$-tém sloupci představuje průtok vzduchu z $i$-tého podlaží do $j$-tého podlaží. Poslední sloupec představuje exfiltrace z jednotlivých podlaží do vnějšího prostředí a poslední řádek představuje infiltrace z vnějšího prostředí do jednotlivých zón.}
+    \input{1vysledky_prutoky}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{Výsledné přísuny radonu pro několik případů koncentrací radonu ve vnějším prostředí. $Q_i$ značí přísun radonu do $i$-tého podlaží.}
+    \input{1vysledky_Q}
+\end{table}
+
+\section{Objekt č. 2}
+\begin{table}[H]
+    \centering
+    \caption{Průměrné koncentrace radonu a objemy všech místností ve všech podlažích.}
+    \input{2vysledky_inputData}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{Průtoky vzduchu mezi podlažími v \si{m^3/hod}. Hodnota v $i$-tém řádku a $j$-tém sloupci představuje průtok vzduchu z $i$-tého podlaží do $j$-tého podlaží. Poslední sloupec představuje exfiltrace z jednotlivých podlaží do vnějšího prostředí a poslední řádek představuje infiltrace z vnějšího prostředí do jednotlivých zón.}
+    \input{2vysledky_prutoky}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{Výsledné přísuny radonu pro několik případů koncentrací radonu ve vnějším prostředí. $Q_i$ značí přísun radonu do $i$-tého podlaží.}
+    \input{2vysledky_Q}
+\end{table}
+
+\section{Objekt č. 3}
+\begin{table}[H]
+    \centering
+    \caption{Průměrné koncentrace radonu a objemy všech místností ve všech podlažích.}
+    \input{3vysledky_inputData}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{Průtoky vzduchu mezi podlažími v \si{m^3/hod}. Hodnota v $i$-tém řádku a $j$-tém sloupci představuje průtok vzduchu z $i$-tého podlaží do $j$-tého podlaží. Poslední sloupec představuje exfiltrace z jednotlivých podlaží do vnějšího prostředí a poslední řádek představuje infiltrace z vnějšího prostředí do jednotlivých zón.}
+    \input{3vysledky_prutoky}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{Výsledné přísuny radonu pro několik případů koncentrací radonu ve vnějším prostředí. $Q_i$ značí přísun radonu do $i$-tého podlaží.}
+    \input{3vysledky_Q}
+\end{table}
+
+\section{Objekt č. 4}
+\begin{table}[H]
+    \centering
+    \caption{Průměrné koncentrace radonu a objemy všech místností ve všech podlažích.}
+    \input{4vysledky_inputData}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{Průtoky vzduchu mezi podlažími v \si{m^3/hod}. Hodnota v $i$-tém řádku a $j$-tém sloupci představuje průtok vzduchu z $i$-tého podlaží do $j$-tého podlaží. Poslední sloupec představuje exfiltrace z jednotlivých podlaží do vnějšího prostředí a poslední řádek představuje infiltrace z vnějšího prostředí do jednotlivých zón.}
+    \input{4vysledky_prutoky}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{Výsledné přísuny radonu pro několik případů koncentrací radonu ve vnějším prostředí. $Q_i$ značí přísun radonu do $i$-tého podlaží.}
+    \input{4vysledky_Q}
+\end{table}
+
+\section{Objekt č. 8}
+\begin{table}[H]
+    \centering
+    \caption{Průměrné koncentrace radonu a objemy všech místností ve všech podlažích.}
+    \input{8vysledky_inputData}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{Průtoky vzduchu mezi podlažími v \si{m^3/hod}. Hodnota v $i$-tém řádku a $j$-tém sloupci představuje průtok vzduchu z $i$-tého podlaží do $j$-tého podlaží. Poslední sloupec představuje exfiltrace z jednotlivých podlaží do vnějšího prostředí a poslední řádek představuje infiltrace z vnějšího prostředí do jednotlivých zón.}
+    \input{8vysledky_prutoky}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{Výsledné přísuny radonu pro několik případů koncentrací radonu ve vnějším prostředí. $Q_i$ značí přísun radonu do $i$-tého podlaží.}
+    \input{8vysledky_Q}
+\end{table}
+%\begin{thebibliography}{Mm99}
+%\end{thebibliography}
+%\pagestyle{empty}
+%\section{Přílohy}
+%\appendix
+\end{document}

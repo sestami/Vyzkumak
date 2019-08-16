@@ -1,0 +1,344 @@
+\chapter{Dynamická měření}
+Dynamická měření přísunů radonu jsem provedl u tří objektů, viz tab.~\ref{tab:dynMer_prehled}.
+\begin{table}[ht]
+	\centering
+	\caption{Objekty, v nichž jsem provedl dynamická měření. $T$ značí dobu měření ve dnech (zaokrouhleno na celé dny včetně počátečního a posledního dne).}
+	\label{tab:dynMer_prehled}
+	\begin{tabular}{llll}
+		\toprule
+		Objekt & Rozsah měření & $T$ [dny] & Typ objektu\\
+		\midrule
+		Skála 75, okr. Havlíčkův Brod & 23. 5. -- 5. 6. 2019 & 14 & chata\\
+		Hálková 980, Humpolec & 5. 6. -- 20. 6. 2019 & 16 & byt\\
+		Anglická 574, Dobřichovice & 9. 7. -- 30. 7. 2019 & 22 & rodinný dům\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Vývoj OAR v čase v jednotlivých zónách byl měřen primárně \emph{TERA sondami}~\cite{tera} a sekundárně měřiči radonu \emph{CANARY}~\cite{canary}. CANARY měřáky byly použity jako záložní systém, tj. pokud by v některé zóně  TERA sonda selhala, pak by se OAR v této zóně brala z příslušného CANARY měřáku. %Zevrubné informace o těchto detektorech lze dohledat v kapitole~\ref{navesti:radon}.
+
+Dále bylo potřeba měřit vývoj teploty, což je znalost nutná při vyhodnocování množství nasorbovaných indikačních plynů v TD detektorech. K tomuto účelu byly použity dataloggery teploty a vlhkosti \emph{testo 174H} \cite{testo}.
+
+Před samotnými měřeními přísunů radonu v objektech bylo nejprve nutno provést srovnávací měření TERA sond, jelikož každá sonda má různou odezvu při stejné OAR. O tomto pojednává podkapitola~\ref{navesti:dynMer_TERA}. Další podkapitoly obsahují dynamická měření přísunů radonu v uvedených objektech. 
+\section{TERA sondy}\label{navesti:dynMer_TERA}
+Pro dynamická měření přísunů radonu mi byly poskytnuty čtyři TERA sondy s označením 8, 10, 88 a 112. Pro srovnání jejich odezev s reálnou hodnotou OAR byly vloženy do sudu (nádoba válcovitého tvaru) spolu s referenčním monitorem radonu \emph{AlphaGuard} \cite{alphaguard}. Hodnota OAR z AlphaGuardu byla brána jako reálná hodnota OAR. V obr.~\ref{fig:dynMer_sondySrovnani} jsou zobrazeny naměřené vývoje OAR v čase ze zkoumaných sond a z Alphaguardu, v tab.~\ref{tab:dynMer_sondy} jsou k vidění nejdůležitější statistiky naměřených dat z každého monitoru.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\linewidth]{images/sondy_srovnani}
+	\caption{Vývoj OAR naměřený zkoumanými sondami a referenčním AlphaGuardem.}
+	\label{fig:dynMer_sondySrovnani}
+\end{figure}
+\begin{table}[ht]
+	\centering
+	\caption{Statistiky vývojů OAR naměřených TERA sondami a AlphaGuardem v \si{Bq/m^3}.}
+	\label{tab:dynMer_sondy}
+	\begin{tabular}{lrrrrrrrr}
+		\toprule
+		ID sondy &  count &  mean &  std &  min &  25\% &  50\% &  75\% &  max \\
+		\midrule
+		8          &     71 &   369 &   47 &  252 &  337 &  368 &  405 &  488 \\
+		10         &     71 &   228 &   41 &  121 &  198 &  232 &  256 &  308 \\
+		88         &     71 &   198 &   33 &  140 &  170 &  198 &  220 &  273 \\
+		112        &     71 &   354 &   58 &  251 &  318 &  349 &  399 &  484 \\
+		\midrule
+		AlphaGuard &     71 &   328 &   50 &  247 &  285 &  318 &  373 &  434 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Pro opravu odezev byla zavedena pro každou sondu tzv. bulharská konstanta, která je definována následovně:
+\begin{equation}
+	B=\frac{OAR_A}{OAR_T}\,,
+\end{equation}
+kde $OAR_A$ je hodnota z AlphaGuardu a $OAR_T$ je hodnota z příslušné TERA sondy. Pro získání věrohodné hodnoty koncentrace radonu z naměřené hodnoty danou sondou pak stačí tuto naměřenou hodnotu přenásobit $B$ náležející této sondě.
+
+Za $OAR_A$, resp. $OAR_T$ byly brány průměry naměřených OAR AlphaGuardem a danou Tera sondou. Relativní nejistoty bulharských konstant byly odhadnuty na 10~\%. Určené bulharské konstanty všech sond jsou k nahlédnutí na obr.~\ref{fig:dynMer_sondyB} a v tab.~\ref{tab:dynMer_sondyB}. %Nejistoty bulharských konstant určeny nebyly vzhledem k tomu, že se jedná o "veličinu", která se může při různých vnějších podmínkách měnit. Hlavním ovlivňujícím faktorem je velikost aerosolů v měřeném prostředí. Tato nespolehlivost TERA sond v poskytování věrohodných dat je dalším důvodem, proč byly použity měřáky radonu CANARY. Takto můžeme srovnávat data z více zdrojů.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{images/sondy_B}
+	\caption{Bulharské konstanty proměřených TERA sond. Černou čárou je vyznačen ideální případ, kdy se odezva sondy rovná skutečné OAR (resp. OAR naměřené AlphaGuardem).}
+	\label{fig:dynMer_sondyB}
+\end{figure}
+\begin{table}[ht]
+	\centering
+	\caption{Bulharské konstanty TERA sond odvozené od referenčního AlphaGuardu. Skutečná hodnota $OAR$ se vypočte ze vztahu $OAR=B\cdot OAR_T$, kde $OAR_T$ je naměřená obj. aktivita radonu danou TERA sondou. Nejistota bulharských konstant byla odhadnuta na 10~\%.}
+	\label{tab:dynMer_sondyB}
+	\begin{tabular}{lr}
+		\toprule
+		ID sondy &     $B$ \\
+		\midrule
+		8   & 0,889+/-0,089\\
+		10  & 1,440+/-0,140\\
+		88  & 1,655+/-0,166\\
+		112 & 0,925+/-0,093\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+\section{Objekt Skála 75, okr. Havlíčkův Brod}
+\subsection{Použitá měřidla}
+\begin{itemize}
+    \setlength\itemsep{0em}
+	\item 14 vyvíječů (2x TMH, 2x TCE, 3x MDC, 3x MCH, 2x PCE, 2x PCH)
+	\item 12 TD detektorů
+	\item 4 CANARY monitory
+	\item 4 TERA sondy
+	\item 3 TESTO měřiče teploty a vlhkosti
+	\item 2 zdroje radonu
+\end{itemize}
+\begin{table}[H]
+    \centering
+    \caption{Objemy podlaží objektu, teploty naměřené v každém podlaží dataloggery testo 174H, odhadnuté atmosférické tlaky v každém podlaží a přiřazení číslování kompartmentů jednotlivým podlažím.}
+    \label{tab:skala75_objemy}
+    \input{skala75/vysledky_inputData}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{Přehled použitých indikačních plynů. $M$ je molekulová hmotnost příslušného plynu, $U$ je jeho odběrová rychlost. Dále je uvedeno, v jakém podlaží byly vyvíječe plynů umístěny s jejich celkovými odpary za celou dobu měření. Význam označení podlaží je vysvětlen v tab. \ref{tab:rovMer_podlazi}.}
+    \label{tab:skala75_indikacniPlyny}
+    \input{skala75/indikacni_plyny}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{Odezvy TD detektorů $R$ na všechny použité indikační plyny ve všech zónách.}
+    \label{tab:skala75_odezvyTD}
+    \input{skala75/odezvy_TD}
+\end{table}
+
+\subsection{Naměřené OAR}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{skala75/OAR_dohromady.png}
+    \caption{Hodnoty OAR naměřené TERA sondami po aplikování bulharských konstant (tab.~\ref{tab:dynMer_sondyB}). Pro další vyhodnocování byly OAR naměřené v přízemí v kuchyni a v ložnici zprůměrovány.}
+    \label{fig:skala75_OARdohromady}
+\end{figure}
+\subsection{Objemové průtoky vzduchu}
+
+\begin{table}[H]
+    \centering
+    \caption{Objemové průtoky vzduchu v \si{m^3/hod} pro všechny kombinace aplikovaných indikačních plynů. $n$ je výměna vzduchu vypočtená ze vztahu~\eqref{eq:prutoky_n}, $[n]=\si{1/hod}$.}
+    \label{tab:skala75Prutoky_celkove}
+\begin{tabular}{l>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}}
+\toprule
+{} & (TMH, MDC, PCE) & (TMH, MDC, PCH) & (TMH, MCH, PCE) & (TMH, MCH, PCH)\\ 
+\midrule
+$k_{12}$ & 4.139$\pm$1.044 & 3.771$\pm$0.994 & 3.445$\pm$0.874 & 3.128$\pm$0.830 \\          
+$k_{13}$ & 0.478$\pm$0.133 & 1.892$\pm$0.533 & 0.495$\pm$0.136 & 1.956$\pm$0.541 \\          
+$k_{21}$ & 0.656$\pm$0.152 & 0.574$\pm$0.137 & 0.525$\pm$0.126 & 0.455$\pm$0.114 \\          
+$k_{23}$ & 0.202$\pm$0.030 & 0.800$\pm$0.119 & 0.167$\pm$0.026 & 0.660$\pm$0.104 \\          
+$k_{31}$ &-0.019$\pm$0.005 & 0.854$\pm$0.233 &-0.015$\pm$0.004 & 0.881$\pm$0.237 \\          
+$k_{32}$ & 0.231$\pm$0.034 & 1.882$\pm$0.282 & 0.192$\pm$0.029 & 1.561$\pm$0.240 \\          
+$k_{1_E}$&12.492$\pm$2.813 &11.640$\pm$2.705 &13.100$\pm$2.886 &12.163$\pm$2.768 \\          
+$k_{2_E}$& 7.169$\pm$0.789 & 6.809$\pm$0.790 & 5.990$\pm$0.690 & 5.674$\pm$0.686 \\          
+$k_{3_E}$& 1.930$\pm$0.212 & 5.749$\pm$0.804 & 1.964$\pm$0.213 & 6.010$\pm$0.804 \\          
+$k_{1_I}$&16.471$\pm$3.007 &15.875$\pm$2.943 &16.530$\pm$3.022 &15.912$\pm$2.952 \\          
+$k_{2_I}$& 3.657$\pm$1.318 & 2.530$\pm$1.313 & 3.045$\pm$1.122 & 2.099$\pm$1.114 \\          
+$k_{3_I}$& 1.462$\pm$0.255 & 5.793$\pm$1.039 & 1.478$\pm$0.256 & 5.836$\pm$1.032 \\          
+\midrule
+$n$      & 0.091$\pm$0.014 & 0.102$\pm$0.015 & 0.089$\pm$0.014 & 0.101$\pm$0.015 \\
+\bottomrule
+\end{tabular}
+\vspace{0.5cm}
+
+\begin{tabular}{l>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}}
+    \toprule
+    {} & (TCE, MDC, PCE) & (TCE, MDC, PCH) & (TCE, MCH, PCE) & (TCE, MCH, PCH) \\
+    \midrule
+$k_{12}$ & 3.330$\pm$0.551 & 2.965$\pm$0.519 & 2.774$\pm$0.468 & 2.462$\pm$0.438 \\
+$k_{13}$ & 0.462$\pm$0.081 & 1.828$\pm$0.322 & 0.476$\pm$0.082 & 1.879$\pm$0.326 \\
+$k_{21}$ & 0.215$\pm$0.034 & 0.188$\pm$0.032 & 0.172$\pm$0.030 & 0.149$\pm$0.028 \\
+$k_{23}$ & 0.203$\pm$0.029 & 0.802$\pm$0.118 & 0.168$\pm$0.026 & 0.662$\pm$0.104 \\
+$k_{31}$ &-0.006$\pm$0.001 & 0.279$\pm$0.060 &-0.005$\pm$0.001 & 0.288$\pm$0.061 \\
+$k_{32}$ & 0.230$\pm$0.034 & 1.922$\pm$0.283 & 0.191$\pm$0.029 & 1.595$\pm$0.241 \\
+$k_{1_E}$& 1.805$\pm$0.627 & 0.865$\pm$0.619 & 2.329$\pm$0.606 & 1.303$\pm$0.596 \\
+$k_{2_E}$& 7.579$\pm$0.796 & 7.166$\pm$0.798 & 6.322$\pm$0.699 & 5.960$\pm$0.695 \\
+$k_{3_E}$& 1.918$\pm$0.212 & 6.281$\pm$0.810 & 1.954$\pm$0.213 & 6.565$\pm$0.810 \\
+$k_{1_I}$& 5.388$\pm$0.840 & 5.191$\pm$0.872 & 5.412$\pm$0.771 & 5.207$\pm$0.812 \\
+$k_{2_I}$& 4.436$\pm$0.970 & 3.269$\pm$1.000 & 3.696$\pm$0.843 & 2.714$\pm$0.863 \\
+$k_{3_I}$& 1.478$\pm$0.231 & 5.852$\pm$0.926 & 1.497$\pm$0.232 & 5.908$\pm$0.914 \\
+\midrule                                                                           
+$n$      & 0.048$\pm$0.006 & 0.061$\pm$0.007 & 0.045$\pm$0.005 & 0.059$\pm$0.007 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Přísuny radonu}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{skala75/prisuny1.png}
+    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
+    \label{fig:skala75_prisuny1}
+\end{figure}
+\begin{table}[H]
+    \centering
+    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých plynů jako v obr. nad touto tabulkou.}
+    \label{tab:skala75_prisuny1}
+    \input{skala75/vysledky_Q_statistiky1}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{skala75/prisuny2.png}
+    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
+    \label{fig:skala75_prisuny2}
+\end{figure}
+\begin{table}[H]
+    \centering
+    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých indikačních plynů jako v obr. nad touto tabulkou.}
+    \label{tab:skala75_prisuny2}
+    \input{skala75/vysledky_Q_statistiky2}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{skala75/prisuny3.png}
+    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
+    \label{fig:skala75_prisuny3}
+\end{figure}
+\begin{table}[H]
+    \centering
+    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých indikačních plynů jako v obr. nad touto tabulkou.}
+    \label{tab:skala75_prisuny3}
+    \input{skala75/vysledky_Q_statistiky3}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{skala75/prisuny4.png}
+    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
+    \label{fig:skala75_prisuny4}
+\end{figure}
+\begin{table}[H]
+    \centering
+    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých indikačních plynů jako v obr. nad touto tabulkou.}
+    \label{tab:skala75_prisuny4}
+    \input{skala75/vysledky_Q_statistiky4}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{skala75/prisuny5.png}
+    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
+    \label{fig:skala75_prisuny5}
+\end{figure}
+\begin{table}[H]
+    \centering
+    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých indikačních plynů jako v obr. nad touto tabulkou.}
+    \label{tab:skala75_prisuny5}
+    \input{skala75/vysledky_Q_statistiky5}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{skala75/prisuny6.png}
+    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
+    \label{fig:skala75_prisuny6}
+\end{figure}
+\begin{table}[H]
+    \centering
+    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých indikačních plynů jako v obr. nad touto tabulkou.}
+    \label{tab:skala75_prisuny6}
+    \input{skala75/vysledky_Q_statistiky6}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{skala75/prisuny7.png}
+    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
+    \label{fig:skala75_prisuny7}
+\end{figure}
+\begin{table}[H]
+    \centering
+    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých indikačních plynů jako v obr. nad touto tabulkou.}
+    \label{tab:skala75_prisuny7}
+    \input{skala75/vysledky_Q_statistiky7}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=\textwidth]{skala75/prisuny8.png}
+    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
+    \label{fig:skala75_prisuny8}
+\end{figure}
+\begin{table}[H]
+    \centering
+    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých indikačních plynů jako v obr. nad touto tabulkou.}
+    \label{tab:skala75_prisuny8}
+    \input{skala75/vysledky_Q_statistiky8}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Průměrné přísuny radonu souhrně pro všechny kombinace indikačních plynů pro dynamické vyhodnocení.}
+    \label{tab:skala75_prisunyDynamicky}
+   \input{skala75/vysledky_Q_dynamicky}
+\end{table}
+\subsubsection{Vyhodnocení v rovnovážném stavu}
+\begin{table}[H]
+    \centering
+    \caption{Průměrné objemové koncentrace radonu naměřené TERA sondami. $\sigma_A$ je nejistota typu A plynoucí ze statistického zpracování naměřených dat, $\sigma_B$ je nejistota typu B plynoucí z nejistoty měřidla a $\sigma$ je kombinovaná nejistota. Při určování přísunů radonu v rovnovážném stavu byla použita pouze nejistota typu B, tj. $\sigma_B$. V posledním sloupci je průměrná citlivost TERA sond vypočtená z naměřených dat (tj. z naměřeného počtu impulzů a naměřeného OAR). Tato citlivost byla použita pro výpočet $\sigma_B$.}
+    \label{tab:skala75_OARprumerne}
+    \begin{tabular}{llrrrrr}
+\toprule
+ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& prům. citlivost $\left[\si{\frac{imp}{hod}/\frac{Bq}{m^3}}\right]$\\ 
+\midrule
+8  &0 & 458 & 309 & 33 & 311&0,405\\
+10 &1 & 789 & 485 & 43 & 487&0,433\\
+112&1 & 633 & 282 & 37 & 284&0,464\\
+88 &2 & 276 & 356 & 31 & 358&0,296\\
+\bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Přísuny radonu určené z průměrných hodnot OAR, tj. jako v rovnovážném měření.}
+    \label{tab:skala75_prisunyRovnovazne}
+   \input{skala75/vysledky_Q_rovnovazne}
+\end{table}
+%\subsection{Přeurčená varianta}
+
+%\begin{table}[H]
+    %\centering
+    %\caption{Průtoky vzduchu mezi jednotlivými zónami. Vnější prostředí je označeno číslem 4.}
+    %\label{tab:skala75Preurcena_prutoky}
+    %\input{skala75/vysledky_prutoky_preurcena}
+%\end{table}
+%\begin{table}[H]
+    %\centering
+    %\caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých zón.}
+    %\label{tab:skala75Preurcena_objemy}
+    %\input{skala75/vysledky_Q_statistiky_preurcena}
+%\end{table}
+
+%\begin{figure}[H]
+    %\centering
+    %\includegraphics[width=\textwidth]{skala75/prisuny_preurcena.png}
+    %\caption{Přísuny radonu. Popisky v legendě značí podlaží.}
+    %\label{fig:skala75Preurcena_prisuny}
+%\end{figure}
+
+\section{Objekt Hálková 980, Humpolec}
+\subsection{Použitá měřidla}
+\begin{itemize}
+    \setlength\itemsep{0em}
+	\item 20 vyvíječů (4x TMH, 4x TCE, 4x MDC, 4x MCH, 4x PCE)
+	\item 8 TD detektorů
+	\item 4 CANARY monitory
+	\item 4 TERA sondy
+	\item 3 TESTO měřiče teploty a vlhkosti
+	\item 1 zdroj radonu
+\end{itemize}
+
+\section{Objekt Anglická 574, Dobřichovice}
+\subsection{Použitá měřidla}
+\begin{itemize}
+    \setlength\itemsep{0em}
+	\item 12 vyvíječů (4x MDC, 4x MCH, 4x PCH)
+	\item 12 TD detektorů
+	\item 2 blank TD detektory 
+	\item 4 CANARY monitory
+	\item 4 TERA sondy
+	\item 3 TESTO měřiče teploty a vlhkosti
+	\item 2 zdroje radonu
+\end{itemize}

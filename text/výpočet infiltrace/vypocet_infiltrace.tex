@@ -1,0 +1,17 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[czech]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\author{Michal Šesták}
+\title{Výpočet infiltrace}
+\begin{document}
+\maketitle
+Mějme $N$ zón. Pak lze infiltraci pro $i$-tou zónu určit ze vztahu
+\begin{align}
+	R_{i_I}=R_{i_E}+\sum_{j=1}^{N} \left(R_{ij}-R_{ji}\right)\,,
+\end{align}
+kde $R_{i_E}$ je exfiltrace z $i$-té zóny, $R_{ij}$ je tok ze sledované $i$-té zóny do $j$-té zóny a $R_{ji}$ je tok opačným směrem.
+\end{document}

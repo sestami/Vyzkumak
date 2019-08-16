@@ -1,0 +1,177 @@
+\chapter{Měření v rovnovážném stavu}\label{navesti:rovnovaznaMereni}
+Pro ověření modelu výpočtu přísunu radonu z měření v rovnovážném stavu (viz kapitola~\ref{navesti:model}) mi byla poskytnuta data naměřená pro SÚRO (Státní ústav radiační ochrany, v. v. i.) v Bulharsku. Měření probíhala v osmi objektech v lednu a únoru 2019 a pomocí techniky indikačních plynů byly změřeny objemové objemové průtoky vzduchu mezi stanovenými kompartmenty všech objektů. OAR ve všech objektech byly změřeny integrálními detektory radonu (konkrétně elektretovými dozimetry, viz kapitola~\ref{navesti:radon}), avšak bohužel pouze u objektů č. 1, 2, 3, 4 a 8 byly OAR změřeny ve všech zónách, což je předpoklad pro použití modelu výpočtu přísunů radonu do jednotlivých zón.
+
+V tab.~\ref{tab:rovMer_objekty} jsou adresy a počty podlaží všech použitelných objektů spolu s obdobím, kdy byly v daném objektu měřeny průtoky vzduchu mezi zónami a OAR v jednotlivých zónách. Jako zóny byly v každém objektu brány podlaží, tj. počet pater daného objektu určuje počet kompartmentů, na něž je rozdělen.
+\begin{table}[ht]
+	\centering
+	\caption{Adresy a počty podlaží každého použitelného objektu. $T$ je doba měření absorpce indikačních plynů v TD detektorech a zároveň je to i doba měření OAR v jednotlivých zónách. Čtvrtý sloupec udává počátek těchto měření.}
+	\label{tab:rovMer_objekty}
+\begin{tabular}{llllll}
+	\toprule 
+&Adresa&Počet podlaží&Počátek měření&$T$ [dny]&Použitelné\\
+	\midrule 
+1	& Sofia, Kalach 20 & 3 & 31. 1. 2019 10:30 & 29,0 & ANO\\ 
+2	& 42\degree41'00.7''N 26\degree20'00.5''E &1  &29. 1. 2019 10:00 &28,1 &ANO \\ 
+3	& 42\degree42'01.0"N 25\degree52'21.6"E & 2 &28. 1. 2019 16:00  &28,8 & ANO\\ 
+4	& Sofia, Yaroslav Hashek 36 & 2 & 31. 1. 2019 13:00 & 26,0& ANO\\ 
+5	&  &  &  & & NE\\ 
+6	&  &  &  & & NE\\ 
+7	&  &  &  & & NE\\ 
+8	& 42\degree08'14.6"N 24\degree44'26.5"E &3  & 29. 1. 2019 15:30 & 28,9& ANO\\ 
+	\bottomrule
+\end{tabular} 
+\end{table}
+
+V následujících podkapitolách jsou uvedeny naměřené veličiny (průtoky vzduchu, OAR, objemy) a vypočítané přísuny radonu do všech zón. U uváděných nejistot je uvažován faktor pokrytí $k=1$, tj. nejistoty jsou rovny směrodatným odchylkám. Podlaží jsou udávána jako čísla, viz tab.~\ref{tab:rovMer_podlazi}. Koncentrace radonu vnějšího prostředí $OAR_{out}$ nebyla ani v jednom případě změřena, a proto byly přísuny radonu vypočteny pro několik jejích typických hodnot: $0, 5, 10, 20, 30\ \si{Bq/m^3}$. Nejistota všech objemů byla odhadnuta na 20~\% nominální hodnoty.
+\begin{table}[ht]
+	\centering
+	\caption{Význam značení podlaží v následujících podkapitolách.}
+	\label{tab:rovMer_podlazi}
+	\begin{tabular}{ll}
+		\toprule
+		0&sklep\\
+		1&přízemí\\
+		2&první patro\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\section{Objekt č. 1}
+První tabulka v tomto oddíle obsahuje naměřené OAR a objemy všech zón (tj. podlaží). Pokud bylo naměřeno více hodnot OAR v nějaké zóně, pak byl z nich byl udělán průměr. Druhá tabulka průtoky vzduchu mezi zónami, exfiltrace zón a dopočítané infiltrace zón. Ve třetí tabulce jsou vypočítané přísuny radonu. 
+
+Podkapitoly ostatních objektů mají stejnou strukturu.
+\begin{table}[H]
+	\centering
+	\caption{Průměrné koncentrace radonu v daném podlaží a objemy všech místností v daném podlaží.}
+	\input{rovMer_data/1vysledky_inputData}
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Průtoky vzduchu mezi podlažími v \si{m^3/hod}. Hodnota v $i$-tém řádku a $j$-tém sloupci představuje průtok vzduchu z $i$-tého podlaží do $j$-tého podlaží. Poslední sloupec představuje exfiltrace z jednotlivých podlaží do vnějšího prostředí a poslední řádek představuje infiltrace z vnějšího prostředí do jednotlivých zón.}
+	\input{rovMer_data/1vysledky_prutoky}
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Výsledné přísuny radonu pro několik případů koncentrací radonu ve vnějším prostředí. $Q_i$ značí přísun radonu do $i$-tého podlaží.}
+    \label{tab:rovMer_Q_1}
+	\input{rovMer_data/1vysledky_Q}
+\end{table}
+
+\section{Objekt č. 2}
+\begin{table}[H]
+	\centering
+	\caption{Průměrné koncentrace radonu v daném podlaží a objemy všech místností v daném podlaží.}
+	\input{rovMer_data/2vysledky_inputData}
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Průtoky vzduchu mezi podlažími v \si{m^3/hod}. Hodnota v $i$-tém řádku a $j$-tém sloupci představuje průtok vzduchu z $i$-tého podlaží do $j$-tého podlaží. Poslední sloupec představuje exfiltrace z jednotlivých podlaží do vnějšího prostředí a poslední řádek představuje infiltrace z vnějšího prostředí do jednotlivých zón.}
+	\input{rovMer_data/2vysledky_prutoky}
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Výsledné přísuny radonu pro několik případů koncentrací radonu ve vnějším prostředí. $Q_i$ značí přísun radonu do $i$-tého podlaží.}
+    \label{tab:rovMer_Q_2}
+	\input{rovMer_data/2vysledky_Q}
+\end{table}
+
+\section{Objekt č. 3}
+\begin{table}[H]
+	\centering
+	\caption{Průměrné koncentrace radonu v daném podlaží a objemy všech místností v daném podlaží.}
+	\input{rovMer_data/3vysledky_inputData}
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Průtoky vzduchu mezi podlažími v \si{m^3/hod}. Hodnota v $i$-tém řádku a $j$-tém sloupci představuje průtok vzduchu z $i$-tého podlaží do $j$-tého podlaží. Poslední sloupec představuje exfiltrace z jednotlivých podlaží do vnějšího prostředí a poslední řádek představuje infiltrace z vnějšího prostředí do jednotlivých zón.}
+	\input{rovMer_data/3vysledky_prutoky}
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Výsledné přísuny radonu pro několik případů koncentrací radonu ve vnějším prostředí. $Q_i$ značí přísun radonu do $i$-tého podlaží.}
+    \label{tab:rovMer_Q_3}
+	\input{rovMer_data/3vysledky_Q}
+\end{table}
+
+\section{Objekt č. 4}
+\begin{table}[H]
+	\centering
+	\caption{Průměrné koncentrace radonu v daném podlaží a objemy všech místností v daném podlaží.}
+	\input{rovMer_data/4vysledky_inputData}
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Průtoky vzduchu mezi podlažími v \si{m^3/hod}. Hodnota v $i$-tém řádku a $j$-tém sloupci představuje průtok vzduchu z $i$-tého podlaží do $j$-tého podlaží. Poslední sloupec představuje exfiltrace z jednotlivých podlaží do vnějšího prostředí a poslední řádek představuje infiltrace z vnějšího prostředí do jednotlivých zón.}
+	\input{rovMer_data/4vysledky_prutoky}
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Výsledné přísuny radonu pro několik případů koncentrací radonu ve vnějším prostředí. $Q_i$ značí přísun radonu do $i$-tého podlaží.}
+    \label{tab:rovMer_Q_4}
+	\input{rovMer_data/4vysledky_Q}
+\end{table}
+
+\section{Objekt č. 8}
+\begin{table}[H]
+	\centering
+	\caption{Průměrné koncentrace radonu v daném podlaží a objemy všech místností v daném podlaží.}
+    \label{tab:rovMer_namereno_8}
+	\input{rovMer_data/8vysledky_inputData}
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Průtoky vzduchu mezi podlažími v \si{m^3/hod}. Hodnota v $i$-tém řádku a $j$-tém sloupci představuje průtok vzduchu z $i$-tého podlaží do $j$-tého podlaží. Poslední sloupec představuje exfiltrace z jednotlivých podlaží do vnějšího prostředí a poslední řádek představuje infiltrace z vnějšího prostředí do jednotlivých zón.}
+    \label{tab:rovMer_prutoky_8}
+	\input{rovMer_data/8vysledky_prutoky}
+\end{table}
+\begin{table}[H]
+	\centering
+	\caption{Výsledné přísuny radonu pro několik případů koncentrací radonu ve vnějším prostředí. $Q_i$ značí přísun radonu do $i$-tého podlaží.}
+    \label{tab:rovMer_Q_8}
+	\input{rovMer_data/8vysledky_Q}
+\end{table}
+
+\section{Diskuze}
+V tabulkách~\ref{tab:rovMer_Q_1}, \ref{tab:rovMer_Q_2}, \ref{tab:rovMer_Q_3}, \ref{tab:rovMer_Q_4} a \ref{tab:rovMer_Q_8} jsou vypočítané přísuny radonů pro objekty č. 1, 2, 3, 4 a 8. Je vidět, že všechny kromě osmého objektu se řídí pravidlem uvedeným v kapitole~\ref{navesti:model_interpretace_Q}. 
+
+U osmého objektu je vývoj velikostí přísunů radonu opačný, než bychom předpokládali. Stačí se ovšem podívat na tabulku naměřených OAR v jednotlivých zónách~\ref{tab:rovMer_namereno_8} a vidíme, proč tomu tak je: OAR je nejvyšší v prvním patře, pak v přízemí a ve sklepě je nejmenší. Toto je velmi nezvyklé a pokud se nejedná o chybu měření (vzhledem k údajům z tabulky~\ref{tab:rovMer_8diskuze} nepravděpodobné, viz dále), pak je to důsledek nějaké anomálie. Pro větší názornost jsou v tab.~\ref{tab:rovMer_8diskuze} zobrazeny hodnoty OAR naměřené v místnostech osmého objektu; OAR uvedené v tab.~\ref{tab:rovMer_namereno_8} jsou pak průměrem přes danou zónu/podlaží. Vidíme, že vyšší koncentrace než ve sklepu byly naměřeny ve všech místnostech v přízemí i v prvním patře a že v ložnice v prvním
+patře byla naměřena dvojnásobná koncentrace radonu než v ostatních místnostech. Z tab.~\ref{tab:rovMer_Q_8} je dále zřejmé, že se zvyšujícím se odhadem koncentrace radonu ve vnějším prostředí se přísuny do všech zón snižují, což značí, že zdrojem radonu nebude vysoká OAR ve vnějším prostředí. S přihlédnutím ke schématu domu (obr.~\ref{fig:rovMer_8schema}) si lze domýšlet, že ložnice v prvním patře je v kontaktu s podložím a narozdíl od sklepa nemá tak dobrou radonovou izolaci. Odtud by se radon mohl šířit do dalších částí domu. Fotky objektu, které by nám tuto hypotézu potvrdily, bohužel nejsou k dispozici.
+
+Za zmínku také stojí záporně vycházející přísun radonu do sklepa. Lze to přisoudit nepřesnostem vzniklých při měření. Avšak uváděná nejistota je rovna směrodatné odchylce $\sigma$ a tudíž $Q_0$ je v rámci rozšířené nejistoty nezáporný.
+%Je možné, že stavební materiál v prvním patře obsahuje velký obsah uranu, nebo že v prvním patře je nějaký jiný zdroj radonu. Vzhledem k vysoké koncentraci radonu lze předpokládat hlavní umístění tohoto zdroje v ložnici. 
+%Je možné uvažovat, že vyšší OAR v přízemí a v prvním patře je dána velkou koncentrací radonu ve vnějším prostředí, jelikož tyto podlaží mají o řád větší inhalaci než sklep (viz tab.~\ref{tab:rovMer_prutoky_8}). První patro má největší inhalaci ze všech podlažích, a proto má největší přísun radonu. To, že ložnice v prvním patře má největší naměřenou koncentraci radonu, by šlo přisoudit tomu, že se v ložnici nejvíc větrá. Této úvaze dále přihrávají n, že průtoky ze sklepa do ostatních zón jsou malé, což znamená, že podlaží není hlavním zdrojem radonu v tomto objektu. 
+\shorthandoff{-}
+\begin{table}[ht]
+	\centering
+	\caption{Naměřené koncentrace radonu v některých místnostech objektu č. 8. \cite{rovMer_8Rn}}
+	\label{tab:rovMer_8diskuze}
+	\begin{tabular}{llp{2cm}p{3cm}}
+		\toprule
+		\multirow{2}{*}{Location in dwelling} & \multirow{2}{*}{Period from\ldots to}  & \multicolumn{2}{l}{Results of measurements [\si{Bq/m^3}]} \\
+		\cline{3-4}
+		&   & Radon concentration   & Combined standard uncertainty (1$\sigma$)   \\
+		\midrule
+		Dining room, floor 2    & 29.01.2019 to 27.02.2019 & 66 & 3  \\
+		Living room,   floor 2 & 29.01.2019   to 27.02.2019 & 51  & 3 \\
+		Bedroom 2, floor 2& 29.01.2019   to 27.02.2019 & 120  & 6   \\
+		Living room, floor 1 &29.01.2019   to 27.02.2019 & 61 & 3  \\
+		Basement   & 29.01.2019   to 27.02.2019 & 33  & 2 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+\shorthandon{-}
+\begin{figure}[ht]
+    \centering
+    \begin{subfigure}{.49\textwidth}
+        \includegraphics[width=.95\textwidth]{rovMer_8schema.png}
+        %\caption{}
+    \end{subfigure}
+    \begin{subfigure}{.49\textwidth}
+        \includegraphics[width=.95\textwidth]{rovMer_8schema_2.png}
+        %\caption{}
+    \end{subfigure}
+    \caption{Schéma objektu č. 8. Křížky značí vyvíječe, trojúhelníky TD detektory a hvězdičky elektretové dozimetry. \cite{rovMer_8Rn}}
+    \label{fig:rovMer_8schema}
+\end{figure}
+\section{Závěr}
+Byly vypočteny přísuny radonu do jednotlivých podlaží pěti objektů (rodinné domy), v nichž proběhlo simultánní měření průtoků vzduchu pomocí techniky indikačních plynů a koncentrací radonu. Měření bylo provedeno pro SÚRO v Bulharsku v různých městech. Kromě osmého objektu vyšly přísuny radonu tak, jak se předpokládalo, tj. nejvyšší byly přísuny radonu do kompartmentů s kontaktem s podložím a s rostoucí vzdáleností zón od podloží se přísuny radonu zmenšovaly. V osmém objektu vyšly přísuny naopak největší do nejvyššího prvního patra a nejmenší do sklepa. Byla uvedena hypotéza, že je to dáno geometrií domu, totiž že ložnice z prvního patra je v kontaktu s podložím. Bohužel nejsou k dispozici fotografie pro ověření této úvahy.

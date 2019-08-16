@@ -1,0 +1,174 @@
+\chapter{Určení objemové rychlosti přísunu zdrojů radonu}\label{navesti:model}
+V této kapitole je popsán model pro výpočet objemové rychlosti přísunu zdrojů radonu (zkráceně přísunů radonu) do jednotlivých kompartmentů zkoumaného objektu. Slovo kompartment je zde často nahrazováno kratším synonymem zóna.
+
+Uvažujme obecné rozdělení objektu na $N$ zón. Pro určení přísunů radonu $Q_1, Q_2, \ldots, Q_N$ potřebujeme znát OAR (objemová aktivita radonu) ve všech zónách, objemové průtoky vzduchu mezi jednotlivými zónami a objemy zón. Tyto veličiny jsou svázány následující soustavou diferenciálních rovnic
+\begin{equation}
+    \dot{a_i}=\frac{1}{V_i}\left( \sum^{N+1}_{j=1}a_j k_{ji}-\sum^{N+1}_{j=1}a_i k_{ij}\right)-\lambda a_i +Q_i\,,\quad i\in \{1,2,\ldots,N\}\,.\label{eq:odvozovani}
+\end{equation}
+značení je vysvětleno v tab.~\ref{tab:veliciny}.
+%\begin{table}[ht]
+    %\centering
+    %\caption{Značení veličin vystupujících v soustavě rovnic~\ref{eq:odvozovani}.}
+    %\label{tab:model_veliciny}
+    %\begin{tabular}{lll}
+        %\toprule
+        %$a_i$ & OAR v $i$-té zóně& [\si{Bq/m^3}] \\
+        %$\dot{a_i}$ & časová derivace $a_i$ & $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$ \\
+        %$V_i$ & objem $i$-té zóny& [\si{m^3}] \\
+        %$k_{ij}$ & objemový průtok vzduchu z $i$-té zóny do $j$-té zóny& [\si{m^3/hod}]\\
+        %$k_{i, N+1}$ & exfiltrace $i$-té zóny, ozn. $k_{i_E}$&[\si{m^3/hod}]\\
+        %$k_{N+1, i}$ & infiltrace $i$-té zóny, ozn. $k_{i_I}$&[\si{m^3/hod}]\\
+        %$\lambda$ & přeměnová konstanta radonu& [\si{1/hod}]\\
+        %$Q_i$ & přísun radonu do $i$-té zóny& $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$ \\
+        %\bottomrule
+    %\end{tabular}
+%\end{table}
+Indexem $N+1$ je značeno vnější prostředí, které je tedy uvažováno jako $N$ plus prvý kompartment. Přísun radonu do vnějšího prostředí nás nezajímá, proto máme pouze soustavu $N$ rovnic.
+
+Průtok vzduchu $k_{i,N+1}$ představuje objemový průtok vzduchu z $i$-té zóny do vnějšího prostředí a je nazýván exfiltrace $i$-té zóny. Průtok vzduchu $k_{N+1, i}$ představuje objemový průtok z vnějšího prostředí do $i$-té zóny a nazýváme jej infiltrace $i$-té zóny. Pro jednoduchost budeme exfiltrace značit jako $k_{i_E}$ a infiltrace jako $k_{i_I}$. Veličinou $a_{N+1}$ je značeno OAR vnějšího prostředí. Lze si povšimnout, že pokud platí $a_{N+1}=0$, pak nemá vnější prostředí vliv na dynamiku přenosu radonu uvnitř objektu.
+
+Objemové koncentrace radonu lze změřit jakýmkoliv detektorem radonu. Pokud měříme kontinuálními monitory radonu, pak je možné určit časový vývoj přísunů radonu v době měření OAR. Tato měření nazýváme \emph{\textbf{dynamické měření přísunu radonu}}. Derivace v rovnicích~\eqref{eq:odvozovani} lze získat například tak, že příslušné naměřené časové vývoje OAR interpolujeme nějakým vhodným způsobem a vzniknuvší funkce zderivujeme podle času.
+
+Měříme-li integrálními detektory radonu, pak máme pro danou zónu k dispozici pouze průměrnou hodnotu OAR $\overline{a_i}$. Lze ukázat (viz \cite{japonci2}), že v tomto případě můžeme levou stranu rovnic \eqref{eq:odvozovani} položit nule, tj. soustava rovnic přechází na tvar 
+\begin{equation}
+    0=\frac{1}{V_i}\left( \sum^{N+1}_{j=1}\overline{a_j} k_{ji}-\sum^{N+1}_{j=1}\overline{a_i} k_{ij}\right)-\lambda \overline{a_i} +\overline{Q_i}\,,\quad i\in \{1,2,\ldots,N\}\,.\label{eq:odvozovani_rovnovaha}
+\end{equation}
+Řešením této soustavy získáme pouze průměrné přísuny radonu $\overline{Q_1}, \overline{Q_2}, \ldots, \overline{Q_N}$. V tomto případě provádíme \emph{\textbf{měření přísunu radonu v rovnovážném stavu}}.
+
+Průtoky vzduchu a exfiltrace se měří pomocí metody popsané v kapitole~\ref{navesti:prutoky}. Pomocí této metody lze určit pouze průměrné hodnoty těchto veličin pro daný časový úsek. Infiltrace se musí dopočítat z průtokových bilančních rovnic:
+\begin{equation}
+k_{i_I}=k_{i_E}+\sum_{j=1}^{N} \left(k_{ij}-k_{ji}\right)\,.
+    \label{eq:infiltrace}
+\end{equation}
+
+Je potřeba, aby měření pro stanovení OAR v zónách a průtoků vzduchu mezi nimi bylo simultánní, tj. aby se časové rozsahy obou měření protínaly a v případě integrálních detektorů radonu by se měly shodovat.
+
+Soustavu rovnic~\eqref{eq:odvozovani} lze přepsat do maticového tvaru
+\begin{equation}
+    \mathbb{K}\cdot\vv{a}+\vv{Q}=\vv{\dot{a}}\,,
+    \label{eq:maticovy_zapis_dynamika}
+\end{equation}
+kde $\mathbb{K}$ je matice typu $N\times(N+1)$,
+\begin{align}
+    \mathbb{K}=\begin{pmatrix}
+        -\frac{1}{V_1}\sum_{j=1}^{N+1}k_{1j}-\lambda& \frac{k_{21}}{V_1} & \frac{k_{31}}{V_1}& \dots& \dots& \frac{k_{N+1,1}}{V_1}\\
+        \frac{k_{12}}{V_2}&-\frac{1}{V_2}\sum_{j=1}^{N+1}k_{2j}-\lambda& \frac{k_{32}}{V_2}&\dots&\dots&\frac{k_{N+1,2}}{V_2}\\
+        \vdots&\vdots&\vdots&\ddots&&\vdots\\
+        \frac{k_{1N}}{V_N}&\frac{k_{2N}}{V_N}&\frac{k_{3N}}{V_N}&\dots&-\frac{1}{V_N}\sum_{j=1}^{N+1}k_{N+1,j}-\lambda&\frac{k_{N+1,N}}{V_N}
+    \end{pmatrix}\,,
+\end{align}
+\begin{align}
+    \vv{a}=\begin{pmatrix}
+        a_1\\
+        a_2\\
+        \vdots\\
+        a_N\\
+        a_{N+1}
+    \end{pmatrix}\,,\quad 
+    \vv{Q}=\begin{pmatrix}
+        Q_1\\
+        Q_2\\
+        \vdots\\
+        Q_N
+    \end{pmatrix}\,,\quad
+    \vv{\dot{a}}=\begin{pmatrix}
+        \dot{a_1}\\
+        \dot{a_2}\\
+        \vdots\\
+        \dot{a_N}
+    \end{pmatrix}\,. 
+\end{align}
+V případě rovnovážného měření je možné soustavu rovnic~\eqref{eq:odvozovani_rovnovaha} přepsat do tvaru
+\begin{equation}
+    \mathbb{K}\cdot\vv{a}+\vv{Q}=\vv{0}\,.
+    \label{eq:maticovy_zapis_rovnovaha}
+\end{equation}
+Vyjádřením $\vv{Q}$ z \eqref{eq:maticovy_zapis_dynamika}, resp. \eqref{eq:maticovy_zapis_rovnovaha} můžeme určit přísuny radonu do všech zón zkoumaného objektu. Důvodem převodu do maticového zápisu je snadnější implementace výpočtu přísunů radonu v programovacím jazyce Python, pomocí něhož jsem vyhodnocoval provedená měření. 
+
+\section{Určení nejistot přísunů radonu}
+Přísun radonu $Q_i$ je veličina závislá na OAR všech zón, všech průtoků vzduchu z a do $i$-té zóny, na objemu $i$-té zóny a případně na časové změně OAR $i$-té zóny, tj. 
+\begin{align}
+    Q_i&=f(a_1, \dots, a_{N+1};\ k_{i1}, \dots , k_{iN}, k_{i_E};\ k_{1i}, \dots , k_{Ni}, k_{i_I};\ V_i;\ \dot{a_i})\,,\\
+    &=f(\vv{x})\,,
+    %\label{eq:}
+\end{align}
+naměřené veličiny byly pro zjednodušení značení shrnuty do vektoru $\vv{x}$.
+
+Pokud jsou rozptyly naměřených veličin malé, pak můžeme použít pro výpočet nejistot přísunů radonů kovarianční matici $\Sigma^{Q}$, kterou lze určit ze vztahu
+\begin{equation}
+    \Sigma_{ij}^{Q}=\sum_{k}^n\sum_l^n\frac{\partial Q_i}{\partial x_k}\frac{\partial Q_j}{\partial x_l}\Sigma_{kl}^x\,,
+    \label{eq:kovariancniMatice_obecne}
+\end{equation}
+Diagonální prvek $\Sigma_{ii}^Q$ představuje rozptyl $Q_i$ (ozn. $\sigma^2(Q_i)$) a nediagonální prvek $\Sigma_{ij}^Q$, resp. $\Sigma_{ji}^Q$ vyjadřuje míru závislosti mezi $Q_i$ a $Q_j$. $x_k$ je $k$-tá složka vektoru $\vv{x}$ a $\Sigma^x$ je kovarianční matice naměřených veličin. Parciální derivace přísunů radonu podle naměřených veličin se určí pomocí \eqref{eq:odvozovani}.
+
+Jestliže jsou naměřené veličiny nezávislé a nebo nevíme, jak jejich závislost určit, pak jsou nediagonální prvky $\Sigma^x$ nulové a předchozí vztah se zjednodušuje na 
+\begin{equation}
+    \Sigma_{ij}^{Q}=\sum_{k}^n\frac{\partial Q_i}{\partial x_k}\frac{\partial Q_j}{\partial x_k}\Sigma_{k}^x\,.
+    \label{eq:kovariancniMatice_jen_variance}
+\end{equation}
+
+Vzhledem k tomu, že nevíme, jak moc velké závislosti jsou mezi jednotlivými naměřenými veličinami a jejich kvantifikace by vyžadovala mnoho náročných měření, ze kterých by stejně nešla míra těchto závislostí určit dostatečně přesně, tak byl pro výpočet $\Sigma^Q$ používán vztah~\eqref{eq:kovariancniMatice_jen_variance}. 
+
+Výpočet nejistot přísunů radonu se značně zesložiťuje se zvyšujícím se počtem kompartmentů $N$, a proto jsem napsal skript v Pythonu, který pomocí modulu Sympy symbolicky vypočítá $\Sigma^Q$ pro požadovaný počet zón. Počet zón je přitom limitován pouze výpočetním časem, např. pro $N=3$ výpočet zabral pouhých \SI{0.2}{s}, pro $N=10$ už \SI{3.9}{s}. Ovšem více než deset zón nepřichází v praxi v úvahu vzhledem k počtu použitelných indikačních plynů a náročnosti provedení měření. Skript je k nahlédnutí v příloze~\ref{navesti:priloha_nejistoty}.
+
+Nejistoty naměřených veličin jsou určeny nejistotou daného měřidla či použité metody. V případě $\dot{a_i}$ lze nejistotu získat aplikováním vzorce~\eqref{eq:kovariancniMatice_jen_variance} na časovou derivaci funkce, jenž představuje proklad naměřených hodnot OAR (chceme znát pouze nejistotu jedné veličiny, proto je výsledkem číslo představující rozptyl $\dot{a_i}$).
+
+Dále budou ukázány vztahy pro určení $\Sigma^Q$ pro jednu, dvě a obecný počet zón.
+\subsection{Jeden kompartment}
+Hledaná kovarianční matice má pouze jeden prvek a to
+\begin{align}
+    \Sigma_{11}^Q=&\sigma^2(\dot{a_1}) + \sigma^2(a_1)(\lambda + k_{12}/V_1)^2 + \frac{1}{V_1^2}\left(a_1^2\sigma^2(k_{12}) + a_2^2\sigma^2(k_{21}) + k_{21}^2\sigma^2(a_2)\right) +\nonumber\\
+    &+\frac{1}{V_1^4}\sigma^2(V_1)(a_1 k_{12} - a_2k_{21})^2\,,
+    \label{eq:nejistota_jednaZona}
+\end{align}
+jedná se o rozptyl $Q_1$. $\sigma^2(x)$ značí rozptyl veličiny $x$.
+\subsection{Dva kompartmenty}
+Kovarianční matice přísunů radonu má následující tvar
+\begin{equation}
+    \Sigma^Q=\begin{pmatrix}
+        \Sigma^Q_{11}&\Sigma^Q_{12}\\
+        \Sigma^Q_{12}&\Sigma^Q_{22}
+    \end{pmatrix}\,.
+\end{equation}
+Její diagonální prvky lze vypočítat z
+\begin{align}
+    \Sigma_{ii}^Q=&\sigma^2(\dot{a_i}) + \sigma^2(a_i)\left(\lambda + \frac{1}{V_i}\sum_{j=1,j\neq i}^{3}k_{ij}\right)^2 + \frac{1}{V_i^2}\sum_{j=1,j\neq i}^{3}\big(\sigma^2(a_j)k_{ji}^2 + \nonumber\\
+    &+ \sigma^2(k_{ij})a_i^2 + \sigma^2(k_{ji})a_j^2\big) + \frac{\sigma^2(V_i)}{V_i^4}\sum_{j=1}^{3}\left(a_i k_{ij} -a_j k_{ji}\right)^2\,.
+    \label{eq:nejistota_dveZony}
+\end{align}
+Jediný nediagonální prvek je určen vztahem
+\begin{align}
+    \Sigma_{12}^Q=&-\sigma^2(a_1)\frac{k_{12}}{V_2}(\lambda + (k_{12} + k_{13})/V_1) - \sigma^2(a_2)\frac{k_{21}}{V_1}(\lambda + (k_{21} + k_{23})/V_2)+\nonumber\\
+    &+ \sigma^2(a_3)\frac{k_{31}k_{32}}{V_1V_2} - \sigma^2(k_{12})\frac{a_1^2}{V_1V_2} - \sigma^2(k_{21})\frac{a_2^2}{V_1V_2}\,.
+\end{align}
+\subsection{$N$ kompartmentů}
+Kovarianční matice přísunů radonu je tvaru $N\times N$. Její diagonální prvky:
+\begin{align}
+    \Sigma_{ii}^Q=&\sigma^2(\dot{a_i}) + \sigma^2(a_i)\left(\lambda + \frac{1}{V_i}\sum_{j=1,j\neq i}^{N+1}k_{ij}\right)^2 + \frac{1}{V_i^2}\sum_{j=1,j\neq i}^{N+1}\big(\sigma^2(a_j)k_{ji}^2 + \nonumber\\
+    &+ \sigma^2(k_{ij})a_i^2 + \sigma^2(k_{ji})a_j^2\big) + \frac{\sigma^2(V_i)}{V_i^4}\sum_{j=1}^{N+1}\left(a_i k_{ij} -a_j k_{ji}\right)^2\,.
+    \label{eq:nejistota_Nzon}
+\end{align}
+Nediagonální prvky:
+\begin{align}
+    \Sigma_{ij}^Q=&-\sigma^2(a_i)\frac{k_{ij}}{V_j}\left(\lambda + \frac{1}{V_i}\sum_{l=1,l\neq i}^{N+1}k_{il}\right) - \sigma^2(a_j)\frac{k_{ji}}{V_i}\left(\lambda + \frac{1}{V_j}\sum_{l=1,l\neq j}^{N+1}k_{jl}\right)+\nonumber\\
+    &+ \frac{1}{V_iV_j}\sum_{l=1,l\neq i,j}^{N+1}\sigma^2(a_l)k_{li}k_{lj} - \sigma^2(k_{ij})\frac{a_i^2}{V_iV_j} - \sigma^2(k_{ji})\frac{a_j^2}{V_iV_j}\,.
+\end{align}
+
+\section{Interpretace přísunu radonu}\label{navesti:model_interpretace_Q}
+Veličina $Q_i$, tj. přísun radonu do $i$-té zóny, nám říká, kolik koncentrace radonu se do $i$-té zóny dostává za jednotku času ze zdrojů radonu. Zkoumaný objekt bychom měli rozdělit na zóny, v nichž předpokládáme homogenní koncentraci radonu. Po provedení měření OAR a ventilace můžeme za pomoci výše uvedeného výpočetního modelu určit přísuny radonu do jednotlivých zón a tím kvantitativně určit zdroje radonu v objektu.
+%Za předpokladu, že průtoky vzduchu mezi zónami nenabývají extrémně odlišných hodnot a že se exfiltrace, resp. infiltrace jednotlivých zón moc neodlišují, by mělo platit, že čím je zóna vzdálenější od zdrojů radonu, tím by měl být přísun radonu do ní menší. Tímto pravidlem můžeme při známosti umístění a velikosti zdrojů radonu v daném objektu ověřit správnost výpočetního modelu. Dále jej lze např. použít k odhalování nových zdrojů radonu a anomálií (radonový most atp.).
+
+Jako příklad uvedeme vícepodlažní dům, což je nejčastější případ zkoumaného objektu. V tomto případě je největším zdrojem radonu podloží. Pokud uvažujeme jednotlivá podlaží za kompartmenty (což se v případě vícepodlažních objektů většinou dělá), pak by měl být přísun radonu největší v zóně s kontaktem s podložím, tj. ve sklepě nebo v přízemí, a ve vyšších patrech by měl být za normálních podmínek zanedbatelný. Vyšší hodnoty přísunu radonu ve vyšších patrech indikují nějakou anomálii.
+
+Dalším příkladem může být byt. Zde jako zóny můžeme brát v podstatě cokoliv za podmínky, že je koncentrace radonu ve všech zónách víceméně homogenní.
+%, ale je vhodné, aby rozdělení bytu na kompartmenty bylo symetrické a aby zóny zabíraly podobný objem. 
+Pokud je byt v kontaktu s podlažím, pak lze podle vypočtených přísunů radonu určit např. chybějící nebo nedostatečnou radonovou izolaci, či ve které zóně bytu se větrá nedostatečně atd. Jestliže se byt nachází ve vyšším patře, pak zvětšený přísun radonu do nějakého jeho kompartmentu indikuje nějakou anomálii (již zmíněný radonový most, smolinec ležící na stole, uranová halda poblíž objektu\ldots).
+
+%Je vhodné ovšem ještě jednou připomenout, že výše zmíněné úvahy platí pouze v případě, že žádný průtok vzduchu se extrémně neodlišuje od ostatních.
+\section{Implementace}
+Výpočetní model přísunů radonu jsem implementoval rozděleně pro případ měření v rovnovážném stavu a pro případ dynamického měření v programovacím jazyce Python. Skript pro vyhodnocení dynamického měření je v příloze~\ref{navesti:priloha_dynamickeMereni}, skript pro vyhodnocení měření v rovnovážném stavu je pouze jeho jednodušší varianta s několika malými obměnami, a proto ho v této práci neuvádím.
+
+V následujících odstavcích je zjednodušeně uvedeno, jakým způsobem skripty pracují a jaké mají vstupy a výstupy.
+\subsection{Rovnovážný stav}
+
+\subsection{Dynamické měření}

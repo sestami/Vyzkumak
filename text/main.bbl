@@ -1,0 +1,473 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.0 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{wiki_radon}{online}{}
+      \name{author}{1}{}{%
+        {{hash=ace5bdefdf16a43f176dd112d8838cc0}{%
+           family={Wikipedie},
+           familyi={W\bibinitperiod},
+           given={Otevřená\bibnamedelima encyklopedie},
+           giveni={O\bibinitperiod\bibinitdelim e\bibinitperiod}}}%
+      }
+      \strng{namehash}{ace5bdefdf16a43f176dd112d8838cc0}
+      \strng{fullhash}{ace5bdefdf16a43f176dd112d8838cc0}
+      \strng{bibnamehash}{ace5bdefdf16a43f176dd112d8838cc0}
+      \strng{authorbibnamehash}{ace5bdefdf16a43f176dd112d8838cc0}
+      \strng{authornamehash}{ace5bdefdf16a43f176dd112d8838cc0}
+      \strng{authorfullhash}{ace5bdefdf16a43f176dd112d8838cc0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{27}
+      \field{month}{6}
+      \field{title}{Radon}
+      \field{urlday}{12}
+      \field{urlmonth}{8}
+      \field{urlyear}{2019}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://cs.wikipedia.org/wiki/Radon
+      \endverb
+      \verb{url}
+      \verb https://cs.wikipedia.org/wiki/Radon
+      \endverb
+    \endentry
+    \entry{SURO}{online}{}
+      \name{author}{1}{}{%
+        {{hash=d532d73ea677321e09f1ce99075c31ed}{%
+           family={Státní\bibnamedelimb ústav\bibnamedelimb radiační\bibnamedelima ochrany},
+           familyi={S\bibinitperiod\bibinitdelim ú\bibinitperiod\bibinitdelim r\bibinitperiod\bibinitdelim o\bibinitperiod},
+           given={v.\bibnamedelimi v.\bibnamedelimi i.},
+           giveni={v\bibinitperiod\bibinitdelim v\bibinitperiod\bibinitdelim i\bibinitperiod}}}%
+      }
+      \strng{namehash}{d532d73ea677321e09f1ce99075c31ed}
+      \strng{fullhash}{d532d73ea677321e09f1ce99075c31ed}
+      \strng{bibnamehash}{d532d73ea677321e09f1ce99075c31ed}
+      \strng{authorbibnamehash}{d532d73ea677321e09f1ce99075c31ed}
+      \strng{authornamehash}{d532d73ea677321e09f1ce99075c31ed}
+      \strng{authorfullhash}{d532d73ea677321e09f1ce99075c31ed}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Přírodní radioaktivita a problematika radonu}
+      \field{urlday}{12}
+      \field{urlmonth}{8}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.suro.cz/cz/prirodnioz
+      \endverb
+      \verb{url}
+      \verb https://www.suro.cz/cz/prirodnioz
+      \endverb
+    \endentry
+    \entry{vyhlaska}{online}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labeltitlesource}{title}
+      \field{day}{23}
+      \field{month}{12}
+      \field{title}{VYHLÁŠKA ze dne 14. prosince 2016 o radiační ochraně a zabezpečení radionuklidového zdroje}
+      \field{urlday}{12}
+      \field{urlmonth}{8}
+      \field{urlyear}{2019}
+      \field{year}{2012}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.sujb.cz/fileadmin/sujb/docs/legislativa/vyhlasky/sb0172-2016.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.sujb.cz/fileadmin/sujb/docs/legislativa/vyhlasky/sb0172-2016.pdf
+      \endverb
+    \endentry
+    \entry{tera}{online}{}
+      \list{organization}{1}{%
+        {TESLA a. s.}%
+      }
+      \field{sortinit}{8}
+      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{labeltitlesource}{title}
+      \field{title}{WLAN bezdrátová a USB radonová sonda TSR4 (TSR3D verze s displejem)}
+      \field{urlday}{30}
+      \field{urlmonth}{7}
+      \field{urlyear}{2019}
+      \field{year}{2014}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.tesla.cz/cz/tera-tsr3/
+      \endverb
+      \verb{url}
+      \verb https://www.tesla.cz/cz/tera-tsr3/
+      \endverb
+    \endentry
+    \entry{alphaguard}{online}{}
+      \list{organization}{1}{%
+        {BERTIN INSTRUMENTS}%
+      }
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{labeltitlesource}{title}
+      \field{title}{AlphaGUARD – Radon monitor}
+      \field{urlday}{29}
+      \field{urlmonth}{7}
+      \field{urlyear}{2019}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.bertin-instruments.com/product/radon-professional-monitoring/radon-alphaguard/
+      \endverb
+      \verb{url}
+      \verb https://www.bertin-instruments.com/product/radon-professional-monitoring/radon-alphaguard/
+      \endverb
+    \endentry
+    \entry{canary}{online}{}
+      \list{organization}{1}{%
+        {Airthings}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{title}{A radon detector for everyone}
+      \field{urlday}{30}
+      \field{urlmonth}{7}
+      \field{urlyear}{2019}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.airthings.com/en-us/home
+      \endverb
+      \verb{url}
+      \verb https://www.airthings.com/en-us/home
+      \endverb
+    \endentry
+    \entry{metodika}{manual}{}
+      \name{author}{2}{}{%
+        {{hash=01fe11b2bc0c9743dc5ac3480b4ea287}{%
+           family={Jílek},
+           familyi={J\bibinitperiod},
+           given={Karel},
+           giveni={K\bibinitperiod}}}%
+        {{hash=b5c121dbcbd2e613155b1c395fc32457}{%
+           family={Froňka},
+           familyi={F\bibinitperiod},
+           given={Aleš},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Státní ústav radiační ochrany, v.v.i.}%
+      }
+      \strng{namehash}{374a6c5c889b3b7b33674625291d2b0d}
+      \strng{fullhash}{374a6c5c889b3b7b33674625291d2b0d}
+      \strng{bibnamehash}{374a6c5c889b3b7b33674625291d2b0d}
+      \strng{authorbibnamehash}{374a6c5c889b3b7b33674625291d2b0d}
+      \strng{authornamehash}{374a6c5c889b3b7b33674625291d2b0d}
+      \strng{authorfullhash}{374a6c5c889b3b7b33674625291d2b0d}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{25}
+      \field{month}{11}
+      \field{title}{Metodika stanovení výměny vzduchu ve vnitřním ovzduší budov s využitím pasivních integrálních měřidel indikačních plynů (pro potřeby SÚJB)}
+      \field{urlday}{1}
+      \field{urlmonth}{8}
+      \field{urlyear}{2019}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.sujb.cz/fileadmin/sujb/docs/dokumenty/metodiky/Stanoveni_vymeny_vzduchu.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.sujb.cz/fileadmin/sujb/docs/dokumenty/metodiky/Stanoveni_vymeny_vzduchu.pdf
+      \endverb
+    \endentry
+    \entry{markes}{online}{}
+      \list{organization}{1}{%
+        {MARKES international}%
+      }
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labeltitlesource}{title}
+      \field{title}{Thermal desorption sorbent tubes for air sampling}
+      \field{urlday}{15}
+      \field{urlmonth}{8}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.markes.com/Products/Sampling-accessories/Sorbent-tubes/default.aspx
+      \endverb
+      \verb{url}
+      \verb https://www.markes.com/Products/Sampling-accessories/Sorbent-tubes/default.aspx
+      \endverb
+    \endentry
+    \entry{japonci}{article}{}
+      \name{author}{6}{}{%
+        {{hash=05f27b6482d1fa422a8f8a02be70b7d2}{%
+           family={Shinohara},
+           familyi={S\bibinitperiod},
+           given={Naohide},
+           giveni={N\bibinitperiod}}}%
+        {{hash=3db05891a0e808b7c268447856e3743a}{%
+           family={Kataoka},
+           familyi={K\bibinitperiod},
+           given={Toshiyuki},
+           giveni={T\bibinitperiod}}}%
+        {{hash=9ec5ce456f0a508d81a3f8afdbd7e852}{%
+           family={Takamine},
+           familyi={T\bibinitperiod},
+           given={Koichi},
+           giveni={K\bibinitperiod}}}%
+        {{hash=489e0954382c713d1ee634540db56c12}{%
+           family={Butsugan},
+           familyi={B\bibinitperiod},
+           given={Michio},
+           giveni={M\bibinitperiod}}}%
+        {{hash=247101218433e6eaf3b20de22bc19390}{%
+           family={Nishijima},
+           familyi={N\bibinitperiod},
+           given={Hirokazu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=7505d291d4697e9e716ad2aab4c9ed28}{%
+           family={Gamo},
+           familyi={G\bibinitperiod},
+           given={Masashi},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{6de207c83038c633e365aa2031cea824}
+      \strng{fullhash}{6de207c83038c633e365aa2031cea824}
+      \strng{bibnamehash}{6de207c83038c633e365aa2031cea824}
+      \strng{authorbibnamehash}{6de207c83038c633e365aa2031cea824}
+      \strng{authornamehash}{6de207c83038c633e365aa2031cea824}
+      \strng{authorfullhash}{6de207c83038c633e365aa2031cea824}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International journal of environmental research and public health}
+      \field{month}{09}
+      \field{title}{Modified Perfluorocarbon Tracer Method for Measuring Effective Multizone Air Exchange Rates}
+      \field{volume}{7}
+      \field{year}{2010}
+      \true{nocite}
+      \field{pages}{3348\bibrangedash 58}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.3390/ijerph7093348
+      \endverb
+    \endentry
+    \entry{uncertainties}{online}{}
+      \name{author}{1}{}{%
+        {{hash=7f46460549372d4c4cd73793c9c1d7f1}{%
+           family={Legibot},
+           familyi={L\bibinitperiod},
+           given={Eric\bibnamedelima O.},
+           giveni={E\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f46460549372d4c4cd73793c9c1d7f1}
+      \strng{fullhash}{7f46460549372d4c4cd73793c9c1d7f1}
+      \strng{bibnamehash}{7f46460549372d4c4cd73793c9c1d7f1}
+      \strng{authorbibnamehash}{7f46460549372d4c4cd73793c9c1d7f1}
+      \strng{authornamehash}{7f46460549372d4c4cd73793c9c1d7f1}
+      \strng{authorfullhash}{7f46460549372d4c4cd73793c9c1d7f1}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Uncertainties: a Python package for calculations with uncertainties}
+      \field{urlday}{16}
+      \field{urlmonth}{8}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://pythonhosted.org/uncertainties/
+      \endverb
+      \verb{url}
+      \verb https://pythonhosted.org/uncertainties/
+      \endverb
+    \endentry
+    \entry{japonci2}{article}{}
+      \name{author}{4}{}{%
+        {{hash=e1e1b4b8fa9c076f455fd9c4d2f1501f}{%
+           family={Okuyama},
+           familyi={O\bibinitperiod},
+           given={Hiroyasu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=f472a154850161b05d768af23778a5b4}{%
+           family={Onishi},
+           familyi={O\bibinitperiod},
+           given={Yoshinori},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=c6697f8917e98b02d7899bb7d74da0e7}{%
+           family={Tanabe},
+           familyi={T\bibinitperiod},
+           given={Shin-ichi},
+           giveni={S\bibinithyphendelim i\bibinitperiod}}}%
+        {{hash=71db0051bdd49e58c97f3ea24b80c954}{%
+           family={Kashihara},
+           familyi={K\bibinitperiod},
+           given={Seiichi},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{5ad6f62945ec3974ac07aacdeb678aff}
+      \strng{fullhash}{5ad6f62945ec3974ac07aacdeb678aff}
+      \strng{bibnamehash}{5ad6f62945ec3974ac07aacdeb678aff}
+      \strng{authorbibnamehash}{5ad6f62945ec3974ac07aacdeb678aff}
+      \strng{authornamehash}{5ad6f62945ec3974ac07aacdeb678aff}
+      \strng{authorfullhash}{5ad6f62945ec3974ac07aacdeb678aff}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Conventional multi-zonal ventilation measurement methods by multiple types of perfluorocarbon tracers use a number of different gases equal to the number of zones (n). The possible n×n+n airflows are estimated from the mass balance of the gases and the airflow balance. However, some airflows may not occur because of inter-zonal geometry, and the introduction of unnecessary, unknown parameters can impair the accuracy of the estimation. Also, various error factors often yield an irrational negative airflow rate. Conventional methods are insufficient for the evaluation of error. This study describes a way of using the least-squares technique to improve the precision of estimation and to evaluate reliability. From the equations’ residual, the error variance–covariance matrix Λq of the estimated airflow rate error is deduced. In addition, the coefficient of determinant using the residual sum of squares and total variation is introduced. Furthermore, the error matrix mΛq from the measurement errors in the gas concentration and gas emission rate is deduced. The discrepancy ratio of the model premises is defined by dividing the diagonal elements of the former by those of the latter. Moreover, the index of irrationality of the estimated negative airflow rate is defined, based on the different results of the three estimation methods. Some numerical experiments are also carried out to verify the flow rate estimation and the reliability evaluation theory.}
+      \field{issn}{0360-1323}
+      \field{journaltitle}{Building and Environment}
+      \field{number}{3}
+      \field{title}{Statistical data analysis method for multi-zonal airflow measurement using multiple kinds of perfluorocarbon tracer gas}
+      \field{volume}{44}
+      \field{year}{2009}
+      \true{nocite}
+      \field{pages}{546\bibrangedash 557}
+      \range{pages}{12}
+      \verb{doi}
+      \verb https://doi.org/10.1016/j.buildenv.2008.04.014
+      \endverb
+      \verb{urlraw}
+      \verb http://www.sciencedirect.com/science/article/pii/S0360132308000905
+      \endverb
+      \verb{url}
+      \verb http://www.sciencedirect.com/science/article/pii/S0360132308000905
+      \endverb
+      \keyw{Multi-zonal airflow measurement,Perfluorocarbon tracer gas,Least squares,Error analysis}
+    \endentry
+    \entry{testo}{online}{}
+      \list{organization}{1}{%
+        {Testo SE \& Co. KGaA}%
+      }
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labeltitlesource}{title}
+      \field{title}{testo 174 H - datalogger teploty a vlhkosti}
+      \field{urlday}{29}
+      \field{urlmonth}{7}
+      \field{urlyear}{2019}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.testo.com/cz-CZ/testo-174-h/p/0572-6560
+      \endverb
+      \verb{url}
+      \verb https://www.testo.com/cz-CZ/testo-174-h/p/0572-6560
+      \endverb
+    \endentry
+    \entry{sherman}{article}{}
+      \name{author}{3}{}{%
+        {{hash=d78c608c1892a8367cbaab0cc0b9435e}{%
+           family={Sherman},
+           familyi={S\bibinitperiod},
+           given={Max},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4a15623c291dcc0fc2300eee43236f19}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Iain},
+           giveni={I\bibinitperiod}}}%
+        {{hash=7d77ffda5e37d5742bb36313d05f4fa2}{%
+           family={Lunden},
+           familyi={L\bibinitperiod},
+           given={Melissa},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{130ac1afee2927c6320559055c9b6439}
+      \strng{fullhash}{130ac1afee2927c6320559055c9b6439}
+      \strng{bibnamehash}{130ac1afee2927c6320559055c9b6439}
+      \strng{authorbibnamehash}{130ac1afee2927c6320559055c9b6439}
+      \strng{authornamehash}{130ac1afee2927c6320559055c9b6439}
+      \strng{authorfullhash}{130ac1afee2927c6320559055c9b6439}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Ventilation}
+      \field{month}{06}
+      \field{title}{Uncertainties in Air Exchange using Continuous-Injection, Long-Term Sampling Tracer-Gas Methods}
+      \field{volume}{13}
+      \field{year}{2014}
+      \true{nocite}
+      \field{pages}{13\bibrangedash 27}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1080/14733315.2014.11684034
+      \endverb
+    \endentry
+    \entry{rovMer_8Rn}{report}{}
+      \name{author}{2}{}{%
+        {{hash=92687237e969eb5f333cf650adb0b162}{%
+           family={Dzhunakova},
+           familyi={D\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b845905b85dbdebb438e8a1d7b863409}{%
+           family={Ivanova},
+           familyi={I\bibinitperiod},
+           given={Kremena},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {National Radiation Protection Institute (NRPI)}%
+      }
+      \strng{namehash}{446c996d9702c610b9138001afcf01ae}
+      \strng{fullhash}{446c996d9702c610b9138001afcf01ae}
+      \strng{bibnamehash}{446c996d9702c610b9138001afcf01ae}
+      \strng{authorbibnamehash}{446c996d9702c610b9138001afcf01ae}
+      \strng{authornamehash}{446c996d9702c610b9138001afcf01ae}
+      \strng{authorfullhash}{446c996d9702c610b9138001afcf01ae}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Radon Concentration PEMP-09E/05.03.2019 (report výsledků měření)}
+      \field{year}{2019}
+      \true{nocite}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
