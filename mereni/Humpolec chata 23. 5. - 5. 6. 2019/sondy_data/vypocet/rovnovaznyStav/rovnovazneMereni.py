@@ -170,7 +170,7 @@ def calculation_Q_conventional(K, a_out, a):
 
 def export_Q(Q, podlazi, airflows_combination):
     def sloupce(patro):
-        return r'$Q_'+str(patro)+r'$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$'
+        return r'$Q_'+str(patro)+r'$ $\left[\si{\frac{Bq}{hod}}\right]$'
     def f(x):
         return '{:.0f}'.format(x)
 
