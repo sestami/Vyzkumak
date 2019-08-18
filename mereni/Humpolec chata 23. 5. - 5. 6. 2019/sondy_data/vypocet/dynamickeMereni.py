@@ -376,12 +376,16 @@ umisteni_sond=[0, 1, 1, 2]
 a_out=5
 
 def modifying_R(R, V, N):
+    '''
+    fce pro pridani vymeny vzduchu do pole s prutoky
+    '''
     n=vymena_vzduchu(R, V, N)
     n_df=pd.Series(n,name='n [hod$^{-1}$]',index=R.columns)
     R=R.append(n_df)
     R.columns=[airflows_combination]
     return R
 
+#export Q a R (prutoky a vymena vzduchu)
 Q_means_list=[]
 airflows_combination_list=[]
 N, podlazi, Dates, A, A_diff, V, R, Q, airflows_combination=run(umisteni_sond, airflows_ID[0], a_out=a_out)

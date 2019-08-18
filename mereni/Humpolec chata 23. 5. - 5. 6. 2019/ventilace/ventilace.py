@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import datetime
 from scipy.optimize import lsq_linear
-from uncertainties import ufloat
+from uncertainties import ufloat, unumpy
 import statsmodels.api as sm
 
 '''
@@ -14,10 +14,10 @@ def completion(velicina, velicina_err):
     return pd.Series(data=united, index=velicina.index, name=velicina.name)
 
 #ZADANI VSTUPNICH PARAMETRU, VYPOCET KONCENTRACI
-odezva_TD = pd.read_csv('odezva_TD_detektoru1.csv',sep=';', decimal=',',index_col=['zona', 'plyn'])
+odezva_TD = pd.read_csv('odezva_TD_detektoru.csv',sep=';', decimal=',',index_col=['zona', 'plyn'])
 # odezva_TD = pd.read_csv('odezva_TD_detektoru_nepreurcena.csv',sep=';', decimal=',',index_col=['zona', 'plyn'])
 odezva_TD = odezva_TD.swaplevel().sort_index()
-informace_plyny = pd.read_csv('plyny_informace1.csv',sep=';', decimal=',',index_col='plyn')
+informace_plyny = pd.read_csv('plyny_informace.csv',sep=';', decimal=',',index_col='plyn')
 # informace_plyny = pd.read_csv('plyny_informace_nepreurcena.csv',sep=';', decimal=',',index_col='plyn')
 
 N=len(odezva_TD.index.levels[1]) #pocet zon
@@ -125,4 +125,15 @@ prutoky_hodnoty2=pd.DataFrame(np.array([prutoky3_n, prutoky3_s]).T, index=prutok
 prutoky_hodnoty2.index.name='ozn'
 prutoky_hodnoty2=prutoky_hodnoty2.sort_index()
 
-prutoky_hodnoty2.to_csv('airflows.txt', sep=';', decimal=',', float_format='%.8f')
+prutoky_hodnoty2.to_csv('airflows_preurcena.txt', sep=';', decimal=',', float_format='%.8f')
+
+odezva_TD_df=odezva_TD.loc[:, ['jmeno', 'R_d', 'R_d_err']]
+odezva_TD_df=odezva_TD_df.reset_index()
+odezva_TD_df.index=[odezva_TD_df.loc[:, 'jmeno'], odezva_TD_df.loc[:, 'zona']]
+odezva_TD_df.loc[:,'R_d']=unumpy.uarray(odezva_TD_df.loc[:,'R_d'], odezva_TD_df.loc[:,'R_d_err'])
+odezva_TD_df=odezva_TD_df.drop(columns=['jmeno', 'zona', 'plyn', 'R_d_err'])
+
+def f(x):
+    return '{:.1f}'.format(x)
+
+odezva_TD_df.to_latex('odezvy_TD.tex', decimal=',',formatters=[f], escape=False, column_format='lrr')

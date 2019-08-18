@@ -84,7 +84,7 @@ Vyhodnocování TD detektorů a odparů z vyvíječů je prováděno odbornými 
 Uvažujme nějaký obecný objekt rozdělený na $N$ zón, do něhož byly umístěny vyvíječe $N_p$ indikačních plynů, přičemž musí platit $N_p\geq N$.
 
 \subsection{Hmotnostní koncentrace a emise indikačních plynů}
-Z vyhodnocení naměřených dat známe $R_{ki}$, tj. průměr odezev TD detektorů umístěných v $i$-té zóně na $k$-tý indikační plyn, průměrnou teplotu $T_i$ a tlak $p_i$ v $i$-té zóně a množství odparu $k$-tého indikačního plynu z vyvíječů umístěných $i$-té zóně. Z tohoto odparu lze určit emisi $k$-tého indikačního plynu v $i$-té zóně:
+Z vyhodnocení naměřených dat známe $R_{ki}$, což je průměr odezev TD detektorů umístěných v $i$-té zóně na $k$-tý indikační plyn, průměrnou teplotu $T_i$ a tlak $p_i$ v $i$-té zóně a množství odparu $k$-tého indikačního plynu z vyvíječů umístěných $i$-té zóně. Z tohoto odparu lze určit emisi $k$-tého indikačního plynu v $i$-té zóně:
 \begin{equation}
     m_{ki}=\frac{\text{odpar}_{ki}}{dT}\,,
     \label{eq:prutoky_emise}
@@ -206,11 +206,11 @@ Nulovost $m_{ki}$ pro $k\neq i$ plyne z pravidel pro osazování vyvíječů do 
     X_{N_p\cdot k-N_p+i,m}&=-C_{ki}\,,\\
     X_{N_p\cdot k-N_p+j,m}&=C_{ki}\,.
 \end{align}
-Pokud řádkový index ($N_p\cdot k-N_p+i$, resp. $N_p\cdot k-N_p+j$) přesáhne řádkový rozměr matice, pak jsou ignorovány a žádnou hodnotu nikam nepřiřazujeme. Pro vysvětlení uvažujme $k=1$. Pak výše uvedené vztahy říkají, že prvek matice $X$ v $i$-tém řádku a $m$-tém sloupci je roven $-C_{1i}$ a prvek v $j$-tém řádku a $m$-tém sloupci $C_{1i}$. Výraz $N_p\cdot k-N_p$ je potřeba pro dopočet ostatních prvků matice, které jsou odvozeny od koncentrací ostatních indikačních plynů. Při odvozování matice $X$ jsem postupoval podle článku~\cite{japonci2}.
+Pokud řádkový index ($N_p\cdot k-N_p+i$, resp. $N_p\cdot k-N_p+j$) přesáhne řádkový rozměr matice $X$, pak je ignorován a žádná hodnota se nikam nepřiřazuje. Pro vysvětlení uvažujme $k=1$. Pak výše uvedené vztahy říkají, že prvek matice $X$ v $i$-tém řádku a $m$-tém sloupci je roven $-C_{1i}$ a prvek v $j$-tém řádku a $m$-tém sloupci $C_{1i}$. Výraz $N_p\cdot k-N_p$ je potřeba pro dopočet ostatních prvků matice, které jsou odvozeny od koncentrací ostatních indikačních plynů. Při odvozování matice $X$ jsem postupoval podle článku~\cite{japonci2}.
 
-Nevýhodou této metody je neurčení nejistot vypočtených průtoků vzduchu při $N=N_{plyny}$. 
+Nevýhodou této metody je, že nedokáže určit nejistoty vypočtených průtoků vzduchu při $N=N_{p}$. 
 
-Tento postup výpočtu jsem také implementoval v Pythonu a pro $N=N_{plyny}$ vychází analytické a regresní řešení stejně, výhodou analytického řešení je určení nejistot řešení. 
+Tento postup výpočtu jsem také implementoval v Pythonu a pro $N=N_{p}$ vychází analytické a regresní řešení stejně, výhodou analytického řešení je určení nejistot řešení. 
 
 Skripty analytického ani regresního řešení v této práci neuvádím, jelikož využívají podobných principů jako skripty určené pro výpočet přísunů radonu do zón (viz další kapitola).
 
