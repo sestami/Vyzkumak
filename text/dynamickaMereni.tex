@@ -33,18 +33,26 @@ Pro dynamická měření přísunů radonu mi byly poskytnuty čtyři TERA sondy
 	\centering
 	\caption{Statistiky vývojů OAR naměřených TERA sondami a AlphaGuardem v \si{Bq/m^3}.}
 	\label{tab:dynMer_sondy}
-	\begin{tabular}{lrrrrrrrr}
+	\begin{tabular}{lrrrrrrr}
 		\toprule
-		ID sondy &  count &  mean &  std &  min &  25\% &  50\% &  75\% &  max \\
+		ID sondy &  count &  mean    &  min &  25\% &  50\% &  75\% &  max \\
 		\midrule
-		8          &     71 &   369 &   47 &  252 &  337 &  368 &  405 &  488 \\
-		10         &     71 &   228 &   41 &  121 &  198 &  232 &  256 &  308 \\
-		88         &     71 &   198 &   33 &  140 &  170 &  198 &  220 &  273 \\
-		112        &     71 &   354 &   58 &  251 &  318 &  349 &  399 &  484 \\
+		8          &     71 &   369  &  252 &  337 &  368 &  405 &  488 \\
+		10         &     71 &   228  &  121 &  198 &  232 &  256 &  308 \\
+		88         &     71 &   198  &  140 &  170 &  198 &  220 &  273 \\
+		112        &     71 &   354  &  251 &  318 &  349 &  399 &  484 \\
 		\midrule
-		AlphaGuard &     71 &   328 &   50 &  247 &  285 &  318 &  373 &  434 \\
+		AlphaGuard &     71 &   328  &  247 &  285 &  318 &  373 &  434 \\
 		\bottomrule
 	\end{tabular}
+%&  std
+      
+%&   47
+%&   41
+%&   33
+%&   58
+      
+%&   50
 \end{table}
 
 Pro opravu odezev byla zavedena pro každou sondu tzv. bulharská konstanta, která je definována následovně:
@@ -86,12 +94,23 @@ Za $OAR_A$, resp. $OAR_T$ byly brány průměry naměřených OAR AlphaGuardem a
 	\item 3 TESTO měřiče teploty a vlhkosti
 	\item 2 zdroje radonu
 \end{itemize}
+
+\subsection{Naměřené OAR}
+
 \begin{table}[H]
     \centering
     \caption{Objemy podlaží objektu, teploty naměřené v každém podlaží dataloggery testo 174H, odhadnuté atmosférické tlaky v každém podlaží a přiřazení číslování kompartmentů jednotlivým podlažím.}
     \label{tab:skala75_objemy}
     \input{skala75/vysledky_inputData}
 \end{table}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{skala75/OAR_dohromady.png}
+    \caption{Hodnoty OAR naměřené TERA sondami po aplikování bulharských konstant (tab.~\ref{tab:dynMer_sondyB}). Pro další vyhodnocování byly OAR naměřené v přízemí v kuchyni a v ložnici zprůměrovány.}
+    \label{fig:skala75_OARdohromady}
+\end{figure}
+\subsection{Objemové průtoky vzduchu}
+
 \begin{table}[H]
     \centering
     \caption{Přehled použitých indikačních plynů. $M$ je molekulová hmotnost příslušného plynu, $U$ je jeho odběrová rychlost. Dále je uvedeno, v jakém podlaží byly vyvíječe plynů umístěny s jejich celkovými odpary za celou dobu měření. Význam označení podlaží je vysvětlen v tab. \ref{tab:rovMer_podlazi}.}
@@ -104,15 +123,6 @@ Za $OAR_A$, resp. $OAR_T$ byly brány průměry naměřených OAR AlphaGuardem a
     \label{tab:skala75_odezvyTD}
     \input{skala75/odezvy_TD}
 \end{table}
-
-\subsection{Naměřené OAR}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{skala75/OAR_dohromady.png}
-    \caption{Hodnoty OAR naměřené TERA sondami po aplikování bulharských konstant (tab.~\ref{tab:dynMer_sondyB}). Pro další vyhodnocování byly OAR naměřené v přízemí v kuchyni a v ložnici zprůměrovány.}
-    \label{fig:skala75_OARdohromady}
-\end{figure}
-\subsection{Objemové průtoky vzduchu}
 
 \begin{table}[H]
     \centering
@@ -164,20 +174,20 @@ Za $OAR_A$, resp. $OAR_T$ byly brány průměry naměřených OAR AlphaGuardem a
 \toprule
 {} & (TMH, MDC, PCE) & (TMH, MDC, PCH) & (TMH, MCH, PCE) & (TMH, MCH, PCH)\\ 
 \midrule
-$k_{12}$ &12.262$\pm$3.129 &  11.759$\pm$3.078 &  10.188$\pm$2.611 &   9.746$\pm$2.563 \\          
-$k_{13}$ & 0.855$\pm$0.255 &   3.372$\pm$1.013 &   0.908$\pm$0.261 &   3.573$\pm$1.036 \\          
-$k_{21}$ & 4.028$\pm$0.940 &   3.507$\pm$0.847 &   3.220$\pm$0.776 &   2.780$\pm$0.700 \\          
-$k_{23}$ & 1.240$\pm$0.183 &   4.889$\pm$0.724 &   1.025$\pm$0.161 &   4.031$\pm$0.635 \\          
-$k_{31}$ &-0.076$\pm$0.020 &   3.524$\pm$0.958 &  -0.061$\pm$0.016 &   3.611$\pm$0.968 \\          
-$k_{32}$ & 0.931$\pm$0.137 &   5.967$\pm$0.967 &   0.774$\pm$0.117 &   4.945$\pm$0.820 \\          
-$k_{1_E}$&21.425$\pm$5.271 &  19.770$\pm$5.057 &  23.244$\pm$5.443 &  21.411$\pm$5.208 \\          
-$k_{2_E}$&44.024$\pm$4.853 &  41.624$\pm$4.833 &  36.712$\pm$4.240 &  34.644$\pm$4.195 \\          
-$k_{3_E}$& 7.712$\pm$0.849 &  24.294$\pm$3.199 &   7.850$\pm$0.853 &  25.127$\pm$3.209 \\          
-$k_{1_I}$&30.590$\pm$6.206 &  27.869$\pm$6.140 &  31.181$\pm$6.093 &  28.339$\pm$6.017 \\          
-$k_{2_I}$&36.099$\pm$5.855 &  32.294$\pm$5.917 &  29.994$\pm$5.043 &  26.764$\pm$5.073 \\          
-$k_{3_I}$& 6.472$\pm$0.916 &  25.525$\pm$3.693 &   6.630$\pm$0.914 &  26.079$\pm$3.658 \\          
+$k_{12}$ &12,262$\pm$3,129 &  11,759$\pm$3,078 &  10,188$\pm$2,611 &   9,746$\pm$2,563 \\          
+$k_{13}$ & 0,855$\pm$0,255 &   3,372$\pm$1,013 &   0,908$\pm$0,261 &   3,573$\pm$1,036 \\          
+$k_{21}$ & 4,028$\pm$0,940 &   3,507$\pm$0,847 &   3,220$\pm$0,776 &   2,780$\pm$0,700 \\          
+$k_{23}$ & 1,240$\pm$0,183 &   4,889$\pm$0,724 &   1,025$\pm$0,161 &   4,031$\pm$0,635 \\          
+$k_{31}$ &-0,076$\pm$0,020 &   3,524$\pm$0,958 &  -0,061$\pm$0,016 &   3,611$\pm$0,968 \\          
+$k_{32}$ & 0,931$\pm$0,137 &   5,967$\pm$0,967 &   0,774$\pm$0,117 &   4,945$\pm$0,820 \\          
+$k_{1_E}$&21,425$\pm$5,271 &  19,770$\pm$5,057 &  23,244$\pm$5,443 &  21,411$\pm$5,208 \\          
+$k_{2_E}$&44,024$\pm$4,853 &  41,624$\pm$4,833 &  36,712$\pm$4,240 &  34,644$\pm$4,195 \\          
+$k_{3_E}$& 7,712$\pm$0,849 &  24,294$\pm$3,199 &   7,850$\pm$0,853 &  25,127$\pm$3,209 \\          
+$k_{1_I}$&30,590$\pm$6,206 &  27,869$\pm$6,140 &  31,181$\pm$6,093 &  28,339$\pm$6,017 \\          
+$k_{2_I}$&36,099$\pm$5,855 &  32,294$\pm$5,917 &  29,994$\pm$5,043 &  26,764$\pm$5,073 \\          
+$k_{3_I}$& 6,472$\pm$0,916 &  25,525$\pm$3,693 &   6,630$\pm$0,914 &  26,079$\pm$3,658 \\          
 \midrule                                                                              
-$n$      & 0.310$\pm$0.038 &   0.363$\pm$0.042 &   0.287$\pm$0.036 &   0.344$\pm$0.041 \\
+$n$      & 0,310$\pm$0,038 &   0,363$\pm$0,042 &   0,287$\pm$0,036 &   0,344$\pm$0,041 \\
 \bottomrule
 \end{tabular}
 \vspace{0.5cm}
@@ -186,128 +196,25 @@ $n$      & 0.310$\pm$0.038 &   0.363$\pm$0.042 &   0.287$\pm$0.036 &   0.344$\pm
     \toprule
     {} & (TCE, MDC, PCE) & (TCE, MDC, PCH) & (TCE, MCH, PCE) & (TCE, MCH, PCH) \\
     \midrule
-$k_{12}$ & 7.859$\pm$1.288 &   7.286$\pm$1.238 &   6.544$\pm$1.094 &   6.050$\pm$1.047 \\
-$k_{13}$ & 0.893$\pm$0.159 &   3.523$\pm$0.631 &   0.927$\pm$0.162 &   3.647$\pm$0.641 \\
-$k_{21}$ & 1.309$\pm$0.211 &   1.140$\pm$0.195 &   1.049$\pm$0.182 &   0.906$\pm$0.169 \\
-$k_{23}$ & 1.235$\pm$0.180 &   4.874$\pm$0.715 &   1.023$\pm$0.159 &   4.025$\pm$0.628 \\
-$k_{31}$ &-0.025$\pm$0.005 &   1.146$\pm$0.243 &  -0.020$\pm$0.004 &   1.176$\pm$0.245 \\
-$k_{32}$ & 0.922$\pm$0.136 &   6.419$\pm$0.960 &   0.767$\pm$0.116 &   5.330$\pm$0.817 \\
-$k_{1_E}$& 2.474$\pm$1.325 &   0.539$\pm$1.320 &   3.713$\pm$1.256 &   1.616$\pm$1.248 \\
-$k_{2_E}$&46.234$\pm$4.862 &  43.556$\pm$4.848 &  38.543$\pm$4.268 &  36.229$\pm$4.226 \\
-$k_{3_E}$& 7.670$\pm$0.848 &  26.236$\pm$3.237 &   7.815$\pm$0.852 &  27.185$\pm$3.242 \\
-$k_{1_I}$& 9.941$\pm$1.867 &   9.061$\pm$1.942 &  10.155$\pm$1.683 &   9.231$\pm$1.776 \\
-$k_{2_I}$&39.997$\pm$5.039 &  35.866$\pm$5.149 &  33.303$\pm$4.414 &  29.780$\pm$4.477 \\
-$k_{3_I}$& 6.439$\pm$0.891 &  25.404$\pm$3.517 &   6.613$\pm$0.889 &  26.019$\pm$3.470 \\
+$k_{12}$ & 7,859$\pm$1,288 &   7,286$\pm$1,238 &   6,544$\pm$1,094 &   6,050$\pm$1,047 \\
+$k_{13}$ & 0,893$\pm$0,159 &   3,523$\pm$0,631 &   0,927$\pm$0,162 &   3,647$\pm$0,641 \\
+$k_{21}$ & 1,309$\pm$0,211 &   1,140$\pm$0,195 &   1,049$\pm$0,182 &   0,906$\pm$0,169 \\
+$k_{23}$ & 1,235$\pm$0,180 &   4,874$\pm$0,715 &   1,023$\pm$0,159 &   4,025$\pm$0,628 \\
+$k_{31}$ &-0,025$\pm$0,005 &   1,146$\pm$0,243 &  -0,020$\pm$0,004 &   1,176$\pm$0,245 \\
+$k_{32}$ & 0,922$\pm$0,136 &   6,419$\pm$0,960 &   0,767$\pm$0,116 &   5,330$\pm$0,817 \\
+$k_{1_E}$& 2,474$\pm$1,325 &   0,539$\pm$1,320 &   3,713$\pm$1,256 &   1,616$\pm$1,248 \\
+$k_{2_E}$&46,234$\pm$4,862 &  43,556$\pm$4,848 &  38,543$\pm$4,268 &  36,229$\pm$4,226 \\
+$k_{3_E}$& 7,670$\pm$0,848 &  26,236$\pm$3,237 &   7,815$\pm$0,852 &  27,185$\pm$3,242 \\
+$k_{1_I}$& 9,941$\pm$1,867 &   9,061$\pm$1,942 &  10,155$\pm$1,683 &   9,231$\pm$1,776 \\
+$k_{2_I}$&39,997$\pm$5,039 &  35,866$\pm$5,149 &  33,303$\pm$4,414 &  29,780$\pm$4,477 \\
+$k_{3_I}$& 6,439$\pm$0,891 &  25,404$\pm$3,517 &   6,613$\pm$0,889 &  26,019$\pm$3,470 \\
 \midrule                                                                                 
-$n$      & 0.239$\pm$0.028 &   0.298$\pm$0.034 &   0.212$\pm$0.025 &   0.275$\pm$0.031 \\
+$n$      & 0,239$\pm$0,028 &   0,298$\pm$0,034 &   0,212$\pm$0,025 &   0,275$\pm$0,031 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 \subsection{Přísuny radonu}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{skala75/prisuny1.png}
-    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
-    \label{fig:skala75_prisuny1}
-\end{figure}
-\begin{table}[H]
-    \centering
-    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých plynů jako v obr. nad touto tabulkou.}
-    \label{tab:skala75_prisuny1}
-    \input{skala75/vysledky_Q_statistiky1}
-\end{table}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{skala75/prisuny2.png}
-    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
-    \label{fig:skala75_prisuny2}
-\end{figure}
-\begin{table}[H]
-    \centering
-    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých indikačních plynů jako v obr. nad touto tabulkou.}
-    \label{tab:skala75_prisuny2}
-    \input{skala75/vysledky_Q_statistiky2}
-\end{table}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{skala75/prisuny3.png}
-    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
-    \label{fig:skala75_prisuny3}
-\end{figure}
-\begin{table}[H]
-    \centering
-    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých indikačních plynů jako v obr. nad touto tabulkou.}
-    \label{tab:skala75_prisuny3}
-    \input{skala75/vysledky_Q_statistiky3}
-\end{table}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{skala75/prisuny4.png}
-    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
-    \label{fig:skala75_prisuny4}
-\end{figure}
-\begin{table}[H]
-    \centering
-    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých indikačních plynů jako v obr. nad touto tabulkou.}
-    \label{tab:skala75_prisuny4}
-    \input{skala75/vysledky_Q_statistiky4}
-\end{table}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{skala75/prisuny5.png}
-    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
-    \label{fig:skala75_prisuny5}
-\end{figure}
-\begin{table}[H]
-    \centering
-    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých indikačních plynů jako v obr. nad touto tabulkou.}
-    \label{tab:skala75_prisuny5}
-    \input{skala75/vysledky_Q_statistiky5}
-\end{table}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{skala75/prisuny6.png}
-    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
-    \label{fig:skala75_prisuny6}
-\end{figure}
-\begin{table}[H]
-    \centering
-    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých indikačních plynů jako v obr. nad touto tabulkou.}
-    \label{tab:skala75_prisuny6}
-    \input{skala75/vysledky_Q_statistiky6}
-\end{table}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{skala75/prisuny7.png}
-    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
-    \label{fig:skala75_prisuny7}
-\end{figure}
-\begin{table}[H]
-    \centering
-    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých indikačních plynů jako v obr. nad touto tabulkou.}
-    \label{tab:skala75_prisuny7}
-    \input{skala75/vysledky_Q_statistiky7}
-\end{table}
-
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=\textwidth]{skala75/prisuny8.png}
-    \caption{Určený časový vývoj přísunů radonu do jednotlivých podlaží. Nad obrázkem je uvedena kombinace tří použitých indikačních plynů. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
-    \label{fig:skala75_prisuny8}
-\end{figure}
-\begin{table}[H]
-    \centering
-    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží při stejné kombinaci použitých indikačních plynů jako v obr. nad touto tabulkou.}
-    \label{tab:skala75_prisuny8}
-    \input{skala75/vysledky_Q_statistiky8}
-\end{table}
 
 \begin{table}[H]
     \centering
@@ -376,7 +283,7 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& prům.
 \subsection{Použitá měřidla}
 \begin{itemize}
     \setlength\itemsep{0em}
-	\item 12 vyvíječů (4x MDC, 4x MCH, 4x PCH)
+	\item 12 vyvíječů (4x MCH, 4x MDC, 4x PCH)
 	\item 12 TD detektorů
 	\item 2 blank TD detektory 
 	\item 4 CANARY monitory
@@ -384,3 +291,63 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& prům.
 	\item 3 TESTO měřiče teploty a vlhkosti
 	\item 2 zdroje radonu
 \end{itemize}
+
+\subsection{Naměřené OAR a objemy}
+
+\begin{table}[H]
+    \centering
+    \caption{Objemy všech podlaží objektu, teploty naměřené v každém podlaží TERA sondami, odhadnuté atmosférické tlaky v každém podlaží a přiřazení číslování kompartmentů jednotlivým podlažím.}
+    \label{tab:anglicka574_objemy}
+    \input{anglicka574/vysledky_inputData}
+\end{table}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{anglicka574/OAR_dohromady.png}
+    \caption{Hodnoty OAR naměřené TERA sondami po aplikování bulharských konstant (tab.~\ref{tab:dynMer_sondyB}).}
+    \label{fig:anglicka574_OARdohromady}
+\end{figure}
+
+\subsection{Objemové průtoky vzduchu}
+
+\begin{table}[H]
+    \centering
+    \caption{Přehled použitých indikačních plynů. $M$ je molekulová hmotnost příslušného plynu, $U$ je jeho odběrová rychlost. Dále je uvedeno, v jakém podlaží byly vyvíječe plynů umístěny s jejich celkovými odpary za celou dobu měření. Význam označení podlaží je vysvětlen v tab. \ref{tab:rovMer_podlazi}.}
+    \label{tab:anglicka574_indikacniPlyny}
+    \input{anglicka574/indikacni_plyny}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{Odezvy TD detektorů $R$ na všechny použité indikační plyny ve všech zónách.}
+    \label{tab:anglicka574_odezvyTD}
+    \input{anglicka574/odezvy_TD}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Objemové průtoky vzduchu mezi zónami v \si{m^3/hod} a výměna vzduchu $n$ v \si{hod^{-1}}.}
+    \label{tab:anglicka574_prutoky}
+    \input{anglicka574/vysledky_prutoky}
+\end{table}
+\subsection{Přísuny radonu}
+
+\begin{figure}[ht]
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{anglicka574/prisuny.png}
+        \caption{}
+        \label{fig:anglicka574_prisuny}
+    \end{subfigure}
+    \begin{subfigure}{\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{anglicka574/prisuny_zoom.png}
+        \caption{}
+        \label{fig:anglicka574_prisunyZoom}
+    \end{subfigure}
+    \caption{V (a) jsou určené časové vývoje přísunů radonu do jednotlivých podlaží. V (b) jsou přiblížené přísuny radonu do přízemí a prvního patra. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
+\end{figure}
+\begin{table}[H]
+    \centering
+    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží.}
+    \label{tab:anglicka574_prisuny}
+    \input{anglicka574/vysledky_Q_statistiky}
+\end{table}

@@ -31,8 +31,12 @@ def hodnoty_a_chyby(velicina):
     smerodatne_odchylky = np.reshape(np.array([el.s for el in velicina.flatten()]), shape)
     return hodnoty, smerodatne_odchylky
 
+def citlivost(data):
+    return impulzy(data)/data.loc[:, 'radon[Bq/m3]']
+
+citlivosti=[]
 for i, el in enumerate(soubory):
-    df = pd.read_csv(el+'.tab', encoding="ISO-8859-1", sep="\t",index_col='zaznam')
+    df = pd.read_csv(el+'.tab', encoding="ISO-8859-1", sep="\t",index_col='zaznam', comment='#')
     OAR_err=OAR_nejistota(df)
     OAR_completed=completion(df.loc[:, 'radon[Bq/m3]'], OAR_err)
     OAR_completed=B[i]*OAR_completed
@@ -43,6 +47,10 @@ for i, el in enumerate(soubory):
 
     df_new=pd.concat([df['cas'], OAR_n, OAR_s, df['Teplota[C]'], df['Vlhkost[%]']], axis=1)
     df_new.to_csv(el+'_modified.csv')
+    citlivosti.append(citlivost(df))
+
+citlivosti=np.array(citlivosti)
+citlivosti_mean=citlivosti.mean(axis=1)
 
 
 

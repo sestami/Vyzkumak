@@ -282,10 +282,11 @@ def graf_Q(podlazi, Dates, Q, airflows_ID, airflows_combination):
     Q=Q.T
     Q_n, Q_s=hodnoty_a_chyby(Q)
     for i in np.arange(len(Q_n)):
-        # ax.plot(Dates[i], savgol_filter(Q_n[i],7,3), label=str(podlazi[i]))
-        ax.plot(Dates[i],Q_n[i], color=barvy[i], label=str(podlazi[i]))
-        ax.fill_between(Dates[i], Q_n[i]-Q_s[i], Q_n[i]+Q_s[i], color=barvy_zesvetlene[i])
-    # print('Pri delani grafu vyvoje Q byl pouzit Savitzky–Golay filtr s velikosti okna 7 a s fitovanim kubickym polynomem (treti stupen)')
+        ax.plot(Dates[i], savgol_filter(Q_n[i],7,3), color=barvy[i], label=str(podlazi[i]))
+        # ax.plot(Dates[i],Q_n[i], color=barvy[i], label=str(podlazi[i]))
+        ax.fill_between(Dates[i], savgol_filter(Q_n[i]-Q_s[i],7,3), savgol_filter(Q_n[i]+Q_s[i],7,3), color=barvy_zesvetlene[i])
+        # ax.fill_between(Dates[i], Q_n[i]-Q_s[i], Q_n[i]+Q_s[i], color=barvy_zesvetlene[i])
+    print('Pri delani grafu vyvoje Q byl pouzit Savitzky–Golay filtr s velikosti okna 7 a s fitovanim kubickym polynomem (treti stupen)')
     ax.set_xlabel("$datum$")
     # ax.set_ylabel(r"$Q$ $\left[\frac{Bq}{m^3\cdot hod}\right]$")
     ax.set_ylabel(r"$Q$ $\left[\frac{Bq}{hod}\right]$")
@@ -354,10 +355,26 @@ def export_Q_statistiky(Q, podlazi, airflows_ID):
     statistiky.to_latex('vysledky_Q_statistiky'+str(airflows_ID)+'.tex', float_format='%0.0f', decimal=',', escape=False)
     return 0
 
+def absolutni_prisuny(A_diff, V):
+    print('Pocitaji se absolutni prisuny radonu')
+    A_diff_modified=np.full(A_diff.shape, np.nan, dtype=object)
+    for i in np.arange(len(A_diff)):
+        A_diff_modified[i]=A_diff[i]*V[i]
+    return A_diff_modified
+
+def objemove_prisuny(K, V):
+    print('Pocitaji se objemove prisuny radonu')
+    return K/V[:, None]
+
 def run(umisteni_sond, airflows_ID, a_out=0):
     N, R, K, A, V, podlazi = load_data(umisteni_sond, airflows_ID)
     Dates = load_Time(umisteni_sond)
     A_diff = np.array([casove_derivace(dates, a) for dates, a in zip(Dates, load_A(umisteni_sond, doplneni_chyb=False))])
+
+    #absolutni prisuny
+    A_diff=absolutni_prisuny(A_diff, V)
+    # objemove prisuny
+    # K=objemove_prisuny(K, V)
 
     Q = np.array([calculation_Q_conventional(K, a_out, a, a_diff) for a, a_diff in zip(A.T, A_diff.T)])
     airflows_combination=load_ID_plynu(airflows_ID)
