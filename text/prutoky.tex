@@ -93,6 +93,21 @@ kde $dT$ je doba měření ventilace (tj. průtoků a výměny vzduchu) objektu.
 
 Dále musíme znát molekulové hmotnosti použitých indikačních plynů a odběrové rychlosti TD detektorů všech indikačních plynů.
 
+Přehledněji a korektněji jsou tyto veličiny uvedeny v tab.~\ref{tab:veliciny}, kde jsou uvedeny i jejich jednotky, se kterými se počítá v dalším postupu, pokud není uvedeno jinak.
+
+Následující vztahy jsou přebrány z~\cite{metodika}. Z $R_{ki}, dT, T_i, p_i$ a konstant pro daný indikační plyn $M_k, U_k$ můžeme vypočítat hmotnostní koncentraci $k$-tého indikačního plynu v $i$-té zóně:
+\begin{align}
+    C_{ki}&=\frac{R_{ki}}{U_k\cdot dT}\frac{M_k}{V_{i}^{mol}}\,,\\
+    &=\frac{R_{ki}}{U_k\cdot dT}\frac{M_k\cdot p_i}{R\cdot T_i}\,,
+\end{align}
+kde bylo využito relace
+\begin{equation}
+    V^{mol}_{i}=\frac{R\cdot T_i}{p_i}\,.
+    \label{eq:prutoky_molarniObjem}
+\end{equation}
+
+V tab.~\ref{tab:prutoky_plyny_konstanty} jsou uvedeny molekulové hmotnosti a odběrové rychlosti všech indikačních plynů použitých v rámci tohoto výzkumného úkolu. Jedná se o plyny na bázi fluorovaných uhlovodíků (označení plynů: MCH, PCH, TMH, MDC) a chlorovaných uhlovodíků (označení: TCE, PCE).
+
 \begin{table}[ht]
     \centering
     \caption{Molekulové hmotnosti $M$ indikačních plynů a jejich odběrové rychlosti do TD detektorů $U$.~\cite{metodika}}
@@ -111,20 +126,6 @@ PCE & 165,8 &  1,385 \\
     \end{tabular}
 \end{table}
 
-Přehledněji a korektněji jsou tyto veličiny s uvedeny v tab.~\ref{tab:veliciny}, kde jsou uvedeny i jejich jednotky, se kterými se počítá v dalším postupu, pokud není uvedeno jinak.
-
-Následující vztahy jsou přebrány z~\cite{metodika}. Z $R_{ki}, dT, T_i, p_i$ a konstant pro daný indikační plyn $M_k, U_k$ můžeme vypočítat hmotnostní koncentraci $k$-tého indikačního plynu v $i$-té zóně:
-\begin{align}
-    C_{ki}&=\frac{R_{ki}}{U_k\cdot dT}\frac{M_k}{V_{i}^{mol}}\,,\\
-    &=\frac{R_{ki}}{U_k\cdot dT}\frac{M_k\cdot p_i}{R\cdot T_i}\,,
-\end{align}
-kde bylo využito relace
-\begin{equation}
-    V^{mol}_{i}=\frac{R\cdot T_i}{p_i}\,.
-    \label{eq:prutoky_molarniObjem}
-\end{equation}
-
-V tab.~\ref{tab:prutoky_plyny_konstanty} jsou uvedeny molekulové hmotnosti a odběrové rychlosti všech použitých indikačních plynů v rámci tohoto výzkumného úkolu.  
 \subsection{Bilanční rovnice}
 V rovnovážném stavu se hmotnostní koncentrace indikačních plynů v zónách chovají podle následující soustavy rovnic~\cite{japonci}:
 \begin{align}
@@ -221,3 +222,10 @@ Pokud známe exfiltrace a objemy všech zón, pak můžeme vypočítat výměnu 
     \label{eq:prutoky_n}
 \end{equation}
 Udává se v \si{1/hod} a vyjadřuje podíl objemu vzduchu, který za jednu hodinu unikne z objektu do vnějšího prostředí, a celkového objemu vzduchu uvnitř objektu (tj. vlastně součtu objemů všech zón).
+
+Výměnu vzduchu lze definovat i pro jednotlivé zóny. Uvažujme $i$-tou zónu:
+\begin{equation}
+    n_i=\frac{k_{i_E}}{V_i}\,.
+    \label{eq:prutoky_n_jednaZona}
+\end{equation}
+Vyjadřuje to samé jako $n$, avšak pouze pro $i$-tou zónu, ne pro celý objekt.

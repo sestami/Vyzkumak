@@ -2,8 +2,8 @@ import numpy as np
 import pandas as pd
 from uncertainties import ufloat
 
-soubory=['a8','a10','a88','a112']
-B=[ufloat(0.889, 0.889*0.1), ufloat(1.440, 1.440*0.1), ufloat(1.655, 1.655*0.1), ufloat(0.925, 0.925*0.1)]
+soubory=['a8','a88','a112']
+B=[ufloat(0.889, 0.889*0.1), ufloat(1.655, 1.655*0.1), ufloat(0.925, 0.925*0.1)]
 
 def impulzy(data):
     return data.loc[:, 'sum2']+data.loc[:, 'sum3']

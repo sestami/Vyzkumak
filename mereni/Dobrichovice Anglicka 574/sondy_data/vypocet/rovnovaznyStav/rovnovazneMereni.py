@@ -118,7 +118,7 @@ def load_data(airflows_ID, V_err_rel=V_err_rel):
             else:
                 K[i, j] = P[j, i]
 
-    # K=K/V[:, None]
+    K=K/V[:, None]
     return N, P, K, a, V, podlazi
 
 def load_ID_plynu(airflows_ID):
@@ -195,11 +195,7 @@ def run(airflows_ID, a_out=0):
 # musime zadat nenulovou koncentraci vnejsiho prostredi, protoze jinak nam to
 #nevypocita infiltrace
 a_out = 0
-airflows_ID=np.arange(1,9)
-N, P, K, a, V, podlazi = load_data(airflows_ID[0])
-airflows_combination_list, Q_list=[], []
-for el in airflows_ID:
-    airflows_combination, Q=run(el)
-    airflows_combination_list.append(airflows_combination)
-    Q_list.append(Q)
-export_Q(Q_list, podlazi, airflows_combination_list)
+airflows_ID=1
+N, P, K, a, V, podlazi = load_data(airflows_ID)
+airflows_combination, Q=run(airflows_ID)
+# export_Q(Q, podlazi, airflows_combination)

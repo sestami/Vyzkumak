@@ -118,7 +118,7 @@ def load_data(airflows_ID, V_err_rel=V_err_rel):
             else:
                 K[i, j] = P[j, i]
 
-    # K=K/V[:, None]
+    K=K/V[:, None]
     return N, P, K, a, V, podlazi
 
 def load_ID_plynu(airflows_ID):
@@ -170,7 +170,7 @@ def calculation_Q_conventional(K, a_out, a):
 
 def export_Q(Q, podlazi, airflows_combination):
     def sloupce(patro):
-        return r'$Q_'+str(patro)+r'$ $\left[\si{\frac{Bq}{hod}}\right]$'
+        return r'$Q_'+str(patro)+r'$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$'
     def f(x):
         return '{:.0f}'.format(x)
 
