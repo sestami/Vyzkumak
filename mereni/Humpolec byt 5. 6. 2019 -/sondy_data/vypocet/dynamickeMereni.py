@@ -430,11 +430,3 @@ export_inputData(V, podlazi)
 plt.close('all')
 # aa=casove_derivace(Dates[0], load_A(umisteni_sond, False).to_numpy()[0], graf=True)
 
-#TOTO BYLO PRO ROVNOVAZNE MERENI
-# N, P, K, a, V, podlazi = load_data(a_out=10)
-# export_inputData(a, V, podlazi, a_out=10)
-# export_P(P, podlazi)
-
-# a_out = np.array([0, 5, 10, 20, 30])
-# Q = np.array([run(el) for el in a_out])
-# export_Q(podlazi, a_out, Q)

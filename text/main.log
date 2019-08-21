@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.7)  21 AUG 2019 11:47
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.7)  21 AUG 2019 13:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1502,12 +1502,13 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 142.
- [19] [20]) [21]
+ [19] [20]) [21] [22]
 \openout2 = `model.aux'.
 
- (./model.tex
+
+(./model.tex
 Kapitola 4.
-[22
+[23
 
 
 
@@ -1516,7 +1517,7 @@ Overfull \hbox (3.32242pt too wide) detected at line 59
 []
  []
 
-[23] [24]
+[24] [25]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 145.
@@ -1525,7 +1526,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 145.
 
-[25] [26]) [27] [28
+[26] [27]) [28] [29
 
 
 ]
@@ -1533,67 +1534,67 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
  (./dynamickaMereni.tex
 Kapitola 6.
-<images/sondy_srovnani.png, id=570, 774.0117pt x 419.166pt>
+<images/sondy_srovnani.png, id=582, 774.0117pt x 419.166pt>
 File: images/sondy_srovnani.png Graphic file (type png)
 <use images/sondy_srovnani.png>
 Package pdftex.def Info: images/sondy_srovnani.png  used on input line 28.
 (pdftex.def)             Requested size: 460.72124pt x 249.506pt.
-[36
+[37
 
 
 
 ]
-<images/sondy_B.png, id=583, 462.528pt x 345.4506pt>
+<images/sondy_B.png, id=594, 462.528pt x 345.4506pt>
 File: images/sondy_B.png Graphic file (type png)
 <use images/sondy_B.png>
 Package pdftex.def Info: images/sondy_B.png  used on input line 67.
 (pdftex.def)             Requested size: 322.50345pt x 240.88077pt.
- [37 <./images/sondy_srovnani.png>] [38 <./images/sondy_B.png>]
+ [38 <./images/sondy_srovnani.png>] [39 <./images/sondy_B.png>]
 (./skala75/vysledky_inputData.tex)
-<images/skala75/OAR_dohromady.png, id=598, 797.1381pt x 445.9059pt>
+<images/skala75/OAR_dohromady.png, id=609, 797.1381pt x 445.9059pt>
 File: images/skala75/OAR_dohromady.png Graphic file (type png)
 <use images/skala75/OAR_dohromady.png>
 Package pdftex.def Info: images/skala75/OAR_dohromady.png  used on input line 1
 08.
 (pdftex.def)             Requested size: 460.72124pt x 257.72067pt.
  (./skala75/indikacni_plyny.tex)
-(./skala75/odezvy_TD.tex) [39 <./images/skala75/OAR_dohromady.png>] [40]
-(./skala75/vysledky_Q_dynamicky.tex) [41] (./skala75/vysledky_Q_rovnovazne.tex)
-[42] (./halkova980/vysledky_inputData.tex)
-<images/halkova980/OAR_dohromady.png, id=631, 733.5405pt x 456.0237pt>
+(./skala75/odezvy_TD.tex) [40 <./images/skala75/OAR_dohromady.png>] [41]
+(./skala75/vysledky_Q_dynamicky.tex) [42] (./skala75/vysledky_Q_rovnovazne.tex)
+[43] (./halkova980/vysledky_inputData.tex)
+<images/halkova980/OAR_dohromady.png, id=642, 733.5405pt x 456.0237pt>
 File: images/halkova980/OAR_dohromady.png Graphic file (type png)
 <use images/halkova980/OAR_dohromady.png>
 Package pdftex.def Info: images/halkova980/OAR_dohromady.png  used on input lin
 e 292.
 (pdftex.def)             Requested size: 460.72124pt x 286.4197pt.
- [43]
-(./halkova980/indikacni_plyny.tex) (./halkova980/odezvy_TD.tex) [44 <./images/h
+ [44]
+(./halkova980/indikacni_plyny.tex) (./halkova980/odezvy_TD.tex) [45 <./images/h
 alkova980/OAR_dohromady.png>] (./halkova980/vysledky_prutoky_CELKOVE.tex)
-[45] (./halkova980/vysledky_Q_rovnovazne.tex) [46]
+[46] (./halkova980/vysledky_Q_rovnovazne.tex) [47]
 (./anglicka574/vysledky_inputData.tex)
-<images/anglicka574/OAR_dohromady.png, id=661, 867.24pt x 505.89pt>
+<images/anglicka574/OAR_dohromady.png, id=672, 867.24pt x 505.89pt>
 File: images/anglicka574/OAR_dohromady.png Graphic file (type png)
 <use images/anglicka574/OAR_dohromady.png>
 Package pdftex.def Info: images/anglicka574/OAR_dohromady.png  used on input li
 ne 358.
 (pdftex.def)             Requested size: 460.72124pt x 268.75339pt.
  (./anglicka574/indikacni_plyny.tex)
-(./anglicka574/odezvy_TD.tex) [47 <./images/anglicka574/OAR_dohromady.png>]
-(./anglicka574/vysledky_prutoky.tex) [48]
-<images/anglicka574/prisuny.png, id=679, 741.12885pt x 421.69545pt>
+(./anglicka574/odezvy_TD.tex) [48 <./images/anglicka574/OAR_dohromady.png>]
+(./anglicka574/vysledky_prutoky.tex) [49]
+<images/anglicka574/prisuny.png, id=691, 741.12885pt x 421.69545pt>
 File: images/anglicka574/prisuny.png Graphic file (type png)
 <use images/anglicka574/prisuny.png>
 Package pdftex.def Info: images/anglicka574/prisuny.png  used on input line 389
 .
 (pdftex.def)             Requested size: 460.72124pt x 262.1434pt.
-<images/anglicka574/prisuny_zoom.png, id=680, 737.154pt x 419.8887pt>
+<images/anglicka574/prisuny_zoom.png, id=692, 737.154pt x 419.8887pt>
 File: images/anglicka574/prisuny_zoom.png Graphic file (type png)
 <use images/anglicka574/prisuny_zoom.png>
 Package pdftex.def Info: images/anglicka574/prisuny_zoom.png  used on input lin
 e 395.
 (pdftex.def)             Requested size: 460.72124pt x 262.4362pt.
 
-(./anglicka574/vysledky_Q_statistiky.tex)) [49] [50 <./images/anglicka574/prisu
+(./anglicka574/vysledky_Q_statistiky.tex)) [50] [51 <./images/anglicka574/prisu
 ny.png> <./images/anglicka574/prisuny_zoom.png>]
 
 Package biblatex Warning: Name format 'last-first' deprecated.
@@ -1644,16 +1645,15 @@ Package biblatex Warning: '\mkdaterangeedtf' is deprecated.
 Package biblatex Warning: '\mkdaterangeedtf' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.43}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.33 \printbibliography[title=Seznam literatury]
-                                                 [43
+[53
 
 
 
 ]
+
+Package biblatex Warning: '\mkdaterangeedtf' is deprecated.
+(biblatex)                Please use '\mkdaterangeiso'.
+
 
 Package biblatex Warning: '\mkdaterangeedtf' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
@@ -1676,35 +1676,29 @@ Overfull \hbox (10.52048pt too wide) in paragraph at lines 33--33
 -20) Ra-don Con-cen-t-ration PEMP-09E/05.03.2019
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.44}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.35 \include{prilohy}
-                       [44]
+[54]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 36.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 36.
- (./main.aux (./uvod.aux) (./radon.aux)
-(./prutoky.aux) (./model.aux) (./rovnovaznaMereni.aux) (./dynamickaMereni.aux)
-(./zaver.aux) (./prilohy.aux))
+ (./main.aux (./uvod.aux) (./radon.aux) (./prutoky.aux) (./model.aux)
+(./rovnovaznaMereni.aux) (./dynamickaMereni.aux) (./zaver.aux) (./prilohy.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 36.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 36.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 0CEFE2DCBDF20C412BB7B9DF6BBC96AA;8732.
+(rerunfilecheck)             Checksum: AEA984426838760425E9FB5B25D3C642;8732.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 36.
  ) 
 Here is how much of TeX's memory you used:
- 37265 strings out of 492623
- 667486 string characters out of 6135670
- 1176365 words of memory out of 5000000
- 40368 multiletter control sequences out of 15000+600000
+ 37274 strings out of 492623
+ 667646 string characters out of 6135670
+ 1176482 words of memory out of 5000000
+ 40371 multiletter control sequences out of 15000+600000
  552365 words of font info for 156 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  48i,25n,79p,1573b,2597s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{table.caption.15} has been referenced but does no
+pdfTeX warning (dest): name{table.caption.16} has been referenced but does no
 t exist, replaced by a fixed one
 
 pdfTeX warning (dest): name{section.D.2} has been referenced but does not exist
@@ -1782,10 +1776,10 @@ pe1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/ams
 fonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/
 msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/esvect/vect10.pfb></usr/sh
 are/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
-Output written on main.pdf (45 pages, 13329984 bytes).
+Output written on main.pdf (46 pages, 13332586 bytes).
 PDF statistics:
- 835 PDF objects out of 1000 (max. 8388607)
- 729 compressed objects within 8 object streams
- 207 named destinations out of 1000 (max. 500000)
+ 850 PDF objects out of 1000 (max. 8388607)
+ 743 compressed objects within 8 object streams
+ 213 named destinations out of 1000 (max. 500000)
  28111 words of extra memory for PDF output out of 29859 (max. 10000000)
 

@@ -375,6 +375,41 @@
       \endverb
       \keyw{Multi-zonal airflow measurement,Perfluorocarbon tracer gas,Least squares,Error analysis}
     \endentry
+    \entry{wiki_OLS}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0daad98b9773a8c95cab228d8eab97f3}{%
+           family={Wikipedia},
+           familyi={W\bibinitperiod},
+           given={The\bibnamedelimb Free\bibnamedelima Encyclopedia},
+           giveni={T\bibinitperiod\bibinitdelim F\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{0daad98b9773a8c95cab228d8eab97f3}
+      \strng{fullhash}{0daad98b9773a8c95cab228d8eab97f3}
+      \strng{bibnamehash}{0daad98b9773a8c95cab228d8eab97f3}
+      \strng{authorbibnamehash}{0daad98b9773a8c95cab228d8eab97f3}
+      \strng{authornamehash}{0daad98b9773a8c95cab228d8eab97f3}
+      \strng{authorfullhash}{0daad98b9773a8c95cab228d8eab97f3}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{4}
+      \field{month}{3}
+      \field{title}{Linear least squares}
+      \field{urlday}{21}
+      \field{urlmonth}{8}
+      \field{urlyear}{2019}
+      \field{year}{2019}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://en.wikipedia.org/wiki/Linear_least_squares
+      \endverb
+      \verb{url}
+      \verb https://en.wikipedia.org/wiki/Linear_least_squares
+      \endverb
+    \endentry
     \entry{spline}{online}{}
       \field{sortinit}{3}
       \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}

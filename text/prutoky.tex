@@ -153,7 +153,7 @@ Pokud máme $N=N_p$, což je nejčastější případ, pak lze soustavu rovnic~\
 \end{itemize}
 Pro vyšší $N$ nabývá řešení rychle na složitosti. Pro zjednodušení jsem napsal v Pythonu skript využívající symbolického programování pro vyřešení soustavy pro obecné $N$. Naneštěstí je velmi pomalý, pro $N=3$ trvá výpočet přibližně 18 vteřin a pro $N=4$ jsem výpočet přerušil, protože trval příliš dlouho.
 
-K propagaci nejistot od vstupních veličin k průtokům vzduchu jsem využil pythonovský balíček~\cite{uncertainties}.
+K propagaci nejistot od vstupních veličin k průtokům vzduchu jsem využil pythonovský balíček uncertainties~\cite{uncertainties}.
 \subsubsection{Lineární regrese}
 Obecnější řešení nabízí lineární regrese, kterou lze použít i pro přeurčenou soustavu rovnic, kterou dostáváme při $N_p>N$. Aby jí šlo využít, tak je potřeba přepsat soustavu~\eqref{eq:prutoky_rovnice} do tvaru 
 \begin{equation}
@@ -209,12 +209,21 @@ Nulovost $m_{ki}$ pro $k\neq i$ plyne z pravidel pro osazování vyvíječů do 
 \end{align}
 Pokud řádkový index ($N_p\cdot k-N_p+i$, resp. $N_p\cdot k-N_p+j$) přesáhne řádkový rozměr matice $X$, pak je ignorován a žádná hodnota se nikam nepřiřazuje. Pro vysvětlení uvažujme $k=1$. Pak výše uvedené vztahy říkají, že prvek matice $X$ v $i$-tém řádku a $m$-tém sloupci je roven $-C_{1i}$ a prvek v $j$-tém řádku a $m$-tém sloupci $C_{1i}$. Výraz $N_p\cdot k-N_p$ je potřeba pro dopočet ostatních prvků matice, které jsou odvozeny od koncentrací ostatních indikačních plynů. Při odvozování matice $X$ jsem postupoval podle článku~\cite{japonci2}.
 
-Nevýhodou této metody je, že nedokáže určit nejistoty vypočtených průtoků vzduchu při $N=N_{p}$. 
+Nevýhodou této metody je, že nedokáže určit nejistoty vypočtených průtoků vzduchu při $N=N_{p}$. Při $N_p>N$ jsou nejistoty určeny, avšak většinou bývají řádově větší než určené nominální hodnoty průtoků vzduchu. To je dáno přeurčeností soustavy a nepřesnostem ve vyhodnocování odezev TD detektorů a odparů z vyvíječů.
 
 Tento postup výpočtu jsem také implementoval v Pythonu a pro $N=N_{p}$ vychází analytické a regresní řešení stejně, výhodou analytického řešení je určení nejistot řešení. 
 
 Skripty analytického ani regresního řešení v této práci neuvádím, jelikož využívají podobných principů jako skripty určené pro výpočet přísunů radonu do zón (viz další kapitola).
 
+\subsubsection{Řešení pro $N=N_p\geq 4$}
+Jak již bylo řečeno, pro čtyři a více zón trvá výpočet pomocí skriptu řešící soustavu~\eqref{eq:prutoky_rovnice} analyticky moc dlouho. Pokud při  použijeme normální nástroje lineární regrese, pak dostaneme průtoky mezi zónami bez nejistot. Východiskem z této situace je využití metody nejmenších čtverců~\cite{wiki_OLS}, pomocí níž můžeme parametry $\beta$ z rovnice~\eqref{eq:prutoky_regrese} určit ze vztahu
+\begin{equation}
+    \beta=(X^T X)^{-1}X^T Y\,,
+    \label{eq:prutoky_OLS}
+\end{equation}
+za podmínky, že matice $(X^T X)$ je invertibilní. Tento jednoduchý výpočet umožňuje propagaci nejistot pomocí balíčku uncertainties~\cite{uncertainties}, díky čemuž jsou určeny průtoky i s nejistotami. 
+
+Tento způsob výpočtu byl srovnán s analytickým způsobem výpočtu pro $N=N_p=3$. V obou případech vyšly stejné hodnoty a jejich nejistoty se rovnaly řádem i hodnotou v první platné cifře.
 \subsection{Výměna vzduchu}
 Pokud známe exfiltrace a objemy všech zón, pak můžeme vypočítat výměnu vzduchu objektu:
 \begin{equation}
