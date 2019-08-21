@@ -1,11 +1,11 @@
 \chapter{Určení objemové rychlosti přísunu zdrojů radonu}\label{navesti:model}
 V této kapitole je popsán model pro výpočet objemové rychlosti přísunu zdrojů radonu (zkráceně přísunů radonu) do jednotlivých kompartmentů zkoumaného objektu. Slovo kompartment je zde často nahrazováno kratším synonymem zóna.
 
-Uvažujme obecné rozdělení objektu na $N$ zón. Pro určení přísunů radonu $Q_1, Q_2, \ldots, Q_N$ potřebujeme znát OAR (objemová aktivita radonu) ve všech zónách, objemové průtoky vzduchu mezi jednotlivými zónami a objemy zón. Tyto veličiny jsou svázány následující soustavou diferenciálních rovnic
+Uvažujme obecné rozdělení objektu na $N$ zón. Pro určení přísunů radonu $Q_1, Q_2, \ldots, Q_N$ potřebujeme znát OAR ve všech zónách, objemové průtoky vzduchu mezi jednotlivými zónami a objemy zón. Tyto veličiny jsou svázány následující soustavou diferenciálních rovnic
 \begin{equation}
     \dot{a_i}=\frac{1}{V_i}\left( \sum^{N+1}_{j=1}a_j k_{ji}-\sum^{N+1}_{j=1}a_i k_{ij}\right)-\lambda a_i +Q_i\,,\quad i\in \{1,2,\ldots,N\}\,.\label{eq:odvozovani}
 \end{equation}
-značení je vysvětleno v tab.~\ref{tab:veliciny}.
+Značení je vysvětleno v tab.~\ref{tab:veliciny}.
 %\begin{table}[ht]
     %\centering
     %\caption{Značení veličin vystupujících v soustavě rovnic~\ref{eq:odvozovani}.}
@@ -27,7 +27,7 @@ Indexem $N+1$ je značeno vnější prostředí, které je tedy uvažováno jako
 
 Průtok vzduchu $k_{i,N+1}$ představuje objemový průtok vzduchu z $i$-té zóny do vnějšího prostředí a je nazýván exfiltrace $i$-té zóny. Průtok vzduchu $k_{N+1, i}$ představuje objemový průtok z vnějšího prostředí do $i$-té zóny a nazýváme jej infiltrace $i$-té zóny. Pro jednoduchost budeme exfiltrace značit jako $k_{i_E}$ a infiltrace jako $k_{i_I}$. Veličinou $a_{N+1}$ je značeno OAR vnějšího prostředí. Lze si povšimnout, že pokud platí $a_{N+1}=0$, pak nemá vnější prostředí vliv na dynamiku přenosu radonu uvnitř objektu.
 
-Objemové koncentrace radonu lze změřit jakýmkoliv detektorem radonu. Pokud měříme kontinuálními monitory radonu, pak je možné určit časový vývoj přísunů radonu v době měření OAR. Tato měření nazýváme \emph{\textbf{dynamické měření přísunu radonu}}. Derivace v rovnicích~\eqref{eq:odvozovani} lze získat například tak, že příslušné naměřené časové vývoje OAR interpolujeme nějakým vhodným způsobem a vzniknuvší funkce zderivujeme podle času.
+Objemové aktivity radonu lze změřit jakýmkoliv detektorem radonu. Pokud měříme kontinuálními monitory radonu, pak je možné určit časový vývoj přísunů radonu v době měření OAR. Tato měření nazýváme \emph{\textbf{dynamické měření přísunu radonu}}. Derivace v rovnicích~\eqref{eq:odvozovani} lze získat například tak, že příslušné naměřené časové vývoje OAR interpolujeme nějakým vhodným způsobem a vzniknuvší funkce zderivujeme podle času.
 
 Měříme-li integrálními detektory radonu, pak máme pro danou zónu k dispozici pouze průměrnou hodnotu OAR $\overline{a_i}$. Lze ukázat (viz \cite{japonci2}), že v tomto případě můžeme levou stranu rovnic \eqref{eq:odvozovani} položit nule, tj. soustava rovnic přechází na tvar 
 \begin{equation}
@@ -88,8 +88,7 @@ Vyjádřením $\vv{Q}$ z \eqref{eq:maticovy_zapis_dynamika}, resp. \eqref{eq:mat
 \section{Určení nejistot přísunů radonu}
 Přísun radonu $Q_i$ je veličina závislá na OAR všech zón, všech průtoků vzduchu z a do $i$-té zóny, na objemu $i$-té zóny a případně na časové změně OAR $i$-té zóny, tj. 
 \begin{align}
-    Q_i&=f(a_1, \dots, a_{N+1};\ k_{i1}, \dots , k_{iN}, k_{i_E};\ k_{1i}, \dots , k_{Ni}, k_{i_I};\ V_i;\ \dot{a_i})\,,\\
-    &=f(\vv{x})\,,
+    Q_i&=f(a_1, \dots, a_{N+1};\ k_{i1}, \dots , k_{iN}, k_{i_E};\ k_{1i}, \dots , k_{Ni}, k_{i_I};\ V_i;\ \dot{a_i})=f(\vv{x})\,,
     %\label{eq:}
 \end{align}
 naměřené veličiny byly pro zjednodušení značení shrnuty do vektoru $\vv{x}$.
@@ -110,7 +109,7 @@ Jestliže jsou naměřené veličiny nezávislé, pak jsou nediagonální prvky 
 
 Vzhledem k tomu, že nevíme, jak moc velké závislosti jsou mezi jednotlivými naměřenými veličinami a jejich kvantifikace by vyžadovala mnoho náročných měření, ze kterých by stejně nešla míra těchto závislostí určit dostatečně přesně, tak byl pro výpočet $\Sigma^Q$ používán vztah~\eqref{eq:kovariancniMatice_jen_variance}. 
 
-Výpočet nejistot přísunů radonu se značně zesložiťuje se zvyšujícím se počtem kompartmentů $N$, a proto jsem napsal skript v Pythonu, který pomocí balíčku Sympy symbolicky vypočítá $\Sigma^Q$ pro požadovaný počet zón. Počet zón je přitom limitován pouze výpočetním časem, např. pro $N=3$ výpočet zabral pouhých \SI{0.2}{s}, pro $N=10$ už \SI{3.9}{s}. Ovšem více než deset zón nepřichází v praxi v úvahu vzhledem k počtu použitelných indikačních plynů a náročnosti provedení měření. Skript je k nahlédnutí v příloze~\ref{navesti:priloha_nejistoty}.
+Výpočet nejistot přísunů radonu se značně ztěžuje se zvyšujícím se počtem kompartmentů $N$, a proto jsem napsal skript v Pythonu, který pomocí balíčku Sympy symbolicky vypočítá $\Sigma^Q$ pro požadovaný počet zón. Počet zón je přitom limitován pouze výpočetním časem, např. pro $N=3$ výpočet zabral pouhých \SI{0.2}{s}, pro $N=10$ už \SI{3.9}{s}. Ovšem více než deset zón nepřichází v praxi v úvahu vzhledem k počtu použitelných indikačních plynů a náročnosti provedení měření. Skript je k nahlédnutí v příloze~\ref{navesti:priloha_nejistoty}.
 
 Nejistoty naměřených veličin jsou určeny nejistotou daného měřidla či použité metody. V případě $\dot{a_i}$ lze nejistotu získat aplikováním vzorce~\eqref{eq:kovariancniMatice_jen_variance} na časovou derivaci funkce, jenž představuje proklad naměřených hodnot OAR (chceme znát pouze nejistotu jedné veličiny, proto je výsledkem číslo představující rozptyl $\dot{a_i}$).
 
@@ -187,4 +186,6 @@ Skript pro vyhodnocení dynamického měření má za vstupy rovněž soubory \e
 
 Opět dojde k sestrojení matice $\mathbb{K}$ a vektoru $\vv{a}$. Dále skript proloží časové vývoje $a_i(t)\,,\ i\in\{1,2,\dots,N\}$ kubickým splinem~\cite{spline}, který následně zderivuje a tím jsou určeny derivace $\vv{\dot{a}}(t)$.
 
-Časové vývoje přísunů radonu $\vv{Q}(t)$ jsou určeny z rovnice~\eqref{eq:maticovy_zapis_dynamika}. Skript umožňuje exportovat naměřené průtoky mezi zónami, objemy zón a statistiky $\vv{Q}(t)$ do tabulek ve formátu Latexu. Statistikami $\vv{Q}(t)$ je myšleno průměr a medián přísunů radonu, jejich maximální a minimální hodnoty a také jejich první a třetí kvartily. Pomocí skriptu také můžeme vytvářet grafy zobrazující $\vv{Q}(t)$ v závislosti na čase $t$.
+Časové vývoje přísunů radonu $\vv{Q}(t)$ jsou určeny z rovnice~\eqref{eq:maticovy_zapis_dynamika}. Skript umožňuje exportovat naměřené průtoky mezi zónami, objemy zón a statistiky $\vv{Q}(t)$ do tabulek ve formátu Latexu. Statistikami $\vv{Q}(t)$ je myšleno průměr a medián přísunů radonu, jejich maximální a minimální hodnoty a také jejich první a třetí kvartily. 
+
+Pomocí skriptu také můžeme vytvářet grafy zobrazující $\vv{Q}(t)$ v závislosti na čase $t$. Zobrazená závislost  $\vv{Q}(t)$ v těchto grafech je vyhlazena Savitzky-Golay filtrem s velikostí okna 7 a s fitovanim kubickým polynomem~\cite{savgol}. Filtrování bylo použito z důvodu velkého zašumění původních dat. 

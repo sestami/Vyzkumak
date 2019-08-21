@@ -4,7 +4,7 @@ Radon je bezbarvý, nereaktivní plyn, je bez chuti a zápachu \cite{wiki_radon}
 V tab.~\ref{tab:radon_dcery} jsou uvedeny krátkodobé dceřinné produkty radonu s jejich poločasy přeměny a způsobem přeměny. Pomocí nich se radon může měřit a právě ony mají hlavní podíl na ozařování obyvatelstva.
 \begin{table}[H]
     \centering
-    \caption{Krátkodobé dceřinné produkty radonu, jejich poločasy přeměny a způsob přeměny~\cite{SURO}.}
+    \caption{Krátkodobé dceřinné produkty radonu, jejich poločasy přeměny a způsob dominantní přeměny~\cite{SURO}.}
     \label{tab:radon_dcery}
     \begin{tabular}{lll}
         \toprule
@@ -18,13 +18,13 @@ V tab.~\ref{tab:radon_dcery} jsou uvedeny krátkodobé dceřinné produkty radon
     \end{tabular}
 \end{table}
 
-Radon vzniká v geologickém podloží, ze kterého se dostává do obytných budov. Pokud se v budovách dostatečně nevětrá, nebo pokud je přísun radonu z podloží do budovy neobvykle vysoký, pak může OAR (objemová aktivita radonu, nazývaná též koncentrace radonu vyjádřená v \si{Bq/m^3}) uvnitř budovy dosahovat velikých hodnot, což může z dlouhodobého hlediska ohrožovat zdraví obyvatel. Pro rozhodnutí, co je a není příliš vysoká hodnota OAR, vyhláška o radiační ochraně~\cite{vyhlaska} stanovuje referenční hodnotu \SI{300}{Bq/m^3}. Při jejím překročení by měl vlastník budovy v rámci optimalizace radiační ochrany přikročit k úpravě užívání budovy (více větrat) nebo k provedení ozdravných opatření (odčerpávání radonu z půdního vzduchu). Informace o působení radonu na lidské zdraví lze dohledat např. na stránkách Státního ústavu radiační ochrany, v. v. i.,~\cite{SURO}.
+Radon vzniká v geologickém podloží, ze kterého se dostává do obytných budov. Pokud se v budovách dostatečně nevětrá, nebo pokud je přísun radonu z podloží do budovy neobvykle vysoký, pak může OAR (objemová aktivita radonu, nazývaná též koncentrace radonu vyjádřená v \si{Bq/m^3}) uvnitř budovy dosahovat velikých hodnot, což může z dlouhodobého hlediska ohrožovat zdraví obyvatel. Pro rozhodnutí, co je a není příliš vysoká hodnota OAR, vyhláška o radiační ochraně~\cite{vyhlaska} stanovuje referenční hodnotu \SI{300}{Bq/m^3}. Při jejím překročení by měl vlastník budovy v rámci optimalizace radiační ochrany přikročit k úpravě užívání budovy (více větrat) nebo k provedení ozdravných opatření (odčerpávání radonu z půdního vzduchu). Informace o působení radonu na lidské zdraví lze dohledat např. na stránkách Státního ústavu radiační ochrany, v. v. i. (SÚRO),~\cite{SURO}.
 
 Z předchozího textu plyne, že je potřeba koncentraci radonu v budovách dostatečně přesně měřit. Detektory radonu rozdělujeme na integrální a kontinuální. Integrální poskytují jednu průměrnou hodnotu OAR za celou dobu měření, ale nepotřebují napájení. Naopak kontinuální detektory měří průběh OAR v čase a potřebují napájení. 
 
 Mezi nejvíce používané integrální detektory radonu pro měření v budovách se řadí stopové detektory a elektretové ionizační komory. Stopové detektory se užívají pro dlouhodobější měření (zpravidla roční), elektretové se využívají při kratších měření (týdenní, dvoutýdenní). V rámci této práce jsem ani s jedním z těchto typů detektorů nepracoval, a proto o nich zde neuvádím podrobnější informace (ty lze opět dohledat v \cite{SURO}). V kapitole~\ref{navesti:rovnovaznaMereni} jsem však využíval OAR naměřené elektretovými detektory.
 
-V případě kontinuálních detektorů se používá termín kontinuální monitory radonu, protože tak nedochází ke zmatení názvosloví. Kontinuální monitory radonu se totiž dělí nejenom podle typu použitého detektoru (polovodičový, ionizační komora), ale i podle nasávání vzduchu, způsobu vyhodnocování naměřených dat atd. V následujícím odstavci jsou uvedeny parametry dvou kontinuálních monitorů, které jsem při měření používal.
+V případě kontinuálních detektorů se používá termín kontinuální monitory radonu, protože tak nedochází ke zmatení názvosloví. Kontinuální monitory radonu se totiž dělí nejenom podle typu použitého detektoru (polovodičový, ionizační komora), ale i podle nasávání vzduchu, způsobu vyhodnocování naměřených dat, atd. V následujícím odstavci jsou uvedeny parametry dvou kontinuálních monitorů, které jsem při měření používal.
 
 V odstavci~\ref{navesti:radon_zdroje} jsou uvedené základní informace o průtočném radonovém zdroji, který jsem používal při měřeních.
 
@@ -32,8 +32,8 @@ V odstavci~\ref{navesti:radon_zdroje} jsou uvedené základní informace o průt
 \subsection{TERA sondy}
 Jedná se o monitory s polovodičovým detektorem. Nasávání vzduchu je prováděno difúzně. Mají dva režimy měření:
 \begin{labeling}{RaA+RaC}
-    \item[RaA] rychlejší, ale méně přesný způsob. OAR se počítá pouze z naměřených impulzů příslušejících \ce{^{218}Po}.
-    \item[RaA+RaC] pomalejší, ale přesnější způsob. OAR se počítá z impulzů příslušejících \ce{^{218}Po} i \ce{^{214}Po}.
+    \item[RaA] rychlejší, ale méně přesný způsob. OAR se počítá pouze z naměřených impulzů od alfa částic vznikajících při přeměně příslušející \ce{^{218}Po}.
+    \item[RaA+RaC] pomalejší, ale přesnější způsob. OAR se počítá z impulzů od alfa částic vznikajících při přeměnách \ce{^{218}Po} i \ce{^{214}Po}.
 \end{labeling}
 
 Sondy neustále měří a zpracovávají výsledky v čtyř minutových intervalech, z kterých každou hodinu počítají koncentraci radonu (pomocí klouzavého průměru). Tyto hodinové hodnoty lze po skončení měření vyčíst. Některé verze sond mají displej, na němž je vidět tato hodinová hodnota (aktuální v daném čase) a také dlouhodobá koncentrace radonu (24 hodinový klouzavý průměr). \cite{tera}
@@ -43,12 +43,12 @@ Parametry uváděné výrobcem tohoto kontinuálního monitoru radonu jsou v tab
 O TERA sondách je z praxe známo, že jsou značně nepřesné a OAR naměřené několika sondami se mohou lišit až třeba o 40~\%. Proto bylo potřeba před samotným měřeními udělat se sondami srovnávací měření s nějakým osvědčeným monitorem radonu, např. AlphaGuardem~\cite{alphaguard}, aby se mohly zavádějící hodnoty OAR opravit. Toto srovnávací měření je rozebráno v podkapitolce~\ref{navesti:dynMer_TERA}.
 
 \subsubsection{Určení nejistot naměřených OAR}
-Jak již bylo řečeno, TERA sondy zapisují průměrnou hodnotu OAR každou hodinu. Spolu s OAR jsou zapisovány i naměřené počty impulzů v jednotlivých diskriminačních oknech, která mají TERA sondy nastaveny pro rozlišení impulzů: do druhého diskriminačního okna spadají impulzy od \ce{^{218}Po} (\SI{6}{MeV}), do třetího od \ce{^{214}Po} (\SI{7.69}{MeV}), do prvního a čtvrtého impulzy od ostatních energií, jenž nás nezajímají. Díky tomu je možné vypočítat nejistotu naměřeného počtu impulzů náležejících \ce{^{218}Po} a \ce{^{214}Po}, označme jej $n$. Počet zaznamenaných impulsů se řídí Poissonovým rozdělením, a proto pro směrodatnou odchylku $n$ máme:
+Jak již bylo řečeno, TERA sondy zapisují průměrnou hodnotu OAR každou hodinu. Spolu s OAR jsou zapisovány i naměřené počty impulzů v jednotlivých diskriminačních oknech, která mají TERA sondy nastaveny pro rozlišení impulzů: do druhého diskriminačního okna spadají impulzy od \ce{^{218}Po} (\SI{6}{MeV}), do třetího od \ce{^{214}Po} (\SI{7.69}{MeV}), do prvního a čtvrtého impulzy od ostatních energií, jenž nás nezajímají. Díky tomu je možné vypočítat nejistotu naměřeného počtu impulzů náležejících \ce{^{218}Po} a \ce{^{214}Po}. Označme tento počet impulzů jako $n$. Počet zaznamenaných impulsů se řídí Poissonovým rozdělením, a proto pro směrodatnou odchylku $n$ máme:
 \begin{equation}
     \sigma_n=\sqrt{n}\,.
     \label{eq:radon_n_odchylka}
 \end{equation}
-Dle tab.~\ref{tab:radon_tera} je průměrná citlivost měření \SI{0.25}{(imp/hod)/(Bq/m^3)}, ale když jsem zkoušel vypočítat citlivost z naměřených dat (jako podíl $n$ a OAR), tak mi pro každou zaznamenanou hodnotu vycházela jinak. To znamená, že kalibrace sond je nějaká funkce OAR. Proto je přesnější vypočítat si citlivost pro každou hodnotu z naměřených dat místo používání tabelované hodnoty.
+Dle tab.~\ref{tab:radon_tera} je průměrná citlivost měření \SI{0.25}{(imp/hod)/(Bq/m^3)}, ale při zkoušení vypočítání citlivosti z naměřených dat (jako podíl $n$ a OAR) mi pro každou zaznamenanou hodnotu vycházela citlivost jinak. To znamená, že kalibrace sond je nějaká funkce OAR. Proto je přesnější vypočítat si citlivost pro každou hodnotu z naměřených dat místo používání tabelované hodnoty.
 
 Při určování nejistoty OAR vycházíme ze znalosti $n$ pro danou OAR:
 \begin{align}
@@ -88,19 +88,19 @@ Parametry uváděné výrobcem jsou v tab.~\ref{tab:radon_canary}. V obr.~\ref{f
     \label{tab:radon_canary}
 \begin{tabular}{ll}
     \toprule
-PowerSupply                   & 3 AAA alkaline batteries (LR03)        \\
-                              & 2 years battery life                   \\
-Dimensions                    & 120 $\times$ 69 $\times$ 25.5 \si{mm^3}                     \\
-Weight                        & 130 g                                  \\
-Operation Environment         & Temperature: +4\degree C to +40\degree C            \\
-                              & Relative humidity: $<$ 85 \%           \\
-Measurement Range             & Lowest detection limit: \SI{0}{Bq/m^3}        \\
-                              & Upper display limit: \SI{9999}{Bq/m^3}        \\
+Baterka                   & 3 AAA alkalinové baterie (LR03)        \\
+                              & dvouroční životnost baterie                   \\
+Rozměry                    & 120 $\times$ 69 $\times$ 25,5 \si{mm^3}                     \\
+Hmotnost                        & 130 g                                  \\
+Měří při          & teplota: +4\degree C to +40\degree C            \\
+                              & relativní vlhkost: $<$ 85 \%           \\
+Měřící rozsah             & nejnižší detekční limit: \SI{0}{Bq/m^3}        \\
+                              & horní limit displeje: \SI{9999}{Bq/m^3}        \\
 \midrule
-\multicolumn{2}{l}{\textbf{Accuracy/Precision at \SI{200}{Bq/m^3} (Typical):}} \\
+\multicolumn{2}{l}{\textbf{Přesnost při \SI{200}{Bq/m^3}:}} \\
 \midrule
-7 days                        & 10 \%                                  \\
-2 months                      & 5 \%                  \\                
+7 dní                        & 10 \%                                  \\
+2 měsíce                      & 5 \%                  \\                
 \bottomrule
 \end{tabular}
 \end{table}
@@ -123,20 +123,18 @@ Měřící algoritmus                                        & rychlý, měně p
                                                          & pomalý, více přesný (počítáno z RaA+ RaC)                                 \\
 Měření relativní vlhkosti                                & 10 – 90 \%                                                                \\
 Měření teploty                                           & od -20\degree do +60\degree C                                              \\
-Radiové rozhraní                                         & 868 MHz                                                                    \\
-Max. počet prvků v měřící síti                           & 16                                                                        \\
-Vzdálenost mezi sondou a centrálou (dosah)               & 600 m ve volném prostoru, v budově závisí na počtu zdí, materiálu atd.    \\
+%Radiové rozhraní                                         & 868 MHz                                                                    \\
+%Max. počet prvků v měřící síti                           & 16                                                                        \\
 Možnost použití opakovače pro zvětšení dosahu            & ano                                                                       \\
 Interval čtení výsledků měření ze sondy                  & 240 – 65535 s (4 min – 18,2 hod)                                          \\
 Interval uložení výsledků v sondě                        & 1 – 255 min, defaultně každou 1 hodinu                                    \\
-Kapacita paměti výsledků v centrále                      & 100 dní (1 sonda, záznamy 1 hodina)                                       \\
 Kapacita paměti výsledků v sondě (při autonomním měření) & 150 dní                                                                   \\
 Napájení sondy                                           & Vnitřní nabíjecí akumulátor; nabíjení přes USB                            \\
 Předpokládaná doba provozu po nabití                     & $>$ 1 rok                                                        \\
 Indikace aktuální koncentrace radonu                     & krátkodobá (klouzavý průměr za 1 hodinu);                                  \\
                                                          & dlouhodobá (klouzavý průměr za 24 hodin)                                  \\
 Rozměry                                                  & $\diameter$ 80 $\times$ 175 mm                                                   \\
-Vestavěný displej                                        & grafický, 128 $\times$ 64 bodů, jantarové podsvícení      \\      
+%Vestavěný displej                                        & grafický, 128 $\times$ 64 bodů, jantarové podsvícení      \\      
 \bottomrule
 \end{tabular}
 \end{table}

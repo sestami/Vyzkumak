@@ -3,7 +3,7 @@ Hlavním zdrojem této kapitoly je~\cite{metodika}.
 
 Technika indikačních plynů dovoluje určit objemové průtoky vzduchu mezi specifikovanými kompartmenty zkoumaného objektu, jakož i průtoky vzduchu ze všech zón do vnějšího prostředí (exfiltrace) a průtoky z vnějšího prostředí do všech zón (infiltrace). Z exfiltrací a objemů všech zón lze určit výměnu vzduchu objektu. Jedná se o pasivní techniku, a tudíž poskytuje pouze průměrné hodnoty za celou dobu měření. Proměřování objektu pomocí této techniky pro zjednodušení nazýváme měření ventilace objektu.
 
-Technika byla vyvinuta Státním ústavem radiační ochrany, v. v. i. (SÚRO) a její správnost byla ověřena s obdobnými technikami používanými v zahraničí. Vše o ní je popsáno v certifikované metodice (\cite{metodika}), podle níž se postupovalo i při měřeních provedených v rámci této práce. Principem techniky je detekce vhodně použitých indikačních plynů, jejichž zdroje jsou rozmístěny po objektu a které mají definovaný konstantní přísun do zón. Ze známosti těchto přísunů do jednotlivých zón, z odezev detektorů a z dalších faktů je možné určit hledané veličiny, tj. objemové průtoky vzduchu a výměnu vzduchu objektu.
+Technika byla vyvinuta Státním ústavem radiační ochrany, v. v. i. a její správnost byla ověřena s obdobnými technikami používanými v zahraničí. Vše o ní je popsáno v certifikované metodice (\cite{metodika}), podle níž se postupovalo i při měřeních provedených v rámci této práce. Principem techniky je detekce vhodně použitých indikačních plynů, jejichž zdroje jsou rozmístěny po objektu a které mají definovaný konstantní přísun do zón. Ze známosti těchto přísunů do jednotlivých zón, z odezev detektorů a z dalších faktů je možné určit hledané veličiny, tj. objemové průtoky vzduchu a výměnu vzduchu objektu.
 
 Při měření se používají tzv. vyvíječe, ze kterých se odpařují indikační plyny, dále TD detektory, na které se indikační plyny sorbují. Pomocnými zařízeními jsou především kontinuální měřidla teploty testo 174H a laserové dálkoměry pro určení objemů kompartmentů. Při vyhodnocování se používá plynový chromatograf s termální desorpcí. Vše je podrobněji popsáno v dalším oddíle.
 \section{Přístroje a pomůcky}
@@ -43,7 +43,7 @@ Dva vyvíječe a dva TD detektory jsou k vidění v obr.~\ref{fig:prutoky_vyvije
 
 \section{Pracovní postup}
 \subsection{Příprava měření}
-Zkoumaný objekt s více patrami rozdělujeme na zóny většinou podle podlaží. Pokud se jedná o jednopodlažní objekt, pak vzhledem k zaměření tohoto výzkumného úkolu objekt rozdělíme tak, aby v každé zóně byla pokud možno homogenní koncentrace radonu. Platí, že máme-li $N$ kompartmentů, pak potřebujeme minimálně $N$ indikačních plynů (tracerů). 
+Zkoumaný objekt s více patry rozdělujeme na zóny většinou podle podlaží. Pokud se jedná o jednopodlažní objekt, pak vzhledem k zaměření tohoto výzkumného úkolu objekt rozdělíme tak, aby v každé zóně byla pokud možno homogenní koncentrace radonu. Platí, že máme-li $N$ kompartmentů, pak potřebujeme minimálně $N$ indikačních plynů (tracerů). 
 
 Před měřením je potřeba připravit všechny potřebné vyvíječe, TD detektory, laserový dálkoměr a teploměry testa. To obnáší nastavit emisi vyvíječů tak, aby nedošlo k nasorbování většího množství indikačních plynů na TD detektory než jejich měřící rozsah. Při tom je zapotřebí vzít do úvahu velikost zón, větrací návyky obyvatel objektu a vnější teplotu v průběhu měření. Pokud dojde k nasorbování nějakého indikačního plynu přes měřící rozsah u některého z TD detektorů, pak je tento TD detektor sice stále možné vyhodnotit, ale s obrovskou nepřesností, která navíc nelze ani určit. 
 
@@ -86,19 +86,18 @@ Uvažujme nějaký obecný objekt rozdělený na $N$ zón, do něhož byly umís
 \subsection{Hmotnostní koncentrace a emise indikačních plynů}
 Z vyhodnocení naměřených dat známe $R_{ki}$, což je průměr odezev TD detektorů umístěných v $i$-té zóně na $k$-tý indikační plyn, průměrnou teplotu $T_i$ a tlak $p_i$ v $i$-té zóně a množství odparu $k$-tého indikačního plynu z vyvíječů umístěných $i$-té zóně. Z tohoto odparu lze určit emisi $k$-tého indikačního plynu v $i$-té zóně:
 \begin{equation}
-    m_{ki}=\frac{\text{odpar}_{ki}}{dT}\,,
+    m_{ki}=\frac{\text{odpar}_{ki}}{dt}\,,
     \label{eq:prutoky_emise}
 \end{equation}
-kde $dT$ je doba měření ventilace (tj. průtoků a výměny vzduchu) objektu. Z pravidel osazování vyvíječů do kompartmentů plyne $m_{ki}=0$ pro $k\neq i$ (viz oddíl~\ref{navesti:prutoky_instalace}). 
+kde $dt$ je doba měření ventilace (tj. průtoků a výměny vzduchu) objektu. Z pravidel osazování vyvíječů do kompartmentů plyne $m_{ki}=0$ pro $k\neq i$ (viz oddíl~\ref{navesti:prutoky_instalace}). 
 
 Dále musíme znát molekulové hmotnosti použitých indikačních plynů a odběrové rychlosti TD detektorů všech indikačních plynů.
 
 Přehledněji a korektněji jsou tyto veličiny uvedeny v tab.~\ref{tab:veliciny}, kde jsou uvedeny i jejich jednotky, se kterými se počítá v dalším postupu, pokud není uvedeno jinak.
 
-Následující vztahy jsou přebrány z~\cite{metodika}. Z $R_{ki}, dT, T_i, p_i$ a konstant pro daný indikační plyn $M_k, U_k$ můžeme vypočítat hmotnostní koncentraci $k$-tého indikačního plynu v $i$-té zóně:
+Následující vztahy jsou přebrány z~\cite{metodika}. Z $R_{ki}, dt, T_i, p_i$ a konstant pro daný indikační plyn $M_k, U_k$ můžeme vypočítat hmotnostní koncentraci $k$-tého indikačního plynu v $i$-té zóně:
 \begin{align}
-    C_{ki}&=\frac{R_{ki}}{U_k\cdot dT}\frac{M_k}{V_{i}^{mol}}\,,\\
-    &=\frac{R_{ki}}{U_k\cdot dT}\frac{M_k\cdot p_i}{R\cdot T_i}\,,
+    C_{ki}&=\frac{R_{ki}}{U_k\cdot dt}\frac{M_k}{V_{i}^{mol}}=\frac{R_{ki}}{U_k\cdot dt}\frac{M_k\cdot p_i}{R\cdot T_i}\,,
 \end{align}
 kde bylo využito relace
 \begin{equation}
@@ -151,7 +150,7 @@ Pokud máme $N=N_p$, což je nejčastější případ, pak lze soustavu rovnic~\
             k_{2_E}&=k_{12}\frac{C_{11}}{C_{12}}-k_{21}\,.
         \end{align}
 \end{itemize}
-Pro vyšší $N$ nabývá řešení rychle na složitosti. Pro zjednodušení jsem napsal v Pythonu skript využívající symbolického programování pro vyřešení soustavy pro obecné $N$. Naneštěstí je velmi pomalý, pro $N=3$ trvá výpočet přibližně 18 vteřin a pro $N=4$ jsem výpočet přerušil, protože trval příliš dlouho.
+Pro vyšší $N$ nabývá řešení rychle na složitosti. Pro zjednodušení vytvořen skript napsaný v Pythonu využívající symbolického programování pro vyřešení soustavy pro obecné $N$. Naneštěstí je velmi časově náročný, pro $N=3$ trvá výpočet přibližně 18 vteřin a pro $N=4$ jsem výpočet přerušil, protože po dni počítání stále nebyl dokončen.
 
 K propagaci nejistot od vstupních veličin k průtokům vzduchu jsem využil pythonovský balíček uncertainties~\cite{uncertainties}.
 \subsubsection{Lineární regrese}
@@ -213,7 +212,7 @@ Nevýhodou této metody je, že nedokáže určit nejistoty vypočtených průto
 
 Tento postup výpočtu jsem také implementoval v Pythonu a pro $N=N_{p}$ vychází analytické a regresní řešení stejně, výhodou analytického řešení je určení nejistot řešení. 
 
-Skripty analytického ani regresního řešení v této práci neuvádím, jelikož využívají podobných principů jako skripty určené pro výpočet přísunů radonu do zón (viz další kapitola).
+Skripty analytického ani regresního řešení nejsou v této práci uvedeny, jelikož využívají podobných principů jako skripty určené pro výpočet přísunů radonu do zón (viz další kapitola).
 
 \subsubsection{Řešení pro $N=N_p\geq 4$}
 Jak již bylo řečeno, pro čtyři a více zón trvá výpočet pomocí skriptu řešící soustavu~\eqref{eq:prutoky_rovnice} analyticky moc dlouho. Pokud při  použijeme normální nástroje lineární regrese, pak dostaneme průtoky mezi zónami bez nejistot. Východiskem z této situace je využití metody nejmenších čtverců~\cite{wiki_OLS}, pomocí níž můžeme parametry $\beta$ z rovnice~\eqref{eq:prutoky_regrese} určit ze vztahu
@@ -223,7 +222,7 @@ Jak již bylo řečeno, pro čtyři a více zón trvá výpočet pomocí skriptu
 \end{equation}
 za podmínky, že matice $(X^T X)$ je invertibilní. Tento jednoduchý výpočet umožňuje propagaci nejistot pomocí balíčku uncertainties~\cite{uncertainties}, díky čemuž jsou určeny průtoky i s nejistotami. 
 
-Tento způsob výpočtu byl srovnán s analytickým způsobem výpočtu pro $N=N_p=3$. V obou případech vyšly stejné hodnoty a jejich nejistoty se rovnaly řádem i hodnotou v první platné cifře.
+Tento způsob výpočtu byl srovnán s analytickým způsobem výpočtu pro $N=N_p=3$. V obou případech vyšly stejné hodnoty a jejich nejistoty se rovnaly řádem. Nejistoty určené analytickým způsobem vycházejí zpravidla o trochu větší.
 \subsection{Výměna vzduchu}
 Pokud známe exfiltrace a objemy všech zón, pak můžeme vypočítat výměnu vzduchu objektu:
 \begin{equation}

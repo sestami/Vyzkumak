@@ -2,11 +2,11 @@
 Dynamická měření přísunů radonu jsem provedl u tří objektů, viz tab.~\ref{tab:dynMer_prehled}.
 \begin{table}[ht]
 	\centering
-	\caption{Objekty, v nichž jsem provedl dynamická měření. $T$ značí dobu měření ve dnech (zaokrouhleno na celé dny včetně počátečního a posledního dne).}
+	\caption{Objekty, v nichž jsem provedl dynamická měření. $dt$ značí dobu měření ve dnech (zaokrouhleno na celé dny včetně počátečního a posledního dne).}
 	\label{tab:dynMer_prehled}
 	\begin{tabular}{llll}
 		\toprule
-		Objekt & Rozsah měření & $T$ [dny] & Typ objektu\\
+		Objekt & Rozsah měření & $dt$ [dny] & Typ objektu\\
 		\midrule
 		Skála 75, okr. Havlíčkův Brod & 23. 5. -- 5. 6. 2019 & 14 & chata\\
 		Hálková 980, Humpolec & 5. 6. -- 20. 6. 2019 & 15 & byt\\
@@ -61,13 +61,13 @@ Pro opravu odezev byla zavedena pro každou sondu kalibrační konstanta $B$, kt
 \end{equation}
 kde $OAR_A$ je hodnota z AlphaGuardu a $OAR_T$ je hodnota z příslušné TERA sondy. Pro získání věrohodné hodnoty koncentrace radonu z naměřené hodnoty danou sondou pak stačí tuto naměřenou hodnotu přenásobit $B$ náležející této sondě.
 
-Za $OAR_A$, resp. $OAR_T$ byly brány průměry naměřených OAR AlphaGuardem a danou Tera sondou. Relativní nejistoty kalibračních konstant byly odhadnuty na 10~\%. Určené kalibrační konstanty všech sond jsou k nahlédnutí na obr.~\ref{fig:dynMer_sondyB} a v tab.~\ref{tab:dynMer_sondyB}. %Nejistoty kalibračních konstant určeny nebyly vzhledem k tomu, že se jedná o "veličinu", která se může při různých vnějších podmínkách měnit. Hlavním ovlivňujícím faktorem je velikost aerosolů v měřeném prostředí. Tato nespolehlivost TERA sond v poskytování věrohodných dat je dalším důvodem, proč byly použity měřáky radonu CANARY. Takto můžeme srovnávat data z více zdrojů.
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=0.7\linewidth]{images/sondy_B}
-	\caption{Kalibrační konstanty proměřených TERA sond. Černou čárou je vyznačen ideální případ, kdy se odezva sondy rovná skutečné OAR (resp. OAR naměřené AlphaGuardem).}
-	\label{fig:dynMer_sondyB}
-\end{figure}
+Za $OAR_A$, resp. $OAR_T$ byly brány průměry naměřených OAR AlphaGuardem a danou Tera sondou. Relativní nejistoty kalibračních konstant byly odhadnuty na 10~\%. Určené kalibrační konstanty všech sond jsou k nahlédnutí v tab.~\ref{tab:dynMer_sondyB}. %Nejistoty kalibračních konstant určeny nebyly vzhledem k tomu, že se jedná o "veličinu", která se může při různých vnějších podmínkách měnit. Hlavním ovlivňujícím faktorem je velikost aerosolů v měřeném prostředí. Tato nespolehlivost TERA sond v poskytování věrohodných dat je dalším důvodem, proč byly použity měřáky radonu CANARY. Takto můžeme srovnávat data z více zdrojů.
+%\begin{figure}[H]
+	%\centering
+	%\includegraphics[width=0.7\linewidth]{images/sondy_B}
+	%\caption{Kalibrační konstanty proměřených TERA sond. Černou čárou je vyznačen ideální případ, kdy se odezva sondy rovná skutečné OAR (resp. OAR naměřené AlphaGuardem).}
+	%\label{fig:dynMer_sondyB}
+%\end{figure}
 \begin{table}[ht]
 	\centering
 	\caption{Kalibrační konstanty TERA sond odvozené od referenčního AlphaGuardu. Skutečná hodnota $OAR$ se vypočte ze vztahu $OAR=B\cdot OAR_T$, kde $OAR_T$ je naměřená obj. aktivita radonu danou TERA sondou. Nejistota kalibračních konstant byla odhadnuta na 10~\%.}
@@ -76,10 +76,10 @@ Za $OAR_A$, resp. $OAR_T$ byly brány průměry naměřených OAR AlphaGuardem a
 		\toprule
 		ID sondy &     $B$ \\
 		\midrule
-		8   & 0,889+/-0,089\\
-		10  & 1,440+/-0,140\\
-		88  & 1,655+/-0,166\\
-		112 & 0,925+/-0,093\\
+		8   & 0,889$\pm$0,089\\
+		10  & 1,440$\pm$0,140\\
+		88  & 1,655$\pm$0,166\\
+		112 & 0,925$\pm$0,093\\
 		\bottomrule
 	\end{tabular}
 \end{table}
@@ -180,6 +180,7 @@ $k_{21}$ & 4,028$\pm$0,940 &   3,507$\pm$0,847 &   3,220$\pm$0,776 &   2,780$\pm
 $k_{23}$ & 1,240$\pm$0,183 &   4,889$\pm$0,724 &   1,025$\pm$0,161 &   4,031$\pm$0,635 \\          
 $k_{31}$ &-0,076$\pm$0,020 &   3,524$\pm$0,958 &  -0,061$\pm$0,016 &   3,611$\pm$0,968 \\          
 $k_{32}$ & 0,931$\pm$0,137 &   5,967$\pm$0,967 &   0,774$\pm$0,117 &   4,945$\pm$0,820 \\          
+&&&&\\
 $k_{1_E}$&21,425$\pm$5,271 &  19,770$\pm$5,057 &  23,244$\pm$5,443 &  21,411$\pm$5,208 \\          
 $k_{2_E}$&44,024$\pm$4,853 &  41,624$\pm$4,833 &  36,712$\pm$4,240 &  34,644$\pm$4,195 \\          
 $k_{3_E}$& 7,712$\pm$0,849 &  24,294$\pm$3,199 &   7,850$\pm$0,853 &  25,127$\pm$3,209 \\          
@@ -202,6 +203,7 @@ $k_{21}$ & 1,309$\pm$0,211 &   1,140$\pm$0,195 &   1,049$\pm$0,182 &   0,906$\pm
 $k_{23}$ & 1,235$\pm$0,180 &   4,874$\pm$0,715 &   1,023$\pm$0,159 &   4,025$\pm$0,628 \\
 $k_{31}$ &-0,025$\pm$0,005 &   1,146$\pm$0,243 &  -0,020$\pm$0,004 &   1,176$\pm$0,245 \\
 $k_{32}$ & 0,922$\pm$0,136 &   6,419$\pm$0,960 &   0,767$\pm$0,116 &   5,330$\pm$0,817 \\
+&&&&\\
 $k_{1_E}$& 2,474$\pm$1,325 &   0,539$\pm$1,320 &   3,713$\pm$1,256 &   1,616$\pm$1,248 \\
 $k_{2_E}$&46,234$\pm$4,862 &  43,556$\pm$4,848 &  38,543$\pm$4,268 &  36,229$\pm$4,226 \\
 $k_{3_E}$& 7,670$\pm$0,848 &  26,236$\pm$3,237 &   7,815$\pm$0,852 &  27,185$\pm$3,242 \\
@@ -225,11 +227,11 @@ $n$      & 0,239$\pm$0,028 &   0,298$\pm$0,034 &   0,212$\pm$0,025 &   0,275$\pm
 \subsubsection{Vyhodnocení v rovnovážném stavu}
 \begin{table}[H]
     \centering
-    \caption{Průměrné objemové koncentrace radonu naměřené TERA sondami umístěnými v uvedených podlažích. $\sigma_A$ je nejistota OAR typu A plynoucí ze statistického zpracování naměřených dat, $\sigma_B$ je nejistota OAR typu B plynoucí z nejistoty měřidla a $\sigma$ je kombinovaná nejistota OAR. Při určování přísunů radonu v rovnovážném stavu byla použita pouze nejistota typu B, tj. $\sigma_B$. V posledním sloupci je průměrná citlivost TERA sond vypočtená z naměřených dat (tj. z naměřeného počtu impulzů a naměřeného OAR). Tato citlivost byla použita pro výpočet $\sigma_B$.}
+    \caption{Průměrné objemové koncentrace radonu naměřené TERA sondami umístěnými v uvedených podlažích. $\sigma_A$ je nejistota OAR typu A plynoucí ze statistického zpracování naměřených dat, $\sigma_B$ je nejistota OAR typu B plynoucí z ostatních zdrojů (statistika přeměny a detekce) a $\sigma$ je kombinovaná nejistota OAR. Při určování přísunů radonu v rovnovážném stavu byla použita pouze nejistota typu B, tj. $\sigma_B$. V posledním sloupci je průměrná citlivost TERA sond vypočtená z naměřených dat (tj. z naměřeného počtu impulzů a naměřeného OAR). Tato citlivost byla použita pro výpočet $\sigma_B$.}
     \label{tab:skala75_OARprumerne}
     \begin{tabular}{llrrrrr}
 \toprule
-ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& prům. citlivost $\left[\si{\frac{imp}{hod}/\frac{Bq}{m^3}}\right]$\\ 
+ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\overline{c}$ $\left[\si{\frac{imp}{hod}/\frac{Bq}{m^3}}\right]$\\ 
 \midrule
 8  &0 & 458 & 309 & 33 & 311&0,405\\
 10 &1 & 789 & 485 & 43 & 487&0,433\\

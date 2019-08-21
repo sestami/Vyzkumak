@@ -431,6 +431,27 @@
       \verb https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.interpolate.CubicSpline.html
       \endverb
     \endentry
+    \entry{savgol}{online}{}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labeltitlesource}{title}
+      \field{day}{24}
+      \field{month}{10}
+      \field{title}{scipy.signal.savgol\_filter}
+      \field{urlday}{21}
+      \field{urlmonth}{8}
+      \field{urlyear}{2019}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://docs.scipy.org/doc/scipy-0.16.1/reference/generated/scipy.signal.savgol_filter.html
+      \endverb
+      \verb{url}
+      \verb https://docs.scipy.org/doc/scipy-0.16.1/reference/generated/scipy.signal.savgol_filter.html
+      \endverb
+    \endentry
     \entry{testo}{online}{}
       \list{organization}{1}{%
         {Testo SE \& Co. KGaA}%
@@ -515,8 +536,8 @@
       \strng{authorbibnamehash}{446c996d9702c610b9138001afcf01ae}
       \strng{authornamehash}{446c996d9702c610b9138001afcf01ae}
       \strng{authorfullhash}{446c996d9702c610b9138001afcf01ae}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Radon Concentration PEMP-09E/05.03.2019 (report výsledků měření)}
