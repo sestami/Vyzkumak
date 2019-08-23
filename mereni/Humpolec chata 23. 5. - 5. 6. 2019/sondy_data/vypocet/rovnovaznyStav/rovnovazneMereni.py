@@ -71,7 +71,7 @@ def load_data(airflows_ID, V_err_rel=V_err_rel):
                 velicina = np.append(velicina, sum(df.loc[i].to_numpy()))
         return velicina
 
-    dfA = pd.read_csv('concentrations.txt',sep=';',decimal=',',index_col='podlazi')
+    dfA = pd.read_csv('concentrations_CANARY.txt',sep=';',decimal=',',index_col='podlazi')
     dfA = completion(dfA.loc[:, 'a'], dfA.loc[:, 'a_err'])
     a = operace(dfA, operace='M')
 
@@ -182,7 +182,7 @@ def export_Q(Q, podlazi, airflows_combination):
     dfQ.columns.name = None
     dfQ.index.name = None
     # formatters=[f]
-    dfQ.to_latex('vysledky_Q_rovnovazne.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
+    dfQ.to_latex('vysledky_Q_rovnovazne_CANARY.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
     return 0
 
 def run(airflows_ID, a_out=0):

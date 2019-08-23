@@ -2,36 +2,53 @@
 Dynamická měření přísunů radonu jsem provedl u tří objektů, viz tab.~\ref{tab:dynMer_prehled}.
 \begin{table}[ht]
 	\centering
-	\caption{Objekty, v nichž jsem provedl dynamická měření. $dt$ značí dobu měření ve dnech (zaokrouhleno na celé dny včetně počátečního a posledního dne).}
+	\caption{Objekty, v nichž jsem provedl dynamická měření. $dt$ značí dobu měření ve dnech (zaokrouhleno na celé dny včetně počátečního a posledního dne). V posledním sloupci je počet zón, na které byl daný objekt rozdělen.}
 	\label{tab:dynMer_prehled}
-	\begin{tabular}{llll}
+	\begin{tabular}{lllll}
 		\toprule
-		Objekt & Rozsah měření & $dt$ [dny] & Typ objektu\\
+		Objekt & Rozsah měření & $dt$ [dny] & Typ objektu &$N$\\
 		\midrule
-		Skála 75, okr. Havlíčkův Brod & 23. 5. -- 5. 6. 2019 & 14 & chata\\
-		Hálková 980, Humpolec & 5. 6. -- 20. 6. 2019 & 15 & byt\\
-		Anglická 574, Dobřichovice & 9. 7. -- 30. 7. 2019 & 22 & rodinný dům\\
+		Skála 75, okr. Havlíčkův Brod & 23. 5. -- 5. 6. 2019 & 14 & chata & 3\\
+		Hálková 980, Humpolec & 5. 6. -- 20. 6. 2019 & 15 & byt & 4\\
+		Anglická 574, Dobřichovice & 9. 7. -- 30. 7. 2019 & 22 & rodinný dům & 3\\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
 Vývoj OAR v čase v jednotlivých zónách byl měřen primárně TERA sondami~\cite{tera} a sekundárně měřiči radonu CANARY~\cite{canary}. CANARY měřáky byly použity jako záložní systém, tj. pokud by v některé zóně  TERA sonda selhala, pak by se OAR v této zóně brala z příslušného CANARY měřáku. %Zevrubné informace o těchto detektorech lze dohledat v kapitole~\ref{navesti:radon}.
 
-Dále bylo potřeba měřit vývoj teploty, což je znalost nutná při vyhodnocování množství nasorbovaných indikačních plynů v TD detektorech. K tomuto účelu byly použity dataloggery teploty a vlhkosti testo 174H~\cite{testo}.
+Dále bylo potřeba měřit vývoj teploty, což je znalost nutná při vyhodnocování množství nasorbovaných indikačních plynů v TD detektorech a k určení hmotnostních koncentrací indikačních plynů  v zónách. K tomuto účelu byly použity dataloggery teploty a vlhkosti testo 174H~\cite{testo}. V případě objektu Hálková 980 byly k určení hmotnostních koncentrací použity teploty naměřené TERA sondami, jelikož v tomto objektu byl osazen pouze jeden datalogger testo 174H (jedná se jednopodlažní byt).
+
+Do objektů byly při měřeních umístěny vždy jeden nebo dva zdroje radonu typu RF 2000 (viz podkapitola \ref{navesti:radon_zdroje}). U těchto zdrojů nás pro naše měření zajímají pouze radonové výdejnosti $W$, které představují definované absolutní přísuny radonu do zón, ve kterých jsou zdroje umístěny. Absolutními přísuny radonu je myšleno množství aktivity radonu, jenž se do zón dostane za hodinu, a tedy jejich jednotkou je \si{Bq/hod}. Radonové výdejnosti použitých zdrojů jsou uvedeny v tab.~\ref{tab:dynMer_zdroje}. Podělením $W$ objemem příslušné zóny můžeme dopočítat přísun radonu pocházející od daného zdroje do této zóny. 
+\begin{table}[ht]
+    \centering
+    \caption{ID a radonové výdejnosti $W$ použitých radonových zdrojů typu RF 2000. Jako ID byla použita část výrobního čísla daného zdroje. Přebráno z certifikátů zdrojů, viz příloha~\ref{navesti:priloha_zdroje}.}
+    \label{tab:dynMer_zdroje}
+    \begin{tabular}{lr}
+        \toprule
+        ID & $W$ [\si{Bq/hod}]\\
+        \midrule
+        38 & 15588\\
+        37 & 14436\\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
 Před samotnými měřeními přísunů radonu v objektech bylo nejprve nutno provést srovnávací měření TERA sond, jelikož každá sonda má různou odezvu při stejné OAR. O tomto pojednává podkapitola~\ref{navesti:dynMer_TERA}. Další podkapitoly obsahují dynamická měření přísunů radonu v uvedených objektech. 
+
 \section{TERA sondy}\label{navesti:dynMer_TERA}
-Pro dynamická měření přísunů radonu mi byly poskytnuty čtyři TERA sondy s označením 8, 10, 88 a 112. Pro srovnání jejich odezev s reálnou hodnotou OAR byly vloženy do sudu (nádoba válcovitého tvaru) spolu s referenčním monitorem radonu AlphaGuard~\cite{alphaguard}. Hodnota OAR z AlphaGuardu byla brána jako reálná hodnota OAR. V obr.~\ref{fig:dynMer_sondySrovnani} jsou zobrazeny naměřené vývoje OAR v čase ze zkoumaných sond a z Alphaguardu, v tab.~\ref{tab:dynMer_sondy} jsou k vidění nejdůležitější statistiky naměřených dat z každého monitoru.
+
+Pro dynamická měření přísunů radonu mi byly poskytnuty čtyři TERA sondy s označením 8, 10, 88 a 112. Pro srovnání jejich odezev s reálnou hodnotou OAR byly vloženy do sudu (nádoba válcovitého tvaru) spolu s referenčním monitorem radonu AlphaGuard (ozn. AG)~\cite{alphaguard}. Hodnota OAR z AG byla brána jako reálná hodnota OAR. V obr.~\ref{fig:dynMer_sondySrovnani} jsou zobrazeny naměřené vývoje OAR v čase ze zkoumaných sond a z AG, v tab.~\ref{tab:dynMer_sondy} jsou k vidění nejdůležitější statistiky naměřených dat z každého monitoru.
 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{images/sondy_srovnani}
-	\caption{Vývoj OAR naměřený zkoumanými sondami a referenčním AlphaGuardem.}
+	\caption{Vývoj OAR naměřený zkoumanými sondami a AG.}
 	\label{fig:dynMer_sondySrovnani}
 \end{figure}
 \begin{table}[ht]
 	\centering
-	\caption{Statistiky vývojů OAR naměřených TERA sondami a AlphaGuardem v \si{Bq/m^3}.}
+	\caption{Statistiky vývojů OAR naměřených TERA sondami a AG v \si{Bq/m^3}.}
 	\label{tab:dynMer_sondy}
 	\begin{tabular}{lrrrrrrr}
 		\toprule
@@ -42,7 +59,7 @@ Pro dynamická měření přísunů radonu mi byly poskytnuty čtyři TERA sondy
 		88         &     71 &   198  &  140 &  170 &  198 &  220 &  273 \\
 		112        &     71 &   354  &  251 &  318 &  349 &  399 &  484 \\
 		\midrule
-		AlphaGuard &     71 &   328  &  247 &  285 &  318 &  373 &  434 \\
+		AG &     71 &   328  &  247 &  285 &  318 &  373 &  434 \\
 		\bottomrule
 	\end{tabular}
 %&  std
@@ -59,9 +76,9 @@ Pro opravu odezev byla zavedena pro každou sondu kalibrační konstanta $B$, kt
 \begin{equation}
 	B=\frac{OAR_A}{OAR_T}\,,
 \end{equation}
-kde $OAR_A$ je hodnota z AlphaGuardu a $OAR_T$ je hodnota z příslušné TERA sondy. Pro získání věrohodné hodnoty koncentrace radonu z naměřené hodnoty danou sondou pak stačí tuto naměřenou hodnotu přenásobit $B$ náležející této sondě.
+kde $OAR_A$ je průměrná OAR z hodnot naměřených AG a $OAR_T$ je průměrná OAR z hodnot naměřených příslušnou TERA sondou. Pro získání věrohodné hodnoty koncentrace radonu z naměřené hodnoty danou sondou pak stačí tuto naměřenou hodnotu přenásobit $B$ náležející této sondě.
 
-Za $OAR_A$, resp. $OAR_T$ byly brány průměry naměřených OAR AlphaGuardem a danou Tera sondou. Relativní nejistoty kalibračních konstant byly odhadnuty na 10~\%. Určené kalibrační konstanty všech sond jsou k nahlédnutí v tab.~\ref{tab:dynMer_sondyB}. %Nejistoty kalibračních konstant určeny nebyly vzhledem k tomu, že se jedná o "veličinu", která se může při různých vnějších podmínkách měnit. Hlavním ovlivňujícím faktorem je velikost aerosolů v měřeném prostředí. Tato nespolehlivost TERA sond v poskytování věrohodných dat je dalším důvodem, proč byly použity měřáky radonu CANARY. Takto můžeme srovnávat data z více zdrojů.
+Relativní nejistoty kalibračních konstant byly odhadnuty na 10~\%. Určené kalibrační konstanty všech sond jsou k nahlédnutí v tab.~\ref{tab:dynMer_sondyB}. %Nejistoty kalibračních konstant určeny nebyly vzhledem k tomu, že se jedná o "veličinu", která se může při různých vnějších podmínkách měnit. Hlavním ovlivňujícím faktorem je velikost aerosolů v měřeném prostředí. Tato nespolehlivost TERA sond v poskytování věrohodných dat je dalším důvodem, proč byly použity měřáky radonu CANARY. Takto můžeme srovnávat data z více zdrojů.
 %\begin{figure}[H]
 	%\centering
 	%\includegraphics[width=0.7\linewidth]{images/sondy_B}
@@ -70,7 +87,7 @@ Za $OAR_A$, resp. $OAR_T$ byly brány průměry naměřených OAR AlphaGuardem a
 %\end{figure}
 \begin{table}[ht]
 	\centering
-	\caption{Kalibrační konstanty TERA sond odvozené od referenčního AlphaGuardu. Skutečná hodnota $OAR$ se vypočte ze vztahu $OAR=B\cdot OAR_T$, kde $OAR_T$ je naměřená obj. aktivita radonu danou TERA sondou. Nejistota kalibračních konstant byla odhadnuta na 10~\%.}
+	\caption{Kalibrační konstanty TERA sond odvozené od referenčního AG. Skutečná hodnota $OAR$ se vypočte ze vztahu $OAR=B\cdot OAR_T$, kde $OAR_T$ je naměřená obj. aktivita radonu danou TERA sondou. Nejistota kalibračních konstant byla odhadnuta na 10~\%.}
 	\label{tab:dynMer_sondyB}
 	\begin{tabular}{lr}
 		\toprule
@@ -99,21 +116,21 @@ Za $OAR_A$, resp. $OAR_T$ byly brány průměry naměřených OAR AlphaGuardem a
 
 \begin{table}[H]
     \centering
-    \caption{Objemy podlaží objektu, průměrné teploty naměřené v každém podlaží dataloggery testo 174H, odhadnuté atmosférické tlaky v každém podlaží a přiřazení číslování kompartmentů jednotlivým podlažím.}
+    \caption{Objemy podlaží objektu, průměrné teploty naměřené v každém podlaží dataloggery testo 174H, odhadnuté atmosférické tlaky v každém podlaží a přiřazení číslování kompartmentů jednotlivým podlažím. Význam označení podlaží je vysvětlen v tab. \ref{tab:rovMer_podlazi}.}
     \label{tab:skala75_objemy}
     \input{skala75/vysledky_inputData}
 \end{table}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{skala75/OAR_dohromady.png}
-    \caption{Hodnoty OAR naměřené TERA sondami po aplikování kalibračních konstant (tab.~\ref{tab:dynMer_sondyB}). Pro další vyhodnocování byly OAR naměřené v přízemí v kuchyni a v ložnici zprůměrovány.}
+    \caption{Vývoj OAR naměřený TERA sondami po aplikování kalibračních konstant (tab.~\ref{tab:dynMer_sondyB}). Pro další vyhodnocování byly OAR naměřené v přízemí v kuchyni a v ložnici zprůměrovány.}
     \label{fig:skala75_OARdohromady}
 \end{figure}
 \subsection{Objemové průtoky vzduchu}
 
 \begin{table}[H]
     \centering
-    \caption{Přehled použitých indikačních plynů. $M$ je molekulová hmotnost příslušného plynu, $U$ je jeho odběrová rychlost. Dále je uvedeno, v jakém podlaží byly vyvíječe plynů umístěny s jejich celkovými odpary za celou dobu měření. Význam označení podlaží je vysvětlen v tab. \ref{tab:rovMer_podlazi}.}
+    \caption{Přehled použitých indikačních plynů a umístění jejich vyvíječů v objektu. V posledním sloupci jsou celkové odpary plynů ze všech jim odpovídajících vyvíječů.}
     \label{tab:skala75_indikacniPlyny}
     \input{skala75/indikacni_plyny}
 \end{table}
@@ -217,17 +234,34 @@ $n$      & 0,239$\pm$0,028 &   0,298$\pm$0,034 &   0,212$\pm$0,025 &   0,275$\pm
 \end{table}
 
 \subsection{Přísuny radonu}
+\begin{table}[H]
+    \centering
+    \caption{Přesně definované přísuny radonu ze zdrojů v \si{Bq/(m^3\cdot hod)}. Ve druhém sloupci je uvedeno, který zdroj byl umístěn v daném podlaží.}
+    \label{tab:skala75_prisunyZdroj}
+    \begin{tabular}{ll
+        >{\collectcell\num}r<{\endcollectcell}
+        @{${}\pm{}$}
+        >{\collectcell\num}r<{\endcollectcell}}
+        \toprule
+        podlaží  &zdroj& \multicolumn{2}{r}{$Q_{zdroj}$}\\
+        \midrule
+        0 &38&400&51\\
+        1 &37&114&13\\
+        2 & NE &0&0\\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
 \begin{table}[H]
     \centering
-    \caption{Průměrné přísuny radonu souhrně pro všechny kombinace indikačních plynů pro dynamické vyhodnocení.}
+    \caption{Průměrné přísuny radonu v \si{Bq/(m^3\cdot hod)} souhrnně pro všechny kombinace indikačních plynů pro dynamické vyhodnocení.}
     \label{tab:skala75_prisunyDynamicky}
    \input{skala75/vysledky_Q_dynamicky}
 \end{table}
 \subsubsection{Vyhodnocení v rovnovážném stavu}
 \begin{table}[H]
     \centering
-    \caption{Průměrné objemové koncentrace radonu naměřené TERA sondami umístěnými v uvedených podlažích. $\sigma_A$ je nejistota OAR typu A plynoucí ze statistického zpracování naměřených dat, $\sigma_B$ je nejistota OAR typu B plynoucí z ostatních zdrojů (statistika přeměny a detekce) a $\sigma$ je kombinovaná nejistota OAR. Při určování přísunů radonu v rovnovážném stavu byla použita pouze nejistota typu B, tj. $\sigma_B$. V posledním sloupci je průměrná citlivost TERA sond vypočtená z naměřených dat (tj. z naměřeného počtu impulzů a naměřeného OAR). Tato citlivost byla použita pro výpočet $\sigma_B$.}
+    \caption{Průměrné objemové koncentrace radonu naměřené TERA sondami umístěnými v uvedených podlažích. $\sigma_A$ je nejistota OAR typu A plynoucí ze statistického zpracování naměřených dat, $\sigma_B$ je nejistota OAR typu B plynoucí z ostatních zdrojů (statistika detekce, nejistota měřidla) a $\sigma$ je kombinovaná nejistota OAR. Při určování přísunů radonu v rovnovážném stavu byla použita pouze nejistota typu B, tj. $\sigma_B$. V posledním sloupci je průměrná citlivost TERA sond vypočtená z naměřených dat (tj. z naměřeného počtu impulzů a naměřeného OAR). Tato citlivost byla použita pro výpočet $\sigma_B$.}
     \label{tab:skala75_OARprumerne}
     \begin{tabular}{llrrrrr}
 \toprule
@@ -243,9 +277,36 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
 
 \begin{table}[H]
     \centering
-    \caption{Přísuny radonu určené z průměrných hodnot OAR, tj. jako v rovnovážném měření.}
+    \caption{Průměrné OAR naměřené CANARY měřáky umístěnými v daných podlažích.}
+    \label{tab:skala75_OARprumerne_CANARY}
+    \begin{tabular}{llr
+        %>{\collectcell\num}r<{\endcollectcell}
+        %@{${}\pm{}$}
+        %>{\collectcell\num}r<{\endcollectcell}
+        }
+        \toprule
+        ID měřáku & podlaží & OAR [\si{Bq/m^3}]\\
+        \midrule
+        1 & 0 & $381\pm38$\\
+        2 & 1 & $419\pm42$\\
+        4 & 1 & $465\pm47$\\
+        3 & 2 & $156\pm16$\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Přísuny radonu určené z průměrných hodnot vývojů OAR naměřených TERA sondami. Jednotkou přísunů radonu je \si{Bq/(m^3\cdot hod)}.}
     \label{tab:skala75_prisunyRovnovazne}
    \input{skala75/vysledky_Q_rovnovazne}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Přísuny radonu určené z průměrných hodnot vývojů OAR naměřených CANARY měřáky. Jednotkou přísunů radonu je \si{Bq/(m^3\cdot hod)}.}
+    \label{tab:skala75_prisunyRovnovazneCANARY}
+   \input{skala75/vysledky_Q_rovnovazneCANARY}
 \end{table}
 %\subsection{Přeurčená varianta}
 
@@ -285,14 +346,14 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
 
 \begin{table}[H]
     \centering
-    \caption{Přiřazení číslování kompartmentů jednotlivým podlažím, objemy všech zón objektu, průměrné teploty naměřené v každém zóně TERA sondami, odhadnuté atmosférické tlaky v každém zóně a průměrné OAR naměřené TERA sondami v každé zóně.}
+    \caption{Přiřazení číslování kompartmentů jednotlivým podlažím, objemy všech zón objektu, průměrné teploty naměřené v každém zóně TERA sondami, odhadnuté atmosférické tlaky v každém zóně a průměrné OAR naměřené TERA sondami ($OAR_T$) a CANARY měřáky ($OAR_C$). OAR jsou uvedené v \si{Bq/m^3}.}
     \label{tab:halkova980_objemy}
     \input{halkova980/vysledky_inputData}
 \end{table}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{halkova980/OAR_dohromady.png}
-    \caption{Hodnoty OAR naměřené TERA sondami po aplikování kalibračních konstant (tab.~\ref{tab:dynMer_sondyB}).}
+    \caption{Vývoj OAR naměřený TERA sondami po aplikování kalibračních konstant (tab.~\ref{tab:dynMer_sondyB}).}
     \label{fig:halkova980_OARdohromady}
 \end{figure}
 
@@ -300,7 +361,7 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
 
 \begin{table}[H]
     \centering
-    \caption{Přehled použitých indikačních plynů. $M$ je molekulová hmotnost příslušného plynu, $U$ je jeho odběrová rychlost. Dále je uvedeno, v jaké zóně byly vyvíječe plynů umístěny s jejich celkovými odpary za celou dobu měření. \ref{tab:rovMer_podlazi}.}
+    \caption{Přehled použitých indikačních plynů a umístění jejich vyvíječů v objektu. V posledním sloupci jsou celkové odpary plynů ze všech jim odpovídajících vyvíječů.}
     \label{tab:halkova980_indikacniPlyny}
     \input{halkova980/indikacni_plyny}
 \end{table}
@@ -320,6 +381,25 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
 
 \subsection{Přísuny radonu}
 
+\begin{table}[H]
+    \centering
+    \caption{Přesně definované přísuny radonu ze zdrojů v \si{Bq/(m^3\cdot hod)}. Ve druhém sloupci je uvedeno, který zdroj byl umístěn v dané zóně.}
+    \label{tab:halkova980_prisunyZdroj}
+    \begin{tabular}{ll
+        >{\collectcell\num}r<{\endcollectcell}
+        @{${}\pm{}$}
+        >{\collectcell\num}r<{\endcollectcell}
+    }
+        \toprule
+        zóna &zdroj  & \multicolumn{2}{r}{$Q_{zdroj}$}\\
+        \midrule
+        1 &38& 332&64\\
+        2 &NE    & 0&0   \\
+        3 &NE    & 0&0   \\
+        4 &NE    & 0&0   \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 %\begin{table}[H]
     %\centering
     %\caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží.}
@@ -328,9 +408,16 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
 %\end{table}
 \begin{table}[H]
     \centering
-    \caption{Průměrné přísuny radonu do zón (ne podlaží!) pro všechny možné kombinace indikačních plynů z rovnovážného vyhodnocení.}
+    \caption{Průměrné přísuny radonu do zón (ne podlaží!) pro všechny možné kombinace indikačních plynů za použití průměrných hodnot vývojů OAR naměřených TERA sondami (rovnovážné vyhodnocení).}
     \label{tab:halkova980_prisunyRovnovazne}
     \input{halkova980/vysledky_Q_rovnovazne}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \caption{Průměrné přísuny radonu do zón pro všechny možné kombinace indikačních plynů vypočtené z průměrných hodnot vývojů OAR naměřených CANARY měřáky.}
+    \label{tab:halkova980_prisunyRovnovazneCANARY}
+    \input{halkova980/vysledky_Q_rovnovazneCANARY}
 \end{table}
 
 \section{Objekt Anglická 574, Dobřichovice}
@@ -351,14 +438,14 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
 
 \begin{table}[H]
     \centering
-    \caption{Objemy všech podlaží objektu, průměrné teploty naměřené v každém podlaží TERA sondami, odhadnuté atmosférické tlaky v každém podlaží, průměrné OAR naměřené TERA sondami v každé zóně a přiřazení číslování kompartmentů jednotlivým podlažím.}
+    \caption{Objemy všech podlaží objektu, průměrné teploty naměřené v každém podlaží TERA sondami, odhadnuté atmosférické tlaky v každém podlaží, průměrné OAR naměřené TERA sondami ($OAR_T$) a CANARY měřáky ($OAR_C$) a přiřazení číslování kompartmentů jednotlivým podlažím. OAR jsou uvedené v \si{Bq/m^3}.}
     \label{tab:anglicka574_objemy}
     \input{anglicka574/vysledky_inputData}
 \end{table}
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth]{anglicka574/OAR_dohromady.png}
-    \caption{Hodnoty OAR naměřené TERA sondami po aplikování kalibračních konstant (tab.~\ref{tab:dynMer_sondyB}).}
+    \caption{Vývoj OAR naměřený TERA sondami po aplikování kalibračních konstant (tab.~\ref{tab:dynMer_sondyB}).}
     \label{fig:anglicka574_OARdohromady}
 \end{figure}
 
@@ -366,7 +453,7 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
 
 \begin{table}[H]
     \centering
-    \caption{Přehled použitých indikačních plynů. $M$ je molekulová hmotnost příslušného plynu, $U$ je jeho odběrová rychlost. Dále je uvedeno, v jakém podlaží byly vyvíječe plynů umístěny s jejich celkovými odpary za celou dobu měření. Význam označení podlaží je vysvětlen v tab. \ref{tab:rovMer_podlazi}.}
+    \caption{Přehled použitých indikačních plynů a umístění jejich vyvíječů v objektu. V posledním sloupci jsou celkové odpary plynů ze všech jim odpovídajících vyvíječů.}
     \label{tab:anglicka574_indikacniPlyny}
     \input{anglicka574/indikacni_plyny}
 \end{table}
@@ -384,6 +471,24 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
     \input{anglicka574/vysledky_prutoky}
 \end{table}
 \subsection{Přísuny radonu}
+
+\begin{table}[H]
+    \centering
+    \caption{Přesně definované přísuny radonu ze zdrojů v \si{Bq/(m^3\cdot hod)}. Ve druhém sloupci je uvedeno, ve kterém podlaží byly umístěny zdroje.}
+    \label{tab:anglicka574_prisunyZdroj}
+    \begin{tabular}{ll
+        >{\collectcell\num}r<{\endcollectcell}
+        @{${}\pm{}$}
+        >{\collectcell\num}r<{\endcollectcell}}
+        \toprule
+        podlaží  &zdroj& \multicolumn{2}{r}{$Q_{zdroj}$}\\
+        \midrule
+        0 &38 \& 37&639&122\\
+        1 & NE &0&0\\
+        2 & NE &0&0\\
+        \bottomrule
+    \end{tabular}
+\end{table}
 
 \begin{figure}[ht]
     \begin{subfigure}{\textwidth}
@@ -408,13 +513,25 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
 \end{table}
 \begin{table}[H]
     \centering
-    \caption{Průměrné přísuny radonu do všech podlaží z rovnovážného vyhodnocení.}
+    \caption{Průměrné přísuny radonu do všech podlaží z rovnovážného vyhodnocení za použití dat z TERA sond.}
     \label{tab:anglicka574_prisunyRovnovazne}
     \begin{tabular}{rrr}
         \toprule
         $Q_0$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$& $Q_1$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$ & $Q_2$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$\\
         \midrule
         $1042\pm233$ & $-22\pm12$ & $19\pm9$\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\begin{table}[H]
+    \centering
+    \caption{Průměrné přísuny radonu do všech podlaží z rovnovážného vyhodnocení za použití dat z CANARY měřáků.}
+    \label{tab:anglicka574_prisunyRovnovazneCANARY}
+    \begin{tabular}{rrr}
+        \toprule
+        $Q_0$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$& $Q_1$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$ & $Q_2$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$\\
+        \midrule
+        $1057\pm245$ & $-31\pm13$ & $21\pm7$\\
         \bottomrule
     \end{tabular}
 \end{table}

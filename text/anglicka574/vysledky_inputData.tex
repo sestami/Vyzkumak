@@ -1,9 +1,13 @@
-\begin{tabular}{lrrrrr}
+\begin{tabular}{llrrrr
+        >{\collectcell\num}r<{\endcollectcell}
+        @{${}\pm{}$}
+        >{\collectcell\num}r<{\endcollectcell}
+}
 \toprule
-podlaží & $V$ [\si{m^3}] & $T$ [\si{\degree C}] & $p$ [kPa] & OAR [\si{Bq/m^3}] & zóna\\
+podlaží & zóna & $V$ [\si{m^3}] & $T$ [\si{\degree C}] & $p$ [kPa] & $OAR_T$ &\multicolumn{2}{r}{$OAR_C$} \\
 \midrule
-0 &        66$\pm$13 &18,35& 100& 2733$\pm$89 &1\\
-1 &       108$\pm$21 &24,74& 100& 121$\pm$17 &2\\
-2 &        93$\pm$19 &26,38& 100&  97$\pm$19 &3\\
+0 &1&        66$\pm$13 &18,35& 100&$2733\pm89$&  2770&196\\
+1 &2&       108$\pm$21 &24,74& 100&$ 121\pm17$ &   92&9  \\
+2 &3&        93$\pm$19 &26,38& 100&$  97\pm19$ &   98&10 \\
 \bottomrule
 \end{tabular}

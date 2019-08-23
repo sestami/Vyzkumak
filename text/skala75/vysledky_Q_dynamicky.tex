@@ -1,14 +1,21 @@
-\begin{tabular}{lrrr}
+%\begin{tabular}{lrrS[table-format=2.0(2)]}
+\begin{tabular}{lrr
+        >{\collectcell\num}r<{\endcollectcell}
+        @{${}\pm{}$}
+        >{\collectcell\num}r<{\endcollectcell}
+    }
 \toprule
-použité tracery & $Q_0$ $\left[\si{\frac{Bq}{hod}}\right]$ & $Q_1$ $\left[\si{\frac{Bq}{hod}}\right]$ & $Q_2$ $\left[\si{\frac{Bq}{hod}}\right]$ \\
+%použité tracery & $Q_0$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$ & $Q_1$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$ & {$Q_2$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$} \\
+použité tracery & $Q_0$ & $Q_1$  & \multicolumn{2}{r}{$Q_2$} \\
 \midrule
-(TMH, MDC, PCE) &                                 337$\pm$84 &                                 237$\pm$40 &                                   19$\pm$5 \\
-(TMH, MDC, PCH) &                                 325$\pm$82 &                                 232$\pm$40 &                                  64$\pm$18 \\
-(TMH, MCH, PCE) &                                 349$\pm$84 &                                 198$\pm$34 &                                   21$\pm$5 \\
-(TMH, MCH, PCH) &                                 336$\pm$81 &                                 193$\pm$34 &                                  71$\pm$18 \\
-(TCE, MDC, PCE) &                                 113$\pm$26 &                                 250$\pm$40 &                                   19$\pm$4 \\
-(TCE, MDC, PCH) &                                 109$\pm$26 &                                 245$\pm$39 &                                  64$\pm$17 \\
-(TCE, MCH, PCE) &                                 117$\pm$24 &                                 209$\pm$34 &                                   21$\pm$4 \\
-(TCE, MCH, PCH) &                                 113$\pm$25 &                                 204$\pm$33 &                                  71$\pm$17 \\
+(TMH, MDC, PCE) & $337\pm84$ & $237\pm40$ & 19& 5 \\
+(TMH, MDC, PCH) & $325\pm82$ & $232\pm40$ & 64&18 \\
+(TMH, MCH, PCE) & $349\pm84$ & $198\pm34$ & 21& 5 \\
+(TMH, MCH, PCH) & $336\pm81$ & $193\pm34$ & 71&18 \\
+&&&\multicolumn{2}{r}{}\\
+(TCE, MDC, PCE) & $113\pm26$ & $250\pm40$ & 19& 4 \\
+(TCE, MDC, PCH) & $109\pm26$ & $245\pm39$ & 64&17 \\
+(TCE, MCH, PCE) & $117\pm24$ & $209\pm34$ & 21& 4 \\
+(TCE, MCH, PCH) & $113\pm25$ & $204\pm33$ & 71&17 \\
 \bottomrule
 \end{tabular}

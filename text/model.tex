@@ -27,6 +27,8 @@ Indexem $N+1$ je značeno vnější prostředí, které je tedy uvažováno jako
 
 Průtok vzduchu $k_{i,N+1}$ představuje objemový průtok vzduchu z $i$-té zóny do vnějšího prostředí a je nazýván exfiltrace $i$-té zóny. Průtok vzduchu $k_{N+1, i}$ představuje objemový průtok z vnějšího prostředí do $i$-té zóny a nazýváme jej infiltrace $i$-té zóny. Pro jednoduchost budeme exfiltrace značit jako $k_{i_E}$ a infiltrace jako $k_{i_I}$. Veličinou $a_{N+1}$ je značeno OAR vnějšího prostředí. Lze si povšimnout, že pokud platí $a_{N+1}=0$, pak nemá vnější prostředí vliv na dynamiku přenosu radonu uvnitř objektu.
 
+Uvažování infiltrací zón v soustavě rovnic~\eqref{eq:odvozovani} má za důsledek, že vypočtené přísuny radonu v sobě nezahrnují množství radonu, který se do zón dostane za jednotku času z vnějšího prostředí. To znamená, že při větší koncentraci radonu ve vnějším prostředí bude větší část OAR ve vnitřních zónách objektu pocházet od infiltrace z vnějšího prostředí a tedy přísuny radonu do vnitřních zón budou nižší (to vše za předpokladu nenulových infiltrací).
+
 Objemové aktivity radonu lze změřit jakýmkoliv detektorem radonu. Pokud měříme kontinuálními monitory radonu, pak je možné určit časový vývoj přísunů radonu v době měření OAR. Tato měření nazýváme \emph{\textbf{dynamické měření přísunu radonu}}. Derivace v rovnicích~\eqref{eq:odvozovani} lze získat například tak, že příslušné naměřené časové vývoje OAR interpolujeme nějakým vhodným způsobem a vzniknuvší funkce zderivujeme podle času.
 
 Měříme-li integrálními detektory radonu, pak máme pro danou zónu k dispozici pouze průměrnou hodnotu OAR $\overline{a_i}$. Lze ukázat (viz \cite{japonci2}), že v tomto případě můžeme levou stranu rovnic \eqref{eq:odvozovani} položit nule, tj. soustava rovnic přechází na tvar 
@@ -160,24 +162,24 @@ Veličina $Q_i$, tj. přísun radonu do $i$-té zóny, nám říká, kolik konce
 
 Jako příklad uvedeme vícepodlažní dům, což je nejčastější případ zkoumaného objektu. V tomto případě je největším zdrojem radonu podloží. Pokud uvažujeme jednotlivá podlaží za kompartmenty (což se v případě vícepodlažních objektů většinou dělá), pak by měl být přísun radonu největší v zóně s kontaktem s podložím, tj. ve sklepě nebo v přízemí, a ve vyšších patrech by měl být za normálních podmínek zanedbatelný. Vyšší hodnoty přísunu radonu ve vyšších patrech indikují nějakou anomálii.
 
-Dalším příkladem může být byt. Zde jako zóny můžeme brát v podstatě cokoliv za podmínky, že je koncentrace radonu ve všech zónách víceméně homogenní.
+Dalším příkladem může být byt. Ten rozdělujeme na zóny podle logického uspořádání bytu (obytné prostory, koupelna, kuchyň \ldots), podle očekávaných hodnot koncentrací radonu nebo podle jiných kritérií.
 %, ale je vhodné, aby rozdělení bytu na kompartmenty bylo symetrické a aby zóny zabíraly podobný objem. 
-Pokud je byt v kontaktu s podlažím, pak lze podle vypočtených přísunů radonu určit např. chybějící nebo nedostatečnou radonovou izolaci, či ve které zóně bytu se větrá nedostatečně atd. Jestliže se byt nachází ve vyšším patře, pak zvětšený přísun radonu do nějakého jeho kompartmentu indikuje nějakou anomálii (již zmíněný radonový most, smolinec ležící na stole, uranová halda poblíž objektu\ldots).
+Pokud je byt v kontaktu s podlažím, pak lze podle vypočtených přísunů radonu určit např. chybějící nebo nedostatečnou radonovou izolaci, či ve které zóně bytu se větrá nedostatečně atd. Jestliže se byt nachází ve vyšším patře, pak zvětšený přísun radonu do nějakého jeho kompartmentu indikuje nějakou anomálii (již zmíněný radonový most, smolinec ležící na stole\ldots).
 
 %Je vhodné ovšem ještě jednou připomenout, že výše zmíněné úvahy platí pouze v případě, že žádný průtok vzduchu se extrémně neodlišuje od ostatních.
 \section{Implementace}
-Výpočetní model přísunů radonu jsem implementoval rozděleně pro případ měření v rovnovážném stavu a pro případ dynamického měření v programovacím jazyce Python. Skript pro vyhodnocení dynamického měření je v příloze~\ref{navesti:priloha_dynamickeMereni}, skript pro vyhodnocení měření v rovnovážném stavu je pouze jeho jednodušší varianta, a proto ho v této práci neuvádím.
+Výpočetní model přísunů radonu jsem implementoval rozděleně pro případ měření v rovnovážném stavu a pro případ dynamického měření v programovacím jazyce Python. Skript pro vyhodnocení dynamického měření je v příloze~\ref{navesti:priloha_dynamickeMereni}, skript pro vyhodnocení měření v rovnovážném stavu je pouze jeho jednodušší varianta, a proto není v této práci neuveden.
 
 V následujících odstavcích je zjednodušeně uvedeno, jakým způsobem skripty pracují a jaké mají vstupy a výstupy.
 \subsection{Rovnovážný stav}
 Skript si načítá naměřené veličiny z několika vstupních souborů:
 \begin{itemize}
     \item\emph{volumes.txt} obsahuje objemy zón,
-    \item\emph{airflows.txt} obsahuje průměrné průtoky mezi všemi zónami (tedy i vnějším prostředím),
+    \item\emph{airflows.txt} obsahuje průměrné objemové průtoky vzduchu mezi všemi  vnitřními zónami objektu a exfiltrace všech zón,
     \item\emph{concentrations.txt} obsahuje průměrné OAR ve všech zónách objektu, tedy OAR vnějšího prostředí není zahrnuto.
 \end{itemize}
 
-Poté skript vytvoří matici $\mathbb{K}$ a vektor $\vv{a}$, z nichž pomocí rovnice \eqref{eq:maticovy_zapis_rovnovaha} určí $\vv{Q}$. Nejistoty jsou propagovány pomocí Python balíčku uncertainties~\cite{uncertainties}.
+Nejprve skript dopočítá pomocí bilančních rovnic~\eqref{eq:infiltrace} infiltrace zón, aby mohl vytvořit matici $\mathbb{K}$. Dále vytvoří vektor $\vv{a}$ a ze soustavy rovnic \eqref{eq:maticovy_zapis_rovnovaha} určí $\vv{Q}$. Nejistoty jsou propagovány pomocí Python balíčku uncertainties~\cite{uncertainties}.
 
 Ve skriptu jsou zahrnuty funkce pro export tabulek obsahující naměřené průtoky, objemy a vypočítané přísuny radonu do typografického systému Latex.
 

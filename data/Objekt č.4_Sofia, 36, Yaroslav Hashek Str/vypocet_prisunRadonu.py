@@ -6,15 +6,17 @@ from uncertainties import ufloat, umath, unumpy, covariance_matrix, correlation_
 from ipdb import set_trace
 import pandas as pd
 import logging
+# logging.getLogger().setLevel(logging.INFO)
 import matplotlib.pyplot as plt
 
 '''
 ARGUMENTY:
     - pokud je zadan jakykoliv prvni argument, pak je uvazovana infiltrace
+    NOPE, tak to neni!!!
 PREDPOKLADY:
     - uvazuji steady state, tj . da/dt = 0, a proto v bilancnich rovnicich
       nevystupuje objem jednotlivych zon
-    - POUZE PRO N>1!!!!!
+    - POUZE PRO N>1!!!!! NOPE!!!
 Vstupni soubory:
 TO DO:
     - metodou solve i lstsq -> ASI NE
@@ -41,7 +43,9 @@ def completion(velicina, velicina_err):
     united = np.array([ufloat(value, error) for value, error in zip(velicina.to_numpy(), velicina_err.to_numpy())])
     return pd.DataFrame(data=united, index=velicina.index, columns=[velicina.name])
 
-def load_data(V_err_rel=0.2, a_out=False):
+V_err_rel=0.2
+print("Rel. chyba všech objemů je "+str(V_err_rel)+" %.")
+def load_data(V_err_rel=V_err_rel, a_out=False):
     '''
     - fce pro nacitani prutoku, objemu i koncentraci
     [a]=Bq/m^3
@@ -58,22 +62,25 @@ def load_data(V_err_rel=0.2, a_out=False):
         [K_ij]=1/hod (je to podelene tim objemem, tj. nasledne [Q]=Bq/m^3/hod
     '''
     #NACTENI KONCENTRACI A OBJEMU
-    def operace(df,operace='N'):
+    def operace(df,operace='M'):
         velicina = np.array([])
         for i in np.unique(df.index.values):
-            if operace=='N':
+            if operace=='M':
                 velicina = np.append(velicina, df.loc[i].to_numpy().mean())
             elif operace=='S':
                 velicina = np.append(velicina, sum(df.loc[i].to_numpy()))
         return velicina
+
     dfA = pd.read_csv('concentrations.txt',sep=';',decimal=',',index_col='podlazi')
     dfA = completion(dfA.loc[:, 'a'], dfA.loc[:, 'a_err'])
-    a = operace(dfA, operace='N')
+    a = operace(dfA, operace='M')
     if a_out:
         a = np.append(a, ufloat(a_out, 0.05*a_out))
+
     dfV = pd.read_csv('volumes.txt',sep=';',decimal=',',index_col='podlazi')
     dfV = completion(dfV.loc[:, 'V'], V_err_rel*dfV.loc[:, 'V'])
     V = operace(dfV, operace='S')
+
     podlazi = np.unique(dfV.index.values)
 
     #NACTENI PRUTOKU DO MATICE K
@@ -103,6 +110,7 @@ def load_data(V_err_rel=0.2, a_out=False):
                     P[i, j]=0
             else:
                 P[i, j]=R.loc['R'+str(i+1)+str(j+1),'R']
+
     #matice K
     if a_out:
         K = np.full((N, N+1), np.nan, dtype=object)
@@ -111,15 +119,24 @@ def load_data(V_err_rel=0.2, a_out=False):
     for i in np.arange(len(K[:, 0])):
         for j in np.arange(len(K[0, :])):
             if i == j:
-                if i+1==N+1:
+                if i+1==N+1: #tato podminka je ZBYTECNA, protoze nepocitam prisun radonu pro vnejsi prostredi
                     K[i, i] = -sum(P[i, :])
                 else:
                     K[i, i] = -sum(P[i, :])-prem_kons_Rn*V[i]
             else:
                 K[i, j] = P[j, i]
 
+    #doplneni infiltraci do R, aby se dala exportovat
+    R_i, R_i_index=[], []
+    for i in np.arange(1,N+1):
+        R_i.append(infiltrace(i))
+        R_i_index.append('R'+str(N+1)+str(i))
+    df_R_i=pd.DataFrame(R_i, index=R_i_index, columns=['R'])
+    R=R.append(df_R_i)
+    R=R.sort_index()
+
     K=K/V[:, None]
-    return N, P, K, a, V, podlazi
+    return N, R, K, a, V, podlazi
 
 def kontrola_rozmeru(K, a):
     if len(a) != len(K[0, :]):
@@ -147,23 +164,24 @@ def calculation_Q_conventional(K, a):
     Q_correlationMatrix = correlation_matrix(Q)
     return Q, Q_covarianceMatrix, Q_correlationMatrix
 
-def zaokrouhleni(value,error):
-    for i, (n, s) in enumerate(zip(value,error)):
-        if s == 0:
-            return 0
-        sgn = -1 if s < 0 else 1
-        scale = int(-np.floor(np.log10(abs(s))))
-        factor = 10**(scale+1)
-        s=sgn*round(abs(s)*factor)/factor
-        sgn = -1 if n < 0 else 1
-        n=sgn*round(abs(n)*factor)/factor
-        value[i], error[i] = n, s
-    return value, error
+# def zaokrouhleni(value,error):
+    # for i, (n, s) in enumerate(zip(value,error)):
+        # if s == 0:
+            # return 0
+        # sgn = -1 if s < 0 else 1
+        # scale = int(-np.floor(np.log10(abs(s))))
+        # factor = 10**(scale+1)
+        # s=sgn*round(abs(s)*factor)/factor
+        # sgn = -1 if n < 0 else 1
+        # n=sgn*round(abs(n)*factor)/factor
+        # value[i], error[i] = n, s
+    # return value, error
 
 def export_inputData(a, V, podlazi, a_out=0):
     '''
     zatim nezahrnuje P (prutoky), N
     vystupuje zde i infiltrovani (v definici df)
+    pokud a_out neni rovno nule, pak je uvazovana infiltrace, kterou ale do tabulky vysledku nechceme
     '''
     def f(x):
         return '{:.0f}'.format(x)
@@ -176,25 +194,33 @@ def export_inputData(a, V, podlazi, a_out=0):
     df.to_latex('vysledky_inputData.tex', decimal=',', formatters=[f, f], escape=False)
     return 0
 
-def export_P(P, podlazi):
+def vymena_vzduchu(R, V, N):
+    n=0
+    for i in np.arange(1, N+1):
+        n+=R.loc['R'+str(i)+str(N+1),'R']
+    n=n/sum(V)
+    return n
+
+def export_R(R,V,N):
     '''
     export prutoku
     '''
-    zony=list(podlazi)
-    zony.append('vnější prostředí')
-    dfP = pd.DataFrame(P, index=zony, columns=zony)
-    # dfP.index += 1
-    # dfP.columns += 1
-    dfP.to_latex('vysledky_prutoky.tex', decimal=',')
-    return 0
+    n=vymena_vzduchu(R, V, N)
+    R=R.append(pd.DataFrame([n],index=[r'n $[\si{hod^{-1}}]$'], columns=['R']))
+
+    R.index=R.index.str.replace('R','k')
+    R=pd.DataFrame(np.array([unumpy.nominal_values(R), unumpy.std_devs(R)]).T[0], columns=['hodnota $\left[\si{m^3/hod}\right]$', r'$\sigma$'],
+                   index=R.index)
+    R.to_latex('vysledky_prutoky.tex', decimal=',',float_format='%0.2f', escape=False)
+    return R
 
 def export_Q(podlazi, a_out, Q):
-    columns=[]
     def titulek(patro):
         return r'$Q_'+str(patro)+r'$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$'
     def f(x):
         return '{:.0f}'.format(x)
 
+    columns=[]
     for patro in podlazi:
         columns.append(titulek(patro))
     dfQ=pd.DataFrame(Q, index=a_out, columns=columns)
@@ -202,21 +228,20 @@ def export_Q(podlazi, a_out, Q):
     dfQ.index.name = None
     # formatters=[f]
     dfQ.to_latex('vysledky_Q.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
-
     return 0
 
 def run(a_out=False):
     N, P, K, a, V, podlazi = load_data(a_out=a_out)
-    Q, Q_kovariance, Q_korelace = calculation_Q_conventional(K, a)
+    Q = calculation_Q_conventional(K, a)
     return Q
 
 #SKRIPTOVA CAST
 # musime zadat nenulovou koncentraci vnejsiho prostredi, protoze jinak nam to
 #nevypocita infiltrace
-N, P, K, a, V, podlazi = load_data(a_out=10)
-export_inputData(a, V, podlazi, a_out=10)
-export_P(P, podlazi)
+N, R, K, a, V, podlazi = load_data(a_out=0)
+# export_inputData(a, V, podlazi, a_out=10)
+export_R(R,V,N)
 
-a_out = np.array([0, 5, 10, 20, 30])
-Q = np.array([run(el) for el in a_out])
-export_Q(podlazi, a_out, Q)
+# a_out = np.array([0, 5, 10, 20, 30])
+# Q = np.array([run(el) for el in a_out])
+# export_Q(podlazi, a_out, Q)

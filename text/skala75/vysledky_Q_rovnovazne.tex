@@ -1,14 +1,22 @@
-\begin{tabular}{lrrr}
+%\begin{tabular}{lrrS[table-format=2.0(2)]}
+%\toprule
+%použité tracery & $Q_0$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$ & $Q_1$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$ & {$Q_2$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$} \\
+\begin{tabular}{lrr
+        >{\collectcell\num}r<{\endcollectcell}
+        @{${}\pm{}$}
+        >{\collectcell\num}r<{\endcollectcell}
+    }
 \toprule
-použité tracery & $Q_0$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$ & $Q_1$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$ & $Q_2$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$ \\
+použité tracery & $Q_0$ & $Q_1$  & \multicolumn{2}{r}{$Q_2$} \\
 \midrule
-(TMH, MDC, PCE) &                                          335$\pm$90 &                                          236$\pm$42 &                                            18$\pm$6 \\
-(TMH, MDC, PCH) &                                          323$\pm$88 &                                          231$\pm$42 &                                           63$\pm$24 \\
-(TMH, MCH, PCE) &                                          347$\pm$89 &                                          197$\pm$36 &                                            19$\pm$6 \\
-(TMH, MCH, PCH) &                                          334$\pm$87 &                                          192$\pm$35 &                                           70$\pm$24 \\
-(TCE, MDC, PCE) &                                          111$\pm$28 &                                          249$\pm$41 &                                            17$\pm$6 \\
-(TCE, MDC, PCH) &                                          108$\pm$28 &                                          243$\pm$41 &                                           62$\pm$23 \\
-(TCE, MCH, PCE) &                                          115$\pm$26 &                                          208$\pm$35 &                                            19$\pm$6 \\
-(TCE, MCH, PCH) &                                          111$\pm$27 &                                          203$\pm$35 &                                           70$\pm$23 \\
+(TMH, MDC, PCE) & $335\pm90$ & $236\pm42$ & 18&6 \\
+(TMH, MDC, PCH) & $323\pm88$ & $231\pm42$ & 63&24 \\
+(TMH, MCH, PCE) & $347\pm89$ & $197\pm36$ & 19&6 \\
+(TMH, MCH, PCH) & $334\pm87$ & $192\pm35$ & 70&24 \\
+&&&\multicolumn{2}{r}{}\\
+(TCE, MDC, PCE) & $111\pm28$ & $249\pm41$ & 17&6 \\
+(TCE, MDC, PCH) & $108\pm28$ & $243\pm41$ & 62&23 \\
+(TCE, MCH, PCE) & $115\pm26$ & $208\pm35$ & 19&6 \\
+(TCE, MCH, PCH) & $111\pm27$ & $203\pm35$ & 70&23 \\
 \bottomrule
 \end{tabular}

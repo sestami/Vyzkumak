@@ -126,8 +126,17 @@ def load_data(V_err_rel=V_err_rel, a_out=False):
             else:
                 K[i, j] = P[j, i]
 
+    #doplneni infiltraci do R, aby se dala exportovat
+    R_i, R_i_index=[], []
+    for i in np.arange(1,N+1):
+        R_i.append(infiltrace(i))
+        R_i_index.append('R'+str(N+1)+str(i))
+    df_R_i=pd.DataFrame(R_i, index=R_i_index, columns=['R'])
+    R=R.append(df_R_i)
+    R=R.sort_index()
+
     K=K/V[:, None]
-    return N, P, K, a, V, podlazi
+    return N, R, K, a, V, podlazi
 
 def kontrola_rozmeru(K, a):
     if len(a) != len(K[0, :]):
@@ -185,17 +194,25 @@ def export_inputData(a, V, podlazi, a_out=0):
     df.to_latex('vysledky_inputData.tex', decimal=',', formatters=[f, f], escape=False)
     return 0
 
-def export_P(P, podlazi):
+def vymena_vzduchu(R, V, N):
+    n=0
+    for i in np.arange(1, N+1):
+        n+=R.loc['R'+str(i)+str(N+1),'R']
+    n=n/sum(V)
+    return n
+
+def export_R(R,V,N):
     '''
     export prutoku
     '''
-    zony=list(podlazi)
-    zony.append('vnější prostředí')
-    dfP = pd.DataFrame(P, index=zony, columns=zony)
-    # dfP.index += 1
-    # dfP.columns += 1
-    dfP.to_latex('vysledky_prutoky.tex', decimal=',')
-    return 0
+    n=vymena_vzduchu(R, V, N)
+    R=R.append(pd.DataFrame([n],index=[r'n $[\si{hod^{-1}}]$'], columns=['R']))
+
+    R.index=R.index.str.replace('R','k')
+    R=pd.DataFrame(np.array([unumpy.nominal_values(R), unumpy.std_devs(R)]).T[0], columns=['hodnota $\left[\si{m^3/hod}\right]$', r'$\sigma$'],
+                   index=R.index)
+    R.to_latex('vysledky_prutoky.tex', decimal=',',float_format='%0.2f', escape=False)
+    return R
 
 def export_Q(podlazi, a_out, Q):
     def titulek(patro):
@@ -211,21 +228,20 @@ def export_Q(podlazi, a_out, Q):
     dfQ.index.name = None
     # formatters=[f]
     dfQ.to_latex('vysledky_Q.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
-
     return 0
 
 def run(a_out=False):
     N, P, K, a, V, podlazi = load_data(a_out=a_out)
-    Q, Q_kovariance, Q_korelace = calculation_Q_conventional(K, a)
+    Q = calculation_Q_conventional(K, a)
     return Q
 
 #SKRIPTOVA CAST
 # musime zadat nenulovou koncentraci vnejsiho prostredi, protoze jinak nam to
 #nevypocita infiltrace
-N, P, K, a, V, podlazi = load_data(a_out=10)
-export_inputData(a, V, podlazi, a_out=10)
-export_P(P, podlazi)
+N, R, K, a, V, podlazi = load_data(a_out=0)
+# export_inputData(a, V, podlazi, a_out=10)
+export_R(R,V,N)
 
-a_out = np.array([0, 5, 10, 20, 30])
-Q = np.array([run(el) for el in a_out])
-export_Q(podlazi, a_out, Q)
+# a_out = np.array([0, 5, 10, 20, 30])
+# Q = np.array([run(el) for el in a_out])
+# export_Q(podlazi, a_out, Q)

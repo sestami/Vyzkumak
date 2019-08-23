@@ -452,12 +452,42 @@
       \verb https://docs.scipy.org/doc/scipy-0.16.1/reference/generated/scipy.signal.savgol_filter.html
       \endverb
     \endentry
+    \entry{rovMer_8Rn}{report}{}
+      \name{author}{2}{}{%
+        {{hash=92687237e969eb5f333cf650adb0b162}{%
+           family={Dzhunakova},
+           familyi={D\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b845905b85dbdebb438e8a1d7b863409}{%
+           family={Ivanova},
+           familyi={I\bibinitperiod},
+           given={Kremena},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {National Radiation Protection Institute (NRPI)}%
+      }
+      \strng{namehash}{446c996d9702c610b9138001afcf01ae}
+      \strng{fullhash}{446c996d9702c610b9138001afcf01ae}
+      \strng{bibnamehash}{446c996d9702c610b9138001afcf01ae}
+      \strng{authorbibnamehash}{446c996d9702c610b9138001afcf01ae}
+      \strng{authornamehash}{446c996d9702c610b9138001afcf01ae}
+      \strng{authorfullhash}{446c996d9702c610b9138001afcf01ae}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Radon Concentration PEMP-09E/05.03.2019 (report výsledků měření)}
+      \field{year}{2019}
+      \true{nocite}
+    \endentry
     \entry{testo}{online}{}
       \list{organization}{1}{%
         {Testo SE \& Co. KGaA}%
       }
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labeltitlesource}{title}
       \field{title}{testo 174 H - datalogger teploty a vlhkosti}
       \field{urlday}{29}
@@ -498,8 +528,8 @@
       \strng{authorbibnamehash}{130ac1afee2927c6320559055c9b6439}
       \strng{authornamehash}{130ac1afee2927c6320559055c9b6439}
       \strng{authorfullhash}{130ac1afee2927c6320559055c9b6439}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{International Journal of Ventilation}
@@ -513,36 +543,6 @@
       \verb{doi}
       \verb 10.1080/14733315.2014.11684034
       \endverb
-    \endentry
-    \entry{rovMer_8Rn}{report}{}
-      \name{author}{2}{}{%
-        {{hash=92687237e969eb5f333cf650adb0b162}{%
-           family={Dzhunakova},
-           familyi={D\bibinitperiod},
-           given={D.},
-           giveni={D\bibinitperiod}}}%
-        {{hash=b845905b85dbdebb438e8a1d7b863409}{%
-           family={Ivanova},
-           familyi={I\bibinitperiod},
-           given={Kremena},
-           giveni={K\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {National Radiation Protection Institute (NRPI)}%
-      }
-      \strng{namehash}{446c996d9702c610b9138001afcf01ae}
-      \strng{fullhash}{446c996d9702c610b9138001afcf01ae}
-      \strng{bibnamehash}{446c996d9702c610b9138001afcf01ae}
-      \strng{authorbibnamehash}{446c996d9702c610b9138001afcf01ae}
-      \strng{authornamehash}{446c996d9702c610b9138001afcf01ae}
-      \strng{authorfullhash}{446c996d9702c610b9138001afcf01ae}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Radon Concentration PEMP-09E/05.03.2019 (report výsledků měření)}
-      \field{year}{2019}
-      \true{nocite}
     \endentry
   \enddatalist
 \endrefsection
