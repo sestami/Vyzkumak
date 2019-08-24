@@ -420,6 +420,25 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
     \input{halkova980/vysledky_Q_rovnovazneCANARY}
 \end{table}
 
+\subsection{Zpětné ověření}
+
+\subsubsection{OAR}
+\begin{table}[H]
+    \centering
+    \caption{Průměrné OAR ve všech podlažích vypočítané pomocí rovnice~\eqref{eq:maticovy_zapis_rovnovaha} za použití průtoků vzduchu z tab.~\ref{tab:halkova980_prutoky} a přísunů radonu pocházejících od zdrojů RF 2000 (tab.~\ref{tab:halkova980_prisunyZdroj}) a průměrné OAR naměřené CANARY měřáky.}
+    \label{tab:halkova980_OAR_zpetne}
+    \begin{tabular}{lrrrr}
+        \toprule
+        & $a_1$ [\si{Bq/m^3}] &  $a_2$ [\si{Bq/m^3}]& $a_3$ [\si{Bq/m^3}]& $a_4$ [\si{Bq/m^3}]\\
+        \midrule
+(MDC, PCE, TCE, TMH) & $200\pm168$          &$139\pm356$     &$75\pm127$       &$165\pm172$ \\
+(MDC, MCH, TCE, TMH) & $201\pm\ \,78$       &$ 141\pm\ \,75$ &$76\pm\ \,59$    &$ 166\pm\ \,80$ \\
+\midrule
+       naměřené      & $210\pm\ \,21$       & $97\pm\ \,10$  &$72\pm\ \,\ \,7$ &$139\pm\ \,14$\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
 \section{Objekt Anglická 574, Dobřichovice}
 
 \subsection{Použitá měřidla}
@@ -474,7 +493,7 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
 
 \begin{table}[H]
     \centering
-    \caption{Přesně definované přísuny radonu ze zdrojů v \si{Bq/(m^3\cdot hod)}. Ve druhém sloupci je uvedeno, ve kterém podlaží byly umístěny zdroje.}
+    \caption{Přesně definované přísuny radonu ze zdrojů v \si{Bq/(m^3\cdot hod)}. Ve druhém sloupci je uvedeno, ve kterém podlaží byly zdroje umístěny.}
     \label{tab:anglicka574_prisunyZdroj}
     \begin{tabular}{ll
         >{\collectcell\num}r<{\endcollectcell}
@@ -483,7 +502,7 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
         \toprule
         podlaží  &zdroj& \multicolumn{2}{r}{$Q_{zdroj}$}\\
         \midrule
-        0 &38 \& 37&639&122\\
+        0 &38 \& 37&455&90\\
         1 & NE &0&0\\
         2 & NE &0&0\\
         \bottomrule
@@ -532,6 +551,22 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
         $Q_0$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$& $Q_1$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$ & $Q_2$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$\\
         \midrule
         $1057\pm245$ & $-31\pm13$ & $21\pm7$\\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
+\subsection{Zpětné ověření}
+\subsubsection{OAR}
+\begin{table}[H]
+    \centering
+    \caption{Průměrné OAR ve všech podlažích vypočítané pomocí rovnice~\eqref{eq:maticovy_zapis_rovnovaha} za použití průtoků vzduchu z tab.~\ref{tab:anglicka574_prutoky} a přísunů radonu pocházejících od zdrojů RF 2000 (tab.~\ref{tab:anglicka574_prisunyZdroj}) a průměrné OAR naměřené CANARY měřáky.}
+    \label{tab:anglicka574_OAR_zpetne}
+    \begin{tabular}{lrrr}
+        \toprule
+        & $a_0$ [\si{Bq/m^3}] &  $a_1$ [\si{Bq/m^3}]& $a_2$ [\si{Bq/m^3}]\\
+        \midrule
+       vypočítané & $1200\pm360$    & $84\pm29$ & $22\pm\ \,8$\\
+       naměřené & $2770\pm196$ & $92\pm\ \,9$& $98\pm10$\\
         \bottomrule
     \end{tabular}
 \end{table}

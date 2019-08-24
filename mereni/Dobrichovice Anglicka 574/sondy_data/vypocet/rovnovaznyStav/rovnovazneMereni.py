@@ -1,5 +1,5 @@
 import numpy as np
-# from numpy.linalg import solve, lstsq
+from numpy.linalg import solve, lstsq
 from scipy.optimize import nnls, lsq_linear
 import sys
 from uncertainties import ufloat, umath, unumpy, covariance_matrix, correlation_matrix
@@ -71,7 +71,7 @@ def load_data(airflows_ID, V_err_rel=V_err_rel):
                 velicina = np.append(velicina, sum(df.loc[i].to_numpy()))
         return velicina
 
-    dfA = pd.read_csv('concentrations_CANARY.txt',sep=';',decimal=',',index_col='podlazi')
+    dfA = pd.read_csv('concentrations.txt',sep=';',decimal=',',index_col='podlazi')
     dfA = completion(dfA.loc[:, 'a'], dfA.loc[:, 'a_err'])
     a = operace(dfA, operace='M')
 
@@ -155,6 +155,26 @@ def calculation_Q_conventional(K, a_out, a):
     Q_correlationMatrix = correlation_matrix(Q)
     return Q, Q_covarianceMatrix, Q_correlationMatrix
 
+# def calculation_OAR_LSQ(K, Q):
+    # K=K[:, :-1]
+    # K=unumpy.nominal_values(K)
+    # Q=unumpy.nominal_values(Q)
+    # OAR=lsq_linear(K, -Q)
+    # return OAR
+
+def calculation_OAR_solve(K, Q):
+    K=K[:, :-1]
+    K=unumpy.nominal_values(K)
+    Q=unumpy.nominal_values(Q)
+    OAR=solve(K, -Q)
+    return OAR
+
+def calculation_OAR_rucne(K, Q):
+    K=K[:, :-1]
+    K=unumpy.matrix(K)
+    K_inverse=K.I
+    return -np.dot(K_inverse, Q)
+
 # def zaokrouhleni(value,error):
     # for i, (n, s) in enumerate(zip(value,error)):
         # if s == 0:
@@ -199,3 +219,9 @@ airflows_ID=1
 N, P, K, a, V, podlazi = load_data(airflows_ID)
 airflows_combination, Q=run(airflows_ID)
 # export_Q(Q, podlazi, airflows_combination)
+
+OAR_zNamereneho=calculation_OAR_solve(K, Q)
+
+Q_zdroje=unumpy.uarray([455, 0, 0], [90, 0, 0])
+OAR=calculation_OAR_solve(K, Q_zdroje)
+OAR_rucne=calculation_OAR_rucne(K, Q_zdroje)

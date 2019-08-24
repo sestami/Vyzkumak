@@ -55,15 +55,19 @@
 \contentsline {subsection}{\numberline {6.3.2}Nam\IeC {\v e}\IeC {\v r}en\IeC {\'e} OAR, objemy a teploty}{45}{subsection.6.3.2}% 
 \contentsline {subsection}{\numberline {6.3.3}Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{46}{subsection.6.3.3}% 
 \contentsline {subsection}{\numberline {6.3.4}P\IeC {\v r}\IeC {\'\i }suny radonu}{48}{subsection.6.3.4}% 
+\contentsline {subsection}{\numberline {6.3.5}Zp\IeC {\v e}tn\IeC {\'e} ov\IeC {\v e}\IeC {\v r}en\IeC {\'\i }}{49}{subsection.6.3.5}% 
+\contentsline {subsubsection}{OAR}{49}{section*.59}% 
 \contentsline {section}{\numberline {6.4}Objekt Anglick\IeC {\'a} 574, Dob\IeC {\v r}ichovice}{49}{section.6.4}% 
 \contentsline {subsection}{\numberline {6.4.1}Pou\IeC {\v z}it\IeC {\'a} m\IeC {\v e}\IeC {\v r}idla}{49}{subsection.6.4.1}% 
-\contentsline {subsection}{\numberline {6.4.2}Nam\IeC {\v e}\IeC {\v r}en\IeC {\'e} OAR, objemy a teploty}{49}{subsection.6.4.2}% 
-\contentsline {subsection}{\numberline {6.4.3}Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{50}{subsection.6.4.3}% 
-\contentsline {subsection}{\numberline {6.4.4}P\IeC {\v r}\IeC {\'\i }suny radonu}{51}{subsection.6.4.4}% 
+\contentsline {subsection}{\numberline {6.4.2}Nam\IeC {\v e}\IeC {\v r}en\IeC {\'e} OAR, objemy a teploty}{50}{subsection.6.4.2}% 
+\contentsline {subsection}{\numberline {6.4.3}Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{51}{subsection.6.4.3}% 
+\contentsline {subsection}{\numberline {6.4.4}P\IeC {\v r}\IeC {\'\i }suny radonu}{52}{subsection.6.4.4}% 
+\contentsline {subsection}{\numberline {6.4.5}Zp\IeC {\v e}tn\IeC {\'e} ov\IeC {\v e}\IeC {\v r}en\IeC {\'\i }}{53}{subsection.6.4.5}% 
+\contentsline {subsubsection}{OAR}{53}{section*.71}% 
 \contentsline {chapter}{\numberline {7}Z\IeC {\'a}v\IeC {\v e}r}{53}{chapter.7}% 
 \contentsline {section}{\numberline {7.1}Dotazy}{53}{section.7.1}% 
 \contentsline {section}{\numberline {7.2}TO DO}{53}{section.7.2}% 
-\contentsline {chapter}{Seznam literatury}{54}{table.caption.68}% 
+\contentsline {chapter}{Seznam literatury}{54}{table.caption.72}% 
 \contentsline {chapter}{\numberline {A}Python skript pro symbolick\IeC {\'e} ur\IeC {\v c}en\IeC {\'\i } nejistot p\IeC {\v r}\IeC {\'\i }sun\IeC {\r u} radonu}{56}{appendix.A}% 
 \contentsline {chapter}{\numberline {B}Python skript pro vyhodnocen\IeC {\'\i } dynamick\IeC {\'e}ho m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } p\IeC {\v r}\IeC {\'\i }sun\IeC {\r u} radonu}{58}{appendix.B}% 
 \contentsline {chapter}{\numberline {C}Certifik\IeC {\'a}ty zdroj\IeC {\r u}}{64}{appendix.C}% 

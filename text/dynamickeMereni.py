@@ -210,7 +210,7 @@ def hodnoty_a_chyby(velicina):
     return hodnoty, smerodatne_odchylky
 
 #VYPOCET Q
-def calculation_Q_conventional(K, a_out, a, a_diff):
+def calculation_Q(K, a_out, a, a_diff):
     '''
     fce pro vypocet Q
     Input:
@@ -303,7 +303,7 @@ def run(umisteni_sond, a_out=0):
     Dates = load_Time(umisteni_sond)
     A_diff = np.array([casove_derivace(dates, a) for dates, a in zip(Dates, load_A(umisteni_sond, doplneni_chyb=False))])
 
-    Q = np.array([calculation_Q_conventional(K, a_out, a, a_diff) for a, a_diff in zip(A.T, A_diff.T)])
+    Q = np.array([calculation_Q(K, a_out, a, a_diff) for a, a_diff in zip(A.T, A_diff.T)])
     graf_Q(podlazi, Dates, Q)
     export_R(R, V, N)
     export_Q_statistiky(Q, podlazi)
