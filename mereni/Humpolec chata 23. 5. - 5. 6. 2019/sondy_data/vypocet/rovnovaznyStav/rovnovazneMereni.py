@@ -168,6 +168,12 @@ def calculation_Q_conventional(K, a_out, a):
         # value[i], error[i] = n, s
     # return value, error
 
+def calculation_OAR_rucne(K, Q):
+    K=K[:, :-1]
+    K=unumpy.matrix(K)
+    K_inverse=K.I
+    return -np.dot(K_inverse, Q)
+
 def export_Q(Q, podlazi, airflows_combination):
     def sloupce(patro):
         return r'$Q_'+str(patro)+r'$ $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$'
@@ -183,6 +189,7 @@ def export_Q(Q, podlazi, airflows_combination):
     dfQ.index.name = None
     # formatters=[f]
     dfQ.to_latex('vysledky_Q_rovnovazne_CANARY.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
+    # dfQ.to_latex('vysledky_OAR.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
     return 0
 
 def run(airflows_ID, a_out=0):
@@ -197,9 +204,15 @@ def run(airflows_ID, a_out=0):
 a_out = 0
 airflows_ID=np.arange(1,9)
 N, P, K, a, V, podlazi = load_data(airflows_ID[0])
+
+Q_zdroje=unumpy.uarray([400, 114, 0], [51, 13, 0])
+
 airflows_combination_list, Q_list=[], []
+OAR_list=[]
 for el in airflows_ID:
+    N, P, K, a, V, podlazi = load_data(el)
+    OAR_list.append(np.array(calculation_OAR_rucne(K, Q_zdroje))[0])
     airflows_combination, Q=run(el)
     airflows_combination_list.append(airflows_combination)
     Q_list.append(Q)
-export_Q(Q_list, podlazi, airflows_combination_list)
+export_Q(OAR_list, podlazi, airflows_combination_list)

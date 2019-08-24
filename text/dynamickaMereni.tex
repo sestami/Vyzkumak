@@ -124,7 +124,13 @@ Relativní nejistoty kalibračních konstant byly odhadnuty na 10~\%. Určené k
     \centering
     \includegraphics[width=1\textwidth]{skala75/OAR_dohromady.png}
     \caption{Vývoj OAR naměřený TERA sondami po aplikování kalibračních konstant (tab.~\ref{tab:dynMer_sondyB}). Pro další vyhodnocování byly OAR naměřené v přízemí v kuchyni a v ložnici zprůměrovány.}
-    \label{fig:skala75_OARdohromady}
+    \label{fig:skala75_OAR_dohromady}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{skala75/OAR_CANARY.png}
+    \caption{Vývoj OAR naměřený CANARY měřáky.}
+    \label{fig:skala75_OAR_CANARY}
 \end{figure}
 \subsection{Objemové průtoky vzduchu}
 
@@ -144,7 +150,7 @@ Relativní nejistoty kalibračních konstant byly odhadnuty na 10~\%. Určené k
 \begin{table}[H]
     \centering
     \caption{Objemové průtoky vzduchu v \si{m^3/hod} pro všechny kombinace aplikovaných indikačních plynů. $n$ je výměna vzduchu vypočtená ze vztahu~\eqref{eq:prutoky_n}, $[n]=\si{1/hod}$.}
-    \label{tab:skala75Prutoky_celkove}
+    \label{tab:skala75_prutoky}
 %\begin{tabular}{l>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}}
 %\toprule
 %{} & (TMH, MDC, PCE) & (TMH, MDC, PCH) & (TMH, MCH, PCE) & (TMH, MCH, PCH)\\ 
@@ -330,6 +336,31 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
     %\label{fig:skala75Preurcena_prisuny}
 %\end{figure}
 
+\subsection{Zpětné ověření}
+
+\subsubsection{OAR}
+\begin{table}[H]
+    \centering
+    \caption{Průměrné OAR ve všech podlažích vypočítané pomocí rovnice~\eqref{eq:maticovy_zapis_rovnovaha} za použití průtoků vzduchu z tab.~\ref{tab:skala75_prutoky} a přísunů radonu pocházejících od zdrojů RF 2000 (tab.~\ref{tab:skala75_prisunyZdroj}) a průměrné OAR naměřené CANARY měřáky.}
+    \label{tab:skala75_OAR_zpetne}
+    \begin{tabular}{lrrr}
+        \toprule
+        & $a_1$ [\si{Bq/m^3}] &  $a_2$ [\si{Bq/m^3}]& $a_3$ [\si{Bq/m^3}] \\
+        \midrule
+(TMH, MDC, PCE) & $ 496\pm121$ & $410\pm72$ & $103\pm25$ \\
+(TMH, MDC, PCH) & $ 496\pm119$ & $410\pm72$ & $107\pm26$ \\
+(TMH, MCH, PCE) & $ 495\pm120$ & $467\pm83$ & $102\pm25$ \\
+(TMH, MCH, PCH) & $ 495\pm118$ & $467\pm82$ & $107\pm26$ \\
+(TCE, MDC, PCE) & $1417\pm333$ & $518\pm85$ & $209\pm50$ \\
+(TCE, MDC, PCH) & $1416\pm338$ & $518\pm86$ & $219\pm50$ \\
+(TCE, MCH, PCE) & $1415\pm319$ & $574\pm96$ & $209\pm49$ \\
+(TCE, MCH, PCH) & $1415\pm324$ & $574\pm96$ & $218\pm49$ \\
+\midrule
+       naměřené & $381\pm\ \,38$ & $442\pm32$ & $156\pm16$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+
 \section{Objekt Hálková 980, Humpolec}
 \subsection{Použitá měřidla}
 \begin{itemize}
@@ -354,7 +385,13 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
     \centering
     \includegraphics[width=1\textwidth]{halkova980/OAR_dohromady.png}
     \caption{Vývoj OAR naměřený TERA sondami po aplikování kalibračních konstant (tab.~\ref{tab:dynMer_sondyB}).}
-    \label{fig:halkova980_OARdohromady}
+    \label{fig:halkova980_OAR_dohromady}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{halkova980/OAR_CANARY.png}
+    \caption{Vývoj OAR naměřený CANARY měřáky.}
+    \label{fig:halkova980_OAR_CANARY}
 \end{figure}
 
 \subsection{Objemové průtoky vzduchu}
@@ -425,7 +462,7 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
 \subsubsection{OAR}
 \begin{table}[H]
     \centering
-    \caption{Průměrné OAR ve všech podlažích vypočítané pomocí rovnice~\eqref{eq:maticovy_zapis_rovnovaha} za použití průtoků vzduchu z tab.~\ref{tab:halkova980_prutoky} a přísunů radonu pocházejících od zdrojů RF 2000 (tab.~\ref{tab:halkova980_prisunyZdroj}) a průměrné OAR naměřené CANARY měřáky.}
+    \caption{Průměrné OAR ve všech zónách vypočítané pomocí rovnice~\eqref{eq:maticovy_zapis_rovnovaha} za použití průtoků vzduchu z tab.~\ref{tab:halkova980_prutoky} a přísunů radonu pocházejících od zdrojů RF 2000 (tab.~\ref{tab:halkova980_prisunyZdroj}) a průměrné OAR naměřené CANARY měřáky.}
     \label{tab:halkova980_OAR_zpetne}
     \begin{tabular}{lrrrr}
         \toprule
@@ -465,7 +502,13 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
     \centering
     \includegraphics[width=1\textwidth]{anglicka574/OAR_dohromady.png}
     \caption{Vývoj OAR naměřený TERA sondami po aplikování kalibračních konstant (tab.~\ref{tab:dynMer_sondyB}).}
-    \label{fig:anglicka574_OARdohromady}
+    \label{fig:anglicka574_OAR_dohromady}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{anglicka574/OAR_CANARY.png}
+    \caption{Vývoj OAR naměřený CANARY měřáky.}
+    \label{fig:anglicka574_OAR_CANARY}
 \end{figure}
 
 \subsection{Objemové průtoky vzduchu}

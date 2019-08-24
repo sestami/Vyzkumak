@@ -188,8 +188,8 @@ def export_Q(Q, podlazi, airflows_combination):
     dfQ.columns.name = None
     dfQ.index.name = None
     # formatters=[f]
-    # dfQ.to_latex('vysledky_Q_rovnovazneCANARY.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
-    dfQ.to_latex('vysledky_OAR.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
+    dfQ.to_latex('vysledky_Q_rovnovazneCANARY.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
+    # dfQ.to_latex('vysledky_OAR.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
     return 0
 
 def run(airflows_ID, a_out=0):
