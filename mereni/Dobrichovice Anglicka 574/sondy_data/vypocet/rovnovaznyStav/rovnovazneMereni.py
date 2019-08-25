@@ -8,6 +8,8 @@ import pandas as pd
 import logging
 # logging.getLogger().setLevel(logging.INFO)
 import matplotlib.pyplot as plt
+import statsmodels.api as sm
+from numpy.linalg import solve, det
 
 '''
 ARGUMENTY:
@@ -71,7 +73,7 @@ def load_data(airflows_ID, V_err_rel=V_err_rel):
                 velicina = np.append(velicina, sum(df.loc[i].to_numpy()))
         return velicina
 
-    dfA = pd.read_csv('concentrations.txt',sep=';',decimal=',',index_col='podlazi')
+    dfA = pd.read_csv('concentrations_CANARY.txt',sep=';',decimal=',',index_col='podlazi')
     dfA = completion(dfA.loc[:, 'a'], dfA.loc[:, 'a_err'])
     a = operace(dfA, operace='M')
 
@@ -111,10 +113,10 @@ def load_data(airflows_ID, V_err_rel=V_err_rel):
     for i in np.arange(len(K[:, 0])):
         for j in np.arange(len(K[0, :])):
             if i == j:
-                if i+1==N+1: #tato podminka je ZBYTECNA, protoze nepocitam prisun radonu pro vnejsi prostredi
-                    K[i, i] = -sum(P[i, :])
-                else:
-                    K[i, i] = -sum(P[i, :])-prem_kons_Rn*V[i]
+                # if i+1==N+1: #tato podminka je ZBYTECNA, protoze nepocitam prisun radonu pro vnejsi prostredi
+                    # K[i, i] = -sum(P[i, :])
+                # else:
+                K[i, i] = -sum(P[i, :])-prem_kons_Rn*V[i]
             else:
                 K[i, j] = P[j, i]
 
@@ -188,6 +190,80 @@ def calculation_OAR_rucne(K, Q):
         # value[i], error[i] = n, s
     # return value, error
 
+def calculation_exfiltrations(a, a_out, P, V, W):
+    P=P[:, :-1]
+    # y=np.full(len(a), np.nan, dtype=object)
+    exfiltrace=np.full(len(a), np.nan, dtype=object)
+
+    # a = np.append(a, ufloat(a_out, 0.05*a_out))
+
+    for i in np.arange(len(exfiltrace)):
+        # y[i]=a[i]*sum(P[i,:])-sum(a[:]*P[:, i])+prem_kons_Rn*V[i]*a[i]-W[i]
+        exfiltrace[i]=-sum(P[i,:])+sum(a[:]*P[:-1, i])/a[i]-prem_kons_Rn*V[i]+W[i]/a[i]
+    return exfiltrace
+
+def calculation_infiltrations(P, exfiltrace):
+    P=P[:-1, :-1]
+    infiltrace=np.full(len(exfiltrace), np.nan, dtype=object)
+    for i in np.arange(len(infiltrace)):
+        infiltrace[i]=exfiltrace[i]+sum(P[i,:]-P[:,i])
+    return infiltrace
+
+def calculation_prutoky_ze_zony(N, ridici_index, a, P, V, W):
+    P=P[:-1, :]
+    k=np.full(len(a), np.nan, dtype=object)
+
+    pocet_neznamych=len(k)
+    index1=[ridici_index]*N
+    index2=[]
+    for j in np.arange(1,N+2):
+        if j!=ridici_index:
+            index2.append(j)
+
+    #indexovani prutoku a jejich poloha v vektoru reseni, tj. v podstate takova funkce, mapovani
+    prutoky_indexy=pd.DataFrame(np.array([index1, index2]).T, index=np.arange(1,pocet_neznamych+1),
+                                columns=['vychozi zona', 'cilova zona'])
+
+    Z=pd.DataFrame(np.zeros((N, pocet_neznamych)),
+                columns=np.arange(1, pocet_neznamych+1), dtype=object)
+    Z.index+=1
+
+    for m in np.arange(1, pocet_neznamych+1):
+        i, j=prutoky_indexy.loc[m]
+        if i!=j:
+            Z.loc[i, m]=-a[i-1]
+            if j<=N:
+                Z.loc[j, m]=a[i-1]
+    X=Z
+    # set_trace()
+    print(det(unumpy.nominal_values(X)))
+
+
+    l=ridici_index-1
+    y=np.full(len(a), np.nan, dtype=object)
+    for i in np.arange(len(y)):
+        if i==l:
+            y[i]=-sum(a[:]*P[:, i])+prem_kons_Rn*a[i]*V[i]-W[i]
+        else:
+            # y[i]=a[i]*sum(P[i, :])-sum(a[:l]*P[:l, i])-sum(a[l+1:]*P[l+1:, i])+prem_kons_Rn*a[i]*V[i]-W[i]
+            y[i]=a[i]*sum(P[i, :])-sum(a[:]*P[:, i])+a[l]*P[l, i]+prem_kons_Rn*a[i]*V[i]-W[i]
+
+    # set_trace()
+
+    X=unumpy.matrix(X)
+    X_inverse=X.I
+    prutoky1=np.dot(X_inverse,y)
+
+    # pom=unumpy.matrix(np.dot(X.T, X))
+    # I2=pom.I
+    # prutoky2=np.dot(I2, np.dot(X.T, y)) #toto je s nejistotami
+    # prutoky2=np.array(prutoky2)[0]
+
+    # res_ols=sm.OLS(unumpy.nominal_values(y), unumpy.nominal_values(X)).fit()
+    # print(res_ols.summary())
+    # vysledek=solve(unumpy.nominal_values(X), unumpy.nominal_values(y))
+    return prutoky1
+
 def export_Q(Q, podlazi, airflows_combination):
     def sloupce(patro):
         return r'$Q_'+str(patro)+r'$ $\left[\si{\frac{Bq}{hod}}\right]$'
@@ -222,6 +298,27 @@ airflows_combination, Q=run(airflows_ID)
 
 OAR_zNamereneho=calculation_OAR_solve(K, Q)
 
+#ZPETNA KONTROLA
 Q_zdroje=unumpy.uarray([455, 0, 0], [90, 0, 0])
 OAR=calculation_OAR_solve(K, Q_zdroje)
 OAR_rucne=calculation_OAR_rucne(K, Q_zdroje)
+
+
+W1=4.330*3600
+W2=4.010*3600
+W=np.array([W1+W2, 0, 0])
+
+#pouze exfiltrace a infiltrace
+exfiltrace_zNamereneho=calculation_exfiltrations(a, a_out, P, V, V*Q)
+infiltrace_zNamereneho=calculation_infiltrations(P, exfiltrace_zNamereneho)
+
+exfiltrace=calculation_exfiltrations(a, a_out, P, V, W)
+infiltrace=calculation_infiltrations(P, exfiltrace)
+
+#po zonach
+prutoky_zNamereneho1=calculation_prutoky_ze_zony(N, 1, a, P, V, Q*V)
+prutoky_zNamereneho2=calculation_prutoky_ze_zony(N, 2, a, P, V, Q*V)
+prutoky_zNamereneho3=calculation_prutoky_ze_zony(N, 3, a, P, V, Q*V)
+# prutoky=calculation_prutoky_ze_zony(N, 1, a, P, V, W)
+
+# P=P[:-1, :-1]
