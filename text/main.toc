@@ -66,10 +66,11 @@
 \contentsline {subsection}{\numberline {6.4.4}P\IeC {\v r}\IeC {\'\i }suny radonu}{54}{subsection.6.4.4}% 
 \contentsline {subsection}{\numberline {6.4.5}Zp\IeC {\v e}tn\IeC {\'e} ov\IeC {\v e}\IeC {\v r}en\IeC {\'\i }}{55}{subsection.6.4.5}% 
 \contentsline {subsubsection}{OAR}{55}{section*.76}% 
+\contentsline {subsubsection}{Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{56}{section*.78}% 
 \contentsline {chapter}{\numberline {7}Z\IeC {\'a}v\IeC {\v e}r}{53}{chapter.7}% 
 \contentsline {section}{\numberline {7.1}Dotazy}{53}{section.7.1}% 
 \contentsline {section}{\numberline {7.2}TO DO}{53}{section.7.2}% 
-\contentsline {chapter}{Seznam literatury}{54}{table.caption.77}% 
+\contentsline {chapter}{Seznam literatury}{54}{table.caption.79}% 
 \contentsline {chapter}{\numberline {A}Python skript pro symbolick\IeC {\'e} ur\IeC {\v c}en\IeC {\'\i } nejistot p\IeC {\v r}\IeC {\'\i }sun\IeC {\r u} radonu}{56}{appendix.A}% 
 \contentsline {chapter}{\numberline {B}Python skript pro vyhodnocen\IeC {\'\i } dynamick\IeC {\'e}ho m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } p\IeC {\v r}\IeC {\'\i }sun\IeC {\r u} radonu}{58}{appendix.B}% 
 \contentsline {chapter}{\numberline {C}Certifik\IeC {\'a}ty zdroj\IeC {\r u}}{64}{appendix.C}% 

@@ -202,14 +202,14 @@ def calculation_exfiltrations(a, a_out, P, V, W):
         exfiltrace[i]=-sum(P[i,:])+sum(a[:]*P[:-1, i])/a[i]-prem_kons_Rn*V[i]+W[i]/a[i]
     return exfiltrace
 
-def calculation_infiltrations(P, exfiltrace):
+def calculation_infiltrations(P, exfiltrace, ridici_index):
     P=P[:-1, :-1]
-    infiltrace=np.full(len(exfiltrace), np.nan, dtype=object)
-    for i in np.arange(len(infiltrace)):
-        infiltrace[i]=exfiltrace[i]+sum(P[i,:]-P[:,i])
+    i=ridici_index-1
+    infiltrace=exfiltrace+sum(P[i,:]-P[:,i])
     return infiltrace
 
 def calculation_prutoky_ze_zony(N, ridici_index, a, P, V, W):
+    P_zaloha=P
     P=P[:-1, :]
     k=np.full(len(a), np.nan, dtype=object)
 
@@ -235,9 +235,7 @@ def calculation_prutoky_ze_zony(N, ridici_index, a, P, V, W):
             if j<=N:
                 Z.loc[j, m]=a[i-1]
     X=Z
-    # set_trace()
-    print(det(unumpy.nominal_values(X)))
-
+    # print(det(unumpy.nominal_values(X)))
 
     l=ridici_index-1
     y=np.full(len(a), np.nan, dtype=object)
@@ -248,37 +246,39 @@ def calculation_prutoky_ze_zony(N, ridici_index, a, P, V, W):
             # y[i]=a[i]*sum(P[i, :])-sum(a[:l]*P[:l, i])-sum(a[l+1:]*P[l+1:, i])+prem_kons_Rn*a[i]*V[i]-W[i]
             y[i]=a[i]*sum(P[i, :])-sum(a[:]*P[:, i])+a[l]*P[l, i]+prem_kons_Rn*a[i]*V[i]-W[i]
 
-    # set_trace()
+    # X=unumpy.matrix(X)
+    # X_inverse=X.I
+    # prutoky1=np.dot(X_inverse,y)
 
-    X=unumpy.matrix(X)
-    X_inverse=X.I
-    prutoky1=np.dot(X_inverse,y)
-
-    # pom=unumpy.matrix(np.dot(X.T, X))
-    # I2=pom.I
-    # prutoky2=np.dot(I2, np.dot(X.T, y)) #toto je s nejistotami
-    # prutoky2=np.array(prutoky2)[0]
+    pom=unumpy.matrix(np.dot(X.T, X))
+    I2=pom.I
+    prutoky=np.dot(I2, np.dot(X.T, y)) #toto je s nejistotami
+    prutoky=np.array(prutoky)[0]
 
     # res_ols=sm.OLS(unumpy.nominal_values(y), unumpy.nominal_values(X)).fit()
     # print(res_ols.summary())
     # vysledek=solve(unumpy.nominal_values(X), unumpy.nominal_values(y))
-    return prutoky1
+
+    prutoky=np.append(prutoky, calculation_infiltrations(P_zaloha, prutoky[-1], ridici_index))
+    return prutoky
 
 def export_Q(Q, podlazi, airflows_combination):
     def sloupce(patro):
         return r'$Q_'+str(patro)+r'$ $\left[\si{\frac{Bq}{hod}}\right]$'
     def f(x):
-        return '{:.0f}'.format(x)
+        return '{:.2f}'.format(x)
 
     columns=[]
     for patro in podlazi:
         columns.append(sloupce(patro))
     dfQ=pd.DataFrame(Q, index=airflows_combination, columns=columns)
+    # dfQ=dfQ.T
     # dfQ.columns.name = '$OAR_{out}$ [\si{Bq/m^3}]'
     dfQ.columns.name = None
     dfQ.index.name = None
     # formatters=[f]
-    dfQ.to_latex('vysledky_Q_rovnovazneCANARY.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
+    # dfQ.to_latex('vysledky_Q_rovnovazneCANARY.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
+    dfQ.to_latex('zpetnyChod_prutoky1.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
     return 0
 
 def run(airflows_ID, a_out=0):
@@ -309,16 +309,18 @@ W2=4.010*3600
 W=np.array([W1+W2, 0, 0])
 
 #pouze exfiltrace a infiltrace
-exfiltrace_zNamereneho=calculation_exfiltrations(a, a_out, P, V, V*Q)
-infiltrace_zNamereneho=calculation_infiltrations(P, exfiltrace_zNamereneho)
-
-exfiltrace=calculation_exfiltrations(a, a_out, P, V, W)
-infiltrace=calculation_infiltrations(P, exfiltrace)
+# exfiltrace_zNamereneho=calculation_exfiltrations(a, a_out, P, V, V*Q)
+# exfiltrace=calculation_exfiltrations(a, a_out, P, V, W)
 
 #po zonach
-prutoky_zNamereneho1=calculation_prutoky_ze_zony(N, 1, a, P, V, Q*V)
-prutoky_zNamereneho2=calculation_prutoky_ze_zony(N, 2, a, P, V, Q*V)
-prutoky_zNamereneho3=calculation_prutoky_ze_zony(N, 3, a, P, V, Q*V)
-# prutoky=calculation_prutoky_ze_zony(N, 1, a, P, V, W)
+prutoky_Namerene1=calculation_prutoky_ze_zony(N, 1, a, P, V, Q*V)
+prutoky_Namerene2=calculation_prutoky_ze_zony(N, 2, a, P, V, Q*V)
+prutoky_Namerene3=calculation_prutoky_ze_zony(N, 3, a, P, V, Q*V)
+prutoky1=calculation_prutoky_ze_zony(N, 1, a, P, V, W)
+prutoky2=calculation_prutoky_ze_zony(N, 2, a, P, V, W)
+prutoky3=calculation_prutoky_ze_zony(N, 3, a, P, V, W)
 
-# P=P[:-1, :-1]
+
+
+export_Q([prutoky1, prutoky2, prutoky3], [1,2,3,4], [1, 1, 1])
+
