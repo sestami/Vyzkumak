@@ -216,3 +216,28 @@ for el in airflows_ID:
     airflows_combination_list.append(airflows_combination)
     Q_list.append(Q)
 export_Q(OAR_list, podlazi, airflows_combination_list)
+
+
+W1=4.330*3600
+W2=4.010*3600
+W=np.array([W1, 0, 0])
+
+#pouze exfiltrace a infiltrace
+# exfiltrace_zNamereneho=calculation_exfiltrations(a, a_out, P, V, V*Q)
+# exfiltrace=calculation_exfiltrations(a, a_out, P, V, W)
+
+#po zonach
+# prutoky_Namerene1=calculation_prutoky_ze_zony(N, 1, a, P, V, Q*V)
+# prutoky_Namerene2=calculation_prutoky_ze_zony(N, 2, a, P, V, Q*V)
+# prutoky_Namerene3=calculation_prutoky_ze_zony(N, 3, a, P, V, Q*V)
+
+# prutoky1=calculation_prutoky_ze_zony(N, 1, a, P, V, W)
+# prutoky2=calculation_prutoky_ze_zony(N, 2, a, P, V, W)
+# prutoky3=calculation_prutoky_ze_zony(N, 3, a, P, V, W)
+# prutoky=[prutoky1, prutoky2, prutoky3]
+
+# namerene=[]
+# for i in np.arange(len(P)-1):
+    # pom=np.append(P[i, :], P[-1, i])
+    # namerene.append(pom[pom!=0])
+    # export_Q([prutoky[i], namerene[i]], N, ['zpětně', 'měření'], i+1)

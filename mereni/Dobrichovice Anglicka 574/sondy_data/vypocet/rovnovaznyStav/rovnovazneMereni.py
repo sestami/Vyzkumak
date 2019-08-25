@@ -262,15 +262,19 @@ def calculation_prutoky_ze_zony(N, ridici_index, a, P, V, W):
     prutoky=np.append(prutoky, calculation_infiltrations(P_zaloha, prutoky[-1], ridici_index))
     return prutoky
 
-def export_Q(Q, podlazi, airflows_combination):
-    def sloupce(patro):
-        return r'$Q_'+str(patro)+r'$ $\left[\si{\frac{Bq}{hod}}\right]$'
+def export_Q(Q, N, airflows_combination, ridici_index):
+    def sloupce(j):
+        # return r'$Q_'+str(patro)+r'$ $\left[\si{\frac{Bq}{hod}}\right]$'
+        return r'\multicolumn{2}{r}{$k_{'+str(ridici_index)+str(j)+r'}$ [\si{m^3/hod}]}'
     def f(x):
         return '{:.2f}'.format(x)
 
     columns=[]
-    for patro in podlazi:
-        columns.append(sloupce(patro))
+    for j in np.arange(1,N+1):
+        if j!=ridici_index:
+            columns.append(sloupce(j))
+    columns.append(sloupce('E'))
+    columns.append(sloupce('I'))
     dfQ=pd.DataFrame(Q, index=airflows_combination, columns=columns)
     # dfQ=dfQ.T
     # dfQ.columns.name = '$OAR_{out}$ [\si{Bq/m^3}]'
@@ -278,7 +282,9 @@ def export_Q(Q, podlazi, airflows_combination):
     dfQ.index.name = None
     # formatters=[f]
     # dfQ.to_latex('vysledky_Q_rovnovazneCANARY.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
-    dfQ.to_latex('zpetnyChod_prutoky1.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
+    formatovani=r'>{\collectcell\num}r<{\endcollectcell}@{${}\pm{}$}>{\collectcell\num}r<{\endcollectcell}'
+    dfQ.to_latex('zpetnyChod_prutoky'+str(ridici_index)+'.tex', decimal=',', formatters=(N+1)*[f],
+                 column_format='l'+formatovani*(N+1),escape=False)
     return 0
 
 def run(airflows_ID, a_out=0):
@@ -316,11 +322,18 @@ W=np.array([W1+W2, 0, 0])
 prutoky_Namerene1=calculation_prutoky_ze_zony(N, 1, a, P, V, Q*V)
 prutoky_Namerene2=calculation_prutoky_ze_zony(N, 2, a, P, V, Q*V)
 prutoky_Namerene3=calculation_prutoky_ze_zony(N, 3, a, P, V, Q*V)
+
 prutoky1=calculation_prutoky_ze_zony(N, 1, a, P, V, W)
 prutoky2=calculation_prutoky_ze_zony(N, 2, a, P, V, W)
 prutoky3=calculation_prutoky_ze_zony(N, 3, a, P, V, W)
+prutoky=[prutoky1, prutoky2, prutoky3]
 
+namerene=[]
+for i in np.arange(len(P)-1):
+    pom=np.append(P[i, :], P[-1, i])
+    namerene.append(pom[pom!=0])
+    export_Q([prutoky[i], namerene[i]], N, ['zpětně', 'měření'], i+1)
 
+# def export_Q(Q, N, airflows_combination, ridici_index):
 
-export_Q([prutoky1, prutoky2, prutoky3], [1,2,3,4], [1, 1, 1])
-
+# export_Q([prutoky1, prutoky2, prutoky3], [1,2,3,4], [1, 1, 1])
