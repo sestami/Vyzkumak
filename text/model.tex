@@ -156,7 +156,7 @@ Nediagonální prvky:
     &+ \frac{1}{V_iV_j}\sum_{l=1,l\neq i,j}^{N+1}\sigma^2(a_l)k_{li}k_{lj} - \sigma^2(k_{ij})\frac{a_i^2}{V_iV_j} - \sigma^2(k_{ji})\frac{a_j^2}{V_iV_j}\,.
 \end{align}
 
-\section{Interpretace přísunu radonu}\label{navesti:model_interpretace_Q}
+\section{Interpretace přísunů radonu}\label{navesti:model_interpretace_Q}
 Veličina $Q_i$, tj. přísun radonu do $i$-té zóny, nám říká, kolik koncentrace radonu se do $i$-té zóny dostává za jednotku času ze zdrojů radonu. Zkoumaný objekt bychom měli rozdělit na zóny, v nichž předpokládáme homogenní koncentraci radonu. Po provedení měření OAR a ventilace můžeme za pomoci výše uvedeného výpočetního modelu určit přísuny radonu do jednotlivých zón a tím kvantitativně určit zdroje radonu v objektu.
 %Za předpokladu, že průtoky vzduchu mezi zónami nenabývají extrémně odlišných hodnot a že se exfiltrace, resp. infiltrace jednotlivých zón moc neodlišují, by mělo platit, že čím je zóna vzdálenější od zdrojů radonu, tím by měl být přísun radonu do ní menší. Tímto pravidlem můžeme při známosti umístění a velikosti zdrojů radonu v daném objektu ověřit správnost výpočetního modelu. Dále jej lze např. použít k odhalování nových zdrojů radonu a anomálií (radonový most atp.).
 
@@ -167,6 +167,13 @@ Dalším příkladem může být byt. Ten rozdělujeme na zóny podle logického
 Pokud je byt v kontaktu s podlažím, pak lze podle vypočtených přísunů radonu určit např. chybějící nebo nedostatečnou radonovou izolaci, či ve které zóně bytu se větrá nedostatečně atd. Jestliže se byt nachází ve vyšším patře, pak zvětšený přísun radonu do nějakého jeho kompartmentu indikuje nějakou anomálii (již zmíněný radonový most, smolinec ležící na stole\ldots).
 
 %Je vhodné ovšem ještě jednou připomenout, že výše zmíněné úvahy platí pouze v případě, že žádný průtok vzduchu se extrémně neodlišuje od ostatních.
+
+\section{Ověření modelu výpočtu přísunů radonu}
+Předpokládáme-li, že se přirozené přísuny radonu do zón zkoumaného objektu blíží nule, pak umístněním zdrojů radonu se známými radonovými výdejnostmi do libovolných zón získáme přesně definované přísuny radonu do těchto zón. Tyto přesně definované přísuny radonu lze srovnat s přísuny radonu vypočítané pomocí výše uvedeného výpočetního modelu pro měření přísunu radonu v rovnovážném stavu a tím ověřit správnost výpočetního modelu. Lze ověřovat ovšem pouze za podmínky, že měření ventilace objektu a OAR v zónách proběhlo s dostatečnou přesností.
+
+Pokud se vypočítané přísuny radonu neshodují s přísuny radonu od zdrojů, tak můžeme provést tzv. zpětné ověřování. Tím je míněn výpočet průměrného OAR ve vnitřních zónách objektu, resp. výpočet $N$ vybraných průtoků vzduchu mezi zónami ze soustavy rovnic~\eqref{eq:maticovy_zapis_rovnovaha} při uvažování přísunů radonu od zdrojů. Za hodnoty ostatních veličin vystupujících v soustavě~\eqref{eq:maticovy_zapis_rovnovaha} bereme hodnoty těchto veličin určené z měření ventilace a případně OAR.
+%Za účelem ověření modelu výpočtu přísunů radonu byly při provedených měřeních (viz kapitola~\ref{navesti:dynamickaMereni}) do některých zón daných objektů umístěny průtočné zdroje radonu typu RF 2000.
+
 \section{Implementace}
 Výpočetní model přísunů radonu jsem implementoval rozděleně pro případ měření v rovnovážném stavu a pro případ dynamického měření v programovacím jazyce Python. Skript pro vyhodnocení dynamického měření je v příloze~\ref{navesti:priloha_dynamickeMereni}, skript pro vyhodnocení měření v rovnovážném stavu je pouze jeho jednodušší varianta, a proto není v této práci neuveden.
 
