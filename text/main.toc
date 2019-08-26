@@ -52,25 +52,27 @@
 \contentsline {subsubsection}{Vyhodnocen\IeC {\'\i } v rovnov\IeC {\'a}\IeC {\v z}n\IeC {\'e}m stavu}{44}{section*.47}% 
 \contentsline {subsection}{\numberline {6.2.5}Zp\IeC {\v e}tn\IeC {\'e} ov\IeC {\v e}\IeC {\v r}en\IeC {\'\i }}{46}{subsection.6.2.5}% 
 \contentsline {subsubsection}{OAR}{46}{section*.52}% 
-\contentsline {section}{\numberline {6.3}Objekt H\IeC {\'a}lkov\IeC {\'a} 980, Humpolec}{46}{section.6.3}% 
-\contentsline {subsection}{\numberline {6.3.1}Pou\IeC {\v z}it\IeC {\'a} m\IeC {\v e}\IeC {\v r}idla}{46}{subsection.6.3.1}% 
-\contentsline {subsection}{\numberline {6.3.2}Nam\IeC {\v e}\IeC {\v r}en\IeC {\'e} OAR, objemy a teploty}{47}{subsection.6.3.2}% 
-\contentsline {subsection}{\numberline {6.3.3}Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{48}{subsection.6.3.3}% 
-\contentsline {subsection}{\numberline {6.3.4}P\IeC {\v r}\IeC {\'\i }suny radonu}{50}{subsection.6.3.4}% 
-\contentsline {subsection}{\numberline {6.3.5}Zp\IeC {\v e}tn\IeC {\'e} ov\IeC {\v e}\IeC {\v r}en\IeC {\'\i }}{51}{subsection.6.3.5}% 
-\contentsline {subsubsection}{OAR}{51}{section*.63}% 
-\contentsline {section}{\numberline {6.4}Objekt Anglick\IeC {\'a} 574, Dob\IeC {\v r}ichovice}{51}{section.6.4}% 
-\contentsline {subsection}{\numberline {6.4.1}Pou\IeC {\v z}it\IeC {\'a} m\IeC {\v e}\IeC {\v r}idla}{51}{subsection.6.4.1}% 
-\contentsline {subsection}{\numberline {6.4.2}Nam\IeC {\v e}\IeC {\v r}en\IeC {\'e} OAR, objemy a teploty}{52}{subsection.6.4.2}% 
-\contentsline {subsection}{\numberline {6.4.3}Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{53}{subsection.6.4.3}% 
-\contentsline {subsection}{\numberline {6.4.4}P\IeC {\v r}\IeC {\'\i }suny radonu}{54}{subsection.6.4.4}% 
-\contentsline {subsection}{\numberline {6.4.5}Zp\IeC {\v e}tn\IeC {\'e} ov\IeC {\v e}\IeC {\v r}en\IeC {\'\i }}{55}{subsection.6.4.5}% 
-\contentsline {subsubsection}{OAR}{55}{section*.76}% 
-\contentsline {subsubsection}{Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{55}{section*.78}% 
+\contentsline {subsubsection}{Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{47}{section*.54}% 
+\contentsline {section}{\numberline {6.3}Objekt H\IeC {\'a}lkov\IeC {\'a} 980, Humpolec}{47}{section.6.3}% 
+\contentsline {subsection}{\numberline {6.3.1}Pou\IeC {\v z}it\IeC {\'a} m\IeC {\v e}\IeC {\v r}idla}{47}{subsection.6.3.1}% 
+\contentsline {subsection}{\numberline {6.3.2}Nam\IeC {\v e}\IeC {\v r}en\IeC {\'e} OAR, objemy a teploty}{48}{subsection.6.3.2}% 
+\contentsline {subsection}{\numberline {6.3.3}Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{49}{subsection.6.3.3}% 
+\contentsline {subsection}{\numberline {6.3.4}P\IeC {\v r}\IeC {\'\i }suny radonu}{51}{subsection.6.3.4}% 
+\contentsline {subsection}{\numberline {6.3.5}Zp\IeC {\v e}tn\IeC {\'e} ov\IeC {\v e}\IeC {\v r}en\IeC {\'\i }}{52}{subsection.6.3.5}% 
+\contentsline {subsubsection}{OAR}{52}{section*.65}% 
+\contentsline {subsubsection}{Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{53}{section*.67}% 
+\contentsline {section}{\numberline {6.4}Objekt Anglick\IeC {\'a} 574, Dob\IeC {\v r}ichovice}{53}{section.6.4}% 
+\contentsline {subsection}{\numberline {6.4.1}Pou\IeC {\v z}it\IeC {\'a} m\IeC {\v e}\IeC {\v r}idla}{53}{subsection.6.4.1}% 
+\contentsline {subsection}{\numberline {6.4.2}Nam\IeC {\v e}\IeC {\v r}en\IeC {\'e} OAR, objemy a teploty}{54}{subsection.6.4.2}% 
+\contentsline {subsection}{\numberline {6.4.3}Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{55}{subsection.6.4.3}% 
+\contentsline {subsection}{\numberline {6.4.4}P\IeC {\v r}\IeC {\'\i }suny radonu}{56}{subsection.6.4.4}% 
+\contentsline {subsection}{\numberline {6.4.5}Zp\IeC {\v e}tn\IeC {\'e} ov\IeC {\v e}\IeC {\v r}en\IeC {\'\i }}{57}{subsection.6.4.5}% 
+\contentsline {subsubsection}{OAR}{57}{section*.80}% 
+\contentsline {subsubsection}{Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{57}{section*.82}% 
 \contentsline {chapter}{\numberline {7}Z\IeC {\'a}v\IeC {\v e}r}{53}{chapter.7}% 
 \contentsline {section}{\numberline {7.1}Dotazy}{53}{section.7.1}% 
 \contentsline {section}{\numberline {7.2}TO DO}{53}{section.7.2}% 
-\contentsline {chapter}{Seznam literatury}{54}{table.caption.79}% 
+\contentsline {chapter}{Seznam literatury}{54}{table.caption.83}% 
 \contentsline {chapter}{\numberline {A}Python skript pro symbolick\IeC {\'e} ur\IeC {\v c}en\IeC {\'\i } nejistot p\IeC {\v r}\IeC {\'\i }sun\IeC {\r u} radonu}{56}{appendix.A}% 
 \contentsline {chapter}{\numberline {B}Python skript pro vyhodnocen\IeC {\'\i } dynamick\IeC {\'e}ho m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } p\IeC {\v r}\IeC {\'\i }sun\IeC {\r u} radonu}{58}{appendix.B}% 
 \contentsline {chapter}{\numberline {C}Certifik\IeC {\'a}ty zdroj\IeC {\r u}}{64}{appendix.C}% 

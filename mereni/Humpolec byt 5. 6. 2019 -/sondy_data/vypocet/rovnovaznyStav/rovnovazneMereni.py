@@ -192,6 +192,93 @@ def export_Q(Q, podlazi, airflows_combination):
     # dfQ.to_latex('vysledky_OAR.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
     return 0
 
+
+def calculation_infiltrations(P, exfiltrace, ridici_index):
+    P=P[:-1, :-1]
+    i=ridici_index-1
+    infiltrace=exfiltrace+sum(P[i,:]-P[:,i])
+    return infiltrace
+
+def calculation_prutoky_ze_zony(N, ridici_index, a, P, V, W):
+    P_zaloha=P
+    P=P[:-1, :]
+    k=np.full(len(a), np.nan, dtype=object)
+
+    pocet_neznamych=len(k)
+    index1=[ridici_index]*N
+    index2=[]
+    for j in np.arange(1,N+2):
+        if j!=ridici_index:
+            index2.append(j)
+
+    #indexovani prutoku a jejich poloha v vektoru reseni, tj. v podstate takova funkce, mapovani
+    prutoky_indexy=pd.DataFrame(np.array([index1, index2]).T, index=np.arange(1,pocet_neznamych+1),
+                                columns=['vychozi zona', 'cilova zona'])
+
+    Z=pd.DataFrame(np.zeros((N, pocet_neznamych)),
+                columns=np.arange(1, pocet_neznamych+1), dtype=object)
+    Z.index+=1
+
+    for m in np.arange(1, pocet_neznamych+1):
+        i, j=prutoky_indexy.loc[m]
+        if i!=j:
+            Z.loc[i, m]=-a[i-1]
+            if j<=N:
+                Z.loc[j, m]=a[i-1]
+    X=Z
+    # print(det(unumpy.nominal_values(X)))
+
+    l=ridici_index-1
+    y=np.full(len(a), np.nan, dtype=object)
+    for i in np.arange(len(y)):
+        if i==l:
+            y[i]=-sum(a[:]*P[:, i])+prem_kons_Rn*a[i]*V[i]-W[i]
+        else:
+            # y[i]=a[i]*sum(P[i, :])-sum(a[:l]*P[:l, i])-sum(a[l+1:]*P[l+1:, i])+prem_kons_Rn*a[i]*V[i]-W[i]
+            y[i]=a[i]*sum(P[i, :])-sum(a[:]*P[:, i])+a[l]*P[l, i]+prem_kons_Rn*a[i]*V[i]-W[i]
+
+    # X=unumpy.matrix(X)
+    # X_inverse=X.I
+    # prutoky1=np.dot(X_inverse,y)
+
+    pom=unumpy.matrix(np.dot(X.T, X))
+    I2=pom.I
+    prutoky=np.dot(I2, np.dot(X.T, y)) #toto je s nejistotami
+    prutoky=np.array(prutoky)[0]
+
+    # res_ols=sm.OLS(unumpy.nominal_values(y), unumpy.nominal_values(X)).fit()
+    # print(res_ols.summary())
+    # vysledek=solve(unumpy.nominal_values(X), unumpy.nominal_values(y))
+
+    prutoky=np.append(prutoky, calculation_infiltrations(P_zaloha, prutoky[-1], ridici_index))
+    return prutoky
+
+def export_prutoky(Q, N, airflows_combination, ridici_index):
+    def sloupce(j):
+        # return r'$Q_'+str(patro)+r'$ $\left[\si{\frac{Bq}{hod}}\right]$'
+        # return r'\multicolumn{2}{r}{$k_{'+str(ridici_index)+str(j)+r'}$ [\si{m^3/hod}]}'
+        return r'$k_{'+str(ridici_index)+str(j)+r'}$ [\si{m^3/hod}]'
+    def f(x):
+        return '{:.0f}'.format(x)
+
+    columns=[]
+    for j in np.arange(1,N+1):
+        if j!=ridici_index:
+            columns.append(sloupce(j))
+    columns.append(sloupce('E'))
+    columns.append(sloupce('I'))
+    dfQ=pd.DataFrame(Q, index=airflows_combination, columns=columns)
+    # dfQ=dfQ.T
+    # dfQ.columns.name = '$OAR_{out}$ [\si{Bq/m^3}]'
+    dfQ.columns.name = None
+    dfQ.index.name = None
+    # formatters=[f]
+    # dfQ.to_latex('vysledky_Q_rovnovazneCANARY.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
+    formatovani=r'>{\collectcell\num}r<{\endcollectcell}@{${}\pm{}$}>{\collectcell\num}r<{\endcollectcell}'
+    dfQ.to_latex('zpetnyChod_prutoky'+str(ridici_index)+'.tex', decimal=',', formatters=(N+1)*[f],
+                 column_format='l'+'r'*(N+1),escape=False)
+    return 0
+
 def run(airflows_ID, a_out=0):
     N, P, K, a, V, podlazi = load_data(airflows_ID)
     Q, Q_kovariance, Q_korelace = calculation_Q_conventional(K, a_out, a)
@@ -202,7 +289,8 @@ def run(airflows_ID, a_out=0):
 # musime zadat nenulovou koncentraci vnejsiho prostredi, protoze jinak nam to
 #nevypocita infiltrace
 a_out = 0
-airflows_ID=np.arange(1,3)
+# airflows_ID=np.arange(1,3)
+airflows_ID=[2]
 N, P, K, a, V, podlazi = load_data(airflows_ID[0])
 
 Q_zdroje=unumpy.uarray([332, 0, 0, 0], [64, 0, 0, 0])
@@ -220,24 +308,26 @@ export_Q(OAR_list, podlazi, airflows_combination_list)
 
 W1=4.330*3600
 W2=4.010*3600
-W=np.array([W1, 0, 0])
+W=np.array([W1, 0, 0, 0])
 
 #pouze exfiltrace a infiltrace
 # exfiltrace_zNamereneho=calculation_exfiltrations(a, a_out, P, V, V*Q)
 # exfiltrace=calculation_exfiltrations(a, a_out, P, V, W)
 
 #po zonach
-# prutoky_Namerene1=calculation_prutoky_ze_zony(N, 1, a, P, V, Q*V)
-# prutoky_Namerene2=calculation_prutoky_ze_zony(N, 2, a, P, V, Q*V)
-# prutoky_Namerene3=calculation_prutoky_ze_zony(N, 3, a, P, V, Q*V)
+prutoky_Namerene1=calculation_prutoky_ze_zony(N, 1, a, P, V, Q*V)
+prutoky_Namerene2=calculation_prutoky_ze_zony(N, 2, a, P, V, Q*V)
+prutoky_Namerene3=calculation_prutoky_ze_zony(N, 3, a, P, V, Q*V)
+prutoky_Namerene4=calculation_prutoky_ze_zony(N, 4, a, P, V, Q*V)
 
-# prutoky1=calculation_prutoky_ze_zony(N, 1, a, P, V, W)
-# prutoky2=calculation_prutoky_ze_zony(N, 2, a, P, V, W)
-# prutoky3=calculation_prutoky_ze_zony(N, 3, a, P, V, W)
-# prutoky=[prutoky1, prutoky2, prutoky3]
+prutoky1=calculation_prutoky_ze_zony(N, 1, a, P, V, W)
+prutoky2=calculation_prutoky_ze_zony(N, 2, a, P, V, W)
+prutoky3=calculation_prutoky_ze_zony(N, 3, a, P, V, W)
+prutoky4=calculation_prutoky_ze_zony(N, 4, a, P, V, W)
+prutoky=[prutoky1, prutoky2, prutoky3, prutoky4]
 
-# namerene=[]
-# for i in np.arange(len(P)-1):
-    # pom=np.append(P[i, :], P[-1, i])
-    # namerene.append(pom[pom!=0])
-    # export_Q([prutoky[i], namerene[i]], N, ['zpětně', 'měření'], i+1)
+namerene=[]
+for i in np.arange(len(P)-1):
+    pom=np.append(P[i, :], P[-1, i])
+    namerene.append(pom[pom!=0])
+    export_prutoky([prutoky[i], namerene[i]], N, ['zpětně', 'měření'], i+1)
