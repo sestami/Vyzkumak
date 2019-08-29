@@ -340,17 +340,22 @@ PCE).
 \end{table}
 
 \subsection{Diskuze}
-V diskuzi nejprve srovnáme průměrné přísuny radonu z dynamického a rovnovážného vyhodnocení (tab.~\ref{tab:skala75_prisunyDynamicky} a tab.~\ref{tab:skala75_prisunyRovnovazne}). Bude následovat srovnání přísunů radonu vypočítaných při použití různých kombinací indikačních plynů při vyhodnocování objemových průtoků vzduchu (všechny tabulky uvádějící vypočítané přísuny radonu a příloha~\ref{navesti:priloha_skala75_prisuny}), dále srovnání přísunů určených z OAR naměřených TERA sondami a CANARY měřáky (tab.~\ref{tab:skala75_prisunyRovnovazne} a tab.~\ref{tab:skala75_prisunyRovnovazneCANARY}) a nakonec srovnání vypočítaných přísunů radonu s $Q_{zdroj}$ (tab.~\ref{tab:skala75_prisunyZdroj}). 
+V diskuzi nejprve srovnáme průměrné přísuny radonu z dynamického a rovnovážného vyhodnocení  (tab.~\ref{tab:skala75_prisunyDynamicky}, tab.~\ref{tab:skala75_prisunyRovnovazne} a příloha~\ref{navesti:priloha_skala75_prisuny}). Bude následovat srovnání přísunů radonu vypočítaných při použití různých kombinací indikačních plynů při vyhodnocování objemových průtoků vzduchu (všechny tabulky uvádějící vypočítané přísuny radonu a příloha~\ref{navesti:priloha_skala75_prisuny}), dále srovnání přísunů určených z OAR naměřených TERA sondami a CANARY měřáky (tab.~\ref{tab:skala75_prisunyRovnovazne} a tab.~\ref{tab:skala75_prisunyRovnovazneCANARY}) a nakonec srovnání vypočítaných přísunů radonu s $Q_{zdroj}$ (tab.~\ref{tab:skala75_prisunyZdroj}). 
 
 Také budeme diskutovat zpětné ověření OAR a objemových průtoků vzduchu z $Q_{zdroj}$ (tabulky~\ref{tab:skala75_OAR_zpetne} a \ref{tab:skala75_prutoky_zpetne}).
 
 \subsubsection{Srovnání dynamického a rovnovážného vyhodnocení}
 Z uvedených tabulek je zřejmé, že zprůměrováním vývojů $Q_i(t)$ jsme dostali v podstatě stejné hodnoty jako při rovnovážném vyhodnocení, což bylo očekáváno. Neshodování se hodnot by ukazovalo na nějakou chybu v kódu některého z vyhodnocovacích skriptů.
 
-\subsubsection{Srovnání různých kombinací indikačních plynů}
-Zde jsou rozdíly mezi jednotlivými přísuny radonu obrovské. Jsou způsobeny rozdílnými vyhodnocenými objemovými průtoky vzduchu mezi zónami pro různé kombinace použitých indikačních plynů (tab.~\ref{tab:skala75_prutoky}). Z uvedených hodnot přísunů radonu je zřetelné, že záměna jednoho plynu v některé ze zón vede hlavně ke změně přísunu radonu do této zóny, přísuny radonu do ostatních zón se změní vzhledem k jejich nejistotě víceméně zanedbatelně. Výjimku tvoří záměna plynů TMH a TCE v první zóně, které velmi změní přísun radonu do první zóny a trochu i do druhé zóny. U ostatních zón nevede záměna jejich zdrojového plynu k tak markantní změně přísunu radonu do nich jako v případě první zóny. 
+Výhodou dynamického vyhodnocení je, že nám dává závislosti přísunů radonu na čase, $Q_i(t)$. Můžeme tedy určit přísun radonu do jakékoliv zóny v jakýkoliv čas, který spadá do doby našeho měření ventilace a OAR. Problémem je, že jedinými veličinami, jejichž vývoj byl v čase změřen, jsou OAR v zónách. Pro objemové průtoky vzduchu mezi zónami máme stále pouze průměrné hodnoty, což znepřesňuje $Q_i(t)$ do takové míry, že je nelze rozumně použít. V příloze~\ref{navesti:priloha_skala75_prisuny} jsou $Q_i(t)$ uvedeny graficky i tabelovaně. Pro tento objekt se může zdát, že $Q_i(t)$ vycházejí celkem pěkně, avšak vzhledem k řečenému nemůžeme říct, jestli jsou to relevantní výsledky, či zdali se jedná o matoucí hodnoty. První by platilo, pokud by se $k_{ij}$
+v průběhu času moc neměnily. To ale není moc pravděpodobné, protože průtoky vzduchu mezi zónami jsou značně ovlivněny venkovní teplotou, a proto zcela určitě $k_{ij}$ nabývá jiných hodnot např. ve sluneční den a v noci. Další faktory ovlivňující hodnoty $k_{ij}$ by bylo potřeba prozkoumat.
 
-Rozdíly mezi objemovými průtoky vzduchu určenými různými kombinacemi tracerů mohou být způsobeny rozdílným chováním použitých indikačních plynů při homogenizaci a proudění v objektu, dále chybným odečtením odparů některých vyvíječů, špatným vyhodnocením TD detektorů atp.
+\subsubsection{Srovnání různých kombinací indikačních plynů}
+Zde jsou rozdíly mezi jednotlivými přísuny radonu obrovské. Jsou způsobeny rozdílnými vyhodnocenými $k_{ij}$ pro různé kombinace použitých indikačních plynů (tab.~\ref{tab:skala75_prutoky}). Z uvedených hodnot přísunů radonu je zřetelné, že záměna jednoho plynu v některé ze zón vede hlavně ke změně přísunu radonu do této zóny, přísuny radonu do ostatních zón se změní vzhledem k jejich nejistotě víceméně zanedbatelně. Výjimku tvoří záměna plynů TMH a TCE v první zóně, které velmi změní přísun radonu do první zóny a trochu i do druhé zóny. U ostatních zón nevede záměna jejich zdrojového plynu k tak markantní změně přísunu radonu do nich jako v případě první zóny. 
+
+Názorné zobrazení rozdílů při použití různých kombinací tracerů je možné vidět v grafech přílohy~\ref{navesti:priloha_skala75_prisuny}, ve kterých jsou zobrazeny závislosti $Q_i(t)$ z dynamického vyhodnocení.
+
+Rozdíly mezi $k_{ij}$ určenými různými kombinacemi tracerů mohou být způsobeny rozdílným chováním použitých indikačních plynů při homogenizaci a proudění v objektu, dále chybným odečtením odparů některých vyvíječů, špatným vyhodnocením TD detektorů atp.
 
 Díky znalosti $Q_{zdroj}$ a také díky v podstatě nulových přirozených přísunů radonu do objektu můžeme určit, která kombinace tracerů vede k nejlepším výsledkům. Jedná se o kombinaci (TMH, MCH, PCH). Plyny jsou v závorce uvedeny postupně pro první, druhou a třetí zónu. Při zpětném ověřování průtoků vzduchu z $Q_{zdroj}$ se proto uvažovala tato kombinace tracerů.
 
@@ -361,7 +366,9 @@ tomto období nejvyšší koncentrace v přízemní kuchyni (až cca \SI{1750}{B
 V důsledku uvedených faktů se při zpětném ověřování počítalo s daty z CANARY měřáků.
 
 \subsubsection{Srovnání vypočítaných přísunů radonu s $Q_{zdroj}$}
+Pomocí tohoto srovnání byla vybrána kombinace tracerů (TMH, MCH, PCH) za davájící nejpřesnější výsledky. 
 
+Dále lze vidět, že kombinace s TMH plynem v první zóně dávají v rámci nejistot správné hodnoty a že kombinace s TCE plynem v první zóně je nedávají.
 
 \subsection{Závěr}
 
