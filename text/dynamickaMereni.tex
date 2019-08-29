@@ -371,6 +371,14 @@ Pomocí tohoto srovnání byla vybrána kombinace tracerů (TMH, MCH, PCH) za da
 Dále lze vidět, že kombinace s TMH plynem v první zóně dávají v rámci nejistot správné hodnoty a že kombinace s TCE plynem v první zóně je nedávají.
 
 \subsection{Závěr}
+Byly určeny průměrné přísuny radonu do sklepa, přízemí a prvního patra objektu pomocí skriptu pro vyhodnocení rovnovážného měření za použití několika kombinací naměřených dat:
+\begin{itemize}
+    \item byly použity průměrné OAR z TERA sond a z CANARY měřáků, viz tabulky~\ref{tab:skala75_prisunyRovnovazne} a \ref{tab:skala75_prisunyRovnovazneCANARY}, to nám dává dvě varianty vypočítaných $Q_i$;
+    \item dále bylo použito osm kombinací odezev TD detektorů a odparů z tří indikačních plynů pro určení osmi variant $k_{ij}$, tj. z toho máme osm variant $Q_i$.
+\end{itemize}
+Celkově jsme tedy získaly 16 variant přísunů radonu. Porovnáním $Q_i$ a $Q_{zdroj}$ a také využitím zpětného ověření OAR a $k_{ij}$ z $Q_{zdroj}$ byla vybrána nejpřesnější varianta. Tou se stala ta, která byla určena za použití OAR naměřených CANARY měřáky a za použití tracerů (TMH, MCH, PCE). Všechny $Q_i$ určené z dat CANARY měřáků a z kombinací tracerů s TMH plynem v první zóně odpovídají $Q_{zdroj}$.
+
+Pro ověření funkčnosti skriptu pro dynamické měření byly vypočteny i časové závislosti přísunů radonu $Q_i(t)$ pro OAR z TERA sond. Bohužel $Q_i(t)$ není možné kvůli známosti pouze průměrných hodnot $k_{ij}$ považovat za dostatečně přesné. Proto byly alespoň $Q_i(t)$ zprůměrovány a tyto průměry srovnány s příslušnými $Q_i$. $\overline{Q_i}(t)$ a $Q_i$ jsou v podstatě totožné a to potvrzuje správnost skriptu pro vyhodnocování dynamického měření. Správnost skriptu pro vyhodnocování rovnovážného měření byla ověřena v~\ref{navesti:rovnovaznaMereni}.
 
 \section{Objekt Hálková 980, Humpolec}
 Jedná se o byt s ložnicí, obývacím pokojem, kuchyní s WC, špajzem a předsíní. Za zóny byly brány obývací pokoj, ložnice, koupelna s WC a kuchyň. Špajz a předsín nebyly zahrnuty do žádné ze zón.
@@ -379,9 +387,9 @@ Bylo použito dvacet vyvíječů pěti různých indikačních plynů, čtyři v
 
 TD detektory byly po dvojicích umístěny do každé ze zón kromě koupelny, kam byl umístěn pouze jeden TD detektor. Poslední TD detektor byl umístěn do špajzu, protože původně bylo zamýšleno brát jako jednu zónu koupelnu a špajz. %PORUŠENÍ PRAVIDEL OSAZOVÁNÍ MĚŘIDEL!!!!
 
-Do každé zóny byly umístěny jedna TERA sonda a jeden CANARY měřák. Do obývacího pokoje byl umístěn radonový zdroj s označením 38 (dle tab.~\ref{tab:dynMer_zdroje}). 
+Do každé zóny byly umístěny jedna TERA sonda a jeden CANARY měřák. Do obývacího pokoje byl umístěn radonový zdroj s označením 38 (dle tab.~\ref{tab:dynMer_zdroje}).
 
-V dalších oddílech jsou uvedena použitá měřidla, naměřené hodnoty OAR, objemů a teplot. Následují vypočítané veličiny, které bylo potřeba určit pro výpočet přísunů radonu a určené přísuny radonu a zpětné ověření pomocí $Q_{zdroj}$.  
+V dalších oddílech jsou uvedena použitá měřidla, naměřené hodnoty OAR, objemů a teplot. Následují vypočítané veličiny, které bylo potřeba určit pro výpočet přísunů radonu a určené přísuny radonu a zpětné ověření pomocí $Q_{zdroj}$.
 %\subsection{Použitá měřidla}
 
 %\begin{itemize}
