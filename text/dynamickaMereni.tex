@@ -111,13 +111,12 @@ Jedná se o chatu se sklepem, přízemím (které zahrnuje verandu) a prvním pa
 
 To, že jsme umístili do každé ze zón zdroje dvou různých indikačních plynů, umožnilo vyhodnocení měření ventilace vícero způsoby. Při vyhodnocování bylo totiž počítáno pouze s $N=N_p=3$, přičemž byly uvažovány plyny, jejichž zdroje byly v různých zónách (viz pravidla o osazování měřidel, podkapitola~\ref{navesti:prutoky_instalace}). To nám dává osm kombinací trojic použitých plynů a tedy osm různých způsobů vyhodnocení měření ventilaci a následně přísunů radonu.
 
-V příloze~\ref{navesti:priloha_skala75} lze dohledat i vyhodnocené veličiny z měření ventilace a OAR. Je tam také uveden výpočet nejistot průměrných hodnot OAR z dat naměřených TERA sondami (podle informací uvedených v podkapitole~\ref{navesti:radon_TERAnejistota}). 
+V příloze~\ref{navesti:priloha_skala75} lze dohledat vyhodnocené veličiny z měření ventilace a OAR. Je tam také uveden výpočet nejistot průměrných hodnot OAR z dat naměřených TERA sondami (podle informací uvedených v podkapitole~\ref{navesti:radon_TERAnejistota}). 
 
-V následujícím oddíle jsou uvedeny přesně definované přísuny radonu od zdrojů RF 2000 a dále průměrné přísuny radonu vypočítané z naměřených průtoků vzduchu mezi zónami a z OAR naměřených TERA sondami, resp. CANARY měřáky pro všechny kombinace indikačních plynů. V případě TERA sond proběhlo i dynamické vyhodnocení pro určení vývojů $Q_i(t)$, které lze vidět v příloze~\ref{navesti:priloha_skala75_prisuny}, v následujícím oddílu jsou pouze uvedeny zprůměrované hodnoty $Q_i(t)$. V posledním oddílu této kapitoly je zobrazeno zpětné ověření (ve smyslu podkapitoly~\ref{navesti:model_overeni}), navíc jsou tam uvedeny i průměrné OAR naměřené CANARY měřáky a objemové průtoky vzduchu z vyhodnocení měření ventilace objektu při použití kombinace indikačních plynů (TMH, MCH,
+V následujícím oddíle jsou uvedeny přesně definované přísuny radonu od zdrojů RF 2000 a dále průměrné přísuny radonu vypočítané z naměřených průtoků vzduchu mezi zónami a z OAR naměřených TERA sondami, resp. CANARY měřáky pro všechny kombinace indikačních plynů. V případě TERA sond proběhlo i dynamické vyhodnocení pro určení vývojů $Q_i(t)$, které lze vidět v příloze~\ref{navesti:priloha_skala75_prisuny}, v následujícím oddílu jsou pouze uvedeny zprůměrované hodnoty $Q_i(t)$.
+
+V posledním oddílu této kapitoly je zobrazeno zpětné ověření OAR (pro všechny kombinace tracerů) a průtoků vzduchu mezi zónami (pro kombinaci (TMH, MCH, PCE)) ve smyslu podkapitoly~\ref{navesti:model_overeni}, navíc jsou tam uvedeny i průměrné OAR naměřené CANARY měřáky a objemové průtoky vzduchu z vyhodnocení měření ventilace objektu při použití kombinace indikačních plynů (TMH, MCH,
 PCE).
-
-
-
 
 %\subsection{Použitá měřidla}
 %\begin{itemize}
@@ -341,13 +340,27 @@ PCE).
 \end{table}
 
 \subsection{Diskuze}
-V diskuzi nejprve srovnáme průměrné přísuny radonu z dynamického a rovnovážného vyhodnocení (tabulky~\ref{tab:skala75_prisunyDynamicky} a \ref{tab:skala75_prisunyRovnovazne}), poté přísuny určené z OAR naměřených TERA sondami a CANARY měřáky (tabulky~\ref{tab:skala75_prisunyRovnovazne} a \ref{tab:skala75_prisunyRovnovazneCANARY}) a následně tyto vypočítané přísuny se známými přísuny od zdrojů (tab.~\ref{tab:skala75_prisunyZdroj}). Při argumentaci také využijeme tabulky~\ref{tab:skala75_OAR_zpetne} a \ref{tab:skala75_prutoky_zpetne} se zpětným ověřením OAR a objemových průtoků vzduchu z $Q_{zdroj}$.
+V diskuzi nejprve srovnáme průměrné přísuny radonu z dynamického a rovnovážného vyhodnocení (tab.~\ref{tab:skala75_prisunyDynamicky} a tab.~\ref{tab:skala75_prisunyRovnovazne}). Bude následovat srovnání přísunů radonu vypočítaných při použití různých kombinací indikačních plynů při vyhodnocování objemových průtoků vzduchu (všechny tabulky uvádějící vypočítané přísuny radonu a příloha~\ref{navesti:priloha_skala75_prisuny}), dále srovnání přísunů určených z OAR naměřených TERA sondami a CANARY měřáky (tab.~\ref{tab:skala75_prisunyRovnovazne} a tab.~\ref{tab:skala75_prisunyRovnovazneCANARY}) a nakonec srovnání vypočítaných přísunů radonu s $Q_{zdroj}$ (tab.~\ref{tab:skala75_prisunyZdroj}). 
+
+Také budeme diskutovat zpětné ověření OAR a objemových průtoků vzduchu z $Q_{zdroj}$ (tabulky~\ref{tab:skala75_OAR_zpetne} a \ref{tab:skala75_prutoky_zpetne}).
 
 \subsubsection{Srovnání dynamického a rovnovážného vyhodnocení}
-Z uvedených tabulek je zřejmé, že zprůměrováním vývojů $Q_i(t)$ dostaneme v podstatě stejné hodnoty jako při rovnovážném vyhodnocení, což bylo očekáváno. Neshodování hodnot by ukazovalo na nějakou chybu v kódu.
+Z uvedených tabulek je zřejmé, že zprůměrováním vývojů $Q_i(t)$ jsme dostali v podstatě stejné hodnoty jako při rovnovážném vyhodnocení, což bylo očekáváno. Neshodování se hodnot by ukazovalo na nějakou chybu v kódu některého z vyhodnocovacích skriptů.
+
+\subsubsection{Srovnání různých kombinací indikačních plynů}
+Zde jsou rozdíly mezi jednotlivými přísuny radonu obrovské. Jsou způsobeny rozdílnými vyhodnocenými objemovými průtoky vzduchu mezi zónami pro různé kombinace použitých indikačních plynů (tab.~\ref{tab:skala75_prutoky}). Z uvedených hodnot přísunů radonu je zřetelné, že záměna jednoho plynu v některé ze zón vede hlavně ke změně přísunu radonu do této zóny, přísuny radonu do ostatních zón se změní vzhledem k jejich nejistotě víceméně zanedbatelně. Výjimku tvoří záměna plynů TMH a TCE v první zóně, které velmi změní přísun radonu do první zóny a trochu i do druhé zóny. U ostatních zón nevede záměna jejich zdrojového plynu k tak markantní změně přísunu radonu do nich jako v případě první zóny. 
+
+Rozdíly mezi objemovými průtoky vzduchu určenými různými kombinacemi tracerů mohou být způsobeny rozdílným chováním použitých indikačních plynů při homogenizaci a proudění v objektu, dále chybným odečtením odparů některých vyvíječů, špatným vyhodnocením TD detektorů atp.
+
+Díky znalosti $Q_{zdroj}$ a také díky v podstatě nulových přirozených přísunů radonu do objektu můžeme určit, která kombinace tracerů vede k nejlepším výsledkům. Jedná se o kombinaci (TMH, MCH, PCH). Plyny jsou v závorce uvedeny postupně pro první, druhou a třetí zónu. Při zpětném ověřování průtoků vzduchu z $Q_{zdroj}$ se proto uvažovala tato kombinace tracerů.
 
 \subsubsection{Srovnání použití OAR z TERA sond a z CANARY měřáků}
+Průměrné přísuny radonu vypočítané z OAR naměřené CANARY měřáky jsou menší než průměrné přísuny radonu vypočítané při použití OAR z TERA sond. Je to dáno tím, že průměrné OAR určené z dat naměřených CANARY měřáky jsou značně nižší než průměrné OAR určené z dat naměřených TERA sondami. Vzhledem ke známé nespolehlivosti a nepřesnosti TERA sond (viz určování kalibračních konstant v podkapitole~\ref{navesti:dynMer_TERA}) jsou považovány výpočty z dat naměřených CANARY měřáky za přesnější. CANARY měřáky jsou navíc odzkoušeny mnoha lety měření a projevily se jako spolehlivé monitory radonu. Je zajímavé, že i vývoje OAR se v případě CANARY měřáků a TERA sond liší, viz. obr.~\ref{fig:skala75_OAR_dohromady} a obr.~\ref{fig:skala75_OAR_CANARY}. Například u CANARY měřáků dosahuje OAR ve sklepě od 3. června do konce měření nejvyšších hodnot ze všech zón (až cca \SI{1400}{Bq/m^3}), zatímco v případě TERA sond je v
+tomto období nejvyšší koncentrace v přízemní kuchyni (až cca \SI{1750}{Bq/m^3}). Jak již vyplývá z nutnosti zavádět kalibrační konstanty, problémem zde je rozdílná odezva jednotlivých TERA sond na stejnou hodnotu OAR. Dále lze z obrázků vypozorovat, že CANARY měřák v prvním patře zaznamenával většinu času nulovou hodnotu OAR, zatímco příslušná TERA sonda nulovou hodnotu v podstatě nikdy nenaměřila a navíc má zašuměnější data. Pokud budeme datům z CANARY měřáku věřit, pak to značí, že TERA sondy mají nenulou odezvu na nulovou OAR. 
 
+V důsledku uvedených faktů se při zpětném ověřování počítalo s daty z CANARY měřáků.
+
+\subsubsection{Srovnání vypočítaných přísunů radonu s $Q_{zdroj}$}
 
 
 \subsection{Závěr}
