@@ -107,7 +107,7 @@ I1=np.linalg.inv(np.dot(X.T, X))
 pom=unumpy.matrix(np.dot(X2.T, X2))
 I2=pom.I
 
-prutoky1=np.dot(I1, np.dot(X.T, y))
+prutoky1=np.dot(I1, np.dot(X.T, y)) #bez nejistot
 prutoky2=np.dot(I2, np.dot(X2.T, y)) #toto je s nejistotami
 prutoky2=np.array(prutoky2)[0]
 
@@ -149,6 +149,6 @@ prutoky_hodnoty2.to_csv('airflows.txt', sep=';', decimal=',', float_format='%.8f
 # odezva_TD_df=odezva_TD_df.drop(columns=['jmeno', 'zona', 'plyn', 'R_d_err'])
 
 # def f(x):
-    # return '{:.1f}'.format(x)
+    # return '{:.0f}'.format(x)
 
 # odezva_TD_df.to_latex('odezvy_TD.tex', decimal=',',formatters=[f], escape=False, column_format='lrr')

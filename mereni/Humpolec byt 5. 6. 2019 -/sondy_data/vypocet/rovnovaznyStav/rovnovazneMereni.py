@@ -188,7 +188,8 @@ def export_Q(Q, podlazi, airflows_combination):
     dfQ.columns.name = None
     dfQ.index.name = None
     # formatters=[f]
-    dfQ.to_latex('vysledky_Q_rovnovazneCANARY.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
+    # dfQ.to_latex('vysledky_Q_rovnovazne.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
+    # dfQ.to_latex('vysledky_Q_rovnovazneCANARY.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
     # dfQ.to_latex('vysledky_OAR.tex', decimal=',', formatters=len(podlazi)*[f],  escape=False)
     return 0
 
@@ -253,7 +254,7 @@ def calculation_prutoky_ze_zony(N, ridici_index, a, P, V, W):
     prutoky=np.append(prutoky, calculation_infiltrations(P_zaloha, prutoky[-1], ridici_index))
     return prutoky
 
-def export_prutoky(Q, N, airflows_combination, ridici_index):
+def export_prutoky_zpetne(Q, N, airflows_combination, ridici_index):
     def sloupce(j):
         # return r'$Q_'+str(patro)+r'$ $\left[\si{\frac{Bq}{hod}}\right]$'
         # return r'\multicolumn{2}{r}{$k_{'+str(ridici_index)+str(j)+r'}$ [\si{m^3/hod}]}'
@@ -289,8 +290,8 @@ def run(airflows_ID, a_out=0):
 # musime zadat nenulovou koncentraci vnejsiho prostredi, protoze jinak nam to
 #nevypocita infiltrace
 a_out = 0
-# airflows_ID=np.arange(1,3)
-airflows_ID=[2]
+airflows_ID=np.arange(1,3)
+# airflows_ID=[2]
 N, P, K, a, V, podlazi = load_data(airflows_ID[0])
 
 Q_zdroje=unumpy.uarray([332, 0, 0, 0], [64, 0, 0, 0])
@@ -303,8 +304,8 @@ for el in airflows_ID:
     airflows_combination, Q=run(el)
     airflows_combination_list.append(airflows_combination)
     Q_list.append(Q)
-export_Q(OAR_list, podlazi, airflows_combination_list)
-
+export_Q(Q_list, podlazi, airflows_combination_list)
+# export_Q(OAR_list, podlazi, airflows_combination_list)
 
 W1=4.330*3600
 W2=4.010*3600
@@ -315,19 +316,21 @@ W=np.array([W1, 0, 0, 0])
 # exfiltrace=calculation_exfiltrations(a, a_out, P, V, W)
 
 #po zonach
-prutoky_Namerene1=calculation_prutoky_ze_zony(N, 1, a, P, V, Q*V)
-prutoky_Namerene2=calculation_prutoky_ze_zony(N, 2, a, P, V, Q*V)
-prutoky_Namerene3=calculation_prutoky_ze_zony(N, 3, a, P, V, Q*V)
-prutoky_Namerene4=calculation_prutoky_ze_zony(N, 4, a, P, V, Q*V)
+#TOTO JE POUZE PRO JEDNU KOMBINACI INDIKACNICH PLYNU, KTEROU JSME
+# SI ZVOLILI! (nastavuje se v airflows_ID)
+# prutoky_Namerene1=calculation_prutoky_ze_zony(N, 1, a, P, V, Q*V)
+# prutoky_Namerene2=calculation_prutoky_ze_zony(N, 2, a, P, V, Q*V)
+# prutoky_Namerene3=calculation_prutoky_ze_zony(N, 3, a, P, V, Q*V)
+# prutoky_Namerene4=calculation_prutoky_ze_zony(N, 4, a, P, V, Q*V)
 
-prutoky1=calculation_prutoky_ze_zony(N, 1, a, P, V, W)
-prutoky2=calculation_prutoky_ze_zony(N, 2, a, P, V, W)
-prutoky3=calculation_prutoky_ze_zony(N, 3, a, P, V, W)
-prutoky4=calculation_prutoky_ze_zony(N, 4, a, P, V, W)
-prutoky=[prutoky1, prutoky2, prutoky3, prutoky4]
+# prutoky1=calculation_prutoky_ze_zony(N, 1, a, P, V, W)
+# prutoky2=calculation_prutoky_ze_zony(N, 2, a, P, V, W)
+# prutoky3=calculation_prutoky_ze_zony(N, 3, a, P, V, W)
+# prutoky4=calculation_prutoky_ze_zony(N, 4, a, P, V, W)
+# prutoky=[prutoky1, prutoky2, prutoky3, prutoky4]
 
-namerene=[]
-for i in np.arange(len(P)-1):
-    pom=np.append(P[i, :], P[-1, i])
-    namerene.append(pom[pom!=0])
-    export_prutoky([prutoky[i], namerene[i]], N, ['zpětně', 'měření'], i+1)
+# namerene=[]
+# for i in np.arange(len(P)-1):
+    # pom=np.append(P[i, :], P[-1, i])
+    # namerene.append(pom[pom!=0])
+    # export_prutoky_zpetne([prutoky[i], namerene[i]], N, ['zpětně', 'měření'], i+1)

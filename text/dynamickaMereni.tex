@@ -17,7 +17,11 @@ Dynamická měření přísunů radonu jsem provedl u tří objektů, viz tab.~\
 
 Vývoj OAR v čase v jednotlivých zónách byl měřen primárně TERA sondami~\cite{tera} a sekundárně měřiči radonu CANARY~\cite{canary}. CANARY měřáky byly použity jako záložní systém, tj. pokud by v některé zóně  TERA sonda selhala, pak by se OAR v této zóně brala z příslušného CANARY měřáku. %Zevrubné informace o těchto detektorech lze dohledat v kapitole~\ref{navesti:radon}.
 
-Dále bylo potřeba měřit vývoj teploty, což je znalost nutná při vyhodnocování množství nasorbovaných indikačních plynů v TD detektorech a k určení hmotnostních koncentrací indikačních plynů  v zónách. K tomuto účelu byly použity dataloggery teploty a vlhkosti testo 174H~\cite{testo}. V případě objektu Hálková 980 byly k určení hmotnostních koncentrací použity teploty naměřené TERA sondami, jelikož v tomto objektu byl osazen pouze jeden datalogger testo 174H (jedná se jednopodlažní byt).
+Dále bylo potřeba měřit vývoj teploty, což je znalost nutná při vyhodnocování množství nasorbovaných indikačních plynů v TD detektorech a k určení hmotnostních koncentrací indikačních plynů  v zónách. K tomuto účelu byly použity dataloggery teploty a vlhkosti testo 174H~\cite{testo}. V případě objektu Hálková 980 byly k určení hmotnostních koncentrací použity teploty naměřené TERA sondami, jelikož v tomto objektu byl osazen pouze jeden datalogger testo 174H (jedná se jednopodlažní byt). 
+
+Pro určení hmotnostních koncentrací indikačních plynů je dále nutno změřit průměrné atmosférické tlaky ve všech zónách. Jejich hodnoty však stačí znát pouze přibližně, protože moc neovlivňují výpočet koncentrací. Proto byly všechny potřebné atmosférické tlaky při vyhodnocování všech objektů brány rovny \SI{100}{kPa}.
+
+Objemy všech objektů byly změřeny laserovým dálkoměrem BOSCH GLM 120 C~\cite{dalkomer}.
 
 Do objektů byly při měřeních umístěny vždy jeden nebo dva zdroje radonu typu RF 2000 (viz podkapitola \ref{navesti:radon_zdroje}). U těchto zdrojů nás pro naše měření zajímají pouze radonové výdejnosti $W$, které představují definované absolutní přísuny radonu do zón, ve kterých jsou zdroje umístěny. Absolutními přísuny radonu je myšleno množství aktivity radonu, jenž se do zón dostane za hodinu, a tedy jejich jednotkou je \si{Bq/hod}. Radonové výdejnosti použitých zdrojů jsou uvedeny v tab.~\ref{tab:dynMer_zdroje}. Podělením $W$ objemem příslušné zóny můžeme dopočítat přísun radonu pocházející od daného zdroje do této zóny. 
 \begin{table}[ht]
@@ -34,7 +38,7 @@ Do objektů byly při měřeních umístěny vždy jeden nebo dva zdroje radonu 
     \end{tabular}
 \end{table}
 
-Před samotnými měřeními přísunů radonu v objektech bylo nejprve nutno provést srovnávací měření TERA sond, jelikož každá sonda má různou odezvu při stejné OAR. O tomto pojednává podkapitola~\ref{navesti:dynMer_TERA}. Další podkapitoly obsahují dynamická měření přísunů radonu v uvedených objektech. 
+Před samotnými měřeními přísunů radonu v objektech bylo nejprve nutno provést srovnávací měření TERA sond, jelikož každá sonda má různou odezvu při stejné OAR. O tom pojednává podkapitola~\ref{navesti:dynMer_TERA}. Další podkapitoly obsahují dynamická měření přísunů radonu v uvedených objektech. Je potřeba dávat pozor na to, zdali je značení OAR a přísunů radonu bráno podle podlaží či podle zón. Pokud se jedná objekt, který nelze rozdělit na zóny podle podlaží, pak je značení bráno podle zón, v opačném případě je používáno značení podle podlaží.
 
 \section{TERA sondy}\label{navesti:dynMer_TERA}
 
@@ -100,75 +104,90 @@ Relativní nejistoty kalibračních konstant byly odhadnuty na 10~\%. Určené k
 		\bottomrule
 	\end{tabular}
 \end{table}
+
 \section{Objekt Skála 75, okr. Havlíčkův Brod}
-\subsection{Použitá měřidla}
-\begin{itemize}
-    \setlength\itemsep{0em}
-	\item 14 vyvíječů (2x TMH, 2x TCE, 3x MDC, 3x MCH, 2x PCE, 2x PCH)
-	\item 12 TD detektorů
-	\item 4 CANARY monitory
-	\item 4 TERA sondy
-	\item 3 TESTO měřiče teploty a vlhkosti
-	\item 2 zdroje radonu
-\end{itemize}
 
-\subsection{Naměřené OAR, objemy a teploty}
+Jedná se o chatu se sklepem, přízemím (které zahrnuje verandu) a prvním patrem. Rozdělení na kompartmenty bylo provedeno podle těchto podlaží. Do každého podlaží/zóny byly umístěny vyvíječe dvou typů indikačních plynů. Ve sklepě byly čtyři vyvíječe plynů TMH a TCE, v přízemí šest vyvíječů plynů MDC a MCH a v prvním patře čtyři vyvíječe plynů PCH a PCE. Dále byly umístěny TD detektory: dva do sklepa, šest do přízemí a čtyři do prvního patra. Do sklepa a prvního patra byly umístěny jeden CANARY měřák a jedna TERA sonda, v přízemí byly oba dva typy monitorů dvakrát. Nakonec byly dány do sklepa a přízemí průtočné zdroje radonu typu RF 2000 (do sklepa zdroj s označením 38, do přízemí s označením 37) a byly změřeny objemy. 
 
-\begin{table}[H]
-    \centering
-    \caption{Objemy podlaží objektu, průměrné teploty naměřené v každém podlaží dataloggery testo 174H, odhadnuté atmosférické tlaky v každém podlaží a přiřazení číslování kompartmentů jednotlivým podlažím. Význam označení podlaží je vysvětlen v tab. \ref{tab:rovMer_podlazi}.}
-    \label{tab:skala75_objemy}
-    \input{skala75/vysledky_inputData}
-\end{table}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{skala75/OAR_dohromady.png}
-    \caption{Vývoj OAR naměřený TERA sondami po aplikování kalibračních konstant (tab.~\ref{tab:dynMer_sondyB}). Pro další vyhodnocování byly OAR naměřené v přízemí v kuchyni a v ložnici zprůměrovány.}
-    \label{fig:skala75_OAR_dohromady}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{skala75/OAR_CANARY.png}
-    \caption{Vývoj OAR naměřený CANARY měřáky.}
-    \label{fig:skala75_OAR_CANARY}
-\end{figure}
-\subsection{Objemové průtoky vzduchu}
+To, že jsme umístili do každé ze zón zdroje dvou různých indikačních plynů, umožnilo vyhodnocení měření ventilace vícero způsoby. Při vyhodnocování bylo totiž počítáno pouze s $N=N_p=3$, přičemž byly uvažovány plyny, jejichž zdroje byly v různých zónách (viz pravidla o osazování měřidel, podkapitola~\ref{navesti:prutoky_instalace}). To nám dává osm kombinací trojic použitých plynů a tedy osm různých způsobů vyhodnocení měření ventilaci a následně přísunů radonu.
 
-\begin{table}[H]
-    \centering
-    \caption{Přehled použitých indikačních plynů a umístění jejich vyvíječů v objektu. V posledním sloupci jsou celkové odpary plynů ze všech jim odpovídajících vyvíječů.}
-    \label{tab:skala75_indikacniPlyny}
-    \input{skala75/indikacni_plyny}
-\end{table}
-\begin{table}[H]
-    \centering
-    \caption{Odezvy TD detektorů $R$ na všechny použité indikační plyny ve všech zónách.}
-    \label{tab:skala75_odezvyTD}
-    \input{skala75/odezvy_TD}
-\end{table}
+V příloze~\ref{navesti:priloha_skala75} lze dohledat i vyhodnocené veličiny z měření ventilace a OAR. Je tam také uveden výpočet nejistot průměrných hodnot OAR z dat naměřených TERA sondami (podle informací uvedených v podkapitole~\ref{navesti:radon_TERAnejistota}). 
 
-\begin{table}[H]
-    \centering
-    \caption{Objemové průtoky vzduchu v \si{m^3/hod} pro všechny kombinace aplikovaných indikačních plynů. $n$ je výměna vzduchu vypočtená ze vztahu~\eqref{eq:prutoky_n}, $[n]=\si{1/hod}$.}
-    \label{tab:skala75_prutoky}
+V následujícím oddíle jsou uvedeny přesně definované přísuny radonu od zdrojů RF 2000 a dále průměrné přísuny radonu vypočítané z naměřených průtoků vzduchu mezi zónami a z OAR naměřených TERA sondami, resp. CANARY měřáky pro všechny kombinace indikačních plynů. V případě TERA sond proběhlo i dynamické vyhodnocení pro určení vývojů $Q_i(t)$, které lze vidět v příloze~\ref{navesti:priloha_skala75_prisuny}, v následujícím oddílu jsou pouze uvedeny zprůměrované hodnoty $Q_i(t)$. V posledním oddílu této kapitoly je zobrazeno zpětné ověření (ve smyslu podkapitoly~\ref{navesti:model_overeni}), navíc jsou tam uvedeny i průměrné OAR naměřené CANARY měřáky a objemové průtoky vzduchu z vyhodnocení měření ventilace objektu při použití kombinace indikačních plynů (TMH, MCH,
+PCE).
+
+
+
+
+%\subsection{Použitá měřidla}
+%\begin{itemize}
+    %\setlength\itemsep{0em}
+	%\item 14 vyvíječů (2x TMH, 2x TCE, 3x MDC, 3x MCH, 2x PCE, 2x PCH)
+	%\item 12 TD detektorů
+	%\item 4 CANARY monitory
+	%\item 4 TERA sondy
+	%\item 3 TESTO měřiče teploty a vlhkosti
+	%\item 2 zdroje radonu
+%\end{itemize}
+
+%\subsection{Naměřené OAR, objemy a teploty}
+
+%\begin{table}[H]
+    %\centering
+    %\caption{Objemy podlaží objektu, průměrné teploty naměřené v každém podlaží dataloggery testo 174H, odhadnuté atmosférické tlaky v každém podlaží a přiřazení číslování kompartmentů jednotlivým podlažím. Význam označení podlaží je vysvětlen v tab. \ref{tab:rovMer_podlazi}.}
+    %\label{tab:skala75_objemy}
+    %\input{skala75/vysledky_inputData}
+%\end{table}
+%\begin{figure}[H]
+    %\centering
+    %\includegraphics[width=1\textwidth]{skala75/OAR_dohromady.png}
+    %\caption{Vývoj OAR naměřený TERA sondami po aplikování kalibračních konstant (tab.~\ref{tab:dynMer_sondyB}). Pro další vyhodnocování byly OAR naměřené v přízemí v kuchyni a v ložnici zprůměrovány.}
+    %\label{fig:skala75_OAR_dohromady}
+%\end{figure}
+%\begin{figure}[H]
+    %\centering
+    %\includegraphics[width=1\textwidth]{skala75/OAR_CANARY.png}
+    %\caption{Vývoj OAR naměřený CANARY měřáky.}
+    %\label{fig:skala75_OAR_CANARY}
+%\end{figure}
+%\subsection{Objemové průtoky vzduchu}
+
+%\begin{table}[H]
+    %\centering
+    %\caption{Přehled použitých indikačních plynů a umístění jejich vyvíječů v objektu. V posledním sloupci jsou celkové odpary plynů ze všech jim odpovídajících vyvíječů.}
+    %\label{tab:skala75_indikacniPlyny}
+    %\input{skala75/indikacni_plyny}
+%\end{table}
+%\begin{table}[H]
+    %\centering
+    %\caption{Odezvy TD detektorů $R$ na všechny použité indikační plyny ve všech zónách.}
+    %\label{tab:skala75_odezvyTD}
+    %\input{skala75/odezvy_TD}
+%\end{table}
+
+%\begin{table}[H]
+    %\centering
+    %\caption{Objemové průtoky vzduchu v \si{m^3/hod} pro všechny kombinace aplikovaných indikačních plynů. $n$ je výměna vzduchu vypočtená ze vztahu~\eqref{eq:prutoky_n}, $[n]=\si{1/hod}$.}
+    %\label{tab:skala75_prutoky}
 %\begin{tabular}{l>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}}
 %\toprule
 %{} & (TMH, MDC, PCE) & (TMH, MDC, PCH) & (TMH, MCH, PCE) & (TMH, MCH, PCH)\\ 
 %\midrule
-%$k_{12}$ & 4.139$\pm$1.044 & 3.771$\pm$0.994 & 3.445$\pm$0.874 & 3.128$\pm$0.830 \\          
-%$k_{13}$ & 0.478$\pm$0.133 & 1.892$\pm$0.533 & 0.495$\pm$0.136 & 1.956$\pm$0.541 \\          
-%$k_{21}$ & 0.656$\pm$0.152 & 0.574$\pm$0.137 & 0.525$\pm$0.126 & 0.455$\pm$0.114 \\          
-%$k_{23}$ & 0.202$\pm$0.030 & 0.800$\pm$0.119 & 0.167$\pm$0.026 & 0.660$\pm$0.104 \\          
-%$k_{31}$ &-0.019$\pm$0.005 & 0.854$\pm$0.233 &-0.015$\pm$0.004 & 0.881$\pm$0.237 \\          
-%$k_{32}$ & 0.231$\pm$0.034 & 1.882$\pm$0.282 & 0.192$\pm$0.029 & 1.561$\pm$0.240 \\          
-%$k_{1_E}$&12.492$\pm$2.813 &11.640$\pm$2.705 &13.100$\pm$2.886 &12.163$\pm$2.768 \\          
-%$k_{2_E}$& 7.169$\pm$0.789 & 6.809$\pm$0.790 & 5.990$\pm$0.690 & 5.674$\pm$0.686 \\          
-%$k_{3_E}$& 1.930$\pm$0.212 & 5.749$\pm$0.804 & 1.964$\pm$0.213 & 6.010$\pm$0.804 \\          
-%$k_{1_I}$&16.471$\pm$3.007 &15.875$\pm$2.943 &16.530$\pm$3.022 &15.912$\pm$2.952 \\          
-%$k_{2_I}$& 3.657$\pm$1.318 & 2.530$\pm$1.313 & 3.045$\pm$1.122 & 2.099$\pm$1.114 \\          
-%$k_{3_I}$& 1.462$\pm$0.255 & 5.793$\pm$1.039 & 1.478$\pm$0.256 & 5.836$\pm$1.032 \\          
-%\midrule
-%$n$      & 0.091$\pm$0.014 & 0.102$\pm$0.015 & 0.089$\pm$0.014 & 0.101$\pm$0.015 \\
+%$k_{12}$ &12,262$\pm$3,129 &  11,759$\pm$3,078 &  10,188$\pm$2,611 &   9,746$\pm$2,563 \\          
+%$k_{13}$ & 0,855$\pm$0,255 &   3,372$\pm$1,013 &   0,908$\pm$0,261 &   3,573$\pm$1,036 \\          
+%$k_{21}$ & 4,028$\pm$0,940 &   3,507$\pm$0,847 &   3,220$\pm$0,776 &   2,780$\pm$0,700 \\          
+%$k_{23}$ & 1,240$\pm$0,183 &   4,889$\pm$0,724 &   1,025$\pm$0,161 &   4,031$\pm$0,635 \\          
+%$k_{31}$ &-0,076$\pm$0,020 &   3,524$\pm$0,958 &  -0,061$\pm$0,016 &   3,611$\pm$0,968 \\          
+%$k_{32}$ & 0,931$\pm$0,137 &   5,967$\pm$0,967 &   0,774$\pm$0,117 &   4,945$\pm$0,820 \\          
+%&&&&\\
+%$k_{1_E}$&21,425$\pm$5,271 &  19,770$\pm$5,057 &  23,244$\pm$5,443 &  21,411$\pm$5,208 \\          
+%$k_{2_E}$&44,024$\pm$4,853 &  41,624$\pm$4,833 &  36,712$\pm$4,240 &  34,644$\pm$4,195 \\          
+%$k_{3_E}$& 7,712$\pm$0,849 &  24,294$\pm$3,199 &   7,850$\pm$0,853 &  25,127$\pm$3,209 \\          
+%$k_{1_I}$&30,590$\pm$6,206 &  27,869$\pm$6,140 &  31,181$\pm$6,093 &  28,339$\pm$6,017 \\          
+%$k_{2_I}$&36,099$\pm$5,855 &  32,294$\pm$5,917 &  29,994$\pm$5,043 &  26,764$\pm$5,073 \\          
+%$k_{3_I}$& 6,472$\pm$0,916 &  25,525$\pm$3,693 &   6,630$\pm$0,914 &  26,079$\pm$3,658 \\          
+%\midrule                                                                              
+%$n$      & 0,310$\pm$0,038 &   0,363$\pm$0,042 &   0,287$\pm$0,036 &   0,344$\pm$0,041 \\
 %\bottomrule
 %\end{tabular}
 %\vspace{0.5cm}
@@ -177,67 +196,24 @@ Relativní nejistoty kalibračních konstant byly odhadnuty na 10~\%. Určené k
     %\toprule
     %{} & (TCE, MDC, PCE) & (TCE, MDC, PCH) & (TCE, MCH, PCE) & (TCE, MCH, PCH) \\
     %\midrule
-%$k_{12}$ & 3.330$\pm$0.551 & 2.965$\pm$0.519 & 2.774$\pm$0.468 & 2.462$\pm$0.438 \\
-%$k_{13}$ & 0.462$\pm$0.081 & 1.828$\pm$0.322 & 0.476$\pm$0.082 & 1.879$\pm$0.326 \\
-%$k_{21}$ & 0.215$\pm$0.034 & 0.188$\pm$0.032 & 0.172$\pm$0.030 & 0.149$\pm$0.028 \\
-%$k_{23}$ & 0.203$\pm$0.029 & 0.802$\pm$0.118 & 0.168$\pm$0.026 & 0.662$\pm$0.104 \\
-%$k_{31}$ &-0.006$\pm$0.001 & 0.279$\pm$0.060 &-0.005$\pm$0.001 & 0.288$\pm$0.061 \\
-%$k_{32}$ & 0.230$\pm$0.034 & 1.922$\pm$0.283 & 0.191$\pm$0.029 & 1.595$\pm$0.241 \\
-%$k_{1_E}$& 1.805$\pm$0.627 & 0.865$\pm$0.619 & 2.329$\pm$0.606 & 1.303$\pm$0.596 \\
-%$k_{2_E}$& 7.579$\pm$0.796 & 7.166$\pm$0.798 & 6.322$\pm$0.699 & 5.960$\pm$0.695 \\
-%$k_{3_E}$& 1.918$\pm$0.212 & 6.281$\pm$0.810 & 1.954$\pm$0.213 & 6.565$\pm$0.810 \\
-%$k_{1_I}$& 5.388$\pm$0.840 & 5.191$\pm$0.872 & 5.412$\pm$0.771 & 5.207$\pm$0.812 \\
-%$k_{2_I}$& 4.436$\pm$0.970 & 3.269$\pm$1.000 & 3.696$\pm$0.843 & 2.714$\pm$0.863 \\
-%$k_{3_I}$& 1.478$\pm$0.231 & 5.852$\pm$0.926 & 1.497$\pm$0.232 & 5.908$\pm$0.914 \\
-%\midrule                                                                           
-%$n$      & 0.048$\pm$0.006 & 0.061$\pm$0.007 & 0.045$\pm$0.005 & 0.059$\pm$0.007 \\
+%$k_{12}$ & 7,859$\pm$1,288 &   7,286$\pm$1,238 &   6,544$\pm$1,094 &   6,050$\pm$1,047 \\
+%$k_{13}$ & 0,893$\pm$0,159 &   3,523$\pm$0,631 &   0,927$\pm$0,162 &   3,647$\pm$0,641 \\
+%$k_{21}$ & 1,309$\pm$0,211 &   1,140$\pm$0,195 &   1,049$\pm$0,182 &   0,906$\pm$0,169 \\
+%$k_{23}$ & 1,235$\pm$0,180 &   4,874$\pm$0,715 &   1,023$\pm$0,159 &   4,025$\pm$0,628 \\
+%$k_{31}$ &-0,025$\pm$0,005 &   1,146$\pm$0,243 &  -0,020$\pm$0,004 &   1,176$\pm$0,245 \\
+%$k_{32}$ & 0,922$\pm$0,136 &   6,419$\pm$0,960 &   0,767$\pm$0,116 &   5,330$\pm$0,817 \\
+%&&&&\\
+%$k_{1_E}$& 2,474$\pm$1,325 &   0,539$\pm$1,320 &   3,713$\pm$1,256 &   1,616$\pm$1,248 \\
+%$k_{2_E}$&46,234$\pm$4,862 &  43,556$\pm$4,848 &  38,543$\pm$4,268 &  36,229$\pm$4,226 \\
+%$k_{3_E}$& 7,670$\pm$0,848 &  26,236$\pm$3,237 &   7,815$\pm$0,852 &  27,185$\pm$3,242 \\
+%$k_{1_I}$& 9,941$\pm$1,867 &   9,061$\pm$1,942 &  10,155$\pm$1,683 &   9,231$\pm$1,776 \\
+%$k_{2_I}$&39,997$\pm$5,039 &  35,866$\pm$5,149 &  33,303$\pm$4,414 &  29,780$\pm$4,477 \\
+%$k_{3_I}$& 6,439$\pm$0,891 &  25,404$\pm$3,517 &   6,613$\pm$0,889 &  26,019$\pm$3,470 \\
+%\midrule                                                                                 
+%$n$      & 0,239$\pm$0,028 &   0,298$\pm$0,034 &   0,212$\pm$0,025 &   0,275$\pm$0,031 \\
 %\bottomrule
 %\end{tabular}
-\begin{tabular}{l>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}}
-\toprule
-{} & (TMH, MDC, PCE) & (TMH, MDC, PCH) & (TMH, MCH, PCE) & (TMH, MCH, PCH)\\ 
-\midrule
-$k_{12}$ &12,262$\pm$3,129 &  11,759$\pm$3,078 &  10,188$\pm$2,611 &   9,746$\pm$2,563 \\          
-$k_{13}$ & 0,855$\pm$0,255 &   3,372$\pm$1,013 &   0,908$\pm$0,261 &   3,573$\pm$1,036 \\          
-$k_{21}$ & 4,028$\pm$0,940 &   3,507$\pm$0,847 &   3,220$\pm$0,776 &   2,780$\pm$0,700 \\          
-$k_{23}$ & 1,240$\pm$0,183 &   4,889$\pm$0,724 &   1,025$\pm$0,161 &   4,031$\pm$0,635 \\          
-$k_{31}$ &-0,076$\pm$0,020 &   3,524$\pm$0,958 &  -0,061$\pm$0,016 &   3,611$\pm$0,968 \\          
-$k_{32}$ & 0,931$\pm$0,137 &   5,967$\pm$0,967 &   0,774$\pm$0,117 &   4,945$\pm$0,820 \\          
-&&&&\\
-$k_{1_E}$&21,425$\pm$5,271 &  19,770$\pm$5,057 &  23,244$\pm$5,443 &  21,411$\pm$5,208 \\          
-$k_{2_E}$&44,024$\pm$4,853 &  41,624$\pm$4,833 &  36,712$\pm$4,240 &  34,644$\pm$4,195 \\          
-$k_{3_E}$& 7,712$\pm$0,849 &  24,294$\pm$3,199 &   7,850$\pm$0,853 &  25,127$\pm$3,209 \\          
-$k_{1_I}$&30,590$\pm$6,206 &  27,869$\pm$6,140 &  31,181$\pm$6,093 &  28,339$\pm$6,017 \\          
-$k_{2_I}$&36,099$\pm$5,855 &  32,294$\pm$5,917 &  29,994$\pm$5,043 &  26,764$\pm$5,073 \\          
-$k_{3_I}$& 6,472$\pm$0,916 &  25,525$\pm$3,693 &   6,630$\pm$0,914 &  26,079$\pm$3,658 \\          
-\midrule                                                                              
-$n$      & 0,310$\pm$0,038 &   0,363$\pm$0,042 &   0,287$\pm$0,036 &   0,344$\pm$0,041 \\
-\bottomrule
-\end{tabular}
-\vspace{0.5cm}
-
-\begin{tabular}{l>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}>{\raggedleft\arraybackslash}p{2.5cm}}
-    \toprule
-    {} & (TCE, MDC, PCE) & (TCE, MDC, PCH) & (TCE, MCH, PCE) & (TCE, MCH, PCH) \\
-    \midrule
-$k_{12}$ & 7,859$\pm$1,288 &   7,286$\pm$1,238 &   6,544$\pm$1,094 &   6,050$\pm$1,047 \\
-$k_{13}$ & 0,893$\pm$0,159 &   3,523$\pm$0,631 &   0,927$\pm$0,162 &   3,647$\pm$0,641 \\
-$k_{21}$ & 1,309$\pm$0,211 &   1,140$\pm$0,195 &   1,049$\pm$0,182 &   0,906$\pm$0,169 \\
-$k_{23}$ & 1,235$\pm$0,180 &   4,874$\pm$0,715 &   1,023$\pm$0,159 &   4,025$\pm$0,628 \\
-$k_{31}$ &-0,025$\pm$0,005 &   1,146$\pm$0,243 &  -0,020$\pm$0,004 &   1,176$\pm$0,245 \\
-$k_{32}$ & 0,922$\pm$0,136 &   6,419$\pm$0,960 &   0,767$\pm$0,116 &   5,330$\pm$0,817 \\
-&&&&\\
-$k_{1_E}$& 2,474$\pm$1,325 &   0,539$\pm$1,320 &   3,713$\pm$1,256 &   1,616$\pm$1,248 \\
-$k_{2_E}$&46,234$\pm$4,862 &  43,556$\pm$4,848 &  38,543$\pm$4,268 &  36,229$\pm$4,226 \\
-$k_{3_E}$& 7,670$\pm$0,848 &  26,236$\pm$3,237 &   7,815$\pm$0,852 &  27,185$\pm$3,242 \\
-$k_{1_I}$& 9,941$\pm$1,867 &   9,061$\pm$1,942 &  10,155$\pm$1,683 &   9,231$\pm$1,776 \\
-$k_{2_I}$&39,997$\pm$5,039 &  35,866$\pm$5,149 &  33,303$\pm$4,414 &  29,780$\pm$4,477 \\
-$k_{3_I}$& 6,439$\pm$0,891 &  25,404$\pm$3,517 &   6,613$\pm$0,889 &  26,019$\pm$3,470 \\
-\midrule                                                                                 
-$n$      & 0,239$\pm$0,028 &   0,298$\pm$0,034 &   0,212$\pm$0,025 &   0,275$\pm$0,031 \\
-\bottomrule
-\end{tabular}
-\end{table}
+%\end{table}
 
 \subsection{Přísuny radonu}
 \begin{table}[H]
@@ -258,48 +234,45 @@ $n$      & 0,239$\pm$0,028 &   0,298$\pm$0,034 &   0,212$\pm$0,025 &   0,275$\pm
     \end{tabular}
 \end{table}
 
+\subsubsection{Vyhodnocení dynamického měření}
 \begin{table}[H]
     \centering
-    \caption{Průměrné přísuny radonu v \si{Bq/(m^3\cdot hod)} souhrnně pro všechny kombinace indikačních plynů pro dynamické vyhodnocení.}
+    \caption{Průměrné přísuny radonu v \si{Bq/(m^3\cdot hod)} souhrnně pro všechny kombinace indikačních plynů určené zprůměrováním časových vývojů $Q_i(t)$ vypočítaných z dynamického vyhodnocení OAR naměřených TERA sondami. Závislosti $Q_i(t)$ lze vidět v příloze~\ref{navesti:priloha_skala75}.}
     \label{tab:skala75_prisunyDynamicky}
    \input{skala75/vysledky_Q_dynamicky}
 \end{table}
 \subsubsection{Vyhodnocení v rovnovážném stavu}
-\begin{table}[H]
-    \centering
-    \caption{Průměrné objemové koncentrace radonu naměřené TERA sondami umístěnými v uvedených podlažích. $\sigma_A$ je nejistota OAR typu A plynoucí ze statistického zpracování naměřených dat, $\sigma_B$ je nejistota OAR typu B plynoucí z ostatních zdrojů (statistika detekce, nejistota měřidla) a $\sigma$ je kombinovaná nejistota OAR. Při určování přísunů radonu v rovnovážném stavu byla použita pouze nejistota typu B, tj. $\sigma_B$. V posledním sloupci je průměrná citlivost TERA sond vypočtená z naměřených dat (tj. z naměřeného počtu impulzů a naměřeného OAR). Tato citlivost byla použita pro výpočet $\sigma_B$.}
-    \label{tab:skala75_OARprumerne}
-    \begin{tabular}{llrrrrr}
-\toprule
-ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\overline{c}$ $\left[\si{\frac{imp}{hod}/\frac{Bq}{m^3}}\right]$\\ 
-\midrule
-8  &0 & 458 & 309 & 33 & 311&0,405\\
-10 &1 & 789 & 485 & 43 & 487&0,433\\
-112&1 & 633 & 282 & 37 & 284&0,464\\
-88 &2 & 276 & 356 & 31 & 358&0,296\\
-\bottomrule
-    \end{tabular}
-\end{table}
+%\begin{table}[H]
+    %\centering
+    %\caption{Průměrné objemové koncentrace radonu naměřené TERA sondami umístěnými v uvedených podlažích. $\sigma_A$ je nejistota OAR typu A plynoucí ze statistického zpracování naměřených dat, $\sigma_B$ je nejistota OAR typu B plynoucí z ostatních zdrojů (statistika detekce, nejistota měřidla) a $\sigma$ je kombinovaná nejistota OAR. Při určování přísunů radonu v rovnovážném stavu byla použita pouze nejistota typu B, tj. $\sigma_B$. V posledním sloupci je průměrná citlivost TERA sond vypočtená z naměřených dat (tj. z naměřeného počtu impulzů a naměřeného OAR). Tato citlivost byla použita pro výpočet $\sigma_B$.}
+    %\label{tab:skala75_OARprumerne}
+    %\begin{tabular}{llrrrrr}
+%\toprule
+%ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\overline{c}$ $\left[\si{\frac{imp}{hod}/\frac{Bq}{m^3}}\right]$\\ 
+%\midrule
+%8  &0 & 458 & 309 & 33 & 311&0,405\\
+%10 &1 & 789 & 485 & 43 & 487&0,433\\
+%112&1 & 633 & 282 & 37 & 284&0,464\\
+%88 &2 & 276 & 356 & 31 & 358&0,296\\
+%\bottomrule
+    %\end{tabular}
+%\end{table}
 
-\begin{table}[H]
-    \centering
-    \caption{Průměrné OAR naměřené CANARY měřáky umístěnými v daných podlažích.}
-    \label{tab:skala75_OARprumerne_CANARY}
-    \begin{tabular}{llr
-        %>{\collectcell\num}r<{\endcollectcell}
-        %@{${}\pm{}$}
-        %>{\collectcell\num}r<{\endcollectcell}
-        }
-        \toprule
-        ID měřáku & podlaží & OAR [\si{Bq/m^3}]\\
-        \midrule
-        1 & 0 & $381\pm38$\\
-        2 & 1 & $419\pm42$\\
-        4 & 1 & $465\pm47$\\
-        3 & 2 & $156\pm16$\\
-        \bottomrule
-    \end{tabular}
-\end{table}
+%\begin{table}[H]
+    %\centering
+    %\caption{Průměrné OAR naměřené CANARY měřáky umístěnými v daných podlažích.}
+    %\label{tab:skala75_OARprumerne_CANARY}
+    %\begin{tabular}{llr}
+        %\toprule
+        %ID měřáku & podlaží & OAR [\si{Bq/m^3}]\\
+        %\midrule
+        %1 & 0 & $381\pm38$\\
+        %2 & 1 & $419\pm42$\\
+        %4 & 1 & $465\pm47$\\
+        %3 & 2 & $156\pm16$\\
+        %\bottomrule
+    %\end{tabular}
+%\end{table}
 
 \begin{table}[H]
     \centering
@@ -314,27 +287,6 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
     \label{tab:skala75_prisunyRovnovazneCANARY}
    \input{skala75/vysledky_Q_rovnovazneCANARY}
 \end{table}
-%\subsection{Přeurčená varianta}
-
-%\begin{table}[H]
-    %\centering
-    %\caption{Průtoky vzduchu mezi jednotlivými zónami. Vnější prostředí je označeno číslem 4.}
-    %\label{tab:skala75Preurcena_prutoky}
-    %\input{skala75/vysledky_prutoky_preurcena}
-%\end{table}
-%\begin{table}[H]
-    %\centering
-    %\caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých zón.}
-    %\label{tab:skala75Preurcena_objemy}
-    %\input{skala75/vysledky_Q_statistiky_preurcena}
-%\end{table}
-
-%\begin{figure}[H]
-    %\centering
-    %\includegraphics[width=\textwidth]{skala75/prisuny_preurcena.png}
-    %\caption{Přísuny radonu. Popisky v legendě značí podlaží.}
-    %\label{fig:skala75Preurcena_prisuny}
-%\end{figure}
 
 \subsection{Zpětné ověření}
 
@@ -345,7 +297,7 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
     \label{tab:skala75_OAR_zpetne}
     \begin{tabular}{lrrr}
         \toprule
-        & $a_1$ [\si{Bq/m^3}] &  $a_2$ [\si{Bq/m^3}]& $a_3$ [\si{Bq/m^3}] \\
+  použité tracery  & $a_1$ [\si{Bq/m^3}] &  $a_2$ [\si{Bq/m^3}]& $a_3$ [\si{Bq/m^3}] \\
         \midrule
 (TMH, MDC, PCE) & $ 496\pm121$ & $410\pm72$ & $103\pm25$ \\
 (TMH, MDC, PCH) & $ 496\pm119$ & $410\pm72$ & $107\pm26$ \\
@@ -365,7 +317,7 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
 
 \begin{table}[H]
     \centering
-    \caption{V prvních řádcích těchto tabulek označených \emph{zpětně} jsou průtoky vzduchu z dané zóny do ostatních zón a infiltrace této zóny vypočítané z rovnice~\eqref{eq:maticovy_zapis_rovnovaha} za využití znalosti ostatních průtoků vzduchu pro kombinaci indikačních plynů (MDC, MCH, TCE, TMH), viz tab.~\ref{tab:skala75_prutoky}, přísunů radonu pocházejících od zdrojů RF 2000 (tab.~\ref{tab:skala75_prisunyZdroj}) a průměrných OAR naměřených CANARY měřáky. V druhých řádcích tabulek označených \emph{měření} jsou pro srovnání uvedené příslušné průtoky vzduchu z tab.~\ref{tab:skala75_prutoky}. V (a) je zájmovou zónou první zóna, v (b) druhá zóna a v (c) třetí zóna.}
+    \caption{V prvních řádcích těchto tabulek označených \emph{zpětně} jsou průtoky vzduchu z dané zóny do ostatních zón a infiltrace této zóny vypočítané z rovnice~\eqref{eq:maticovy_zapis_rovnovaha} za využití znalosti ostatních průtoků vzduchu pro kombinaci indikačních plynů (TMH, MCH, PCE), viz tab.~\ref{tab:skala75_prutoky}, přísunů radonu pocházejících od zdrojů RF 2000 (tab.~\ref{tab:skala75_prisunyZdroj}) a průměrných OAR naměřených CANARY měřáky. V druhých řádcích tabulek označených \emph{měření} jsou pro srovnání uvedené příslušné průtoky vzduchu z tab.~\ref{tab:skala75_prutoky}. V (a) je zájmovou zónou první zóna, v (b) druhá zóna a v (c) třetí zóna.}
     \label{tab:skala75_prutoky_zpetne}
     \begin{subtable}{\textwidth}
         \centering
@@ -388,61 +340,82 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
     \end{subtable}
 \end{table}
 
+\subsection{Diskuze}
+V diskuzi nejprve srovnáme průměrné přísuny radonu z dynamického a rovnovážného vyhodnocení (tabulky~\ref{tab:skala75_prisunyDynamicky} a \ref{tab:skala75_prisunyRovnovazne}), poté přísuny určené z OAR naměřených TERA sondami a CANARY měřáky (tabulky~\ref{tab:skala75_prisunyRovnovazne} a \ref{tab:skala75_prisunyRovnovazneCANARY}) a následně tyto vypočítané přísuny se známými přísuny od zdrojů (tab.~\ref{tab:skala75_prisunyZdroj}). Při argumentaci také využijeme tabulky~\ref{tab:skala75_OAR_zpetne} a \ref{tab:skala75_prutoky_zpetne} se zpětným ověřením OAR a objemových průtoků vzduchu z $Q_{zdroj}$.
+
+\subsubsection{Srovnání dynamického a rovnovážného vyhodnocení}
+Z uvedených tabulek je zřejmé, že zprůměrováním vývojů $Q_i(t)$ dostaneme v podstatě stejné hodnoty jako při rovnovážném vyhodnocení, což bylo očekáváno. Neshodování hodnot by ukazovalo na nějakou chybu v kódu.
+
+\subsubsection{Srovnání použití OAR z TERA sond a z CANARY měřáků}
+
+
+
+\subsection{Závěr}
+
 \section{Objekt Hálková 980, Humpolec}
+Jedná se o byt s ložnicí, obývacím pokojem, kuchyní s WC, špajzem a předsíní. Za zóny byly brány obývací pokoj, ložnice, koupelna s WC a kuchyň. Špajz a předsín nebyly zahrnuty do žádné ze zón.
 
-\subsection{Použitá měřidla}
-\begin{itemize}
-    \setlength\itemsep{0em}
-	\item 20 vyvíječů (4x MDC, 4x MCH, 4x PCE, 4x TCE, 4x TMH)
-	\item 8 TD detektorů
-	\item 4 CANARY monitory
-	\item 4 TERA sondy
-	\item 3 TESTO měřiče teploty a vlhkosti
-	\item 1 zdroj radonu
-\end{itemize}
+Bylo použito dvacet vyvíječů pěti různých indikačních plynů, čtyři vyvíječe pro daný plyn. Do obývacího pokoje byly umístěny vyvíječe s MDC plynem, do ložnice vyvíječe s MCH a PCE plyny, do koupelny s TCE plynem a do kuchyně s TMH plynem.
 
-\subsection{Naměřené OAR, objemy a teploty}
+TD detektory byly po dvojicích umístěny do každé ze zón kromě koupelny, kam byl umístěn pouze jeden TD detektor. Poslední TD detektor byl umístěn do špajzu, protože původně bylo zamýšleno brát jako jednu zónu koupelnu a špajz. %PORUŠENÍ PRAVIDEL OSAZOVÁNÍ MĚŘIDEL!!!!
 
-\begin{table}[H]
-    \centering
-    \caption{Přiřazení číslování kompartmentů jednotlivým podlažím, objemy všech zón objektu, průměrné teploty naměřené v každém zóně TERA sondami, odhadnuté atmosférické tlaky v každém zóně a průměrné OAR naměřené TERA sondami ($OAR_T$) a CANARY měřáky ($OAR_C$). OAR jsou uvedené v \si{Bq/m^3}.}
-    \label{tab:halkova980_objemy}
-    \input{halkova980/vysledky_inputData}
-\end{table}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{halkova980/OAR_dohromady.png}
-    \caption{Vývoj OAR naměřený TERA sondami po aplikování kalibračních konstant (tab.~\ref{tab:dynMer_sondyB}).}
-    \label{fig:halkova980_OAR_dohromady}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{halkova980/OAR_CANARY.png}
-    \caption{Vývoj OAR naměřený CANARY měřáky.}
-    \label{fig:halkova980_OAR_CANARY}
-\end{figure}
+Do každé zóny byly umístěny jedna TERA sonda a jeden CANARY měřák. Do obývacího pokoje byl umístěn radonový zdroj s označením 38 (dle tab.~\ref{tab:dynMer_zdroje}). 
 
-\subsection{Objemové průtoky vzduchu}
+V dalších oddílech jsou uvedena použitá měřidla, naměřené hodnoty OAR, objemů a teplot. Následují vypočítané veličiny, které bylo potřeba určit pro výpočet přísunů radonu a určené přísuny radonu a zpětné ověření pomocí $Q_{zdroj}$.  
+%\subsection{Použitá měřidla}
 
-\begin{table}[H]
-    \centering
-    \caption{Přehled použitých indikačních plynů a umístění jejich vyvíječů v objektu. V posledním sloupci jsou celkové odpary plynů ze všech jim odpovídajících vyvíječů.}
-    \label{tab:halkova980_indikacniPlyny}
-    \input{halkova980/indikacni_plyny}
-\end{table}
-\begin{table}[H]
-    \centering
-    \caption{Odezvy TD detektorů $R$ na všechny použité indikační plyny ve všech zónách.}
-    \label{tab:halkova980_odezvyTD}
-    \input{halkova980/odezvy_TD}
-\end{table}
+%\begin{itemize}
+    %\setlength\itemsep{0em}
+	%\item 20 vyvíječů (4x MDC, 4x MCH, 4x PCE, 4x TCE, 4x TMH)
+	%\item 8 TD detektorů
+	%\item 4 CANARY monitory
+	%\item 4 TERA sondy
+	%\item 3 TESTO měřiče teploty a vlhkosti
+	%\item 1 zdroj radonu
+%\end{itemize}
 
-\begin{table}[H]
-    \centering
-    \caption{Objemové průtoky vzduchu mezi zónami v \si{m^3/hod} a výměna vzduchu $n$ v \si{hod^{-1}}.}
-    \label{tab:halkova980_prutoky}
-    \input{halkova980/vysledky_prutoky_CELKOVE}
-\end{table}
+%\subsection{Naměřené OAR, objemy a teploty}
+
+%\begin{table}[H]
+    %\centering
+    %\caption{Přiřazení číslování kompartmentů jednotlivým podlažím, objemy všech zón objektu, průměrné teploty naměřené v každém zóně TERA sondami, odhadnuté atmosférické tlaky v každém zóně a průměrné OAR naměřené TERA sondami ($OAR_T$) a CANARY měřáky ($OAR_C$). OAR jsou uvedené v \si{Bq/m^3}.}
+    %\label{tab:halkova980_objemy}
+    %\input{halkova980/vysledky_inputData}
+%\end{table}
+%\begin{figure}[H]
+    %\centering
+    %\includegraphics[width=1\textwidth]{halkova980/OAR_dohromady.png}
+    %\caption{Vývoj OAR naměřený TERA sondami po aplikování kalibračních konstant (tab.~\ref{tab:dynMer_sondyB}).}
+    %\label{fig:halkova980_OAR_dohromady}
+%\end{figure}
+%\begin{figure}[H]
+    %\centering
+    %\includegraphics[width=1\textwidth]{halkova980/OAR_CANARY.png}
+    %\caption{Vývoj OAR naměřený CANARY měřáky.}
+    %\label{fig:halkova980_OAR_CANARY}
+%\end{figure}
+
+%\subsection{Objemové průtoky vzduchu}
+
+%\begin{table}[H]
+    %\centering
+    %\caption{Přehled použitých indikačních plynů a umístění jejich vyvíječů v objektu. V posledním sloupci jsou celkové odpary plynů ze všech jim odpovídajících vyvíječů.}
+    %\label{tab:halkova980_indikacniPlyny}
+    %\input{halkova980/indikacni_plyny}
+%\end{table}
+%\begin{table}[H]
+    %\centering
+    %\caption{Odezvy TD detektorů $R$ na všechny použité indikační plyny ve všech zónách.}
+    %\label{tab:halkova980_odezvyTD}
+    %\input{halkova980/odezvy_TD}
+%\end{table}
+
+%\begin{table}[H]
+    %\centering
+    %\caption{Objemové průtoky vzduchu mezi zónami v \si{m^3/hod} a výměna vzduchu $n$ v \si{hod^{-1}}.}
+    %\label{tab:halkova980_prutoky}
+    %\input{halkova980/vysledky_prutoky_CELKOVE}
+%\end{table}
 
 \subsection{Přísuny radonu}
 
@@ -492,16 +465,7 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
     \centering
     \caption{Průměrné OAR ve všech zónách vypočítané pomocí rovnice~\eqref{eq:maticovy_zapis_rovnovaha} za použití průtoků vzduchu z tab.~\ref{tab:halkova980_prutoky} a přísunů radonu pocházejících od zdrojů RF 2000 (tab.~\ref{tab:halkova980_prisunyZdroj}) a průměrné OAR naměřené CANARY měřáky.}
     \label{tab:halkova980_OAR_zpetne}
-    \begin{tabular}{lrrrr}
-        \toprule
-        & $a_1$ [\si{Bq/m^3}] &  $a_2$ [\si{Bq/m^3}]& $a_3$ [\si{Bq/m^3}]& $a_4$ [\si{Bq/m^3}]\\
-        \midrule
-(MDC, PCE, TCE, TMH) & $200\pm168$          &$139\pm356$     &$75\pm127$       &$165\pm172$ \\
-(MDC, MCH, TCE, TMH) & $201\pm\ \,78$       &$ 141\pm\ \,75$ &$76\pm\ \,59$    &$ 166\pm\ \,80$ \\
-\midrule
-       naměřené      & $210\pm\ \,21$       & $97\pm\ \,10$  &$72\pm\ \,\ \,7$ &$139\pm\ \,14$\\
-        \bottomrule
-    \end{tabular}
+    \input{halkova980/vysledky_OAR.tex}
 \end{table}
 
 \subsubsection{Objemové průtoky vzduchu}
@@ -536,62 +500,68 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
     \end{subtable}
 \end{table}
 
+\subsection{Diskuze}
+
+\subsection{Závěr}
+
 \section{Objekt Anglická 574, Dobřichovice}
+Jedná se o rodinný dům se sklepem, přízemím a prvním patrem. Při měření byla brána jednotlivá podlaží jako zóny. 
 
-\subsection{Použitá měřidla}
-\begin{itemize}
-    \setlength\itemsep{0em}
-	\item 12 vyvíječů (4x MCH, 4x MDC, 4x PCH)
-	\item 12 TD detektorů
-	\item 2 blank TD detektory 
-	\item 4 CANARY monitory
-	\item 4 TERA sondy
-	\item 3 TESTO měřiče teploty a vlhkosti
-	\item 2 zdroje radonu
-\end{itemize}
+%\subsection{Použitá měřidla}
+%\begin{itemize}
+    %\setlength\itemsep{0em}
+	%\item 12 vyvíječů (4x MCH, 4x MDC, 4x PCH)
+	%\item 12 TD detektorů
+	%\item 2 blank TD detektory 
+	%\item 4 CANARY monitory
+	%\item 4 TERA sondy
+	%\item 3 TESTO měřiče teploty a vlhkosti
+	%\item 2 zdroje radonu
+%\end{itemize}
 
-\subsection{Naměřené OAR, objemy a teploty}
+%\subsection{Naměřené OAR, objemy a teploty}
 
-\begin{table}[H]
-    \centering
-    \caption{Objemy všech podlaží objektu, průměrné teploty naměřené v každém podlaží TERA sondami, odhadnuté atmosférické tlaky v každém podlaží, průměrné OAR naměřené TERA sondami ($OAR_T$) a CANARY měřáky ($OAR_C$) a přiřazení číslování kompartmentů jednotlivým podlažím. OAR jsou uvedené v \si{Bq/m^3}.}
-    \label{tab:anglicka574_objemy}
-    \input{anglicka574/vysledky_inputData}
-\end{table}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{anglicka574/OAR_dohromady.png}
-    \caption{Vývoj OAR naměřený TERA sondami po aplikování kalibračních konstant (tab.~\ref{tab:dynMer_sondyB}).}
-    \label{fig:anglicka574_OAR_dohromady}
-\end{figure}
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=1\textwidth]{anglicka574/OAR_CANARY.png}
-    \caption{Vývoj OAR naměřený CANARY měřáky.}
-    \label{fig:anglicka574_OAR_CANARY}
-\end{figure}
+%\begin{table}[H]
+    %\centering
+    %\caption{Objemy všech podlaží objektu, průměrné teploty naměřené v každém podlaží TERA sondami, odhadnuté atmosférické tlaky v každém podlaží, průměrné OAR naměřené TERA sondami ($OAR_T$) a CANARY měřáky ($OAR_C$) a přiřazení číslování kompartmentů jednotlivým podlažím. OAR jsou uvedené v \si{Bq/m^3}.}
+    %\label{tab:anglicka574_objemy}
+    %\input{anglicka574/vysledky_inputData}
+%\end{table}
+%\begin{figure}[H]
+    %\centering
+    %\includegraphics[width=1\textwidth]{anglicka574/OAR_dohromady.png}
+    %\caption{Vývoj OAR naměřený TERA sondami po aplikování kalibračních konstant (tab.~\ref{tab:dynMer_sondyB}).}
+    %\label{fig:anglicka574_OAR_dohromady}
+%\end{figure}
+%\begin{figure}[H]
+    %\centering
+    %\includegraphics[width=1\textwidth]{anglicka574/OAR_CANARY.png}
+    %\caption{Vývoj OAR naměřený CANARY měřáky.}
+    %\label{fig:anglicka574_OAR_CANARY}
+%\end{figure}
 
-\subsection{Objemové průtoky vzduchu}
+%\subsection{Objemové průtoky vzduchu}
 
-\begin{table}[H]
-    \centering
-    \caption{Přehled použitých indikačních plynů a umístění jejich vyvíječů v objektu. V posledním sloupci jsou celkové odpary plynů ze všech jim odpovídajících vyvíječů.}
-    \label{tab:anglicka574_indikacniPlyny}
-    \input{anglicka574/indikacni_plyny}
-\end{table}
-\begin{table}[H]
-    \centering
-    \caption{Odezvy TD detektorů $R$ na všechny použité indikační plyny ve všech zónách.}
-    \label{tab:anglicka574_odezvyTD}
-    \input{anglicka574/odezvy_TD}
-\end{table}
+%\begin{table}[H]
+    %\centering
+    %\caption{Přehled použitých indikačních plynů a umístění jejich vyvíječů v objektu. V posledním sloupci jsou celkové odpary plynů ze všech jim odpovídajících vyvíječů.}
+    %\label{tab:anglicka574_indikacniPlyny}
+    %\input{anglicka574/indikacni_plyny}
+%\end{table}
+%\begin{table}[H]
+    %\centering
+    %\caption{Odezvy TD detektorů $R$ na všechny použité indikační plyny ve všech zónách.}
+    %\label{tab:anglicka574_odezvyTD}
+    %\input{anglicka574/odezvy_TD}
+%\end{table}
 
-\begin{table}[H]
-    \centering
-    \caption{Objemové průtoky vzduchu mezi zónami v \si{m^3/hod} a výměna vzduchu $n$ v \si{hod^{-1}}.}
-    \label{tab:anglicka574_prutoky}
-    \input{anglicka574/vysledky_prutoky}
-\end{table}
+%\begin{table}[H]
+    %\centering
+    %\caption{Objemové průtoky vzduchu mezi zónami v \si{m^3/hod} a výměna vzduchu $n$ v \si{hod^{-1}}.}
+    %\label{tab:anglicka574_prutoky}
+    %\input{anglicka574/vysledky_prutoky}
+%\end{table}
+
 \subsection{Přísuny radonu}
 
 \begin{table}[H]
@@ -612,27 +582,27 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
     \end{tabular}
 \end{table}
 
-\begin{figure}[ht]
-    \begin{subfigure}{\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{anglicka574/prisuny.png}
-        \caption{}
-        \label{fig:anglicka574_prisuny}
-    \end{subfigure}
-    \begin{subfigure}{\textwidth}
-        \centering
-        \includegraphics[width=\textwidth]{anglicka574/prisuny_zoom.png}
-        \caption{}
-        \label{fig:anglicka574_prisunyZoom}
-    \end{subfigure}
-    \caption{V (a) jsou určené časové vývoje přísunů radonu do jednotlivých podlaží. V (b) jsou přiblížené přísuny radonu do přízemí a prvního patra. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
-\end{figure}
-\begin{table}[H]
-    \centering
-    \caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží.}
-    \label{tab:anglicka574_prisuny}
-    \input{anglicka574/vysledky_Q_statistiky}
-\end{table}
+%\begin{figure}[ht]
+    %\begin{subfigure}{\textwidth}
+        %\centering
+        %\includegraphics[width=\textwidth]{anglicka574/prisuny.png}
+        %\caption{}
+        %\label{fig:anglicka574_prisuny}
+    %\end{subfigure}
+    %\begin{subfigure}{\textwidth}
+        %\centering
+        %\includegraphics[width=\textwidth]{anglicka574/prisuny_zoom.png}
+        %\caption{}
+        %\label{fig:anglicka574_prisunyZoom}
+    %\end{subfigure}
+    %\caption{V (a) jsou určené časové vývoje přísunů radonu do jednotlivých podlaží. V (b) jsou přiblížené přísuny radonu do přízemí a prvního patra. Oblasti označené zesvětlenou barvou značí nejistotu přísunů radonu při faktoru pokrytí $k=1$.}
+%\end{figure}
+%\begin{table}[H]
+    %\centering
+    %\caption{Statistiky vypočítaných přísunů radonu $Q$ do jednotlivých podlaží.}
+    %\label{tab:anglicka574_prisuny}
+    %\input{anglicka574/vysledky_Q_statistiky}
+%\end{table}
 \begin{table}[H]
     \centering
     \caption{Průměrné přísuny radonu do všech podlaží z rovnovážného vyhodnocení za použití dat z TERA sond.}
@@ -675,7 +645,7 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
 \end{table}
 \subsubsection{Objemové průtoky vzduchu}
 
-\begin{table}[ht]
+\begin{table}[H]
     \centering
     \caption{V prvních řádcích těchto tabulek označených \emph{zpětně} jsou průtoky vzduchu z dané zóny do ostatních zón a infiltrace této zóny vypočítané z rovnice~\eqref{eq:maticovy_zapis_rovnovaha} za využití znalosti ostatních průtoků vzduchu (viz tab.~\ref{tab:anglicka574_prutoky}), přísunů radonu pocházejících od zdrojů RF 2000 (tab.~\ref{tab:anglicka574_prisunyZdroj}) a průměrných OAR naměřených CANARY měřáky. V druhých řádcích tabulek označených \emph{měření} jsou pro srovnání uvedené příslušné průtoky vzduchu z tab.~\ref{tab:anglicka574_prutoky}. V (a) je zájmovou zónou první zóna, v (b) druhá zóna a v (c) třetí zóna.}
     \label{tab:anglicka574_prutoky_zpetne}
@@ -700,17 +670,37 @@ ID sondy&podlaží& OAR [\si{Bq/m^3}]& $\sigma_A$ & $\sigma_B$ &$\sigma$& $\over
     \end{subtable}
 \end{table}
 
-%\begin{table}[H]
-    %\centering
-    %\caption{}
-    %\label{tab:anglicka574_prutoky1_zpetne}
-    %\begin{tabular}{lrrrr}
-        %\toprule
-        %& $k_{12}$ [\si{m^3/hod}] &  $k_{13}$ [\si{m^3/hod}]&  $k_{1_E}$ [\si{m^3/hod}]&  $k_{1_I}$ [\si{m^3/hod}]\\
-        %\midrule
+\subsection{Diskuze}
 
-         %zpětně& $1,09\pm0,16$ &    $1,00\pm0,18$ &     $8,36\pm0,67$ &     $7,83\pm0,91$ \\
-       %měření & $2,32\pm0,38$ & $0,29\pm0,09$& $22,05\pm2,53$ &$21,52\pm2,60$\\
-        %\bottomrule
-    %\end{tabular}
-%\end{table}
+\subsection{Závěr}
+
+\section{Shrnutí}
+toto bude obsahovat přehledové tabulky obsahující určené přísuny radonu a dulezite poznatky z diskuzi a zaveru
+\begin{table}
+    \centering
+    \caption{(TMH, MCH, PCE), (MDC, MCH, TCE, TMH)}
+    \label{tab:dynMer_shrnuti}
+    \begin{tabular}{l
+        >{\collectcell\num}r<{\endcollectcell}
+        @{${}\pm{}$}
+        >{\collectcell\num}r<{\endcollectcell}
+        >{\collectcell\num}r<{\endcollectcell}
+        @{${}\pm{}$}
+        >{\collectcell\num}r<{\endcollectcell}
+        >{\collectcell\num}r<{\endcollectcell}
+        @{${}\pm{}$}
+        >{\collectcell\num}r<{\endcollectcell}
+        >{\collectcell\num}r<{\endcollectcell}
+        @{${}\pm{}$}
+        >{\collectcell\num}r<{\endcollectcell}
+    }
+        \toprule
+        {}& \multicolumn{2}{r}{$Q_1$} & \multicolumn{2}{r}{$Q_2$} & \multicolumn{2}{r}{$Q_3$} & \multicolumn{2}{r}{$Q_4$} \\
+        \midrule
+
+Skála 75 &   301&78 & 115&24 &   9&3 &  \multicolumn{2}{r}{}\\
+Hálková 980 & 445&241 & -86&104 & 38&84 & -152&351 \\
+Anglická 574 & 1057&245 & -31&13 & 21&7 &\multicolumn{2}{r}{}\\
+\bottomrule
+    \end{tabular}
+\end{table}

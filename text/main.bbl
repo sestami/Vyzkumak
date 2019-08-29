@@ -504,6 +504,26 @@
       \verb https://www.testo.com/cz-CZ/testo-174-h/p/0572-6560
       \endverb
     \endentry
+    \entry{dalkomer}{online}{}
+      \list{organization}{1}{%
+        {BOSCH}%
+      }
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labeltitlesource}{title}
+      \field{title}{Laserový měřič vzdálenosti GLM 120 C Professional}
+      \field{urlday}{27}
+      \field{urlmonth}{8}
+      \field{urlyear}{2019}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://www.bosch-proffesional.com/cz/cs/products/glm-120-c-0601072F00
+      \endverb
+      \verb{url}
+      \verb https://www.bosch-proffesional.com/cz/cs/products/glm-120-c-0601072F00
+      \endverb
+    \endentry
     \entry{sherman}{article}{}
       \name{author}{3}{}{%
         {{hash=d78c608c1892a8367cbaab0cc0b9435e}{%

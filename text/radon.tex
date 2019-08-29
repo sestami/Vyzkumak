@@ -42,7 +42,7 @@ Parametry uváděné výrobcem tohoto kontinuálního monitoru radonu jsou v tab
 
 O TERA sondách je z praxe známo, že jsou značně nepřesné a OAR naměřené několika sondami se mohou lišit až třeba o 40~\%. Proto bylo potřeba před samotným měřeními udělat se sondami srovnávací měření s nějakým osvědčeným monitorem radonu, např. AlphaGuardem~\cite{alphaguard}, aby se mohly zavádějící hodnoty OAR opravit. Toto srovnávací měření je rozebráno v podkapitolce~\ref{navesti:dynMer_TERA}.
 
-\subsubsection{Určení nejistot naměřených OAR}
+\subsubsection{Určení nejistot naměřených OAR}\label{navesti:radon_TERAnejistota}
 Jak již bylo řečeno, TERA sondy zapisují průměrnou hodnotu OAR každou hodinu. Spolu s OAR jsou zapisovány i naměřené počty impulzů v jednotlivých diskriminačních oknech, která mají TERA sondy nastaveny pro rozlišení impulzů: do druhého diskriminačního okna spadají impulzy od \ce{^{218}Po} (\SI{6}{MeV}), do třetího od \ce{^{214}Po} (\SI{7.69}{MeV}), do prvního a čtvrtého impulzy od ostatních energií, jenž nás nezajímají. Díky tomu je možné vypočítat nejistotu naměřeného počtu impulzů náležejících \ce{^{218}Po} a \ce{^{214}Po}. Označme tento počet impulzů jako $n$. Počet zaznamenaných impulsů se řídí Poissonovým rozdělením, a proto pro směrodatnou odchylku $n$ máme:
 \begin{equation}
     \sigma_n=\sqrt{n}\,.

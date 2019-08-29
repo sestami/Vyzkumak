@@ -28,7 +28,7 @@ def plotovani(data,ID):
 print('Nezapomen zmenit legendu!')
 OAR1=plotovani(data1, 'obývací pokoj')
 OAR2=plotovani(data2, 'ložnice')
-OAR3=plotovani(data3, 'koupelna+WC+špajz')
+OAR3=plotovani(data3, 'koupelna+WC')
 OAR4=plotovani(data4, 'kuchyň')
 
 ax.set_xlabel("$datum$")
