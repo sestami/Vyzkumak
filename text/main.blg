@@ -1,14 +1,14 @@
-[0] Config.pm:304> INFO - This is Biber 2.12
+[1] Config.pm:304> INFO - This is Biber 2.12
 [1] Config.pm:307> INFO - Logfile is 'main.blg'
-[56] biber:315> INFO - === Fr Aug 30, 2019, 10:52:12
-[85] Biber.pm:371> INFO - Reading 'main.bcf'
-[205] Biber.pm:886> INFO - Using all citekeys in bib section 0
-[248] Biber.pm:4093> INFO - Processing section 0
-[266] Biber.pm:4254> INFO - Looking for bibtex format file 'citace.bib' for section 0
-[268] bibtex.pm:1523> INFO - LaTeX decoding ...
-[299] bibtex.pm:1340> INFO - Found BibTeX data source 'citace.bib'
-[425] UCollate.pm:68> INFO - Overriding locale 'cs_CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
-[425] UCollate.pm:68> INFO - Overriding locale 'cs_CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[425] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'cs_CZ'
-[447] bbl.pm:636> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[455] bbl.pm:739> INFO - Output to main.bbl
+[49] biber:315> INFO - === Fr Aug 30, 2019, 12:18:42
+[78] Biber.pm:371> INFO - Reading 'main.bcf'
+[189] Biber.pm:886> INFO - Using all citekeys in bib section 0
+[215] Biber.pm:4093> INFO - Processing section 0
+[234] Biber.pm:4254> INFO - Looking for bibtex format file 'citace.bib' for section 0
+[235] bibtex.pm:1523> INFO - LaTeX decoding ...
+[267] bibtex.pm:1340> INFO - Found BibTeX data source 'citace.bib'
+[393] UCollate.pm:68> INFO - Overriding locale 'cs_CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[393] UCollate.pm:68> INFO - Overriding locale 'cs_CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
+[393] Biber.pm:3921> INFO - Sorting list 'none/global//global/global' of type 'entry' with template 'none' and locale 'cs_CZ'
+[415] bbl.pm:636> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[423] bbl.pm:739> INFO - Output to main.bbl
