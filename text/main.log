@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.7)  30 AUG 2019 12:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.7)  30 AUG 2019 16:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1674,12 +1674,18 @@ Package pdftex.def Info: images/sondy_srovnani.png  used on input line 49.
 (./skala75/vysledky_Q_dynamicky.tex) (./skala75/vysledky_Q_rovnovazne.tex)
 [48] (./skala75/vysledky_Q_rovnovazneCANARY.tex) [49]
 (./skala75/zpetnyChod_prutoky1.tex) (./skala75/zpetnyChod_prutoky2.tex)
-(./skala75/zpetnyChod_prutoky3.tex) [50] [51] [52] [53]
-(./halkova980/vysledky_Q_rovnovazne.tex) [54]
+(./skala75/zpetnyChod_prutoky3.tex) [50] [51] [52]
+Overfull \hbox (0.84862pt too wide) in paragraph at lines 399--401
+[]\OT1/cmr/m/n/12 (-20) V dal^^Ts^^S^^Pch odd^^S^^Plech t^^Seto ka-pi-toly jsou
+ seps^^Sany do ta-bu-lek vypo^^Tc^^S^^Ptan^^Se $\OML/cmm/m/it/12 Q[]$ \OT1/cmr/
+m/n/12 (-20) z OAR nam^^Te^^Tren^^Sych
+ []
+
+(./halkova980/vysledky_Q_rovnovazne.tex) [53]
 (./halkova980/vysledky_Q_rovnovazneCANARY.tex) (./halkova980/vysledky_OAR.tex)
 (./halkova980/zpetnyChod_prutoky1.tex) (./halkova980/zpetnyChod_prutoky2.tex)
 (./halkova980/zpetnyChod_prutoky3.tex) (./halkova980/zpetnyChod_prutoky4.tex)
-[55] [56] (./anglicka574/zpetnyChod_prutoky1.tex)
+[54] [55] [56] (./anglicka574/zpetnyChod_prutoky1.tex)
 (./anglicka574/zpetnyChod_prutoky2.tex) (./anglicka574/zpetnyChod_prutoky3.tex)
 [57]) [58] [59]
 \openout2 = `zaver.aux'.
@@ -1798,7 +1804,7 @@ P\v {r}\'{\i }loha B.
 
 ] [66] [67] [68] [69]) [70]
 P\v {r}\'{\i }loha C.
-<zdroje.pdf, id=1501, page=1, 844.83629pt x 597.432pt>
+<zdroje.pdf, id=1509, page=1, 844.83629pt x 597.432pt>
 File: zdroje.pdf Graphic file (type pdf)
 <use zdroje.pdf, page 1>
 Package pdftex.def Info: zdroje.pdf , page1 used on input line 10.
@@ -1810,21 +1816,21 @@ Overfull \vbox (108.21913pt too high) has occurred while \output is active []
 
 
 [72 <./zdroje.pdf>]
-<zdroje.pdf, id=1518, page=2, 844.83629pt x 597.432pt>
+<zdroje.pdf, id=1526, page=2, 844.83629pt x 597.432pt>
 File: zdroje.pdf Graphic file (type pdf)
 <use zdroje.pdf, page 2>
 Package pdftex.def Info: zdroje.pdf , page2 used on input line 12.
 (pdftex.def)             Requested size: 844.83423pt x 597.43054pt.
  [73 <./zdroje.pdf>]
 P\v {r}\'{\i }loha D.
-<images/skala75/humpolec_chata.jpg, id=1530, 4175.6pt x 3131.7pt>
+<images/skala75/humpolec_chata.jpg, id=1538, 4175.6pt x 3131.7pt>
 File: images/skala75/humpolec_chata.jpg Graphic file (type jpg)
 <use images/skala75/humpolec_chata.jpg>
 Package pdftex.def Info: images/skala75/humpolec_chata.jpg  used on input line 
 21.
 (pdftex.def)             Requested size: 276.43555pt x 207.29494pt.
 (./skala75/vysledky_inputData.tex)
-<images/skala75/OAR_dohromady.png, id=1533, 797.1381pt x 445.9059pt>
+<images/skala75/OAR_dohromady.png, id=1541, 797.1381pt x 445.9059pt>
 File: images/skala75/OAR_dohromady.png Graphic file (type png)
 <use images/skala75/OAR_dohromady.png>
 Package pdftex.def Info: images/skala75/OAR_dohromady.png  used on input line 7
@@ -1833,7 +1839,7 @@ Package pdftex.def Info: images/skala75/OAR_dohromady.png  used on input line 7
  [74
 
  <./images/skala75/humpolec_chata.jpg>]
-<images/skala75/OAR_CANARY.png, id=1541, 741.12885pt x 457.10776pt>
+<images/skala75/OAR_CANARY.png, id=1549, 741.12885pt x 457.10776pt>
 File: images/skala75/OAR_CANARY.png Graphic file (type png)
 <use images/skala75/OAR_CANARY.png>
 Package pdftex.def Info: images/skala75/OAR_CANARY.png  used on input line 82.
@@ -1841,56 +1847,56 @@ Package pdftex.def Info: images/skala75/OAR_CANARY.png  used on input line 82.
 
 [75 <./images/skala75/OAR_dohromady.png>] [76 <./images/skala75/OAR_CANARY.png>
 ] (./skala75/indikacni_plyny.tex) (./skala75/odezvy_TD.tex) [77] [78]
-<images/skala75/prisuny1.png, id=1569, 742.9356pt x 437.2335pt>
+<images/skala75/prisuny1.png, id=1577, 742.9356pt x 437.2335pt>
 File: images/skala75/prisuny1.png Graphic file (type png)
 <use images/skala75/prisuny1.png>
 Package pdftex.def Info: images/skala75/prisuny1.png  used on input line 190.
 (pdftex.def)             Requested size: 460.72124pt x 271.14868pt.
  [79]
 (./skala75/vysledky_Q_statistiky1.tex)
-<images/skala75/prisuny2.png, id=1575, 742.9356pt x 437.2335pt>
+<images/skala75/prisuny2.png, id=1583, 742.9356pt x 437.2335pt>
 File: images/skala75/prisuny2.png Graphic file (type png)
 <use images/skala75/prisuny2.png>
 Package pdftex.def Info: images/skala75/prisuny2.png  used on input line 203.
 (pdftex.def)             Requested size: 460.72124pt x 271.14868pt.
  (./skala75/vysledky_Q_statistiky2.tex)
 [80 <./images/skala75/prisuny1.png>]
-<images/skala75/prisuny3.png, id=1583, 742.9356pt x 437.2335pt>
+<images/skala75/prisuny3.png, id=1591, 742.9356pt x 437.2335pt>
 File: images/skala75/prisuny3.png Graphic file (type png)
 <use images/skala75/prisuny3.png>
 Package pdftex.def Info: images/skala75/prisuny3.png  used on input line 216.
 (pdftex.def)             Requested size: 460.72124pt x 271.14868pt.
  (./skala75/vysledky_Q_statistiky3.tex)
 [81 <./images/skala75/prisuny2.png>]
-<images/skala75/prisuny4.png, id=1591, 742.9356pt x 437.2335pt>
+<images/skala75/prisuny4.png, id=1599, 742.9356pt x 437.2335pt>
 File: images/skala75/prisuny4.png Graphic file (type png)
 <use images/skala75/prisuny4.png>
 Package pdftex.def Info: images/skala75/prisuny4.png  used on input line 229.
 (pdftex.def)             Requested size: 460.72124pt x 271.14868pt.
  (./skala75/vysledky_Q_statistiky4.tex)
 [82 <./images/skala75/prisuny3.png>]
-<images/skala75/prisuny5.png, id=1599, 742.9356pt x 437.2335pt>
+<images/skala75/prisuny5.png, id=1608, 742.9356pt x 437.2335pt>
 File: images/skala75/prisuny5.png Graphic file (type png)
 <use images/skala75/prisuny5.png>
 Package pdftex.def Info: images/skala75/prisuny5.png  used on input line 242.
 (pdftex.def)             Requested size: 460.72124pt x 271.14868pt.
  (./skala75/vysledky_Q_statistiky5.tex)
 [83 <./images/skala75/prisuny4.png>]
-<images/skala75/prisuny6.png, id=1608, 742.9356pt x 437.2335pt>
+<images/skala75/prisuny6.png, id=1616, 742.9356pt x 437.2335pt>
 File: images/skala75/prisuny6.png Graphic file (type png)
 <use images/skala75/prisuny6.png>
 Package pdftex.def Info: images/skala75/prisuny6.png  used on input line 255.
 (pdftex.def)             Requested size: 460.72124pt x 271.14868pt.
  (./skala75/vysledky_Q_statistiky6.tex)
 [84 <./images/skala75/prisuny5.png>]
-<images/skala75/prisuny7.png, id=1616, 742.9356pt x 437.2335pt>
+<images/skala75/prisuny7.png, id=1624, 742.9356pt x 437.2335pt>
 File: images/skala75/prisuny7.png Graphic file (type png)
 <use images/skala75/prisuny7.png>
 Package pdftex.def Info: images/skala75/prisuny7.png  used on input line 268.
 (pdftex.def)             Requested size: 460.72124pt x 271.14868pt.
  (./skala75/vysledky_Q_statistiky7.tex)
 [85 <./images/skala75/prisuny6.png>]
-<images/skala75/prisuny8.png, id=1625, 742.9356pt x 437.2335pt>
+<images/skala75/prisuny8.png, id=1633, 742.9356pt x 437.2335pt>
 File: images/skala75/prisuny8.png Graphic file (type png)
 <use images/skala75/prisuny8.png>
 Package pdftex.def Info: images/skala75/prisuny8.png  used on input line 281.
@@ -1899,13 +1905,13 @@ Package pdftex.def Info: images/skala75/prisuny8.png  used on input line 281.
 [86 <./images/skala75/prisuny7.png>] [87 <./images/skala75/prisuny8.png>]
 P\v {r}\'{\i }loha E.
 (./halkova980/vysledky_inputData.tex)
-<images/halkova980/OAR_dohromady.png, id=1640, 733.5405pt x 456.0237pt>
+<images/halkova980/OAR_dohromady.png, id=1648, 733.5405pt x 456.0237pt>
 File: images/halkova980/OAR_dohromady.png Graphic file (type png)
 <use images/halkova980/OAR_dohromady.png>
 Package pdftex.def Info: images/halkova980/OAR_dohromady.png  used on input lin
 e 316.
 (pdftex.def)             Requested size: 460.72124pt x 286.4197pt.
-<images/halkova980/OAR_CANARY.png, id=1643, 733.5405pt x 457.10776pt>
+<images/halkova980/OAR_CANARY.png, id=1651, 733.5405pt x 457.10776pt>
 File: images/halkova980/OAR_CANARY.png Graphic file (type png)
 <use images/halkova980/OAR_CANARY.png>
 Package pdftex.def Info: images/halkova980/OAR_CANARY.png  used on input line 3
@@ -1918,7 +1924,7 @@ x) (./halkova980/odezvy_TD.tex)
 [90 <./images/halkova980/OAR_CANARY.png>]
 (./halkova980/vysledky_prutoky_CELKOVE.tex) [91] [92]
 P\v {r}\'{\i }loha F.
-<images/anglicka574/dobrichovice.jpg, id=1672, 4175.6pt x 3131.7pt>
+<images/anglicka574/dobrichovice.jpg, id=1680, 4175.6pt x 3131.7pt>
 File: images/anglicka574/dobrichovice.jpg Graphic file (type jpg)
 <use images/anglicka574/dobrichovice.jpg>
 Package pdftex.def Info: images/anglicka574/dobrichovice.jpg  used on input lin
@@ -1928,13 +1934,13 @@ e 354.
 
  <./images/anglicka574/dobrichovice.jpg>]
 (./anglicka574/vysledky_inputData.tex)
-<images/anglicka574/OAR_dohromady.png, id=1678, 748.35585pt x 445.9059pt>
+<images/anglicka574/OAR_dohromady.png, id=1686, 748.35585pt x 445.9059pt>
 File: images/anglicka574/OAR_dohromady.png Graphic file (type png)
 <use images/anglicka574/OAR_dohromady.png>
 Package pdftex.def Info: images/anglicka574/OAR_dohromady.png  used on input li
 ne 382.
 (pdftex.def)             Requested size: 460.72124pt x 274.51967pt.
-<images/anglicka574/OAR_CANARY.png, id=1681, 741.12885pt x 457.10776pt>
+<images/anglicka574/OAR_CANARY.png, id=1689, 741.12885pt x 457.10776pt>
 File: images/anglicka574/OAR_CANARY.png Graphic file (type png)
 <use images/anglicka574/OAR_CANARY.png>
 Package pdftex.def Info: images/anglicka574/OAR_CANARY.png  used on input line 
@@ -1943,13 +1949,13 @@ Package pdftex.def Info: images/anglicka574/OAR_CANARY.png  used on input line
  [94] [95 <./images/anglicka574/OAR_dohromady.png>] (./anglicka574/indikacni_pl
 yny.tex) (./anglicka574/odezvy_TD.tex)
 [96 <./images/anglicka574/OAR_CANARY.png>] (./anglicka574/vysledky_prutoky.tex)
-<images/anglicka574/prisuny.png, id=1700, 741.12885pt x 421.69545pt>
+<images/anglicka574/prisuny.png, id=1708, 741.12885pt x 421.69545pt>
 File: images/anglicka574/prisuny.png Graphic file (type png)
 <use images/anglicka574/prisuny.png>
 Package pdftex.def Info: images/anglicka574/prisuny.png  used on input line 420
 .
 (pdftex.def)             Requested size: 460.72124pt x 262.1434pt.
-<images/anglicka574/prisuny_zoom.png, id=1701, 737.154pt x 419.8887pt>
+<images/anglicka574/prisuny_zoom.png, id=1709, 737.154pt x 419.8887pt>
 File: images/anglicka574/prisuny_zoom.png Graphic file (type png)
 <use images/anglicka574/prisuny_zoom.png>
 Package pdftex.def Info: images/anglicka574/prisuny_zoom.png  used on input lin
@@ -1972,34 +1978,35 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 38.
  ) 
 Here is how much of TeX's memory you used:
- 39432 strings out of 492623
- 701085 string characters out of 6135670
- 1481163 words of memory out of 5000000
- 41821 multiletter control sequences out of 15000+600000
- 553347 words of font info for 162 fonts, out of 8000000 for 9000
+ 39465 strings out of 492623
+ 701628 string characters out of 6135670
+ 1481185 words of memory out of 5000000
+ 41841 multiletter control sequences out of 15000+600000
+ 556160 words of font info for 178 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,25n,79p,1687b,2597s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,25n,79p,2057b,2597s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
-sr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><
-/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt
-12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/sh
-are/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf
--dist/fonts/type1/public/esvect/vect10.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/wasy2-ps/wasy10.pfb>
-Output written on main.pdf (99 pages, 27140124 bytes).
+lic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
+usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
+></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
+10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/esv
+ect/vect10.pfb></usr/share/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
+Output written on main.pdf (99 pages, 27171615 bytes).
 PDF statistics:
- 1943 PDF objects out of 2073 (max. 8388607)
- 1701 compressed objects within 18 object streams
+ 1957 PDF objects out of 2073 (max. 8388607)
+ 1713 compressed objects within 18 object streams
  750 named destinations out of 1000 (max. 500000)
- 29504 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 34112 words of extra memory for PDF output out of 35830 (max. 10000000)
 

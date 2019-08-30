@@ -291,8 +291,9 @@ PCE). Zpětné ověření $k_{ij}$ bylo provedeno pouze pro tuto kombinaci trace
 
 \subsubsection{OAR}
 \begin{table}[H]
+    \small
     \centering
-    \caption{Průměrné OAR ve všech podlažích vypočítané pomocí rovnice~\eqref{eq:maticovy_zapis_rovnovaha} za použití průtoků vzduchu z tab.~\ref{tab:skala75_prutoky} a přísunů radonu pocházejících od zdrojů RF 2000 (tab.~\ref{tab:skala75_prisunyZdroj}) a průměrné OAR naměřené CANARY měřáky.}
+    \caption{\small Průměrné OAR ve všech podlažích vypočítané pomocí rovnice~\eqref{eq:maticovy_zapis_rovnovaha} za použití průtoků vzduchu z tab.~\ref{tab:skala75_prutoky} a přísunů radonu pocházejících od zdrojů RF 2000 (tab.~\ref{tab:skala75_prisunyZdroj}) a průměrné OAR naměřené CANARY měřáky.}
     \label{tab:skala75_OAR_zpetne}
     \begin{tabular}{lrrr}
         \toprule
@@ -315,22 +316,23 @@ PCE). Zpětné ověření $k_{ij}$ bylo provedeno pouze pro tuto kombinaci trace
 \subsubsection{Objemové průtoky vzduchu}
 
 \begin{table}[H]
+    \small
     \centering
-    \caption{V prvních řádcích těchto tabulek označených \emph{zpětně} jsou průtoky vzduchu z dané zóny do ostatních zón a infiltrace této zóny vypočítané z rovnice~\eqref{eq:maticovy_zapis_rovnovaha} za využití znalosti ostatních průtoků vzduchu pro kombinaci indikačních plynů (TMH, MCH, PCE), viz tab.~\ref{tab:skala75_prutoky}, přísunů radonu pocházejících od zdrojů RF 2000 (tab.~\ref{tab:skala75_prisunyZdroj}) a průměrných OAR naměřených CANARY měřáky. V druhých řádcích tabulek označených \emph{měření} jsou pro srovnání uvedené příslušné průtoky vzduchu z tab.~\ref{tab:skala75_prutoky}. V (a) je zájmovou zónou první zóna, v (b) druhá zóna a v (c) třetí zóna.}
+    \caption{\small V prvních řádcích těchto tabulek označených \emph{zpětně} jsou průtoky vzduchu z dané zóny do ostatních zón a infiltrace této zóny vypočítané z rovnice~\eqref{eq:maticovy_zapis_rovnovaha} za využití znalosti ostatních průtoků vzduchu pro kombinaci indikačních plynů (TMH, MCH, PCE), viz tab.~\ref{tab:skala75_prutoky}, přísunů radonu pocházejících od zdrojů RF 2000 (tab.~\ref{tab:skala75_prisunyZdroj}) a průměrných OAR naměřených CANARY měřáky. V druhých řádcích tabulek označených \emph{měření} jsou pro srovnání uvedené příslušné průtoky vzduchu z tab.~\ref{tab:skala75_prutoky}. V (a) je zájmovou zónou první zóna, v (b) druhá zóna a v (c) třetí zóna.}
     \label{tab:skala75_prutoky_zpetne}
     \begin{subtable}{\textwidth}
         \centering
         \caption{}
         \input{skala75/zpetnyChod_prutoky1}
     \end{subtable}
-    \vspace{1em}
+    %\vspace{1em}
 
     \begin{subtable}{\textwidth}
         \centering
         \caption{}
         \input{skala75/zpetnyChod_prutoky2}
     \end{subtable}
-    \vspace{1em}
+    %\vspace{1em}
 
     \begin{subtable}{\textwidth}
         \centering
@@ -386,13 +388,15 @@ Pro ověření funkčnosti skriptu pro dynamické měření byly vypočteny i č
 \section{Objekt Hálková 980, Humpolec}
 Jedná se o byt s ložnicí, obývacím pokojem, kuchyní s WC, špajzem a předsíní. Za zóny byly brány obývací pokoj, ložnice, koupelna s WC a kuchyň. Špajz a předsín nebyly zahrnuty do žádné ze zón.
 
-Bylo použito dvacet vyvíječů pěti různých indikačních plynů, čtyři vyvíječe pro daný plyn. Do obývacího pokoje byly umístěny vyvíječe s MDC plynem, do ložnice vyvíječe s MCH a PCE plyny, do koupelny s TCE plynem a do kuchyně s TMH plynem.
+Bylo použito dvacet vyvíječů pěti různých indikačních plynů, čtyři vyvíječe pro daný plyn. Do obývacího pokoje byly umístěny vyvíječe s MDC plynem, do ložnice vyvíječe s MCH a PCE plyny, do koupelny s TCE plynem a do kuchyně s TMH plynem. Díky umístění vyvíječů dvou plynů do ložnice lze vyhodnotit $k_{ij}$ dvěma způsoby.
 
 TD detektory byly po dvojicích umístěny do každé ze zón kromě koupelny, kam byl umístěn pouze jeden TD detektor. Poslední TD detektor byl umístěn do špajzu, protože původně bylo zamýšleno brát jako jednu zónu koupelnu a špajz. %PORUŠENÍ PRAVIDEL OSAZOVÁNÍ MĚŘIDEL!!!!
 
 Do každé zóny byly umístěny jedna TERA sonda a jeden CANARY měřák. Do obývacího pokoje byl umístěn radonový zdroj s označením 38 (dle tab.~\ref{tab:dynMer_zdroje}).
 
-V dalších oddílech jsou uvedena použitá měřidla, naměřené hodnoty OAR, objemů a teplot. Následují vypočítané veličiny, které bylo potřeba určit pro výpočet přísunů radonu a určené přísuny radonu a zpětné ověření pomocí $Q_{zdroj}$.
+V příloze~\ref{navesti:priloha_halkova980} jsou uvedeny naměřené a vyhodnocené veličiny potřebné pro výpočet přísunů radonu.
+
+V dalších oddílech této kapitoly jsou sepsány do tabulek vypočítané $Q_i$ z OAR naměřených TERA sondami a CANARY měřáky a z obou kombinací použitých tracerů. Pro srovnání jsou tam uvedeny i $Q_{zdroj}$. Dále tam lze nalézt zpětné ověření OAR a $k_{ij}$ pro kombinaci tracerů (MDC, MCH, TCE, TMH) pomocí $Q_{zdroj}$.
 %\subsection{Použitá měřidla}
 
 %\begin{itemize}
@@ -532,8 +536,25 @@ V dalších oddílech jsou uvedena použitá měřidla, naměřené hodnoty OAR,
 \end{table}
 
 \subsection{Diskuze}
+Dost informací uvedených u předchozího měření v objektu Skála 75 platí i zde:
+\begin{itemize}
+    \item CANARY měřáky měří přesněji a spolehlivěji než TERA sondy,
+    \item časové závislosti přísunů radonu $Q_i(t)$ nelze považovat za přesné.
+\end{itemize}
 
+Měření ventilace u tohoto objektu je zatíženo velikou nejistotou kvůli saturaci několika TD detektorů na několik druhů tracerů. Stalo se to v důsledku porušení pravidel osazování měřidel do objektu (podkapitola~\ref{navesti:prutoky_instalace}), jelikož do ložnice bylo umístěno moc vyvíječů, jejichž celkové emise dotyčných tracerů byly příliš veliké. Proto $k_{ij}$ vycházejí s velikou nejistotou (tab.~\ref{tab:halkova980_prutoky}) a je dost pravděpodobné, že jsou zatíženy nějakou další chybou, která není v uvedených nejistotách zahrnuta. 
+
+V tab.~\ref{tab:halkova980_prisunyRovnovazneCANARY} jsou $Q_i$ pro data z CANARY měřáků. Kupodivu i přes uvedené nepřesné měření ventilace vychází v rámci nejistot stejně jako $Q_{zdroj}$ (tab.~\ref{tab:halkova980_prisunyZdroj}). Ovšem jejich nejistoty jsou tak obrovské, že to zabraňuje přesné kvantifikaci zdrojů radonu v objektu.
+
+Jako přesnější byla vybrána kombinace tracerů (MDC, MCH, TCE, TMH), protože pro ní vychází méně průtoků záporně (záporné $k_{ij}$ jsou nesmyslné).
+
+Při zpětném ověření OAR vyšly hodnoty blízké naměřeným hodnotám (tab.~\ref{tab:halkova980_OAR_zpetne}). Při zpětném ověření průtoků vyšly nominální hodnoty průtoků značně rozdílně oproti $k_{ij}$ z měření, avšak jejich intervaly nejistot jsou tak veliké, že v nich $k_{ij}$ leží. 
+
+Dynamické vyhodnocení bylo provedeno pro obě kombinace tracerů a pro OAR z TERA sond, avšak závislosti $Q_i(t)$ byly tak nepřesné (víceméně oscilovaly kolem nuly), že nejsou v této práci uvedeny.
 \subsection{Závěr}
+Byly určeny přísuny radonu do obývacího pokoje, ložnice, koupelny s WC a do kuchyně. Jako přesnější jsou opět brány přísuny radonu, při jejichž výpočtu byly použity OAR z CANARY měřáků. Při vyhodnocování byly uvažovány dvě kombinace tracerů, jako přesnější byla vyhodnocena kombinace (MDC, MCH, TCE, TMH). Vypočítané a vybrané $Q_i$ se shoduje s $Q_{zdroj}$, avšak mají obrovskou nejistotu.
+
+Hlavním zdrojem nejistot tohoto měření bylo umístění příliš mnoho vyvíječů do zón, což vedlo k saturaci několika TD detektorů.
 
 \section{Objekt Anglická 574, Dobřichovice}
 Jedná se o rodinný dům se sklepem, přízemím a prvním patrem. Při měření byla brána jednotlivá podlaží jako zóny. 
