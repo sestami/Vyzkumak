@@ -2040,11 +2040,19 @@
     <bcf:citekey order="28">japonci2</bcf:citekey>
     <bcf:citekey order="29">wiki_OLS</bcf:citekey>
     <bcf:citekey order="30">uncertainties</bcf:citekey>
-    <bcf:citekey order="31">tera</bcf:citekey>
-    <bcf:citekey order="32">canary</bcf:citekey>
-    <bcf:citekey order="33">testo</bcf:citekey>
-    <bcf:citekey order="34">dalkomer</bcf:citekey>
-    <bcf:citekey order="35">alphaguard</bcf:citekey>
+    <bcf:citekey order="31">japonci2</bcf:citekey>
+    <bcf:citekey order="32">uncertainties</bcf:citekey>
+    <bcf:citekey order="33">spline</bcf:citekey>
+    <bcf:citekey order="34">savgol</bcf:citekey>
+    <bcf:citekey order="35">rovMer_8Rn</bcf:citekey>
+    <bcf:citekey order="36">rovMer_8Rn</bcf:citekey>
+    <bcf:citekey order="37">rovMer_8Rn</bcf:citekey>
+    <bcf:citekey order="38">rovMer_8Rn</bcf:citekey>
+    <bcf:citekey order="39">tera</bcf:citekey>
+    <bcf:citekey order="40">canary</bcf:citekey>
+    <bcf:citekey order="41">testo</bcf:citekey>
+    <bcf:citekey order="42">dalkomer</bcf:citekey>
+    <bcf:citekey order="43">alphaguard</bcf:citekey>
     <bcf:citekey order="0" nocite="1">*</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->

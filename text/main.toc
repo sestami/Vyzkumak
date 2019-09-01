@@ -5,7 +5,7 @@
 \contentsline {chapter}{\numberline {2}Radonov\IeC {\'a} problematika}{13}{chapter.2}% 
 \contentsline {section}{\numberline {2.1}Pou\IeC {\v z}it\IeC {\'e} kontinu\IeC {\'a}ln\IeC {\'\i } monitory radonu}{14}{section.2.1}% 
 \contentsline {subsection}{\numberline {2.1.1}TERA sondy}{14}{subsection.2.1.1}% 
-\contentsline {subsubsection}{Ur\IeC {\v c}en\IeC {\'\i } nejistot nam\IeC {\v e}\IeC {\v r}en\IeC {\'y}ch OAR}{15}{section*.4}% 
+\contentsline {subsubsection}{Ur\IeC {\v c}en\IeC {\'\i } nejistot nam\IeC {\v e}\IeC {\v r}en\IeC {\'y}ch OAR}{15}{section*.6}% 
 \contentsline {subsection}{\numberline {2.1.2}CANARY m\IeC {\v e}\IeC {\v r}\IeC {\'a}ky}{15}{subsection.2.1.2}% 
 \contentsline {section}{\numberline {2.2}Pr\IeC {\r u}to\IeC {\v c}n\IeC {\'e} radonov\IeC {\'e} zdroje typu RF 2000}{17}{section.2.2}% 
 \contentsline {chapter}{\numberline {3}M\IeC {\v e}\IeC {\v r}en\IeC {\'\i } intenzity v\IeC {\v e}tr\IeC {\'a}n\IeC {\'\i } pomoc\IeC {\'\i } techniky indika\IeC {\v c}n\IeC {\'\i }ch plyn\IeC {\r u}}{19}{chapter.3}% 
@@ -21,8 +21,8 @@
 \contentsline {subsection}{\numberline {3.3.1}Hmotnostn\IeC {\'\i } koncentrace a emise indika\IeC {\v c}n\IeC {\'\i }ch plyn\IeC {\r u}}{24}{subsection.3.3.1}% 
 \contentsline {subsection}{\numberline {3.3.2}Bilan\IeC {\v c}n\IeC {\'\i } rovnice}{25}{subsection.3.3.2}% 
 \contentsline {subsection}{\numberline {3.3.3}\IeC {\v R}e\IeC {\v s}en\IeC {\'\i } bilan\IeC {\v c}n\IeC {\'\i }ch rovnic}{25}{subsection.3.3.3}% 
-\contentsline {subsubsection}{Line\IeC {\'a}rn\IeC {\'\i } regrese}{26}{section*.13}% 
-\contentsline {subsubsection}{\IeC {\v R}e\IeC {\v s}en\IeC {\'\i } pro $N=N_p\geq 4$}{27}{section*.14}% 
+\contentsline {subsubsection}{Line\IeC {\'a}rn\IeC {\'\i } regrese}{26}{section*.15}% 
+\contentsline {subsubsection}{\IeC {\v R}e\IeC {\v s}en\IeC {\'\i } pro $N=N_p\geq 4$}{27}{section*.16}% 
 \contentsline {subsection}{\numberline {3.3.4}V\IeC {\'y}m\IeC {\v e}na vzduchu}{27}{subsection.3.3.4}% 
 \contentsline {chapter}{\numberline {4}Ur\IeC {\v c}en\IeC {\'\i } objemov\IeC {\'e} rychlosti p\IeC {\v r}\IeC {\'\i }sunu zdroj\IeC {\r u} radonu}{29}{chapter.4}% 
 \contentsline {section}{\numberline {4.1}Ur\IeC {\v c}en\IeC {\'\i } nejistot p\IeC {\v r}\IeC {\'\i }sun\IeC {\r u} radonu}{31}{section.4.1}% 
@@ -47,37 +47,35 @@
 \contentsline {section}{\numberline {6.1}TERA sondy}{46}{section.6.1}% 
 \contentsline {section}{\numberline {6.2}Objekt Sk\IeC {\'a}la 75, okr. Havl\IeC {\'\i }\IeC {\v c}k\IeC {\r u}v Brod}{47}{section.6.2}% 
 \contentsline {subsection}{\numberline {6.2.1}P\IeC {\v r}\IeC {\'\i }suny radonu}{48}{subsection.6.2.1}% 
-\contentsline {subsubsection}{Vyhodnocen\IeC {\'\i } dynamick\IeC {\'e}ho m\IeC {\v e}\IeC {\v r}en\IeC {\'\i }}{49}{section*.21}% 
-\contentsline {subsubsection}{Vyhodnocen\IeC {\'\i } v rovnov\IeC {\'a}\IeC {\v z}n\IeC {\'e}m stavu}{49}{section*.23}% 
+\contentsline {subsubsection}{Vyhodnocen\IeC {\'\i } dynamick\IeC {\'e}ho m\IeC {\v e}\IeC {\v r}en\IeC {\'\i }}{49}{section*.42}% 
+\contentsline {subsubsection}{Vyhodnocen\IeC {\'\i } v rovnov\IeC {\'a}\IeC {\v z}n\IeC {\'e}m stavu}{49}{section*.44}% 
 \contentsline {subsection}{\numberline {6.2.2}Zp\IeC {\v e}tn\IeC {\'e} ov\IeC {\v e}\IeC {\v r}en\IeC {\'\i }}{50}{subsection.6.2.2}% 
-\contentsline {subsubsection}{OAR}{50}{section*.26}% 
-\contentsline {subsubsection}{Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{51}{section*.28}% 
+\contentsline {subsubsection}{OAR}{50}{section*.47}% 
+\contentsline {subsubsection}{Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{51}{section*.49}% 
 \contentsline {subsection}{\numberline {6.2.3}Diskuze}{51}{subsection.6.2.3}% 
-\contentsline {subsubsection}{Srovn\IeC {\'a}n\IeC {\'\i } dynamick\IeC {\'e}ho a rovnov\IeC {\'a}\IeC {\v z}n\IeC {\'e}ho vyhodnocen\IeC {\'\i }}{51}{section*.30}% 
-\contentsline {subsubsection}{Srovn\IeC {\'a}n\IeC {\'\i } r\IeC {\r u}zn\IeC {\'y}ch kombinac\IeC {\'\i } indika\IeC {\v c}n\IeC {\'\i }ch plyn\IeC {\r u}}{52}{section*.31}% 
-\contentsline {subsubsection}{Srovn\IeC {\'a}n\IeC {\'\i } pou\IeC {\v z}it\IeC {\'\i } OAR z TERA sond a z CANARY m\IeC {\v e}\IeC {\v r}\IeC {\'a}k\IeC {\r u}}{52}{section*.32}% 
-\contentsline {subsubsection}{Srovn\IeC {\'a}n\IeC {\'\i } vypo\IeC {\v c}\IeC {\'\i }tan\IeC {\'y}ch p\IeC {\v r}\IeC {\'\i }sun\IeC {\r u} radonu s $Q_{zdroj}$}{53}{section*.33}% 
-\contentsline {subsubsection}{Zp\IeC {\v e}tn\IeC {\'e} ov\IeC {\v e}\IeC {\v r}en\IeC {\'\i }}{53}{section*.34}% 
+\contentsline {subsubsection}{Srovn\IeC {\'a}n\IeC {\'\i } dynamick\IeC {\'e}ho a rovnov\IeC {\'a}\IeC {\v z}n\IeC {\'e}ho vyhodnocen\IeC {\'\i }}{51}{section*.51}% 
+\contentsline {subsubsection}{Srovn\IeC {\'a}n\IeC {\'\i } r\IeC {\r u}zn\IeC {\'y}ch kombinac\IeC {\'\i } indika\IeC {\v c}n\IeC {\'\i }ch plyn\IeC {\r u}}{52}{section*.52}% 
+\contentsline {subsubsection}{Srovn\IeC {\'a}n\IeC {\'\i } pou\IeC {\v z}it\IeC {\'\i } OAR z TERA sond a z CANARY m\IeC {\v e}\IeC {\v r}\IeC {\'a}k\IeC {\r u}}{52}{section*.53}% 
+\contentsline {subsubsection}{Srovn\IeC {\'a}n\IeC {\'\i } vypo\IeC {\v c}\IeC {\'\i }tan\IeC {\'y}ch p\IeC {\v r}\IeC {\'\i }sun\IeC {\r u} radonu s $Q_{zdroj}$}{53}{section*.54}% 
+\contentsline {subsubsection}{Zp\IeC {\v e}tn\IeC {\'e} ov\IeC {\v e}\IeC {\v r}en\IeC {\'\i }}{53}{section*.55}% 
 \contentsline {subsection}{\numberline {6.2.4}Z\IeC {\'a}v\IeC {\v e}r}{53}{subsection.6.2.4}% 
 \contentsline {section}{\numberline {6.3}Objekt H\IeC {\'a}lkov\IeC {\'a} 980, Humpolec}{54}{section.6.3}% 
 \contentsline {subsection}{\numberline {6.3.1}P\IeC {\v r}\IeC {\'\i }suny radonu}{54}{subsection.6.3.1}% 
 \contentsline {subsection}{\numberline {6.3.2}Zp\IeC {\v e}tn\IeC {\'e} ov\IeC {\v e}\IeC {\v r}en\IeC {\'\i }}{55}{subsection.6.3.2}% 
-\contentsline {subsubsection}{OAR}{55}{section*.38}% 
-\contentsline {subsubsection}{Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{56}{section*.40}% 
+\contentsline {subsubsection}{OAR}{55}{section*.59}% 
+\contentsline {subsubsection}{Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{56}{section*.61}% 
 \contentsline {subsection}{\numberline {6.3.3}Diskuze}{56}{subsection.6.3.3}% 
 \contentsline {subsection}{\numberline {6.3.4}Z\IeC {\'a}v\IeC {\v e}r}{57}{subsection.6.3.4}% 
 \contentsline {section}{\numberline {6.4}Objekt Anglick\IeC {\'a} 574, Dob\IeC {\v r}ichovice}{57}{section.6.4}% 
 \contentsline {subsection}{\numberline {6.4.1}P\IeC {\v r}\IeC {\'\i }suny radonu}{58}{subsection.6.4.1}% 
 \contentsline {subsection}{\numberline {6.4.2}Zp\IeC {\v e}tn\IeC {\'e} ov\IeC {\v e}\IeC {\v r}en\IeC {\'\i }}{58}{subsection.6.4.2}% 
-\contentsline {subsubsection}{OAR}{58}{section*.45}% 
-\contentsline {subsubsection}{Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{59}{section*.47}% 
+\contentsline {subsubsection}{OAR}{58}{section*.66}% 
+\contentsline {subsubsection}{Objemov\IeC {\'e} pr\IeC {\r u}toky vzduchu}{59}{section*.68}% 
 \contentsline {subsection}{\numberline {6.4.3}Diskuze}{59}{subsection.6.4.3}% 
 \contentsline {subsection}{\numberline {6.4.4}Z\IeC {\'a}v\IeC {\v e}r}{60}{subsection.6.4.4}% 
 \contentsline {section}{\numberline {6.5}Shrnut\IeC {\'\i }}{60}{section.6.5}% 
 \contentsline {chapter}{\numberline {7}Z\IeC {\'a}v\IeC {\v e}r}{61}{chapter.7}% 
-\contentsline {section}{\numberline {7.1}Dotazy}{61}{section.7.1}% 
-\contentsline {section}{\numberline {7.2}TO DO}{61}{section.7.2}% 
-\contentsline {chapter}{Seznam literatury}{62}{table.caption.50}% 
+\contentsline {chapter}{Seznam literatury}{62}{chapter.7}% 
 \contentsline {chapter}{\numberline {A}Python skript pro symbolick\IeC {\'e} ur\IeC {\v c}en\IeC {\'\i } nejistot p\IeC {\v r}\IeC {\'\i }sun\IeC {\r u} radonu}{64}{appendix.A}% 
 \contentsline {chapter}{\numberline {B}Python skript pro vyhodnocen\IeC {\'\i } dynamick\IeC {\'e}ho m\IeC {\v e}\IeC {\v r}en\IeC {\'\i } p\IeC {\v r}\IeC {\'\i }sun\IeC {\r u} radonu}{66}{appendix.B}% 
 \contentsline {chapter}{\numberline {C}Certifik\IeC {\'a}ty zdroj\IeC {\r u}}{72}{appendix.C}% 
