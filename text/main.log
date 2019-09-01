@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.7)  1 SEP 2019 12:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Arch Linux) (preloaded format=pdflatex 2019.8.7)  1 SEP 2019 13:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1203,23 +1203,23 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (./prilohy.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Info: Redefining \microtypecontext on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 12.
+LaTeX Font Info:    ... okay on input line 12.
+LaTeX Info: Redefining \microtypecontext on input line 12.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1268,7 +1268,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 
-Package chemgreek Info: Activating mapping `default' on line 11.
+Package chemgreek Info: Activating mapping `default' on line 12.
 
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
@@ -1353,7 +1353,7 @@ Dictionary: translator-basic-dictionary, Language: English
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
 \AtBeginShipoutBox=\box71
-Package hyperref Info: Link coloring ON on input line 11.
+Package hyperref Info: Link coloring ON on input line 12.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -1363,9 +1363,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count462
 )
-LaTeX Info: Redefining \ref on input line 11.
-LaTeX Info: Redefining \pageref on input line 11.
-LaTeX Info: Redefining \nameref on input line 11.
+LaTeX Info: Redefining \ref on input line 12.
+LaTeX Info: Redefining \pageref on input line 12.
+LaTeX Info: Redefining \nameref on input line 12.
  (./main.out)
 (./main.out)
 \@outlinefile=\write4
@@ -1379,18 +1379,18 @@ Package biblatex Info: Data encoding 'UTF8' specified.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
  (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 11.
-Package biblatex Info: Reference segment=0 on input line 11.
+Package biblatex Info: Reference section=0 on input line 12.
+Package biblatex Info: Reference segment=0 on input line 12.
 \c@lstlisting=\count463
-LaTeX Info: Redefining \celsius on input line 11.
-Package gensymb Info: Faking symbols for \degree and \celsius on input line 11.
+LaTeX Info: Redefining \celsius on input line 12.
+Package gensymb Info: Faking symbols for \degree and \celsius on input line 12.
 
 
 
 Package gensymb Warning: Not defining \perthousand.
 
-LaTeX Info: Redefining \ohm on input line 11.
-Package gensymb Info: Using \Omega for \ohm on input line 11.
+LaTeX Info: Redefining \ohm on input line 12.
+Package gensymb Info: Using \Omega for \ohm on input line 12.
 
 Package gensymb Warning: Not defining \micro.
 
@@ -1402,7 +1402,7 @@ Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 11.
+LaTeX Font Info:    Try loading font information for U+msa on input line 12.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1410,7 +1410,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/share/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 11.
+LaTeX Font Info:    Try loading font information for U+msb on input line 12.
 
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1418,13 +1418,13 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 (/usr/share/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Try loading font information for U+esvect on input line 11.
+LaTeX Font Info:    Try loading font information for U+esvect on input line 12.
 
 
 (/usr/share/texmf-dist/tex/latex/esvect/uesvect.fd
 File: uesvect.fd 
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 11.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 12.
 
 (/usr/share/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
@@ -1437,67 +1437,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `cmtt' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-\openout2 = `titlepage.aux'.
-
- (./titlepage.tex
-<images/cvut.jpg, id=333, 1185.42876pt x 1185.42876pt>
-File: images/cvut.jpg Graphic file (type jpg)
-<use images/cvut.jpg>
-Package pdftex.def Info: images/cvut.jpg  used on input line 7.
-(pdftex.def)             Requested size: 115.1803pt x 115.16733pt.
- [1
+ (./main.toc [7
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/cvut.jpg>]
-<zadani.pdf, id=342, 594.05943pt x 844.47496pt>
-File: zadani.pdf Graphic file (type pdf)
-<use zadani.pdf>
-Package pdftex.def Info: zadani.pdf  used on input line 26.
-(pdftex.def)             Requested size: 594.05798pt x 844.4729pt.
-File: zadani.pdf Graphic file (type pdf)
-<use zadani.pdf>
-Package pdftex.def Info: zadani.pdf  used on input line 26.
-(pdftex.def)             Requested size: 594.05798pt x 844.4729pt.
-<zadani.pdf, id=345, page=1, 594.05943pt x 844.47496pt>
-File: zadani.pdf Graphic file (type pdf)
-<use zadani.pdf, page 1>
-Package pdftex.def Info: zadani.pdf , page1 used on input line 26.
-(pdftex.def)             Requested size: 594.05798pt x 844.4729pt.
-File: zadani.pdf Graphic file (type pdf)
-<use zadani.pdf, page 1>
-Package pdftex.def Info: zadani.pdf , page1 used on input line 26.
-(pdftex.def)             Requested size: 594.7922pt x 845.51663pt.
-File: zadani.pdf Graphic file (type pdf)
-<use zadani.pdf, page 1>
-Package pdftex.def Info: zadani.pdf , page1 used on input line 26.
-(pdftex.def)             Requested size: 594.7922pt x 845.51663pt.
-File: zadani.pdf Graphic file (type pdf)
-<use zadani.pdf, page 1>
-Package pdftex.def Info: zadani.pdf , page1 used on input line 26.
-(pdftex.def)             Requested size: 594.7922pt x 845.51663pt.
-File: zadani.pdf Graphic file (type pdf)
-<use zadani.pdf, page 1>
-Package pdftex.def Info: zadani.pdf , page1 used on input line 26.
-(pdftex.def)             Requested size: 594.7922pt x 845.51663pt.
- [2 <./zadani.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 30--32
 
- []
-
-[3] [4]
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 47--48
-[][] 
- []
-
-[5]
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 56--57
-[][] 
- []
-
-[6]) (./main.toc [7
-
-
-] [8])
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [8])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
@@ -1526,12 +1470,12 @@ Overfull \hbox (2.01143pt too wide) in paragraph at lines 50--52
 Te^^Tren^^S^^P [][], ale p^^Tri zkou^^Tsen^^S^^P vypo^^Tc^^S^^Pt^^San^^S^^P
  []
 
-<images/tera.jpg, id=525, 1237.62375pt x 2498.33376pt>
+<images/tera.jpg, id=367, 1237.62375pt x 2498.33376pt>
 File: images/tera.jpg Graphic file (type jpg)
 <use images/tera.jpg>
 Package pdftex.def Info: images/tera.jpg  used on input line 73.
 (pdftex.def)             Requested size: 145.12872pt x 292.96338pt.
-<images/canary.jpg, id=526, 1847.90375pt x 2851.65375pt>
+<images/canary.jpg, id=368, 1847.90375pt x 2851.65375pt>
 File: images/canary.jpg Graphic file (type jpg)
 <use images/canary.jpg>
 Package pdftex.def Info: images/canary.jpg  used on input line 78.
@@ -1542,7 +1486,7 @@ Overfull \hbox (23.99998pt too wide) in paragraph at lines 112--140
  []
 
 [16 <./images/tera.jpg> <./images/canary.jpg>]
-<images/zdroj.jpg, id=549, 3121.6625pt x 1164.35pt>
+<images/zdroj.jpg, id=391, 3121.6625pt x 1164.35pt>
 File: images/zdroj.jpg Graphic file (type jpg)
 <use images/zdroj.jpg>
 Package pdftex.def Info: images/zdroj.jpg  used on input line 149.
@@ -1553,12 +1497,12 @@ Package pdftex.def Info: images/zdroj.jpg  used on input line 149.
 
 (./prutoky.tex
 Kapitola 3.
-<images/vyvijece_detektory.jpg, id=563, 3131.7pt x 4175.6pt>
+<images/vyvijece_detektory.jpg, id=405, 3131.7pt x 4175.6pt>
 File: images/vyvijece_detektory.jpg Graphic file (type jpg)
 <use images/vyvijece_detektory.jpg>
 Package pdftex.def Info: images/vyvijece_detektory.jpg  used on input line 15.
 (pdftex.def)             Requested size: 175.07082pt x 233.386pt.
-<images/testo.jpg, id=564, 1362.08875pt x 1771.61874pt>
+<images/testo.jpg, id=406, 1362.08875pt x 1771.61874pt>
 File: images/testo.jpg Graphic file (type jpg)
 <use images/testo.jpg>
 Package pdftex.def Info: images/testo.jpg  used on input line 21.
@@ -1574,14 +1518,14 @@ a^^Tcn^^S^^Pch plyn^^Wu,
  []
 
 [20 <./images/vyvijece_detektory.jpg> <./images/testo.jpg>]
-<images/chromatograf_celkove.jpg, id=583, 4175.6pt x 3131.7pt>
+<images/chromatograf_celkove.jpg, id=425, 4175.6pt x 3131.7pt>
 File: images/chromatograf_celkove.jpg Graphic file (type jpg)
 <use images/chromatograf_celkove.jpg>
 Package pdftex.def Info: images/chromatograf_celkove.jpg  used on input line 39
 .
 (pdftex.def)             Requested size: 322.50345pt x 241.8441pt.
  [21 <./images/chromatograf_celkove.jpg>]
-<images/vyvijece_preprava.jpg, id=591, 4175.6pt x 3131.7pt>
+<images/vyvijece_preprava.jpg, id=433, 4175.6pt x 3131.7pt>
 File: images/vyvijece_preprava.jpg Graphic file (type jpg)
 <use images/vyvijece_preprava.jpg>
 Package pdftex.def Info: images/vyvijece_preprava.jpg  used on input line 55.
@@ -1595,70 +1539,11 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 141.
- [25] [26]) [27] [28]
-\openout2 = `model.aux'.
-
-
-(./model.tex
-Kapitola 4.
-[29
+ [25] [26]) [27] [28] [36
 
 
 
 ]
-Overfull \hbox (3.32242pt too wide) detected at line 61
-[]
- []
-
-[30] [31]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 146.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 146.
-
-[32] [33] [34]) [35] [36
-
-
-]
-\openout2 = `rovnovaznaMereni.aux'.
-
- (./rovnovaznaMereni.tex
-Kapitola 5.
-
-Overfull \hbox (1.5299pt too wide) in paragraph at lines 9--23
- [][] 
- []
-
-[37
-
-
-] (./rovMer_data/1vysledky_inputData.tex)
-(./rovMer_data/1vysledky_prutoky.tex) (./rovMer_data/1vysledky_Q.tex) [38]
-(./rovMer_data/2vysledky_inputData.tex) (./rovMer_data/2vysledky_prutoky.tex)
-(./rovMer_data/2vysledky_Q.tex) (./rovMer_data/3vysledky_inputData.tex)
-(./rovMer_data/3vysledky_prutoky.tex) [39] (./rovMer_data/3vysledky_Q.tex)
-(./rovMer_data/4vysledky_inputData.tex) (./rovMer_data/4vysledky_prutoky.tex)
-[40] (./rovMer_data/4vysledky_Q.tex) (./rovMer_data/8vysledky_inputData.tex)
-(./rovMer_data/8vysledky_prutoky.tex) [41] (./rovMer_data/8vysledky_Q.tex)
-[42]
-Underfull \hbox (badness 1152) in paragraph at lines 152--153
-[]|\OT1/cmr/m/n/12 (+20) Combined stan-
- []
-
-<images/rovMer_8schema.png, id=802, 189.70876pt x 310.91156pt>
-File: images/rovMer_8schema.png Graphic file (type png)
-<use images/rovMer_8schema.png>
-Package pdftex.def Info: images/rovMer_8schema.png  used on input line 166.
-(pdftex.def)             Requested size: 214.46744pt x 351.49673pt.
-<images/rovMer_8schema_2.png, id=804, 480.29437pt x 492.33937pt>
-File: images/rovMer_8schema_2.png Graphic file (type png)
-<use images/rovMer_8schema_2.png>
-Package pdftex.def Info: images/rovMer_8schema_2.png  used on input line 170.
-(pdftex.def)             Requested size: 214.46744pt x 219.84532pt.
-[43]) [44 <./images/rovMer_8schema.png> <./images/rovMer_8schema_2.png>]
 \openout2 = `dynamickaMereni.aux'.
 
 
@@ -1669,7 +1554,7 @@ Kapitola 6.
 
 
 ]
-<images/sondy_srovnani.png, id=842, 774.0117pt x 419.166pt>
+<images/sondy_srovnani.png, id=531, 774.0117pt x 419.166pt>
 File: images/sondy_srovnani.png Graphic file (type png)
 <use images/sondy_srovnani.png>
 Package pdftex.def Info: images/sondy_srovnani.png  used on input line 50.
@@ -1692,15 +1577,6 @@ m/n/12 (-20) z OAR nam^^Te^^Tren^^Sych
 [55] [56] [57] (./anglicka574/zpetnyChod_prutoky1.tex)
 (./anglicka574/zpetnyChod_prutoky2.tex) (./anglicka574/zpetnyChod_prutoky3.tex)
 [58] [59]) [60]
-\openout2 = `zaver.aux'.
-
- (./zaver.tex
-Kapitola 7.
-) [61
-
-
-
-]
 
 Package biblatex Warning: Name format 'last-first' deprecated.
 (biblatex)                Please use 'family-given' instead.
@@ -1750,7 +1626,12 @@ Package biblatex Warning: '\mkdaterangeedtf' is deprecated.
 Package biblatex Warning: '\mkdaterangeedtf' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
+
+Package biblatex Warning: '\mkdaterangeedtf' is deprecated.
+(biblatex)                Please use '\mkdaterangeiso'.
+
 [62
+
 
 
 ]
@@ -1771,7 +1652,11 @@ Package biblatex Warning: '\mkdaterangeedtf' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
 
-Overfull \hbox (10.52048pt too wide) in paragraph at lines 35--35
+Package biblatex Warning: '\mkdaterangeedtf' is deprecated.
+(biblatex)                Please use '\mkdaterangeiso'.
+
+
+Overfull \hbox (10.52048pt too wide) in paragraph at lines 36--36
 []\OT1/cmr/m/n/12 (-20) DZHUNAKOVA, D.; IVA-NOVA, Kre-mena.  \OT1/cmr/m/it/12 (
 -20) Ra-don Con-cen-t-ration PEMP-09E/05.03.2019
  []
@@ -1784,249 +1669,191 @@ Package biblatex Warning: '\mkdaterangeedtf' is deprecated.
 Package biblatex Warning: '\mkdaterangeedtf' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
-
-Package biblatex Warning: '\mkdaterangeedtf' is deprecated.
-(biblatex)                Please use '\mkdaterangeiso'.
-
 [63]
-\openout2 = `prilohy.aux'.
-
- (./prilohy.tex
-P\v {r}\'{\i }loha A.
-(/usr/share/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2019/02/27 1.8b listings language file
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 3.
- (./nejistoty.py
-[64
-
-
-]) [65]
-P\v {r}\'{\i }loha B.
-(./dynamickeMereni.py [66
-
-] [67] [68] [69] [70]) [71]
-P\v {r}\'{\i }loha C.
-<zdroje.pdf, id=1524, page=1, 844.83629pt x 597.432pt>
-File: zdroje.pdf Graphic file (type pdf)
-<use zdroje.pdf, page 1>
-Package pdftex.def Info: zdroje.pdf , page1 used on input line 10.
-(pdftex.def)             Requested size: 844.83423pt x 597.43054pt.
-[72
-
-]
-Overfull \vbox (108.21913pt too high) has occurred while \output is active []
-
-
-[73 <./zdroje.pdf>]
-<zdroje.pdf, id=1542, page=2, 844.83629pt x 597.432pt>
-File: zdroje.pdf Graphic file (type pdf)
-<use zdroje.pdf, page 2>
-Package pdftex.def Info: zdroje.pdf , page2 used on input line 12.
-(pdftex.def)             Requested size: 844.83423pt x 597.43054pt.
- [74 <./zdroje.pdf>]
-P\v {r}\'{\i }loha D.
-<images/skala75/humpolec_chata.jpg, id=1553, 4175.6pt x 3131.7pt>
-File: images/skala75/humpolec_chata.jpg Graphic file (type jpg)
-<use images/skala75/humpolec_chata.jpg>
-Package pdftex.def Info: images/skala75/humpolec_chata.jpg  used on input line 
-21.
-(pdftex.def)             Requested size: 276.43555pt x 207.29494pt.
-(./skala75/vysledky_inputData.tex)
-<images/skala75/OAR_dohromady.png, id=1556, 797.1381pt x 445.9059pt>
-File: images/skala75/OAR_dohromady.png Graphic file (type png)
-<use images/skala75/OAR_dohromady.png>
-Package pdftex.def Info: images/skala75/OAR_dohromady.png  used on input line 7
-6.
-(pdftex.def)             Requested size: 460.72124pt x 257.72067pt.
- [75
-
- <./images/skala75/humpolec_chata.jpg>]
-<images/skala75/OAR_CANARY.png, id=1564, 741.12885pt x 457.10776pt>
-File: images/skala75/OAR_CANARY.png Graphic file (type png)
-<use images/skala75/OAR_CANARY.png>
-Package pdftex.def Info: images/skala75/OAR_CANARY.png  used on input line 82.
-(pdftex.def)             Requested size: 460.72124pt x 284.15717pt.
-
-[76 <./images/skala75/OAR_dohromady.png>] [77 <./images/skala75/OAR_CANARY.png>
-] (./skala75/indikacni_plyny.tex)
-
-./prilohy.tex:132: LaTeX Error: There's no line here to end.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.132     \label{tab:skala75_odezvyTD}\\
-                                        
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-(./skala75/odezvy_TD.tex) [78] [79]
-<images/skala75/prisuny1.png, id=1593, 742.9356pt x 437.2335pt>
-File: images/skala75/prisuny1.png Graphic file (type png)
-<use images/skala75/prisuny1.png>
-Package pdftex.def Info: images/skala75/prisuny1.png  used on input line 190.
-(pdftex.def)             Requested size: 460.72124pt x 271.14868pt.
- [80] (./skala75/vysledky_Q_statistiky1.tex)
-<images/skala75/prisuny2.png, id=1598, 742.9356pt x 437.2335pt>
-File: images/skala75/prisuny2.png Graphic file (type png)
-<use images/skala75/prisuny2.png>
-Package pdftex.def Info: images/skala75/prisuny2.png  used on input line 203.
-(pdftex.def)             Requested size: 460.72124pt x 271.14868pt.
-(./skala75/vysledky_Q_statistiky2.tex) [81 <./images/skala75/prisuny1.png>]
-<images/skala75/prisuny3.png, id=1607, 742.9356pt x 437.2335pt>
-File: images/skala75/prisuny3.png Graphic file (type png)
-<use images/skala75/prisuny3.png>
-Package pdftex.def Info: images/skala75/prisuny3.png  used on input line 216.
-(pdftex.def)             Requested size: 460.72124pt x 271.14868pt.
-
-(./skala75/vysledky_Q_statistiky3.tex) [82 <./images/skala75/prisuny2.png>]
-<images/skala75/prisuny4.png, id=1615, 742.9356pt x 437.2335pt>
-File: images/skala75/prisuny4.png Graphic file (type png)
-<use images/skala75/prisuny4.png>
-Package pdftex.def Info: images/skala75/prisuny4.png  used on input line 229.
-(pdftex.def)             Requested size: 460.72124pt x 271.14868pt.
-
-(./skala75/vysledky_Q_statistiky4.tex) [83 <./images/skala75/prisuny3.png>]
-<images/skala75/prisuny5.png, id=1623, 742.9356pt x 437.2335pt>
-File: images/skala75/prisuny5.png Graphic file (type png)
-<use images/skala75/prisuny5.png>
-Package pdftex.def Info: images/skala75/prisuny5.png  used on input line 242.
-(pdftex.def)             Requested size: 460.72124pt x 271.14868pt.
-
-(./skala75/vysledky_Q_statistiky5.tex) [84 <./images/skala75/prisuny4.png>]
-<images/skala75/prisuny6.png, id=1631, 742.9356pt x 437.2335pt>
-File: images/skala75/prisuny6.png Graphic file (type png)
-<use images/skala75/prisuny6.png>
-Package pdftex.def Info: images/skala75/prisuny6.png  used on input line 255.
-(pdftex.def)             Requested size: 460.72124pt x 271.14868pt.
-
-(./skala75/vysledky_Q_statistiky6.tex) [85 <./images/skala75/prisuny5.png>]
-<images/skala75/prisuny7.png, id=1640, 742.9356pt x 437.2335pt>
-File: images/skala75/prisuny7.png Graphic file (type png)
-<use images/skala75/prisuny7.png>
-Package pdftex.def Info: images/skala75/prisuny7.png  used on input line 268.
-(pdftex.def)             Requested size: 460.72124pt x 271.14868pt.
-
-(./skala75/vysledky_Q_statistiky7.tex) [86 <./images/skala75/prisuny6.png>]
-<images/skala75/prisuny8.png, id=1648, 742.9356pt x 437.2335pt>
-File: images/skala75/prisuny8.png Graphic file (type png)
-<use images/skala75/prisuny8.png>
-Package pdftex.def Info: images/skala75/prisuny8.png  used on input line 281.
-(pdftex.def)             Requested size: 460.72124pt x 271.14868pt.
-
-(./skala75/vysledky_Q_statistiky8.tex) [87 <./images/skala75/prisuny7.png>]
-[88 <./images/skala75/prisuny8.png>]
-P\v {r}\'{\i }loha E.
-(./halkova980/vysledky_inputData.tex)
-<images/halkova980/OAR_dohromady.png, id=1663, 733.5405pt x 456.0237pt>
-File: images/halkova980/OAR_dohromady.png Graphic file (type png)
-<use images/halkova980/OAR_dohromady.png>
-Package pdftex.def Info: images/halkova980/OAR_dohromady.png  used on input lin
-e 316.
-(pdftex.def)             Requested size: 414.6463pt x 257.77216pt.
-<images/halkova980/OAR_CANARY.png, id=1666, 733.5405pt x 457.10776pt>
-File: images/halkova980/OAR_CANARY.png Graphic file (type png)
-<use images/halkova980/OAR_CANARY.png>
-Package pdftex.def Info: images/halkova980/OAR_CANARY.png  used on input line 3
-22.
-(pdftex.def)             Requested size: 414.6463pt x 258.38493pt.
- [89
-
-] (./halkova980/indikacni_plyny.tex)
-(./halkova980/odezvy_TD.tex) [90 <./images/halkova980/OAR_dohromady.png> <./ima
-ges/halkova980/OAR_CANARY.png>] (./halkova980/vysledky_prutoky_CELKOVE.tex)
-[91] [92]
-P\v {r}\'{\i }loha F.
-<images/anglicka574/dobrichovice.jpg, id=1691, 4175.6pt x 3131.7pt>
-File: images/anglicka574/dobrichovice.jpg Graphic file (type jpg)
-<use images/anglicka574/dobrichovice.jpg>
-Package pdftex.def Info: images/anglicka574/dobrichovice.jpg  used on input lin
-e 354.
-(pdftex.def)             Requested size: 368.57838pt x 276.39325pt.
-[93
-
- <./images/anglicka574/dobrichovice.jpg>]
-(./anglicka574/vysledky_inputData.tex)
-<images/anglicka574/OAR_dohromady.png, id=1697, 748.35585pt x 445.9059pt>
-File: images/anglicka574/OAR_dohromady.png Graphic file (type png)
-<use images/anglicka574/OAR_dohromady.png>
-Package pdftex.def Info: images/anglicka574/OAR_dohromady.png  used on input li
-ne 382.
-(pdftex.def)             Requested size: 414.6463pt x 247.06566pt.
-<images/anglicka574/OAR_CANARY.png, id=1700, 741.12885pt x 457.10776pt>
-File: images/anglicka574/OAR_CANARY.png Graphic file (type png)
-<use images/anglicka574/OAR_CANARY.png>
-Package pdftex.def Info: images/anglicka574/OAR_CANARY.png  used on input line 
-388.
-(pdftex.def)             Requested size: 414.6463pt x 255.74144pt.
- [94 <./images/anglicka574/OAR_dohromady.png>] (./anglicka574/indikacni_plyny.t
-ex) (./anglicka574/odezvy_TD.tex)
-[95 <./images/anglicka574/OAR_CANARY.png>] (./anglicka574/vysledky_prutoky.tex)
-<images/anglicka574/prisuny.png, id=1715, 741.12885pt x 421.69545pt>
-File: images/anglicka574/prisuny.png Graphic file (type png)
-<use images/anglicka574/prisuny.png>
-Package pdftex.def Info: images/anglicka574/prisuny.png  used on input line 420
-.
-(pdftex.def)             Requested size: 460.72124pt x 262.1434pt.
-<images/anglicka574/prisuny_zoom.png, id=1716, 737.154pt x 419.8887pt>
-File: images/anglicka574/prisuny_zoom.png Graphic file (type png)
-<use images/anglicka574/prisuny_zoom.png>
-Package pdftex.def Info: images/anglicka574/prisuny_zoom.png  used on input lin
-e 426.
-(pdftex.def)             Requested size: 460.72124pt x 262.4362pt.
-(./anglicka574/vysledky_Q_statistiky.tex) [96] [97 <./images/anglicka574/prisun
-y.png> <./images/anglicka574/prisuny_zoom.png>]) [98]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 38.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 38.
- (./main.aux
-(./titlepage.aux) (./uvod.aux) (./radon.aux) (./prutoky.aux) (./model.aux)
-(./rovnovaznaMereni.aux) (./dynamickaMereni.aux) (./zaver.aux) (./prilohy.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 38.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 38.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 39.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 39.
+ (./main.aux (./titlepage.aux) (./uvod.aux) (./radon.aux) (./prutoky.aux)
+(./model.aux) (./rovnovaznaMereni.aux) (./dynamickaMereni.aux) (./zaver.aux)
+(./prilohy.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 39.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 39.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 11000680073B3001A2B3368F838A6027;14108.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(rerunfilecheck)             Checksum: B944F25895D9E51E038F375B02343A33;6505.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 38.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 39.
  ) 
 Here is how much of TeX's memory you used:
- 39484 strings out of 492623
- 702006 string characters out of 6135670
- 1481716 words of memory out of 5000000
- 41856 multiletter control sequences out of 15000+600000
- 556160 words of font info for 178 fonts, out of 8000000 for 9000
+ 37933 strings out of 492623
+ 678496 string characters out of 6135670
+ 1192074 words of memory out of 5000000
+ 40998 multiletter control sequences out of 15000+600000
+ 549998 words of font info for 145 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 48i,25n,79p,2057b,2597s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
-usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf
--dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr17.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
-></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
-10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/s
-hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/public/esv
-ect/vect10.pfb></usr/share/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
-Output written on main.pdf (98 pages, 27176311 bytes).
+ 48i,25n,79p,2057b,2596s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{table.caption.110} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.103} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.76} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.75} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{table.caption.81} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.4.0.7} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{equation.4.0.3} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.F.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.F.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.F.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.F.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.F.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.F} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.E.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.E.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.E.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.E} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.D.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.D.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.D.3.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.D.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.D.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.D.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.D} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.C} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.B} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{appendix.A} has been referenced but does not exist,
+ replaced by a fixed one
+
+pdfTeX warning (dest): name{section.7.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.7.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.7} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.7} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.6} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.5} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.5.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.5} has been referenced but does not exist, 
+replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.4.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.4.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.4.4} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.4.3} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.4.2} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.1.3} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.1.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.4.1.1} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.4.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter.4} has been referenced but does not exist, 
+replaced by a fixed one
+
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/s
+hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmti12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.
+pfb></usr/share/texmf-dist/fonts/type1/public/wasy2-ps/wasy10.pfb>
+Output written on main.pdf (41 pages, 11842426 bytes).
 PDF statistics:
- 1964 PDF objects out of 2073 (max. 8388607)
- 1721 compressed objects within 18 object streams
- 750 named destinations out of 1000 (max. 500000)
- 34112 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 880 PDF objects out of 1000 (max. 8388607)
+ 775 compressed objects within 8 object streams
+ 220 named destinations out of 1000 (max. 500000)
+ 23409 words of extra memory for PDF output out of 24883 (max. 10000000)
 

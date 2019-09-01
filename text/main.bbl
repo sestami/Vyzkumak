@@ -19,6 +19,42 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{wiki_blowerDoorTest}{online}{}
+      \name{author}{1}{}{%
+        {{hash=ace5bdefdf16a43f176dd112d8838cc0}{%
+           family={Wikipedie},
+           familyi={W\bibinitperiod},
+           given={Otevřená\bibnamedelima encyklopedie},
+           giveni={O\bibinitperiod\bibinitdelim e\bibinitperiod}}}%
+      }
+      \strng{namehash}{ace5bdefdf16a43f176dd112d8838cc0}
+      \strng{fullhash}{ace5bdefdf16a43f176dd112d8838cc0}
+      \strng{bibnamehash}{ace5bdefdf16a43f176dd112d8838cc0}
+      \strng{authorbibnamehash}{ace5bdefdf16a43f176dd112d8838cc0}
+      \strng{authornamehash}{ace5bdefdf16a43f176dd112d8838cc0}
+      \strng{authorfullhash}{ace5bdefdf16a43f176dd112d8838cc0}
+      \field{extraname}{1}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{28}
+      \field{month}{11}
+      \field{title}{Blower-door test}
+      \field{urlday}{9}
+      \field{urlmonth}{1}
+      \field{urlyear}{2019}
+      \field{year}{2018}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://cs.wikipedia.org/wiki/Blower-door_test
+      \endverb
+      \verb{url}
+      \verb https://cs.wikipedia.org/wiki/Blower-door_test
+      \endverb
+    \endentry
     \entry{wiki_radon}{online}{}
       \name{author}{1}{}{%
         {{hash=ace5bdefdf16a43f176dd112d8838cc0}{%
@@ -33,8 +69,9 @@
       \strng{authorbibnamehash}{ace5bdefdf16a43f176dd112d8838cc0}
       \strng{authornamehash}{ace5bdefdf16a43f176dd112d8838cc0}
       \strng{authorfullhash}{ace5bdefdf16a43f176dd112d8838cc0}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{extraname}{2}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{day}{27}
@@ -68,8 +105,8 @@
       \strng{authorbibnamehash}{d532d73ea677321e09f1ce99075c31ed}
       \strng{authornamehash}{d532d73ea677321e09f1ce99075c31ed}
       \strng{authorfullhash}{d532d73ea677321e09f1ce99075c31ed}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Přírodní radioaktivita a problematika radonu}
@@ -86,8 +123,8 @@
       \endverb
     \endentry
     \entry{vyhlaska}{online}{}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{6}
+      \field{sortinithash}{7851c86048328b027313775d8fbd2131}
       \field{labeltitlesource}{title}
       \field{day}{23}
       \field{month}{12}
@@ -110,8 +147,8 @@
       \list{organization}{1}{%
         {TESLA a. s.}%
       }
-      \field{sortinit}{8}
-      \field{sortinithash}{1b24cab5087933ef0826a7cd3b99e994}
+      \field{sortinit}{9}
+      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
       \field{labeltitlesource}{title}
       \field{title}{WLAN bezdrátová a USB radonová sonda TSR4 (TSR3D verze s displejem)}
       \field{urlday}{30}
@@ -132,8 +169,8 @@
       \list{organization}{1}{%
         {BERTIN INSTRUMENTS}%
       }
-      \field{sortinit}{9}
-      \field{sortinithash}{54047ffb55bdefa0694bbd554c1b11a0}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labeltitlesource}{title}
       \field{title}{AlphaGUARD – Radon monitor}
       \field{urlday}{29}
@@ -410,84 +447,12 @@
       \verb https://en.wikipedia.org/wiki/Linear_least_squares
       \endverb
     \endentry
-    \entry{spline}{online}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
-      \field{labeltitlesource}{title}
-      \field{day}{19}
-      \field{month}{9}
-      \field{title}{scipy.interpolate.CubicSpline}
-      \field{urlday}{21}
-      \field{urlmonth}{8}
-      \field{urlyear}{2019}
-      \field{year}{2016}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.interpolate.CubicSpline.html
-      \endverb
-      \verb{url}
-      \verb https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.interpolate.CubicSpline.html
-      \endverb
-    \endentry
-    \entry{savgol}{online}{}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
-      \field{labeltitlesource}{title}
-      \field{day}{24}
-      \field{month}{10}
-      \field{title}{scipy.signal.savgol\_filter}
-      \field{urlday}{21}
-      \field{urlmonth}{8}
-      \field{urlyear}{2019}
-      \field{year}{2015}
-      \field{dateera}{ce}
-      \field{urldateera}{ce}
-      \true{nocite}
-      \verb{urlraw}
-      \verb https://docs.scipy.org/doc/scipy-0.16.1/reference/generated/scipy.signal.savgol_filter.html
-      \endverb
-      \verb{url}
-      \verb https://docs.scipy.org/doc/scipy-0.16.1/reference/generated/scipy.signal.savgol_filter.html
-      \endverb
-    \endentry
-    \entry{rovMer_8Rn}{report}{}
-      \name{author}{2}{}{%
-        {{hash=92687237e969eb5f333cf650adb0b162}{%
-           family={Dzhunakova},
-           familyi={D\bibinitperiod},
-           given={D.},
-           giveni={D\bibinitperiod}}}%
-        {{hash=b845905b85dbdebb438e8a1d7b863409}{%
-           family={Ivanova},
-           familyi={I\bibinitperiod},
-           given={Kremena},
-           giveni={K\bibinitperiod}}}%
-      }
-      \list{institution}{1}{%
-        {National Radiation Protection Institute (NRPI)}%
-      }
-      \strng{namehash}{446c996d9702c610b9138001afcf01ae}
-      \strng{fullhash}{446c996d9702c610b9138001afcf01ae}
-      \strng{bibnamehash}{446c996d9702c610b9138001afcf01ae}
-      \strng{authorbibnamehash}{446c996d9702c610b9138001afcf01ae}
-      \strng{authornamehash}{446c996d9702c610b9138001afcf01ae}
-      \strng{authorfullhash}{446c996d9702c610b9138001afcf01ae}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Radon Concentration PEMP-09E/05.03.2019 (report výsledků měření)}
-      \field{year}{2019}
-      \true{nocite}
-    \endentry
     \entry{testo}{online}{}
       \list{organization}{1}{%
         {Testo SE \& Co. KGaA}%
       }
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labeltitlesource}{title}
       \field{title}{testo 174 H - datalogger teploty a vlhkosti}
       \field{urlday}{29}
@@ -508,8 +473,8 @@
       \list{organization}{1}{%
         {BOSCH}%
       }
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labeltitlesource}{title}
       \field{title}{Laserový měřič vzdálenosti GLM 120 C Professional}
       \field{urlday}{27}
@@ -548,8 +513,8 @@
       \strng{authorbibnamehash}{130ac1afee2927c6320559055c9b6439}
       \strng{authornamehash}{130ac1afee2927c6320559055c9b6439}
       \strng{authorfullhash}{130ac1afee2927c6320559055c9b6439}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{International Journal of Ventilation}
@@ -562,6 +527,78 @@
       \range{pages}{15}
       \verb{doi}
       \verb 10.1080/14733315.2014.11684034
+      \endverb
+    \endentry
+    \entry{rovMer_8Rn}{report}{}
+      \name{author}{2}{}{%
+        {{hash=92687237e969eb5f333cf650adb0b162}{%
+           family={Dzhunakova},
+           familyi={D\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=b845905b85dbdebb438e8a1d7b863409}{%
+           family={Ivanova},
+           familyi={I\bibinitperiod},
+           given={Kremena},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {National Radiation Protection Institute (NRPI)}%
+      }
+      \strng{namehash}{446c996d9702c610b9138001afcf01ae}
+      \strng{fullhash}{446c996d9702c610b9138001afcf01ae}
+      \strng{bibnamehash}{446c996d9702c610b9138001afcf01ae}
+      \strng{authorbibnamehash}{446c996d9702c610b9138001afcf01ae}
+      \strng{authornamehash}{446c996d9702c610b9138001afcf01ae}
+      \strng{authorfullhash}{446c996d9702c610b9138001afcf01ae}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Radon Concentration PEMP-09E/05.03.2019 (report výsledků měření)}
+      \field{year}{2019}
+      \true{nocite}
+    \endentry
+    \entry{spline}{online}{}
+      \field{sortinit}{4}
+      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{labeltitlesource}{title}
+      \field{day}{19}
+      \field{month}{9}
+      \field{title}{scipy.interpolate.CubicSpline}
+      \field{urlday}{21}
+      \field{urlmonth}{8}
+      \field{urlyear}{2019}
+      \field{year}{2016}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.interpolate.CubicSpline.html
+      \endverb
+      \verb{url}
+      \verb https://docs.scipy.org/doc/scipy-0.18.1/reference/generated/scipy.interpolate.CubicSpline.html
+      \endverb
+    \endentry
+    \entry{savgol}{online}{}
+      \field{sortinit}{5}
+      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{labeltitlesource}{title}
+      \field{day}{24}
+      \field{month}{10}
+      \field{title}{scipy.signal.savgol\_filter}
+      \field{urlday}{21}
+      \field{urlmonth}{8}
+      \field{urlyear}{2019}
+      \field{year}{2015}
+      \field{dateera}{ce}
+      \field{urldateera}{ce}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://docs.scipy.org/doc/scipy-0.16.1/reference/generated/scipy.signal.savgol_filter.html
+      \endverb
+      \verb{url}
+      \verb https://docs.scipy.org/doc/scipy-0.16.1/reference/generated/scipy.signal.savgol_filter.html
       \endverb
     \endentry
   \enddatalist
