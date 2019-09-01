@@ -76,4 +76,11 @@ urlcolor=black, citecolor=blue]{hyperref}
 \usepackage{adjustbox}
 \usepackage{collcell}
 \usepackage{pdfpages}
-%\usepackage[section]{placeins}
+\usepackage[section]{placeins}
+\makeatletter
+\AtBeginDocument{%
+  \expandafter\renewcommand\expandafter\subsection\expandafter{%
+    \expandafter\@fb@secFB\subsection
+  }%
+}
+\makeatother

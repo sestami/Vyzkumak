@@ -15,7 +15,8 @@ Dynamická měření přísunů radonu jsem provedl u tří objektů, viz tab.~\
 	\end{tabular}
 \end{table}
 
-Vývoj OAR v čase v jednotlivých zónách byl měřen primárně TERA sondami~\cite{tera} a sekundárně měřiči radonu CANARY~\cite{canary}. CANARY měřáky byly použity jako záložní systém, tj. pokud by v některé zóně  TERA sonda selhala, pak by se OAR v této zóně brala z příslušného CANARY měřáku. %Zevrubné informace o těchto detektorech lze dohledat v kapitole~\ref{navesti:radon}.
+Vývoj OAR v čase v jednotlivých zónách byl měřen primárně TERA sondami~\cite{tera} a sekundárně měřiči radonu CANARY~\cite{canary}. CANARY měřáky byly použity jako záložní systém, tj. pokud by v některé zóně  TERA sonda selhala, pak by se OAR v této zóně brala z příslušného CANARY měřáku. %Zevrubné informace o těchto detektorech lze dohledat v kapitole~\ref{navesti:radon}. 
+Pokud bylo v jedné zóně použito více kontinuálních monitorů radonu, pak se z jejich dat udělal průměrný časový vývoj OAR v této zóně a s tím bylo dále počítáno.
 
 Dále bylo potřeba měřit vývoj teploty, což je znalost nutná při vyhodnocování množství nasorbovaných indikačních plynů v TD detektorech a k určení hmotnostních koncentrací indikačních plynů  v zónách. K tomuto účelu byly použity dataloggery teploty a vlhkosti testo 174H~\cite{testo}. V případě objektu Hálková 980 byly k určení hmotnostních koncentrací použity teploty naměřené TERA sondami, jelikož v tomto objektu byl osazen pouze jeden datalogger testo 174H (jedná se jednopodlažní byt). 
 
@@ -44,7 +45,7 @@ Před samotnými měřeními přísunů radonu v objektech bylo nejprve nutno pr
 
 Pro dynamická měření přísunů radonu mi byly poskytnuty čtyři TERA sondy s označením 8, 10, 88 a 112. Pro srovnání jejich odezev s reálnou hodnotou OAR byly vloženy do sudu (nádoba válcovitého tvaru) spolu s referenčním monitorem radonu AlphaGuard (ozn. AG)~\cite{alphaguard}. Hodnota OAR z AG byla brána jako reálná hodnota OAR. V obr.~\ref{fig:dynMer_sondySrovnani} jsou zobrazeny naměřené vývoje OAR v čase ze zkoumaných sond a z AG, v tab.~\ref{tab:dynMer_sondy} jsou k vidění nejdůležitější statistiky naměřených dat z každého monitoru.
 
-\begin{figure}[H]
+\begin{figure}[ht]
 	\centering
 	\includegraphics[width=1\linewidth]{images/sondy_srovnani}
 	\caption{Vývoj OAR naměřený zkoumanými sondami a AG.}
@@ -273,14 +274,14 @@ PCE). Zpětné ověření $k_{ij}$ bylo provedeno pouze pro tuto kombinaci trace
     %\end{tabular}
 %\end{table}
 
-\begin{table}[H]
+\begin{table}[ht]
     \centering
     \caption{Přísuny radonu určené z průměrných hodnot vývojů OAR naměřených TERA sondami. Jednotkou přísunů radonu je \si{Bq/(m^3\cdot hod)}.}
     \label{tab:skala75_prisunyRovnovazne}
    \input{skala75/vysledky_Q_rovnovazne}
 \end{table}
 
-\begin{table}[H]
+\begin{table}[ht]
     \centering
     \caption{Přísuny radonu určené z průměrných hodnot vývojů OAR naměřených CANARY měřáky. Jednotkou přísunů radonu je \si{Bq/(m^3\cdot hod)}.}
     \label{tab:skala75_prisunyRovnovazneCANARY}
@@ -536,29 +537,30 @@ V dalších oddílech této kapitoly jsou sepsány do tabulek vypočítané $Q_i
 \end{table}
 
 \subsection{Diskuze}
-Dost informací uvedených u předchozího měření v objektu Skála 75 platí i zde:
+Mnoho informací uvedených u předchozího měření v objektu Skála 75 platí i zde:
 \begin{itemize}
     \item CANARY měřáky měří přesněji a spolehlivěji než TERA sondy,
     \item časové závislosti přísunů radonu $Q_i(t)$ nelze považovat za přesné.
 \end{itemize}
 
-Měření ventilace u tohoto objektu je zatíženo velikou nejistotou kvůli saturaci několika TD detektorů na několik druhů tracerů. Stalo se to v důsledku porušení pravidel osazování měřidel do objektu (podkapitola~\ref{navesti:prutoky_instalace}), jelikož do ložnice bylo umístěno moc vyvíječů, jejichž celkové emise dotyčných tracerů byly příliš veliké. Proto $k_{ij}$ vycházejí s velikou nejistotou (tab.~\ref{tab:halkova980_prutoky}) a je dost pravděpodobné, že jsou zatíženy nějakou další chybou, která není v uvedených nejistotách zahrnuta. 
+Měření ventilace u tohoto objektu je zatíženo velikou nejistotou kvůli saturaci několika TD detektorů na některé druhy tracerů. Stalo se to v důsledku porušení pravidel osazování měřidel do objektu (podkapitola~\ref{navesti:prutoky_instalace}), jelikož do ložnice bylo umístěno moc vyvíječů, jejichž celkové emise dotyčných tracerů byly příliš veliké. Proto $k_{ij}$ vycházejí s velikou nejistotou (tab.~\ref{tab:halkova980_prutoky}) a je dost pravděpodobné, že jsou zatíženy nějakou další chybou, která není v uvedených nejistotách zahrnuta. 
 
-V tab.~\ref{tab:halkova980_prisunyRovnovazneCANARY} jsou $Q_i$ pro data z CANARY měřáků. Kupodivu i přes uvedené nepřesné měření ventilace vychází v rámci nejistot stejně jako $Q_{zdroj}$ (tab.~\ref{tab:halkova980_prisunyZdroj}). Ovšem jejich nejistoty jsou tak obrovské, že to zabraňuje přesné kvantifikaci zdrojů radonu v objektu.
+V tab.~\ref{tab:halkova980_prisunyRovnovazneCANARY} jsou $Q_i$ pro data z CANARY měřáků. Kupodivu i přes uvedené nepřesné měření ventilace vychází v rámci nejistot stejně jako $Q_{zdroj}$ (tab.~\ref{tab:halkova980_prisunyZdroj}). Ovšem jejich nejistoty jsou tak obrovské, že by to při neznámosti $Q_{zdroj}$ zabraňovalo přesné kvantifikaci zdrojů radonu v objektu.
 
 Jako přesnější byla vybrána kombinace tracerů (MDC, MCH, TCE, TMH), protože pro ní vychází méně průtoků záporně (záporné $k_{ij}$ jsou nesmyslné).
 
-Při zpětném ověření OAR vyšly hodnoty blízké naměřeným hodnotám (tab.~\ref{tab:halkova980_OAR_zpetne}). Při zpětném ověření průtoků vyšly nominální hodnoty průtoků značně rozdílně oproti $k_{ij}$ z měření, avšak jejich intervaly nejistot jsou tak veliké, že v nich $k_{ij}$ leží. 
+Při zpětném ověření OAR vyšly hodnoty blízké naměřeným hodnotám (tab.~\ref{tab:halkova980_OAR_zpetne}). Nominální hodnoty zpětně ověřených $k_{ij}$ vyšly značně rozdílně oproti nominálním hodnotám $k_{ij}$ z měření, avšak jejich intervaly nejistot jsou tak veliké, že se navzájem protínají (tab.~\ref{tab:halkova980_prutoky_zpetne}). 
 
 Dynamické vyhodnocení bylo provedeno pro obě kombinace tracerů a pro OAR z TERA sond, avšak závislosti $Q_i(t)$ byly tak nepřesné (víceméně oscilovaly kolem nuly), že nejsou v této práci uvedeny.
 \subsection{Závěr}
-Byly určeny přísuny radonu do obývacího pokoje, ložnice, koupelny s WC a do kuchyně. Jako přesnější jsou opět brány přísuny radonu, při jejichž výpočtu byly použity OAR z CANARY měřáků. Při vyhodnocování byly uvažovány dvě kombinace tracerů, jako přesnější byla vyhodnocena kombinace (MDC, MCH, TCE, TMH). Vypočítané a vybrané $Q_i$ se shoduje s $Q_{zdroj}$, avšak mají obrovskou nejistotu.
+Byly určeny přísuny radonu do obývacího pokoje, ložnice, koupelny s WC a do kuchyně. Jako přesnější jsou opět brány přísuny radonu, při jejichž výpočtu byly použity OAR z CANARY měřáků. Při vyhodnocování byly uvažovány dvě kombinace tracerů, jako přesnější byla určena kombinace (MDC, MCH, TCE, TMH). Vypočítané a vybrané $Q_i$ se shoduje s $Q_{zdroj}$, avšak mají obrovskou nejistotu.
 
-Hlavním zdrojem nejistot tohoto měření bylo umístění příliš mnoho vyvíječů do zón, což vedlo k saturaci několika TD detektorů.
+Hlavním zdrojem nejistot tohoto měření bylo umístění příliš mnoho vyvíječů do zón, což vedlo k saturaci několika TD detektorů na některé druhy tracerů.
 
 \section{Objekt Anglická 574, Dobřichovice}
-Jedná se o rodinný dům se sklepem, přízemím a prvním patrem. Při měření byla brána jednotlivá podlaží jako zóny. 
+Jedná se o rodinný dům se sklepem, přízemím a prvním patrem. Při měření byla brána jednotlivá podlaží jako zóny. Do sklepa byly umístěny vyvíječe s MCH plynem, do přízemí vyvíječe s MDC plynem a do prvního patra vyvíječe s PCH plynem. Do každé zóny byly dále osazeny čtyři TD detektory. Do přízemí a do prvního patra byly dány po jednom CANARY měřáku a TERA sondě, ve sklepě byly tyto kontinuální motnitory umístěny po dvojicích. Ve sklepě byly navíc instálovány zdroje 38 a 37.
 
+Veličiny vypočítané z měřeních jsou v příloze~\ref{navesti:priloha_anglicka574}. Přísuny radonu $Q_{zdroj}$ a $Q_i$ jsou uvedeny v dalším oddíle. Dále je v této kapitolce uvedeno zpětné ověření OAR a $k_{ij}$. Časové vývoje přísunů radonu $Q_i(t)$ z dynamického vyhodnocení OAR z TERA sond jsou také v příloze~\ref{navesti:priloha_anglicka574}.
 %\subsection{Použitá měřidla}
 %\begin{itemize}
     %\setlength\itemsep{0em}
@@ -723,14 +725,22 @@ Jedná se o rodinný dům se sklepem, přízemím a prvním patrem. Při měřen
 \end{table}
 
 \subsection{Diskuze}
+I u tohoto měření došlo k saturaci několika TD detektorů. Stalo se díky nesprávnému odhadu intenzity větrání, v tomto objektu se totiž větrá velmi málo. Kupodivu však nemají vypočítané $k_{ij}$ (tab~\ref{tab:anglicka574_prutoky}) tak velké nejistoty jako $k_{ij}$ u předchozího objektu. 
+
+$Q_0$ (tab.~\ref{tab:anglicka574_prisunyRovnovazneCANARY}) vychází mnohem větší než $Q_{zdroj}$ (tab.~\ref{tab:anglicka574_prisunyZdroj}). Pravděpodobně to je v důsledku přirozeného přísunu radonu od geologického podloží. Není známo, zdali byla koncentrace radonu v tomto objektu někdy v minulosti proměřována, každopádně nejsou k dispozici žádné hodnoty, a proto v současné době probíhá ve sklepě a v přízemí kontinuální měření radonu. Z výsledků bude hypotéza o přísunu radonu z podloží ověřena.
+
+V tab.~\ref{tab:anglicka574_OAR_zpetne} jsou uvedeny OAR, které by měly být naměřeny, pokud by platilo $Q_0=Q_{zdroj}$ a OAR, které bylo skutečně naměřeno CANARY měřáky. Je vidět, že rozdíl je veliký.
+
+V tabulkách ~\ref{tab:anglicka574_prutoky_zpetne} jsou $k_{ij}$ vždy pro příslušnou zónu $i$, které byly vypočítány z naměřených OAR, $Q_{zdroj}$ a hodnot $k_{ij}$ pro ostatní zóny. Vzhledem k rozdílnosti $Q_0$ a $Q_{zdroj}$ vycházejí naprosto rozdílně od naměřených $k_{ij}$ a vlastně ani nemělo smysl počítat je. 
 
 \subsection{Závěr}
+Byly určeny průměrné přísuny radonu do jednotlivých podlaží objektu $Q_i$. Pro přízemí a první zónu vyšly v rámci nejistot shodně s příslušnými $Q_{zdroj}$, ale pro sklep je vypočítaný přísun radonu velmi odlišný od $Q_{zdroj}$. Pravděpodobně to je dáno přirozeným přísunem radonu do sklepa z geologického podloží. V současné době probíhá měření OAR za účelem ověření této úvahy.
 
 \section{Shrnutí}
-toto bude obsahovat přehledové tabulky obsahující určené přísuny radonu a dulezite poznatky z diskuzi a zaveru
-\begin{table}
+Zde jsou souhrnně uvedeny všechny vypočítané průměrné přísuny radonu, resp. přísuny radonu od zdrojů RF 2000 do všech zón všech objektů (tab.~\ref{tab:dynMer_shrnuti}, resp. tab~\ref{tab:dynMer_shrnuti_zdroj}).
+\begin{table}[ht]
     \centering
-    \caption{(TMH, MCH, PCE), (MDC, MCH, TCE, TMH)}
+    \caption{Průměrné přísuny radonu $Q_i$ do všech zón (ne podlaží!) všech objektů vypočítané z OAR naměřených CANARY měřáky. V případě objektu Skála 75, resp. Hálková 980 jsou uvedeny $Q_i$ pro kombinaci tracerů (TMH, MCH, PCE), resp. (MDC, MCH, TCE, TMH). Tyto kombinace jsou považovány za nejpřesnější.}
     \label{tab:dynMer_shrnuti}
     \begin{tabular}{l
         >{\collectcell\num}r<{\endcollectcell}
@@ -753,6 +763,35 @@ toto bude obsahovat přehledové tabulky obsahující určené přísuny radonu 
 Skála 75 &   301&78 & 115&24 &   9&3 &  \multicolumn{2}{r}{}\\
 Hálková 980 & 445&241 & -86&104 & 38&84 & -152&351 \\
 Anglická 574 & 1057&245 & -31&13 & 21&7 &\multicolumn{2}{r}{}\\
+\bottomrule
+    \end{tabular}
+\end{table}
+
+\begin{table}[ht]
+    \centering
+    \caption{Přísuny radonu ze zdrojů RF 2000 do všech zón všech proměřených objektů.}
+    \label{tab:dynMer_shrnuti_zdroj}
+    \begin{tabular}{l
+        >{\collectcell\num}r<{\endcollectcell}
+        @{${}\pm{}$}
+        >{\collectcell\num}r<{\endcollectcell}
+        >{\collectcell\num}r<{\endcollectcell}
+        @{${}\pm{}$}
+        >{\collectcell\num}r<{\endcollectcell}
+        >{\collectcell\num}r<{\endcollectcell}
+        @{${}\pm{}$}
+        >{\collectcell\num}r<{\endcollectcell}
+        >{\collectcell\num}r<{\endcollectcell}
+        @{${}\pm{}$}
+        >{\collectcell\num}r<{\endcollectcell}
+    }
+        \toprule
+        {}& \multicolumn{2}{r}{$Q_1$} & \multicolumn{2}{r}{$Q_2$} & \multicolumn{2}{r}{$Q_3$} & \multicolumn{2}{r}{$Q_4$} \\
+        \midrule
+
+Skála 75 & 400& 51& 114& 13& 0& 0&  \multicolumn{2}{r}{}\\
+Hálková 980 & 332& 64& 0&0 & 0& 0& 0& 0\\
+Anglická 574 & 455& 90& 0& 0& 0& 0&\multicolumn{2}{r}{}\\
 \bottomrule
     \end{tabular}
 \end{table}
