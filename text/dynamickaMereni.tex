@@ -22,7 +22,7 @@ Dále bylo potřeba měřit vývoj teploty, což je znalost nutná při vyhodnoc
 
 Pro určení hmotnostních koncentrací indikačních plynů je dále nutno změřit průměrné atmosférické tlaky ve všech zónách. Jejich hodnoty však stačí znát pouze přibližně, protože moc neovlivňují výpočet koncentrací. Proto byly všechny potřebné atmosférické tlaky při vyhodnocování všech objektů brány rovny \SI{100}{kPa}.
 
-Objemy všech objektů byly změřeny laserovým dálkoměrem BOSCH GLM 120 C~\cite{dalkomer}.
+Objemy všech objektů byly změřeny laserovým dálkoměrem BOSCH GLM 120 C~\cite{dalkomer} a jejich relativní nejistota byla odhadnuta na 20~\%.
 
 Do objektů byly při měřeních umístěny vždy jeden nebo dva zdroje radonu typu RF 2000 (viz podkapitola \ref{navesti:radon_zdroje}). U těchto zdrojů nás pro naše měření zajímají pouze radonové výdejnosti $W$, které představují definované absolutní přísuny radonu do zón, ve kterých jsou zdroje umístěny. Absolutními přísuny radonu je myšleno množství aktivity radonu, jenž se do zón dostane za hodinu, a tedy jejich jednotkou je \si{Bq/hod}. Radonové výdejnosti použitých zdrojů jsou uvedeny v tab.~\ref{tab:dynMer_zdroje}. Podělením $W$ objemem příslušné zóny můžeme dopočítat přísun radonu pocházející od daného zdroje do této zóny. 
 \begin{table}[ht]
@@ -114,11 +114,10 @@ To, že jsme umístili do každé ze zón zdroje dvou různých indikačních pl
 
 V příloze~\ref{navesti:priloha_skala75} lze dohledat vyhodnocené veličiny z měření ventilace a OAR. Je tam také uveden výpočet nejistot průměrných hodnot OAR z dat naměřených TERA sondami (podle informací uvedených v podkapitole~\ref{navesti:radon_TERAnejistota}). 
 
-V následujícím oddíle jsou uvedeny přesně definované přísuny radonu od zdrojů RF 2000 a dále průměrné přísuny radonu vypočítané z naměřených průtoků vzduchu mezi zónami a z OAR naměřených TERA sondami, resp. CANARY měřáky pro všechny kombinace indikačních plynů. V případě TERA sond proběhlo i dynamické vyhodnocení pro určení vývojů $Q_i(t)$, které lze vidět v příloze~\ref{navesti:priloha_skala75_prisuny}, v následujícím oddílu jsou pouze uvedeny zprůměrované hodnoty $Q_i(t)$.
+V následujícím oddíle jsou uvedeny přesně definované přísuny radonu od zdrojů RF 2000 a dále průměrné přísuny radonu vypočítané z určených průtoků vzduchu mezi zónami pro všechny kombinace indikačních plynů a z OAR naměřených TERA sondami, resp. CANARY měřáky. V případě TERA sond proběhlo i dynamické vyhodnocení pro určení vývojů $Q_i(t)$, které lze vidět v příloze~\ref{navesti:priloha_skala75_prisuny}, v následujícím oddílu jsou pouze uvedeny zprůměrované hodnoty $Q_i(t)$.
 
 V posledním oddílu této kapitoly je zobrazeno zpětné ověření OAR (pro všechny kombinace tracerů) a $k_{ij}$ (pro kombinaci (TMH, MCH, PCE)) ve smyslu podkapitoly~\ref{navesti:model_overeni}, navíc jsou tam uvedeny i průměrné OAR naměřené CANARY měřáky a $k_{ij}$ z vyhodnocení měření ventilace objektu při použití kombinace tracerů (TMH, MCH,
-PCE). Zpětné ověření $k_{ij}$ bylo provedeno pouze pro tuto kombinaci tracerů.
-
+PCE).
 %\subsection{Použitá měřidla}
 %\begin{itemize}
     %\setlength\itemsep{0em}
@@ -380,9 +379,9 @@ Zpětně dopočítané $k_{ij}$ pro kombinaci plynů (TMH, MCH, PCE) a $k_{ij}$ 
 Byly určeny průměrné přísuny radonu do sklepa, přízemí a prvního patra objektu pomocí skriptu pro vyhodnocení rovnovážného měření za použití několika kombinací naměřených dat:
 \begin{itemize}
     \item byly použity průměrné OAR z TERA sond a z CANARY měřáků, viz tabulky~\ref{tab:skala75_prisunyRovnovazne} a \ref{tab:skala75_prisunyRovnovazneCANARY}, to nám dává dvě varianty vypočítaných $Q_i$;
-    \item dále bylo použito osm kombinací odezev TD detektorů a odparů z tří indikačních plynů pro určení osmi variant $k_{ij}$, tj. z toho máme osm variant $Q_i$.
+    \item dále bylo použito osm kombinací trojic indikačních plynů, z nich se určovaly odezvy TD detektorů a odpary z vyvíječů pro určení osmi variant $k_{ij}$, tj. z toho máme osm variant $Q_i$.
 \end{itemize}
-Celkově jsme tedy získaly 16 variant přísunů radonu. Porovnáním $Q_i$ a $Q_{zdroj}$ byla vybrána nejpřesnější varianta. Tou se stala ta, která byla určena za použití OAR naměřených CANARY měřáky a za použití tracerů (TMH, MCH, PCE). Všechny $Q_i$ určené z dat CANARY měřáků a z kombinací tracerů s TMH plynem v první zóně odpovídají $Q_{zdroj}$.
+Celkově jsme tedy získaly 16 variant přísunů radonu. Porovnáním $Q_i$ a $Q_{zdroj}$ byla vybrána nejpřesnější varianta. Tou se stala ta, která byla určena za použití OAR naměřených CANARY měřáky a za použití tracerů (TMH, MCH, PCE).
 
 Pro ověření funkčnosti skriptu pro dynamické měření byly vypočteny i časové závislosti přísunů radonu $Q_i(t)$ pro OAR z TERA sond. Bohužel $Q_i(t)$ není možné kvůli známosti pouze průměrných hodnot $k_{ij}$ považovat za dostatečně přesné. Proto byly alespoň $Q_i(t)$ zprůměrovány a tyto průměry srovnány s příslušnými $Q_i$. $\overline{Q_i}(t)$ a $Q_i$ jsou v podstatě totožné a to potvrzuje správnost skriptu pro vyhodnocování dynamického měření. Správnost skriptu pro vyhodnocování rovnovážného měření byla ověřena v kapitole~\ref{navesti:rovnovaznaMereni}.
 
@@ -543,7 +542,7 @@ Mnoho informací uvedených u předchozího měření v objektu Skála 75 platí
     \item časové závislosti přísunů radonu $Q_i(t)$ nelze považovat za přesné.
 \end{itemize}
 
-Měření ventilace u tohoto objektu je zatíženo velikou nejistotou kvůli saturaci několika TD detektorů na některé druhy tracerů. Stalo se to v důsledku porušení pravidel osazování měřidel do objektu (podkapitola~\ref{navesti:prutoky_instalace}), jelikož do ložnice bylo umístěno moc vyvíječů, jejichž celkové emise dotyčných tracerů byly příliš veliké. Proto $k_{ij}$ vycházejí s velikou nejistotou (tab.~\ref{tab:halkova980_prutoky}) a je dost pravděpodobné, že jsou zatíženy nějakou další chybou, která není v uvedených nejistotách zahrnuta. 
+Měření ventilace u tohoto objektu je zatíženo velikou nejistotou kvůli saturaci několika TD detektorů na některé druhy tracerů. Stalo se to v důsledku porušení pravidel osazování měřidel do objektu (podkapitola~\ref{navesti:prutoky_instalace}), jelikož do ložnice bylo umístěno moc vyvíječů, jejichž celkové emise dotyčných tracerů byly příliš veliké. Proto $k_{ij}$ vycházejí s velikou nejistotou (tab.~\ref{tab:halkova980_prutoky}) a je dost pravděpodobné, že jsou zatíženy nějakou další chybou, která není v uvedených nejistotách zahrnuta. Další nejistota vzniká v důsledku použití odezev pouze jednoho TD detektoru ve třetí zóně (koupelna), protože druhý TD detektor určený pro tuto zónu byl umístěn mimo ní (ve špajzu).
 
 V tab.~\ref{tab:halkova980_prisunyRovnovazneCANARY} jsou $Q_i$ pro data z CANARY měřáků. Kupodivu i přes uvedené nepřesné měření ventilace vychází v rámci nejistot stejně jako $Q_{zdroj}$ (tab.~\ref{tab:halkova980_prisunyZdroj}). Ovšem jejich nejistoty jsou tak obrovské, že by to při neznámosti $Q_{zdroj}$ zabraňovalo přesné kvantifikaci zdrojů radonu v objektu.
 
@@ -551,7 +550,7 @@ Jako přesnější byla vybrána kombinace tracerů (MDC, MCH, TCE, TMH), proto�
 
 Při zpětném ověření OAR vyšly hodnoty blízké naměřeným hodnotám (tab.~\ref{tab:halkova980_OAR_zpetne}). Nominální hodnoty zpětně ověřených $k_{ij}$ vyšly značně rozdílně oproti nominálním hodnotám $k_{ij}$ z měření, avšak jejich intervaly nejistot jsou tak veliké, že se navzájem protínají (tab.~\ref{tab:halkova980_prutoky_zpetne}). 
 
-Dynamické vyhodnocení bylo provedeno pro obě kombinace tracerů a pro OAR z TERA sond, avšak závislosti $Q_i(t)$ byly tak nepřesné (víceméně oscilovaly kolem nuly), že nejsou v této práci uvedeny.
+Dynamické vyhodnocení bylo provedeno pro obě kombinace tracerů a pro OAR z TERA sond, nicméně závislosti $Q_i(t)$ byly tak nepřesné (víceméně oscilovaly kolem nuly), že nejsou v této práci uvedeny.
 \subsection{Závěr}
 Byly určeny přísuny radonu do obývacího pokoje, ložnice, koupelny s WC a do kuchyně. Jako přesnější jsou opět brány přísuny radonu, při jejichž výpočtu byly použity OAR z CANARY měřáků. Při vyhodnocování byly uvažovány dvě kombinace tracerů, jako přesnější byla určena kombinace (MDC, MCH, TCE, TMH). Vypočítané a vybrané $Q_i$ se shoduje s $Q_{zdroj}$, avšak mají obrovskou nejistotu.
 
