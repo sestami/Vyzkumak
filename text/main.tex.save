@@ -1,0 +1,39 @@
+:\documentclass[12pt,a4paper]{report}
+\input{preamble}
+%\LTcapwidth=\textwidth
+%\renewcommand{\arraystretch}{1.0}
+%\title{Výzkumný úkol}
+%\author{Michal Šesták}
+%\newcommand{\Chapter}[1]{\chapter*{#1}\addcontentsline{toc}{chapter}{#1}}
+%\includeonly{uvod, radon, prutoky, model, rovnovaznaMereni, dynamickaMereni, zaver, prilohy}
+%\includeonly{uvod, radon, dynamickaMereni, prilohy}
+%\includeonly{prilohy}
+%\includeonly{uvod, radon, prutoky, dynamickaMereni, zaver, prilohy}
+\begin{document}
+
+\pagestyle{empty}
+\include{titlepage}
+\tableofcontents
+\pagestyle{plain}
+
+\include{uvod}
+\part{Teoretická část}
+\include{radon}
+
+\include{prutoky}
+
+\include{model}
+
+\part{Praktická část}
+\include{rovnovaznaMereni}
+
+\include{dynamickaMereni}
+
+\include{zaver}
+
+\nocite{*}
+\addcontentsline{toc}{chapter}{Seznam literatury}
+\printbibliography[title=Seznam literatury]
+
+\include{prilohy}
+\end{document}

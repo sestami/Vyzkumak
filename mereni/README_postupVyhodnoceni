@@ -1,0 +1,5 @@
+1. ventilace -> symbolicky.py (pokud N<4)
+2. sondy_data -> bulharskeKonstanty.py (zpracovani souboru s OAR do pozadovaneho formatu)
+3. sondy_data -> rovnovaznyStav -> rovnovazneMereni.py 
+pozn.: Dynamicke zpracovani nema smysl
+pozn.: kopirovani souboru jsem zde nezahrnul
