@@ -1,0 +1,254 @@
+\documentclass{beamer}
+\usefonttheme[onlymath]{serif}
+\usepackage[orientation=portrait,size=a0,scale=1.4,debug]{beamerposter}
+\mode<presentation>{\usetheme{ZH}}
+\usepackage{chemformula}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[czech]{babel} % required for rendering German special characters
+\usepackage{siunitx} %pretty measurement unit rendering
+\usepackage{hyperref} %enable hyperlink for urls
+\usepackage{ragged2e}
+\usepackage[font=scriptsize,justification=justified, figurename=Obr., tablename=Tab.]{caption}
+\usepackage{array,booktabs,tabularx}
+\usepackage[version=4]{mhchem}
+\usepackage{lmodern}
+\usepackage{exscale}
+\usepackage{siunitx}
+\sisetup{output-decimal-marker = {,}}
+\sisetup{separate-uncertainty}
+\usepackage{collcell}
+\usepackage{microtype}
+\usepackage{multirow}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{subcaption}
+
+\newcolumntype{Z}{>{\centering\arraybackslash}X} % centered tabularx columns
+\sisetup{per=frac,fraction=sfrac}
+
+\title{\huge Multi-kompártmentový přístup ke kvantifikaci  objemové rychlosti přísunu zdrojů radonu do budov s využitím měřené intenzity větrání pomocí techniky indikačních plynů}
+\author[michal.sestak@suro.cz]{Michal Šesták$^{1,2}$, Karel Jílek$^{1}$}
+%\institute[ETH]{$^{1}$Institute for Biomedical Engineering, ETH and University of Zurich \\ $^{2}$Preclinical Laboratory for Translational Research into Affective Disorders, DPPP, Psychiatric Hospital, University of Zurich}
+\institute[SÚRO]{$^{1}$Státní ústav radiační ochrany, v. v. i. \\ $^{2}$Fakulta jaderná a fyzikálně inženýrská, ČVUT v Praze}
+\date{5. listopadu 2019}
+
+% edit this depending on how tall your header is. We should make this scaling automatic :-/
+\newlength{\columnheight}
+%\setlength{\columnheight}{104cm}
+\setlength{\columnheight}{99cm}
+
+\begin{document}
+\shorthandoff{-}
+\begin{frame}
+\begin{columns}
+	\begin{column}{.43\textwidth}
+		\begin{beamercolorbox}[center]{postercolumn}
+			\begin{minipage}{.98\textwidth}  % tweaks the width, makes a new \textwidth
+				\parbox[t][\columnheight]{\textwidth}{ % must be some better way to set the the height, width and textwidth simultaneously
+\begin{myblock}{Úvod}
+Cílem této práce bylo odvodit matematický model, pomocí něhož by se daly lokalizovat a kvantifikovat zdroje radonu v budovách za využití techniky indikačních plynů, a následně jej ověřit na naměřených datech. Postup je následující: budova se rozdělí na několik kompártmentů (zón), v nichž předpokládáme homogenní koncentrace radonu, a poté v těchto kompártmentech provedeme simultánně měření intenzity větrání pomocí techniky indikačních plynů a měření OAR. Z naměřených veličin můžeme určit tzv. objemové rychlosti přísunů zdrojů radonu (zjednodušeně přísuny radonu), které kvantifikují množství radonu dostávajícího se do kompartmentů.
+
+Pokud se proměřují vícepodlažní objekty, pak se za kompartmenty většinou berou jednotlivá patra. S touto metodou lze však měřit i jednopodlažních objektech nebo jenom v částech nějakého objektu, např. v bytech.
+
+Model byl nejprve zevrubně ověřen na naměřených datech. Poté byla pro vyzkoušení a ověření celého procesu provedena tři měření (viz tab.~\ref{tab:prehled}) se známými přísuny radonu. Ty byly vytvořeny umístěním průtočných zdrojů radonu typu RF 2000 do objektů.
+\begin{table}
+    \scriptsize
+    \centering
+    \caption{Objekty, v nichž bylo provedeno měření přísunů radonu. $N$ je počet kompartmentů, na který byl daný objekt rozdělen.}
+    \label{tab:prehled}
+    \input{tabs/prehled}
+\end{table}
+
+Pro měření OAR byly použity TESLA TSR sondy a CANARY detektory.
+%Dále bylo nutné znát objemy kompartmentů, k jejich změření byl použit laserový měřič vzdálenosti.
+
+%- popsat ten princip celého toho měření a vyhodnocení (tj. i chromatograf) -> to teda až v tom dalším boxu
+
+%Měření probíhala od května do července 2019 (přidej tu tabulku přehledovou o měřeních)
+\end{myblock}\vfill
+
+
+\begin{myblock}{Metoda indikačních plynů}
+    Pomocí této metody můžeme určit objemové průtoky vzduchu mezi specifikovanými kompartmenty zkoumaného objektu, dále obj. průtoky vzduchu ze všech zón do vnějšího prostředí (exfiltrace). Z exfiltrací a objemů všech zón lze určit výměnu vzduchu objektu. Jedná se o pasivní techniku, a tudíž poskytuje pouze průměrné hodnoty za celou dobu měření. 
+
+Principem techniky je detekce vhodně použitých indikačních plynů, jejichž zdroje (tzv. vyvíječe) jsou rozmístěny po objektu a které mají definovanou emisi do zón. Ze známosti těchto emisí do jednotlivých zón, z odezev detektorů a z dalších faktů je možné určit hledané obj. průtoky vzduchu.
+
+Měření obvykle trvá 14 nebo 31 dní a je při něm nutno kontinuálně snímat teplotu v zónách. Dále musí platit $N_p\geq N$, kde $N_p$ je počet indikačních plynů a $N$ počet zón.
+
+Vyhodnocení množství nasorbovaných plynů v detektorech se provádí pomocí plynového chromatografu s termální desorpcí.
+
+Vše potřebné o této metodě je popsáno v metodice~\cite{metodika}.
+\end{myblock}\vfill
+
+\begin{myblock}{Určení přísunů radonu}
+
+\begin{itemize}
+    \item výpočet infiltrací:
+        \begin{equation}
+            k_{i_I}=k_{i_E}+\sum_{j=1}^{N} \left(k_{ij}-k_{ji}\right)
+            \label{eq:infiltrace}
+        \end{equation}
+    \item soustava rovnic popisující systém:
+        \begin{equation}
+            0=\frac{1}{V_i}\left( \sum^{N+1}_{j=1}\overline{a_j} k_{ji}-\sum^{N+1}_{j=1}\overline{a_i} k_{ij}\right)-\lambda \overline{a_i} +\overline{Q_i}\,,\quad i\in \{1,2,\ldots,N\}\label{eq:odvozovani_rovnovaha}
+        \end{equation}
+\end{itemize}
+
+\begin{table}[h]
+\def\arraystretch{1.1}
+\scriptsize
+    \centering
+    \caption{Značení a jednotky používaných veličin.}
+    \label{tab:veliciny}
+    \begin{tabular}{lp{.7\textwidth}l}
+    %\begin{tabular}{lll}
+        \toprule
+        $N$   & počet kompartmentů/zón uvnitř zkoumaného objektu&[-]\\
+        $V_i$ & objem $i$-té zóny& [\si{m^3}] \\
+        $k_{ij}$ & objemový průtok vzduchu z $i$-té zóny do $j$-té zóny& [\si{m^3/hod}]\\
+        $k_{i, N+1}$ & exfiltrace $i$-té zóny, ozn. $k_{i_E}$; index $N+1$ značí vnější prostředí & [\si{m^3/hod}]\\
+        $k_{N+1, i}$ & infiltrace $i$-té zóny, ozn. $k_{i_I}$; index $N+1$ značí vnější prostředí &[\si{m^3/hod}]\\
+        $a_i$ & OAR v $i$-té zóně& [\si{Bq/m^3}] \\
+        $\lambda$ & přeměnová konstanta radonu& [\si{1/hod}]\\
+        $Q_i$ & přísun radonu do $i$-té zóny& $\left[\si{\frac{Bq}{m^3\cdot hod}}\right]$ \\
+        \bottomrule
+    \end{tabular}
+\end{table}
+\end{myblock}\vfill
+
+		}\end{minipage}\end{beamercolorbox}
+	\end{column}
+
+
+
+	\begin{column}{.57\textwidth}
+		\begin{beamercolorbox}[center]{postercolumn}
+			\begin{minipage}{.98\textwidth} % tweaks the width, makes a new \textwidth
+				\parbox[t][\columnheight]{\textwidth}{ % must be some better way to set the the height, width and textwidth simultaneously
+
+
+\begin{myblock}{Příklad měření a vyhodnocení}
+    %\begin{figure}
+        %\centering
+        %\begin{subfigure}{0.47\textwidth}
+            %\centering
+            %\includegraphics[width=0.99\textwidth]{tabs/OAR_dohromady.png}
+            %\caption{}
+        %\end{subfigure}
+        %\hspace{1em}
+        %\begin{subfigure}{0.47\textwidth}
+            %\centering
+            %\includegraphics[width=0.99\textwidth]{tabs/OAR_CANARY.png}
+            %\caption{alksdjf}
+        %\end{subfigure}
+    %\end{figure}
+    \begin{columns}
+        \centering
+        \begin{column}{.69\textwidth}
+            Jako příklad měření a vyhodnocení je uveden objekt Skála 75. Jedná se o chatu se sklepem, přízemím a prvním patrem. Do každého podlaží/zóny byly umístěny vyvíječe dvou typů tracerů, celkově tedy bylo použito šest typů tracerů, což při $N=3$ umožňuje vyhodnotit naměřená data vícero způsoby za použití různých kombinací indikačních plynů. Celkově bylo použito: 
+            \begin{itemize}
+                \item 14 vyvíječů, 12 TD detektorů, 3 teploměry
+                \item 2 průtočné zdroje radonu (umístěny do sklepa a do kuchyně v přízemí)
+                \item 4 TESLA TSR sondy, 4 CANARY detektory
+            \end{itemize}
+            V tab.~\ref{tab:skala75_OAR} jsou průměrné OAR naměřené TESLA TSR sondami a CANARY detektory, v tab.~\ref{tab:skala75_prutoky} jsou vypočítané obj. průtoky vzduchu za použití dvou kombinací tracerů. Zkratkami TMH, MCH, PCH a MDC, resp. TCE a PCE jsou označeny fluorované uhlovodíky, resp. chlorované uhlovodíky.
+            %\begin{itemize}
+                %\item TMH, MCH, PCH a MDC jsou fluorované uhlovodíky
+                %\item TCE a PCE jsou chlorované uhlovodíky
+            %\end{itemize}
+V tab.~\ref{tab:skala75_Q} jsou určené přísuny radonu. Za povšimnutí stojí velká variabilita $Q_i$ v závislosti na použité kombinaci tracerů a OAR.
+        \end{column}
+        \begin{column}{.3\textwidth}
+
+        \centering
+            \begin{table}
+                \scriptsize
+                \centering
+                \caption{Průměrné OAR naměřené TESLA TSR sondami a CANARY detektory.}
+                \label{tab:skala75_OAR}
+                \input{tabs/standalone_OAR.tex}
+            \end{table}
+
+            \begin{table}
+                \centering
+                \scriptsize
+                \caption{Obj. průtoky vzduchu a výměna vzduchu $n$ pro třetí a pátou kombinaci indikačních plynů (z celkového počtu osmi kombinací).}
+                \label{tab:skala75_prutoky}
+                \input{tabs/standalone_prutoky}
+            \end{table}
+
+        \end{column}
+    \end{columns}
+    %\centering
+    %\begin{minipage}{.8\textwidth}
+        \begin{table}
+            \scriptsize
+            \centering
+            \caption{Vypočítané přísuny radonu při použití OAR z: (a) TESLA TSR sond, (b) CANARY detektorů. V posledním řádku jsou uvedeny známé přísuny radonu z průtočných zdrojů.}
+            \label{tab:skala75_Q}
+            \begin{subtable}{0.45\textwidth}
+                \centering
+                \caption{}
+                \label{tab:skala75_Q_sondy}
+                \input{tabs/standalone_Q_sondy.tex}
+            \end{subtable}
+            \begin{subtable}{0.45\textwidth}
+                \centering
+                \caption{}
+                \label{tab:skala75_Q_CANARY}
+                \input{tabs/standalone_Q_CANARY.tex}
+            \end{subtable}
+        \end{table}
+    %\end{minipage}
+
+\end{myblock}\vfill
+
+
+\begin{myblock}{Výsledky ostatních měření}
+    V tab.~\ref{tab:halkova980} a \ref{tab:anglicka574} jsou uvedeny vypočítané přísuny radonu do zbylých dvou proměřených objektů. ýměna vzduchu obj. Hálková 980 
+TO DO: uvest vymeny vzduchu vsech mereni (v textu)
+\begin{columns}
+    \begin{column}{.5\textwidth}
+        sdfkjaskdjflkajdf
+    \end{column}
+    \begin{column}{.5\textwidth}
+        \begin{table}
+            \centering
+            \scriptsize
+            \caption{Určené přísuny radonu do zón objektu Hálková 980.}
+            \label{tab:halkova980}
+            \input{tabs/standalone_Q_halkova980}
+        \end{table}
+        \begin{table}
+            \centering
+            \scriptsize
+            \caption{Určené přísuny radonu do zón objektu Anglická 574.}
+            \label{tab:anglicka574}
+            \input{tabs/standalone_Q_anglicka574}
+        \end{table}
+    \end{column}
+\end{columns}
+\end{myblock}\vfill
+
+\begin{myblock}{Závěr}
+    
+\end{myblock}
+\vfill
+
+					\begin{myblock}{References}
+						\footnotesize
+                        \tiny
+                        \begin{thebibliography}{Mn99}
+                                \bibitem{japonci2} OKUYAMA, Hiroyasu, Yoshinori ONISHI, Shin-ichi TANABE a Seiichi KASHIHARA. Statistical data analysis method for multi-zonal airflow measurement using multiple kinds of perfluorocarbon tracer gas. Building and Environment [online]. 2009, 44(3), 546-557. DOI: 10.1016/j.buildenv.2008.04.014. ISSN 03601323. Dostupné z: \url{https://linkinghub.elsevier.com/retrieve/pii/S0360132308000905} 
+                                \bibitem{sherman} SHERMAN, Max H., Iain S. WALKER a Melissa M. LUNDEN. Uncertainties in Air Exchange using Continuous-Injection, Long-Term Sampling Tracer-Gas Methods. International Journal of Ventilation [online]. 2016, 13(1), 13-28. DOI: 10.1080/14733315.2014.11684034. ISSN 1473-3315. Dostupné z: \url{http://www.tandfonline.com/doi/full/10.1080/14733315.2014.11684034}
+                                \bibitem{metodika} JÍLEK, Karel; FROŇKA, Aleš. Metodika stanovení výměny vzduchu ve vnitřním ovzduší budov s využitím pasivních integrálních měřidel indikačních plynů (pro potřeby SÚJB) [online]. 2016 [cit. 2019-08-01]. Dostupné z: \url{https://www.sujb.cz/
+fileadmin/sujb/docs/dokumenty/metodiky/Stanoveni_vymeny_vzduchu.pdf.}
+                        \end{thebibliography}
+					\end{myblock}\vfill
+		}\end{minipage}\end{beamercolorbox}
+	\end{column}
+\end{columns}
+\end{frame}
+\end{document}
