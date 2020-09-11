@@ -135,7 +135,7 @@ Kovarianční matice přísunů radonu má následující tvar
 Její diagonální prvky lze vypočítat z
 \begin{align}
     \Sigma_{ii}^Q=&\sigma^2(\dot{a_i}) + \sigma^2(a_i)\left(\lambda + \frac{1}{V_i}\sum_{j=1,j\neq i}^{3}k_{ij}\right)^2 + \frac{1}{V_i^2}\sum_{j=1,j\neq i}^{3}\big(\sigma^2(a_j)k_{ji}^2 + \nonumber\\
-    &+ \sigma^2(k_{ij})a_i^2 + \sigma^2(k_{ji})a_j^2\big) + \frac{\sigma^2(V_i)}{V_i^4}\sum_{j=1}^{3}\left(a_i k_{ij} -a_j k_{ji}\right)^2\,.
+    &+ \sigma^2(k_{ij})a_i^2 + \sigma^2(k_{ji})a_j^2\big) + \frac{\sigma^2(V_i)}{V_i^4}\left(\sum_{j=1}^{3}\left(a_i k_{ij} -a_j k_{ji}\right)\right)^2\,.
     \label{eq:nejistota_dveZony}
 \end{align}
 Jediný nediagonální prvek je určen vztahem
@@ -147,7 +147,7 @@ Jediný nediagonální prvek je určen vztahem
 Kovarianční matice přísunů radonu je tvaru $N\times N$. Její diagonální prvky:
 \begin{align}
     \Sigma_{ii}^Q=&\sigma^2(\dot{a_i}) + \sigma^2(a_i)\left(\lambda + \frac{1}{V_i}\sum_{j=1,j\neq i}^{N+1}k_{ij}\right)^2 + \frac{1}{V_i^2}\sum_{j=1,j\neq i}^{N+1}\big(\sigma^2(a_j)k_{ji}^2 + \nonumber\\
-    &+ \sigma^2(k_{ij})a_i^2 + \sigma^2(k_{ji})a_j^2\big) + \frac{\sigma^2(V_i)}{V_i^4}\sum_{j=1}^{N+1}\left(a_i k_{ij} -a_j k_{ji}\right)^2\,.
+    &+ \sigma^2(k_{ij})a_i^2 + \sigma^2(k_{ji})a_j^2\big) + \frac{\sigma^2(V_i)}{V_i^4}\left(\sum_{j=1}^{N+1}\left(a_i k_{ij} -a_j k_{ji}\right)\right)^2\,.
     \label{eq:nejistota_Nzon}
 \end{align}
 Nediagonální prvky:
